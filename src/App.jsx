@@ -6,7 +6,7 @@ function App() {
     <div>
 
 
-      <h1>Pamper Mine</h1>
+      <h1>Pamper your</h1>
 
     </div>
   )
