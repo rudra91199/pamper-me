@@ -4,7 +4,7 @@ function App() {
 
   return (
     <div>
-      <h1>Pamper Me</h1>
+      <h1>Pamper Mine</h1>
     </div>
   )
 }
