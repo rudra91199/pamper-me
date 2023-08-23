@@ -4,7 +4,10 @@ function App() {
 
   return (
     <div>
+
+
       <h1>Pamper Mine</h1>
+
     </div>
   )
 }
