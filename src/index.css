@@ -1,0 +1,15 @@
+:root {
+--pink: #E32085;
+--purple:#962986;
+--blue:#624896;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: none;
+}
+
+button{
+  border: none;
+}
