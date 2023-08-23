@@ -4,10 +4,6 @@ function App() {
 
   return (
     <div>
-
-
-      <h1>Pamper your</h1>
-
     </div>
   )
 }
