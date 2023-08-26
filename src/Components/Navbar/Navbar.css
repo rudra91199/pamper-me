@@ -1,0 +1,34 @@
+.nav-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 40px;
+  padding: 10px;
+}
+.nav-menu a {
+  color: black;
+  transition: all ease-in-out 200ms;
+  font-size: 3vh;
+}
+.nav-menu a:hover {
+  color: #e32085;
+}
+.bag {
+  position: relative;
+}
+.badge {
+  position: absolute;
+  bottom: 0px;
+  right: -6px;
+  background: #e32085;
+  border-radius: 50%;
+  padding: 2px 5px;
+  color: white;
+  font-size: small;
+}
+.w-6 {
+  width: 24px;
+}
+.h-6 {
+  height: 24px;
+}
