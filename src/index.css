@@ -1,9 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;500;600;700;800&display=swap");
 :root {
---pink: #E32085;
---purple:#962986;
---blue:#624896;
---black:#000;
---white:#fff;
+  --pink: #e32085;
+  --purple: #962986;
+  --blue: #624896;
+  --black: #000;
+  --white: #fff;
 }
 
 a {
@@ -12,6 +13,12 @@ a {
   text-decoration: none;
 }
 
-button{
+button {
   border: none;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  margin: 0;
+  padding: 0;
 }
