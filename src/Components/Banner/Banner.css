@@ -1,6 +1,48 @@
 .swiper{
-    height: 78vh;
+    height: 76vh;
 }
 .swiper img{
     width: 100%;
+    height: 100%;
+}
+.swiper-button-next,.swiper-button-prev{
+    color: #ffffff;
+    background: rgba(227, 32, 133, 0.6);
+    padding: 20px;
+    border-radius: 50%;
+    transition: all ease-in-out 300ms;
+    width: 10px;
+    height: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
+    opacity: 0;
+}
+.swiper-button-disabled{
+    opacity:0 !important;
+}
+.swiper-button-next{
+    translate: -80px 0px;
+}
+
+.swiper-button-prev{
+    translate: 80px 0px;
+}
+
+.swiper-pagination-bullet-active{
+    background: #e32085;
+}
+
+.swiper-button-next::after,.swiper-button-prev::after{
+    font-size: 24px;
+}
+.swiper-button-next:hover,.swiper-button-prev:hover{
+    background: rgba(227, 32, 133, 0.8);
+}
+.swiper:hover .swiper-button-next,.swiper:hover .swiper-button-prev{
+    opacity: 1;
+    translate: 0;
+
+}
+.swiper:hover .swiper-button-disabled{
+    opacity: 0.3 !important;
 }
