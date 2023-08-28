@@ -1,14 +1,15 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
+import banner2 from '../../assets/Images/Banner/banner2.jpg'
+import banner3 from '../../assets/Images/Banner/banner-3.jpg'
+import banner1 from '../../assets/Images/Banner/pamper-me.jpg'
 
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import banner1 from '../../assets/Images/Banner/pamper-me.jpg'
-import banner2 from '../../assets/Images/Banner/banner2.jpg'
-import banner3 from '../../assets/Images/Banner/banner-3.jpg'
+
 
 import './Banner.css'
 // import required modules
