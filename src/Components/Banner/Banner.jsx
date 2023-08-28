@@ -6,6 +6,9 @@ import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import banner1 from '../../assets/Images/Banner/pamper-me.jpg'
+import banner2 from '../../assets/Images/Banner/banner2.jpg'
+import banner3 from '../../assets/Images/Banner/banner-3.jpg'
 
 import './Banner.css'
 // import required modules
@@ -29,13 +32,13 @@ export default function Banner() {
         className="swiper"
       >
         <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-1.jpg" alt='' />
+          <img src={banner1} alt='' />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-2.jpg" alt='' />
+          <img src={banner2} alt='' />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-3.jpg" alt='' />
+          <img src={banner3} alt='' />
         </SwiperSlide>
       </Swiper>
     </>
