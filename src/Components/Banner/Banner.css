@@ -1,9 +1,9 @@
 .swiper{
-    height: 78vh;
+    height: 76vh;
 }
 .swiper img{
     width: 100%;
-    height: 78vh;
+    height: 100%;
 }
 .swiper-button-next,.swiper-button-prev{
     color: #ffffff;
