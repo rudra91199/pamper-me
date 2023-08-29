@@ -8,7 +8,7 @@ const Navbar = () => {
       <Link>Services</Link>
       <Link>Blog</Link>
       <Link>About Us</Link>
-      <Link>Login</Link>
+      <Link to="/login">Login</Link>
       <Link className="bag">
         <svg
           xmlns="http://www.w3.org/2000/svg"
