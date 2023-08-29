@@ -3,7 +3,7 @@ import "./Navbar.css";
 
 const Navbar = () => {
   return (
-    <div className="nav-menu">
+    <div className={`nav-menu ${location.pathname=='/login'? "d-none":""}`}>
       <Link>Home</Link>
       <Link>Services</Link>
       <Link>Blog</Link>

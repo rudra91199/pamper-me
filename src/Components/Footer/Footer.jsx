@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className="footer">
+    <div className={`footer ${location.pathname=='/login'? "d-none":""}`}>
       <footer>
         <div className="footer-container">
           <div className="link-container">
