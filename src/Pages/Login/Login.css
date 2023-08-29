@@ -1,0 +1,36 @@
+.authentication-page {
+    display: flex;
+}
+
+.authentication-page>div {
+    width: 50%;
+    height: 100vh;
+}
+
+.authentication-page .swiper {
+    height: 100vh;
+}
+
+.form-container {
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.forgot-pass {
+    margin-top: 0;
+}
+
+.form input,
+.form button {
+    width: 25vw;
+    height: 30px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.form button {}
