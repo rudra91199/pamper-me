@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div className={`footer ${location.pathname=='/login'? "d-none":""}`}>
+      <div className="footer-background">
       <footer>
         <div className="footer-container">
           <div className="link-container">
@@ -16,46 +17,45 @@ const Footer = () => {
           </div>
           <div className="link-container">
             <span className="link-title">CATEGORIES</span>
-            <Link>Perfume</Link>
-            <Link>Deodorants</Link>
-            <Link>Mist</Link>
+            <Link>Make up</Link>
+            <Link>Facial</Link>
+            <Link>Hair treatment</Link>
+            <Link>Body massage</Link>
+            <Link>Waxing</Link>
+            <Link>Baby care</Link>
           </div>
           <div className="link-container">
-            <span className="link-title">BRANDS</span>
-            <Link>ARMAF</Link>
-            <Link>ARMAF ENCHANTED</Link>
-            <Link>BIOLUXE</Link>
-            <Link>HAVEX</Link>
-            <Link>PARIS</Link>
+            <span className="link-title">PACKAGES</span>
+            <Link>Pre Bridal Care</Link>
+            <Link>Bridal Complete Makeover</Link>
+            <Link>Luxe Beauty Complete Kit</Link>
+            <Link>Enchanted Canvas Makeup Set</Link>
+            <Link>Glamour Glow Essentials</Link>
           </div>
           <div className="link-container">
-            <span className="link-title">BROCHURE</span>
-            <Link>Armaf</Link>
-            <Link>Armaf Enchanted</Link>
-            <Link>Flavia</Link>
-            <Link>Estiara</Link>
+            <span className="link-title">ABOUT US</span>
+            <Link>Our Story</Link>
+            <Link>Meet the Team</Link>
+            <Link>Mission and Vision</Link>
+            <Link>Awards and Recognition</Link>
           </div>
           <div className="link-container">
-            <span className="link-title">STORE LOCATION</span>
+            <span className="link-title">CONTACT</span>
             <Link>
-              Multi Import <br />
-              3rd Floor, 316, Moriswala Building, <br />
-              Saboo Siddik Road, Musafir Khana, Mumbai. Maharashtra 400 001.
-            </Link>
-            <Link>
-              Contact No. : +91 90764 05205y
+              Contact No. : 01319717565
             </Link>
             <Link className=" ">
-              Email - contact@armafperfume.com
+              Email - pamperme@gmail.com
             </Link>
-            <Link>
+            <Link style={{marginTop:"20px"}}>
               Show some love on Social Media
             </Link>
           </div>
         </div>
       </footer>
       <div className="footer-end">
-        <p>Copyright © 2023 - All right reserved by ACME Industries Ltd</p>
+        <p>Copyright © 2023 - All right reserved by pamper me services Ltd</p>
+      </div>
       </div>
     </div>
   );
