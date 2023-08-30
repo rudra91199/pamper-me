@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import loginBanner1 from "../../assets/Images/LoginBanner/loginBanner2-01.png";
 import banner2 from "../../assets/Images/LoginBanner/login-banner-1.jpg";
 import banner3 from "../../assets/Images/Banner/pamper-me.jpg";
+import textLogo from "../../assets/Images/Logo/textLogo.jpg"
 
 // Import Swiper styles
 import "swiper/css";
@@ -26,22 +27,24 @@ const Login = () => {
     <div className="authentication-page">
       <div className="authentication-container">
         {/**  TEXT LOGO  */}
-        <Link to="/">
-          <p>Go to home</p>
-          <img src="" alt="" />
+        <Link to="/" className="logo-link">
+          <img src={textLogo} alt="" />
         </Link>
-        <div className="form-container">
-          <h2>Login</h2>
-          <form onSubmit={handleSubmit} className="form">
-            <input type="email" name="email" placeholder="email" />
-            <input type="password" name="password" placeholder="password" />
-            <button type="submit">Login</button>
-          </form>
-          <p className="forgot-pass">Forgot Password?</p>
-          <span>or</span> <br />
-          <button>Google Icon</button>
-          <button>Facebook Icon</button>
-          <button>Twitter Icon</button>
+        <div className="form-wrapper">
+
+          <div className="form-container">
+            <h2>WELCOME BACK!</h2>
+            <p>Login to get full access of our website</p>
+            <button>Sign in with Google</button>
+            <form onSubmit={handleSubmit} className="form">
+              <input type="email" name="email" placeholder="email" />
+              <input type="password" name="password" placeholder="password" />
+              <button type="submit">Login</button>
+            </form>
+            <p className="forgot-pass">Forgot Password?</p>
+            <span>or</span> <br />
+
+          </div>
         </div>
       </div>
 
