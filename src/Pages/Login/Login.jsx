@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import loginBanner1 from "../../assets/Images/LoginBanner/loginBanner2-01.png";
 import banner2 from "../../assets/Images/LoginBanner/login-banner-1.jpg";
-import banner3 from "../../assets/Images/LoginBanner/loginBanner3-01.jpg";
+import banner3 from "../../assets/Images/LoginBanner/loginBanner3-01";
 import textLogo from "../../assets/Images/Logo/textLogo.jpg"
 
 // Import Swiper styles
