@@ -7,8 +7,9 @@
         "taskDescription1":"Foundation: Begin your journey to beauty perfection with our expertly applied foundation. Our artists meticulously match the ideal shade to your skin tone, creating a seamless and smooth base that blurs imperfections while maintaining a lightweight and breathable feel. The foundation sets the stage for the rest of the process, ensuring a radiant and even complexion that lasts throughout the day.",
         "taskDescription2":"Elevate your features with strategic highlights that capture and reflect light in all the right places. Our skilled artists are adept at accentuating your best attributes, whether it's your cheekbones, brow bones, or the bridge of your nose. The artful application of highlights adds dimension and a touch of ethereal luminosity, creating a sculpted and captivating look that catches every gaze.",
         "taskDescription3":"Embrace the allure of a natural, lit-from-within glow that emanates vitality and youthfulness. Our artists utilize carefully chosen products to enhance your skin's radiance, fostering a dewy and healthy finish. The glow aspect of our service ensures that your skin appears revitalized and rejuvenated, leaving you with an enchanting and vibrant visage.",
-        "prcie": "4000",
-        "time-consumption":"60-90"
+        "price": "4000",
+        "time":"60-90",
+        "img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS22z6sbW6fZshC_LQmRjtjN9GsZUYCR5W3XQ&usqp=CAU"
     },
     {
         "title": "INSTANT DARK CIRCLE ERASER",
@@ -18,8 +19,9 @@
         "taskDescription1":"Rapid Revitalization: Watch as your under-eye area undergoes a remarkable transformation within minutes. Our expert practitioners skillfully apply specialized products that work to instantly brighten and rejuvenate your skin, making it appear smoother, firmer, and more radiant.",
         "taskDescription2":"Precision Techniques: Our professionals are trained in the art of targeted application. By strategically addressing the root causes of dark circles – including poor circulation, pigmentation, and skin thinness – they ensure an effective treatment that restores your skin's natural vibrancy.",
         "taskDescription3":"Tailored Solutions: We recognize that every individual is unique. That's why our Instant Dark Circle Eraser service is tailored to your specific needs and skin type. Whether you're battling chronic dark circles or seeking a quick fix before a special event, our experts will customize the treatment to ensure optimal results.",
-        "prcie": "4000",
-        "time-consumption":"10-15"
+        "price": "4000",
+        "time":"10-15",
+        "img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSdRqY_j5MUmRrtB3z-b1gUMSm6vaFk3sX-g&usqp=CAU"
     },
     {
         "title": "COLOUR MATCH FOUNDATION",
@@ -29,8 +31,9 @@
         "taskDescription1":"Precise Shade Matching: Our experts are trained in the art of discerning undertones, shades, and nuances that make your skin truly one-of-a-kind. Using advanced technology and their keen eye for detail, they pinpoint the ideal foundation match that melts into your skin, creating a virtually undetectable finish.",
         "taskDescription2":"Customized Formulas: We understand that each person's skin has its own characteristics and needs. Our Colour Match Foundation service offers a range of formulas that cater to different skin types – from oily to dry, combination to sensitive. This personalized approach ensures not only a perfect color match but also a foundation that works harmoniously with your skin's unique traits.",
         "taskDescription3":"Flawless Coverage: Experience the confidence of a flawless complexion that blurs imperfections and evens out skin tone without feeling heavy or cakey. Our foundation seamlessly blends into your skin, delivering buildable coverage that lets your skin breathe while still providing the coverage you desire.",
-        "prcie": "4000",
-        "time-consumption":"10-15"
+        "price": "4000",
+        "time":"10-15",
+        "img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZQwsy7qEUqixGubDL7b61fGkc0jmUm9o-4w&usqp=CAU"
     },
     {
         "title": "COLOUR MATCH FOUNDATION",
@@ -40,8 +43,9 @@
         "taskDescription1":"Precise Shade Matching: Our experts are trained in the art of discerning undertones, shades, and nuances that make your skin truly one-of-a-kind. Using advanced technology and their keen eye for detail, they pinpoint the ideal foundation match that melts into your skin, creating a virtually undetectable finish.",
         "taskDescription2":"Customized Formulas: We understand that each person's skin has its own characteristics and needs. Our Colour Match Foundation service offers a range of formulas that cater to different skin types – from oily to dry, combination to sensitive. This personalized approach ensures not only a perfect color match but also a foundation that works harmoniously with your skin's unique traits.",
         "taskDescription3":"Flawless Coverage: Experience the confidence of a flawless complexion that blurs imperfections and evens out skin tone without feeling heavy or cakey. Our foundation seamlessly blends into your skin, delivering buildable coverage that lets your skin breathe while still providing the coverage you desire.",
-        "prcie": "4000",
-        "time-consumption":"10-15"
+        "price": "4000",
+        "time":"10-15",
+        "img":"https://cdn.yesmadam.com/images/live/app/mainsubcategory/threading-subcategory-1-12-22.jpg"
     }
 
 ]
