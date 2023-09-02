@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import loginBanner1 from "../../assets/Images/LoginBanner/loginBanner2-01.png";
 import banner2 from "../../assets/Images/LoginBanner/login-banner-1.jpg";
 import banner3 from "../../assets/Images/LoginBanner/loginBanner3-01.jpg";
+import googleIcon from "../../assets/Images/icons/icons8-google-48.png"
 import textLogo from "../../assets/Images/Logo/textLogo.jpg"
 
 // Import Swiper styles
@@ -23,6 +24,11 @@ const Login = () => {
     const password = e.target.password.value;
   };
 
+  const googleLoginButton = document.getElementById("googleLoginButton");
+  if(googleLoginButton)
+  {
+    googleLoginButton
+  }
   return (
     <div className="authentication-page">
       <div className="authentication-container">
@@ -35,14 +41,26 @@ const Login = () => {
           <div className="form-container">
             <h2>WELCOME BACK!</h2>
             <p>Login to get full access of our website</p>
-            <button>Sign in with Google</button>
+
+            <button id="googleLoginButton">
+              <img src={googleIcon} alt="" />
+              <span>
+                Sign in with Google
+              </span>
+            </button>
+
+            <div className="or-container">
+              <span className="straight-line"></span>
+              <span>or</span> 
+              <span className="straight-line"></span>
+            </div>
+
             <form onSubmit={handleSubmit} className="form">
               <input type="email" name="email" placeholder="email" />
               <input type="password" name="password" placeholder="password" />
               <button type="submit">Login</button>
             </form>
             <p className="forgot-pass">Forgot Password?</p>
-            <span>or</span> <br />
 
           </div>
         </div>
