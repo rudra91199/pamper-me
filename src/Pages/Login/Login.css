@@ -54,27 +54,50 @@
     border: 2px solid rgb(205, 204, 204);
     transition: all 200ms ease-in-out;
     cursor: pointer;
+    height: 45px;
 }
 
 .form-container>button:hover{
-    background:#FDD7FF;
+    background:linear-gradient(to right, var(--pink),var(--purple));
     color: white;
+
 }
+
 
 .form-container button img{
     width: 28px;
+    opacity: 1;
+    transition: all 200ms ease-in-out;
 }
+
+.form-container>button:hover img{
+    opacity: 0;
+
+}
+.fa-google{
+    color:#ffcae5;
+    font-size: 24px;
+    transition: all 200ms ease-in-out;
+    translate: 153% 0; 
+    opacity: 0;
+}
+
+.form-container>button:hover .fa-google{
+    opacity: 1;
+}
+
 
 .or-container{
     display: flex;
     gap: 10px;
     align-items: center;
+    margin: 20px 0;
 }
 
 .straight-line{
     width: 100%;
     height: 2px;
-    background-color: darkgray;
+    background-color:#e3208581;
 }
 
 .form {

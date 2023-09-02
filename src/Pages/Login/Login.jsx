@@ -5,8 +5,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import loginBanner1 from "../../assets/Images/LoginBanner/loginBanner2-01.png";
 import banner2 from "../../assets/Images/LoginBanner/login-banner-1.jpg";
 import banner3 from "../../assets/Images/LoginBanner/loginBanner3-01.jpg";
-import googleIcon from "../../assets/Images/icons/icons8-google-48.png"
-import textLogo from "../../assets/Images/Logo/textLogo.jpg"
+import googleIcon from "../../assets/Images/icons/icons8-google-48.png";
+import textLogo from "../../assets/Images/Logo/textLogo.jpg";
 
 // Import Swiper styles
 import "swiper/css";
@@ -15,8 +15,10 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import { EffectFade, Pagination, Autoplay } from "swiper/modules";
+import { useState } from "react";
 
 const Login = () => {
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const name = e.target.name.value;
@@ -24,11 +26,8 @@ const Login = () => {
     const password = e.target.password.value;
   };
 
-  const googleLoginButton = document.getElementById("googleLoginButton");
-  if(googleLoginButton)
-  {
-    googleLoginButton
-  }
+
+
   return (
     <div className="authentication-page">
       <div className="authentication-container">
@@ -37,21 +36,21 @@ const Login = () => {
           <img src={textLogo} alt="" />
         </Link>
         <div className="form-wrapper">
-
           <div className="form-container">
             <h2>WELCOME BACK!</h2>
             <p>Login to get full access of our website</p>
 
-            <button id="googleLoginButton">
+            <button
+
+            >
+              <i className="fa-brands fa-google"></i>
               <img src={googleIcon} alt="" />
-              <span>
-                Sign in with Google
-              </span>
+              <span>Sign in with Google</span>
             </button>
 
             <div className="or-container">
               <span className="straight-line"></span>
-              <span>or</span> 
+              <span>or</span>
               <span className="straight-line"></span>
             </div>
 
@@ -61,7 +60,6 @@ const Login = () => {
               <button type="submit">Login</button>
             </form>
             <p className="forgot-pass">Forgot Password?</p>
-
           </div>
         </div>
       </div>
