@@ -40,6 +40,14 @@
     text-align: left;
 }
 
+.form-container h2 span{
+    color: var(--pink);
+}
+
+.form-container p{
+    color: rgb(133, 132, 132);
+}
+
 .form-container>button{
     display: flex;
     align-items: center;
@@ -51,7 +59,7 @@
     font-size: 14px;
     font-weight: 600;
     padding: 7px 0px;
-    border: 2px solid rgb(205, 204, 204);
+    border: 1px solid rgb(205, 204, 204);
     transition: all 200ms ease-in-out;
     cursor: pointer;
     height: 45px;
@@ -66,14 +74,9 @@
 
 .form-container button img{
     width: 28px;
-    opacity: 1;
-    transition: all 200ms ease-in-out;
 }
 
-.form-container>button:hover img{
-    opacity: 0;
 
-}
 .fa-google{
     color:#ffcae5;
     font-size: 24px;

@@ -37,7 +37,7 @@ const Login = () => {
         </Link>
         <div className="form-wrapper">
           <div className="form-container">
-            <h2>WELCOME BACK!</h2>
+            <h2>WELCOME <span>BACK!</span></h2>
             <p>Login to get full access of our website</p>
 
             <button
