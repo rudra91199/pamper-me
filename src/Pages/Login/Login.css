@@ -115,10 +115,31 @@
 .form input,
 .form button {
     width: 100%;
-    height: 30px;
-    margin: 0 auto;
-    margin-bottom: 15px;
-    border-radius: 5px;
+    padding:10px 0px;
+    margin-top:20px;
+    border:none;
+    outline:none;
+}
+
+.form label{
+    margin-bottom:15px;
+    position:relative;
+    border-bottom:1px solid #ddd;
+}
+
+.form label span{
+    position:absolute;
+    top:0;
+    left:0;
+    transform:translateY(30px);
+    font-size:0.825em;
+    transition-duration:300ms;
 }
 
 .form button {}
+
+.form label:hover .form label span
+{
+    color:purple;
+    transform:translateY(0px);
+}
