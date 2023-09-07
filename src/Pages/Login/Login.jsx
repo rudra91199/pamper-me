@@ -54,14 +54,14 @@ const Login = () => {
 
             <form onSubmit={handleSubmit} className="form">
 
-              <div class="floating-label">
+              <div className="floating-label">
                 <input type="email" id="email" required/>
-                <label for="email">Email</label>
+                <label htmlFor="email">Email</label>
               </div>
 
-              <div class="floating-label">
+              <div className="floating-label">
                 <input type="password" id="pass" required/>
-                <label for="pass">Password</label>
+                <label htmlFor="pass">Password</label>
               </div>
 
               <button type="submit">Login</button>
