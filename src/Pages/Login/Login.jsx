@@ -40,9 +40,7 @@ const Login = () => {
             <h2>WELCOME <span>BACK!</span></h2>
             <p>Login to get full access of our website</p>
 
-            <button
-
-            >
+            <button>
               <i className="fa-brands fa-google"></i>
               <img src={googleIcon} alt="" />
               <span>Sign in with Google</span>
@@ -55,14 +53,17 @@ const Login = () => {
             </div>
 
             <form onSubmit={handleSubmit} className="form">
-              <label for="email">
-                <input type="email" id="email" />
-                  <span>Email</span>
-              </label>
-              <label for="pass">
-                <input type="password" id="pass" placeholder="Password"/>
-                  <span>Password</span>
-              </label>
+
+              <div class="floating-label">
+                <input type="email" id="email" required/>
+                <label for="email">Email</label>
+              </div>
+
+              <div class="floating-label">
+                <input type="password" id="pass" required/>
+                <label for="pass">Password</label>
+              </div>
+
               <button type="submit">Login</button>
             </form>
             <p className="forgot-pass">Forgot Password?</p>
