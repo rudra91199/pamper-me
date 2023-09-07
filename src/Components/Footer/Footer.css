@@ -1,14 +1,14 @@
 .footer{
     letter-spacing: 0.5px;
     line-height: 21px;
-    background-image: url('../../assets//Images/footer1.avif');
+    background-image: url('');
     background-size: cover;
     background-repeat: no-repeat;
     padding-bottom: 100px;
     height: 400px;
 }
 .footer-background{
-    background-color: #e320857c;
+    background-color: #962986;
     display: flex;
     flex-direction: column;
     height: 500px;

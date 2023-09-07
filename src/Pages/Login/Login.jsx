@@ -37,7 +37,7 @@ const Login = () => {
         </Link>
         <div className="form-wrapper">
           <div className="form-container">
-            <h2>WELCOME BACK!</h2>
+            <h2>WELCOME <span>BACK!</span></h2>
             <p>Login to get full access of our website</p>
 
             <button
@@ -55,8 +55,14 @@ const Login = () => {
             </div>
 
             <form onSubmit={handleSubmit} className="form">
-              <input type="email" name="email" placeholder="email" />
-              <input type="password" name="password" placeholder="password" />
+              <label for="email">
+                <input type="email" id="email" />
+                  <span>Email</span>
+              </label>
+              <label for="pass">
+                <input type="password" id="pass" placeholder="Password"/>
+                  <span>Password</span>
+              </label>
               <button type="submit">Login</button>
             </form>
             <p className="forgot-pass">Forgot Password?</p>

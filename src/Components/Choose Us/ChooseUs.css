@@ -1,15 +1,16 @@
 .choose-us-section{
-    margin-bottom: 30px;
+    margin-bottom: 80px;
 }
 
 .choose-us-section h2{
     text-align: center;
     font-size: 40px;
+    margin-bottom: 60px;
 }
 
 .choose-us-container{
     display: flex;
-    gap: 30px;
+    gap: 40px;
     justify-content: center;
     width: 100%;
 }
@@ -21,6 +22,7 @@
     flex-direction: column;
     border: 1px solid black;
     padding: 10px;
+    border-radius: 10px;
 }
 
 .choose-us-card img{
