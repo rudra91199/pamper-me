@@ -18,6 +18,7 @@ a {
 
 button {
   border: none;
+  cursor: url('./assets/Images/Cursor/brush3-01.png'), auto;
 }
 
 body {

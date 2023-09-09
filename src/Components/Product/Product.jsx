@@ -14,6 +14,9 @@ const Product = ({ service }) => {
         style={{
           display: "flex",
           flexDirection: "row",
+          justifyContent:"space-between",
+          alignItems:"center",
+          width:"88%",
           gap: "20px",
           fontFamily: "Arial, Helvetica, sans-serif",
           position: "absolute",
@@ -21,6 +24,7 @@ const Product = ({ service }) => {
         }}
       >
         <p className="product-price">TK. {service.price}</p>
+        <button className='cart-btn'>Add to cart</button>
       </div>
     </div>
   );
