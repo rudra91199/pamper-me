@@ -13,12 +13,12 @@
     text-align: center;
     display: block;
     text-decoration: none;
-    color: black;
+    color: #e32085;
     margin-top: 60px;
     font-size: 18px;
     font-weight: bold;
     transition: all ease-in-out 200ms;
 }
 .products a:hover{
-    color: #e32085;
+    color: #962986;
 }

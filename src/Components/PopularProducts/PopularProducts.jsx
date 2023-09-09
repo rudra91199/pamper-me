@@ -28,7 +28,7 @@ const PopularProducts = () => {
           </Product>
         ))}
       </div>
-      <Link style={{color:"#e32085"}}>View All Products</Link>
+      <Link>View All Products</Link>
     </div>
   );
 };

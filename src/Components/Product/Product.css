@@ -23,3 +23,15 @@
     color: #962986;
     font-weight: bold;
 }
+.cart-btn{
+    background: #962986;
+    color: white;
+    font-weight: bold;
+    height: 30px;
+    padding: 0 10px;
+    transition: all ease-in-out 200ms;
+    border-radius: 8px;
+}
+.cart-btn:hover{
+    background: #e32085;
+}
