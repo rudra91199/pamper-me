@@ -6,9 +6,11 @@ const Navbar = () => {
     <div className={`nav-menu ${location.pathname=='/login'? "d-none":""}`}>
       <Link>Home</Link>
       <Link>Services</Link>
+      <Link>Shop</Link>
       <Link>Blog</Link>
       <Link>About Us</Link>
       <Link to="/login">Login</Link>
+      <Link>Bookings</Link>
       <Link className="bag">
         <svg
           xmlns="http://www.w3.org/2000/svg"

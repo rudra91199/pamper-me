@@ -12,7 +12,9 @@ a {
   font-weight: 500;
   color: #646cff;
   text-decoration: none;
+  cursor: url('./assets/Images/Cursor/brush3-01.png'), auto;
 }
+
 
 button {
   border: none;
