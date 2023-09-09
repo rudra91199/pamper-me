@@ -142,9 +142,15 @@
     font-size: 16px;
     /* border: 1px solid rgba(227, 32, 133, 0.274); */
     margin-bottom: 10px;
-    background-color:rgba(227, 32, 133, 0.042);
+    background-color:rgba(227, 32, 133, 0.05);
     border-radius: 10px;
 
+}
+
+.floating-label input:focus
+,.floating-label input:not(:placeholder-shown){
+    outline: 3px solid rgba(227, 32, 133, 0.5);
+    background-color: white;
 }
 
 /* Style for the label */
@@ -153,19 +159,29 @@
     left: 20px;
     top: 15px;
     pointer-events: none;
-    font-size: 16px;
-    color: #242424;
-    transition: top 0.2s ease, font-size 0.2s ease;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(104, 42, 120, 0.8);
+    transition:all 0.2s ease-in-out;
 }
 
-/* Floating label effect on focus */
-.floating-label input:focus+label,
-.floating-label input:valid+label {
-    top: -10px;
+.floating-label input:focus +label,
+.floating-label input:valid +label,
+.floating-label input:not(:placeholder-shown) + label {
+    top: -9px;
     font-size: 12px;
-    color: #575757;
+    font-weight: 600;
+    color: rgba(104, 42, 120, 0.9);
+    width: fit-content;
+    background-color: white;
+    padding: 0 4px;
+
     /* Change label color when active/focused */
 }
+/* 
+.floating-label input:not(:placeholder-shown) + label{
+    top: -9px;
+} */
 
 
 
