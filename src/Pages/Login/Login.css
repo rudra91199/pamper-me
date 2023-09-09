@@ -10,12 +10,12 @@
 .authentication-container {
     max-width: 40vw;
     margin: 0 auto;
+    text-align: center;
 }
 
 
 .logo-link img {
-    width: 14vw;
-    translate: -20% 0;
+    width: 6vw;
 }
 
 
@@ -24,22 +24,26 @@
 }
 
 .form-wrapper {
-    height: 70vh;
+    height: 90vh;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
     width: 30vw;
+    margin: 0  auto;
 }
 
 .form-container {
     text-align: center;
     width: 100%;
+
 }
 
 .form-container h2,
 .form-container p {
     text-align: left;
+    text-align: center !important;
+
 }
 
 .form-container h2 span {
@@ -130,24 +134,27 @@
 
 /* Style for the input field */
 .floating-label input {
-    width: 100%;
-    padding: 10px 0px;
+    width: 92%;
+    padding: 15px 20px;
     border: 1px solid #ccc;
     border: none;
     outline: none;
     font-size: 16px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.171);
+    /* border: 1px solid rgba(227, 32, 133, 0.274); */
     margin-bottom: 10px;
+    background-color:rgba(227, 32, 133, 0.042);
+    border-radius: 10px;
+
 }
 
 /* Style for the label */
 .floating-label label {
     position: absolute;
-    left: 10px;
-    top: 10px;
+    left: 20px;
+    top: 15px;
     pointer-events: none;
     font-size: 16px;
-    color: #555;
+    color: #242424;
     transition: top 0.2s ease, font-size 0.2s ease;
 }
 

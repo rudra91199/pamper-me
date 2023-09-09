@@ -7,6 +7,9 @@ import banner2 from "../../assets/Images/LoginBanner/login-banner-1.jpg";
 import banner3 from "../../assets/Images/LoginBanner/loginBanner3-01.jpg";
 import googleIcon from "../../assets/Images/icons/icons8-google-48.png";
 import textLogo from "../../assets/Images/Logo/textLogo.jpg";
+import logo from "../../assets/Images/Logo/logo.jpg";
+import faceLogo from "../../assets/Images/Logo/FaceLogo-01.png"
+
 
 // Import Swiper styles
 import "swiper/css";
@@ -32,10 +35,10 @@ const Login = () => {
     <div className="authentication-page">
       <div className="authentication-container">
         {/**  TEXT LOGO  */}
-        <Link to="/" className="logo-link">
-          <img src={textLogo} alt="" />
-        </Link>
         <div className="form-wrapper">
+        <Link to="/" className="logo-link">
+          <img src={faceLogo} alt="" />
+        </Link>
           <div className="form-container">
             <h2>WELCOME <span>BACK!</span></h2>
             <p>Login to get full access of our website</p>
