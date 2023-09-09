@@ -1,0 +1,24 @@
+.products{
+    padding: 60px 12%;
+    background: #e3208528;
+}
+.home-products-container{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    justify-content: center;
+    margin-top: 40px;
+}
+.products a{
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    color: black;
+    margin-top: 60px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all ease-in-out 200ms;
+}
+.products a:hover{
+    color: #e32085;
+}
