@@ -1,5 +1,5 @@
 import "./Login.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import loginBanner1 from "../../assets/Images/LoginBanner/loginBanner2-01.png";
@@ -21,6 +21,7 @@ import { EffectFade, Pagination, Autoplay } from "swiper/modules";
 
 
 const Login = () => {
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -33,12 +34,14 @@ const Login = () => {
 
   return (
     <div className="authentication-page">
+         <svg onClick={()=>navigate("/")} xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 320 512"><path fill="#e32085" d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+
       <div className="authentication-container">
         {/**  TEXT LOGO  */}
         <div className="form-wrapper">
-        <Link to="/" className="logo-link">
-          <img src={faceLogo} alt="" />
-        </Link>
+          <Link to="/" className="logo-link">
+            <img src={faceLogo} alt="" />
+          </Link>
           <div className="form-container">
             <h2>WELCOME <span>BACK!</span></h2>
             <p>Login to get full access of our website</p>
@@ -58,18 +61,24 @@ const Login = () => {
             <form onSubmit={handleSubmit} className="form">
 
               <div className="floating-label">
-                <input type="email" id="email" required placeholder=""/>
+                <input type="email" id="email" required placeholder="" />
                 <label htmlFor="email">Email</label>
               </div>
 
               <div className="floating-label">
-                <input type="password" id="pass" required placeholder=""/>
+                <input type="password" id="pass" required placeholder="" />
                 <label htmlFor="pass">Password</label>
+              </div>
+              <div className="remember-me-section">
+                <label htmlFor="remember" className="remember-me-label">
+                  <input type="checkbox" name="" id="remember" />
+                  Remember Me
+                </label>
+                <p className="forgot-pass">Forgot Password?</p>
               </div>
 
               <button type="submit">Login</button>
             </form>
-            <p className="forgot-pass">Forgot Password?</p>
           </div>
         </div>
       </div>
