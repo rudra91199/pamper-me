@@ -1,15 +1,23 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Navbar.css";
-
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../../firebase.init";
+import { signOut } from "firebase/auth";
+import { useState } from "react";
 const Navbar = () => {
+  const [user] = useAuthState(auth);
+  const [profileHover,setProfileHover] = useState(false)
+  const navigate = useNavigate();
+  console.log(user);
   return (
-    <div className={`nav-menu ${location.pathname=='/login'? "d-none":""}`}>
+    <div
+      className={`nav-menu ${location.pathname == "/login" ? "d-none" : ""}`}
+    >
       <Link>Home</Link>
       <Link>Services</Link>
       <Link>Shop</Link>
       <Link>Blog</Link>
       <Link>About Us</Link>
-      <Link to="/login">Login</Link>
       <Link>Bookings</Link>
       <Link className="bag">
         <svg
@@ -44,6 +52,47 @@ const Navbar = () => {
           />
         </svg>
       </Link>
+      {user ? (
+        <div onMouseEnter={()=>setProfileHover(true)} onMouseLeave={()=>setProfileHover(false)} className="relative">
+          <button>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="1em"
+              viewBox="0 0 448 512"
+              className="w-6 h-6"
+            >
+              <path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z" />
+            </svg>
+          </button>
+          <div className={`profile ${profileHover?"show":"hide"}`}>
+            <div className="userImage">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmEwalaRUsDXz_hi03tVaA56X2bP3ocnStKw&usqp=CAU"
+                alt=""
+              />
+              <p className="userName">Nayem Sayed</p>
+            </div>
+            <hr />
+            <div className="dashboardLink">
+              <Link>Purchase History</Link>
+              <Link>Update Profile</Link>
+              <Link>Bookings</Link>
+              <Link className="logout" to="/login" onClick={()=>signOut(auth)}>Log Out</Link>
+            </div>
+          </div>
+        </div>
+      ) : (
+        <button onClick={() => navigate("/login")}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="1em"
+            viewBox="0 0 448 512"
+            className="w-6 h-6"
+          >
+            <path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z" />
+          </svg>
+        </button>
+      )}
     </div>
   );
 };
