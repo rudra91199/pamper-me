@@ -8,7 +8,6 @@ const Navbar = () => {
   const [user] = useAuthState(auth);
   const [profileHover,setProfileHover] = useState(false)
   const navigate = useNavigate();
-  console.log(user);
   return (
     <div
       className={`nav-menu ${location.pathname == "/login" ? "d-none" : ""}`}
@@ -67,10 +66,10 @@ const Navbar = () => {
           <div className={`profile ${profileHover?"show":"hide"}`}>
             <div className="userImage">
               <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmEwalaRUsDXz_hi03tVaA56X2bP3ocnStKw&usqp=CAU"
+                src={user?.photoURL}
                 alt=""
               />
-              <p className="userName">Nayem Sayed</p>
+              <p className="userName">{user.displayName || "User Name"}</p>
             </div>
             <hr />
             <div className="dashboardLink">
