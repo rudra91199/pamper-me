@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import './PopularProducts.css'
+import "./PopularProducts.css";
 import { Link } from "react-router-dom";
 import Product from "../Product/Product";
 
@@ -16,10 +16,10 @@ const PopularProducts = () => {
         style={{
           textAlign: "center",
           fontSize: "40px",
-          color:"#e32085"
+          color: "#e32085",
         }}
       >
-        Popular Products
+        Popular <span>Products</span>
       </h2>
       <div className="home-products-container">
         {services.slice(0, 3).map((service) => (
@@ -28,7 +28,9 @@ const PopularProducts = () => {
           </Product>
         ))}
       </div>
-      <Link>View All Products</Link>
+      <button className="all-product-btn">
+        <Link>View All Products</Link>
+      </button>
     </div>
   );
 };
