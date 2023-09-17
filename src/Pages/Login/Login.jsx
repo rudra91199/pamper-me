@@ -1,13 +1,12 @@
 import "./Login.css";
 import { Link, useNavigate } from "react-router-dom";
+import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import loginBanner1 from "../../assets/Images/LoginBanner/loginBanner2-01.png";
 import banner2 from "../../assets/Images/LoginBanner/login-banner-1.jpg";
 import banner3 from "../../assets/Images/LoginBanner/loginBanner3-01.jpg";
 import googleIcon from "../../assets/Images/icons/icons8-google-48.png";
-import textLogo from "../../assets/Images/Logo/textLogo.jpg";
-import logo from "../../assets/Images/Logo/logo.jpg";
 import faceLogo from "../../assets/Images/Logo/FaceLogo-01.png"
 
 
@@ -25,7 +24,8 @@ const Login = () => {
   const [login, setLogin] = useState(true);
   console.log(login)
   const navigate = useNavigate();
-
+  
+  const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
 
 
   const handleSubmit = (e) => {
