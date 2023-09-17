@@ -66,7 +66,7 @@ const Navbar = () => {
           <div className={`profile ${profileHover?"show":"hide"}`}>
             <div className="userImage">
               <img
-                src={user?.photoURL}
+                src={user?.photoURL || "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmEwalaRUsDXz_hi03tVaA56X2bP3ocnStKw&usqp=CAU"}
                 alt=""
               />
               <p className="userName">{user.displayName || "User Name"}</p>
