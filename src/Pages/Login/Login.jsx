@@ -1,6 +1,7 @@
 import "./Login.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useAuthState } from 'react-firebase-hooks/auth';
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import loginBanner1 from "../../assets/Images/LoginBanner/loginBanner2-01.png";
@@ -18,21 +19,26 @@ import "swiper/css/pagination";
 
 import { EffectFade, Pagination, Autoplay } from "swiper/modules";
 import { useState } from "react";
+import auth from "../../../firebase.init";
 
 
 const Login = () => {
   const [login, setLogin] = useState(true);
+  const [user, loading, error] = useAuthState(auth);
+
   console.log(login)
   const navigate = useNavigate();
   
-  const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+  const [signInWithGoogle] = useSignInWithGoogle(auth);
 
+  console.log(user);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const name = e.target.name.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
+
   };
 
 
@@ -61,7 +67,7 @@ const Login = () => {
                 </div>
             }
 
-            <button>
+            <button onClick={()=>signInWithGoogle()}>
               <i className="fa-brands fa-google"></i>
               <img src={googleIcon} alt="" />
               <span>Sign in with Google</span>
