@@ -2,7 +2,7 @@
     display: flex;
 }
 
-.authentication-page svg{
+.authentication-page svg {
     position: absolute;
     font-size: 16px;
     top: 15px;
@@ -22,6 +22,15 @@
     text-align: center;
 }
 
+.authentication-container>p {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(119, 119, 119);
+}
+
+.authentication-container>p>span {
+    color: var(--pink);
+}
 
 .logo-link img {
     width: 6vw;
@@ -39,7 +48,7 @@
     flex-direction: column;
     justify-content: center;
     width: 30vw;
-    margin: 0  auto;
+    margin: 0 auto;
 }
 
 .form-container {
@@ -52,6 +61,7 @@
 .form-container p {
     text-align: left;
     text-align: center !important;
+    margin: 0 0 15px 0;
 }
 
 .form-container h2 span {
@@ -107,13 +117,14 @@
     display: flex;
     gap: 10px;
     align-items: center;
-    margin: 20px 0;
+    margin: 25px 0;
+
 }
 
 .straight-line {
     width: 100%;
     height: 2px;
-    background-color: #e320859e;
+    background-color: #e320856b;
 }
 
 .form {
@@ -124,6 +135,7 @@
 .forgot-pass {
     margin-top: 0;
 }
+
 
 
 .form button {
@@ -150,13 +162,18 @@
     font-size: 16px;
     /* border: 1px solid rgba(227, 32, 133, 0.274); */
     margin-bottom: 10px;
-    background-color:rgba(227, 32, 133, 0.08);
+    background-color: rgba(227, 32, 133, 0.08);
     border-radius: 10px;
 
 }
 
-.floating-label input:focus
-,.floating-label input:not(:placeholder-shown){
+.floating-label input[type=number]::-webkit-outer-spin-button,
+.floating-label input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.floating-label input:focus,
+.floating-label input:not(:placeholder-shown) {
     outline: 2px solid rgba(227, 32, 133, 0.5);
     background-color: white;
     box-shadow: 0px 0px 10px rgba(255, 92, 176, 0.7);
@@ -171,12 +188,13 @@
     font-size: 14px;
     font-weight: 600;
     color: rgba(104, 42, 120, 0.8);
-    transition:all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+
 }
 
-.floating-label input:focus +label,
-.floating-label input:valid +label,
-.floating-label input:not(:placeholder-shown) + label {
+.floating-label input:focus+label,
+.floating-label input:valid+label,
+.floating-label input:not(:placeholder-shown)+label {
     top: -9px;
     font-size: 12px;
     font-weight: 600;
@@ -186,29 +204,41 @@
     padding: 0 4px;
 }
 
-.remember-me-section{
+.remember-me-section {
     display: flex;
     justify-content: space-between;
-    margin: 0px 0 5px 0;
+    margin: 0px 0 10px 0;
+    align-items: center;
 }
 
-.remember-me-label{
+.remember-me-section>div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.remember-me-label {
     color: var(--purple) !important;
     font-size: 14px;
     font-weight: 500;
 }
 
-.forgot-pass{
+.remember-me-section input {
+    accent-color: var(--pink);
+    mix-blend-mode: multiply;
+}
+
+.forgot-pass {
     color: var(--purple) !important;
     font-size: 14px;
     font-weight: 500;
 }
 
-.remember-me-label input{
+.remember-me-label input {
     background-color: aqua;
 }
 
-.remember-me-label input:checked{
+.remember-me-label input:checked {
     background-color: black;
     border: 2px solid pink !important;
 
