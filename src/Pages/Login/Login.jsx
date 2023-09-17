@@ -1,7 +1,8 @@
 import "./Login.css";
 import { Link, useNavigate } from "react-router-dom";
-import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useSignInWithGoogle, useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { useAuthState } from 'react-firebase-hooks/auth';
+
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import loginBanner1 from "../../assets/Images/LoginBanner/loginBanner2-01.png";
@@ -18,28 +19,45 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import { EffectFade, Pagination, Autoplay } from "swiper/modules";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import auth from "../../../firebase.init";
 
 
 const Login = () => {
   const [login, setLogin] = useState(true);
   const [user, loading, error] = useAuthState(auth);
+  const [updateProfile, updating] = useUpdateProfile(auth);
+  const [
+    createUserWithEmailAndPassword
+  ] = useCreateUserWithEmailAndPassword(auth);
 
   console.log(login)
   const navigate = useNavigate();
-  
+
   const [signInWithGoogle] = useSignInWithGoogle(auth);
 
-  console.log(user);
 
-  const handleSubmit = (e) => {
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const name = e.target.name.value;
+    const displayName = e.target.name.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
+    const phoneNumber ="+"+ e.target.number.value;
+
+    if (!login) {
+      await createUserWithEmailAndPassword(email, password)
+      await updateProfile({ displayName})
+
+    }
+
 
   };
+
+  useEffect(() => {
+    if (user)
+      navigate("/");
+  }, [user])
 
 
 
@@ -67,7 +85,7 @@ const Login = () => {
                 </div>
             }
 
-            <button onClick={()=>signInWithGoogle()}>
+            <button onClick={() => signInWithGoogle()}>
               <i className="fa-brands fa-google"></i>
               <img src={googleIcon} alt="" />
               <span>Sign in with Google</span>
@@ -84,7 +102,7 @@ const Login = () => {
               {
                 login ||
                 <div className="floating-label">
-                  <input type="text" id="name" required placeholder="" />
+                  <input type="text" id="name" name="name" required placeholder="" />
                   <label htmlFor="name">Name</label>
                 </div>
 
@@ -92,18 +110,18 @@ const Login = () => {
               {
                 login ||
                 <div className="floating-label">
-                  <input type="number" id="phone" required placeholder="" />
+                  <input type="number" id="phone" name="number" required placeholder="" defaultValue="880"/>
                   <label htmlFor="phone">Phone</label>
                 </div>
 
               }
               <div className="floating-label">
-                <input type="email" id="email" required placeholder="" />
+                <input type="email" id="email" name="email" required placeholder="" />
                 <label htmlFor="email">Email</label>
               </div>
 
               <div className="floating-label">
-                <input type="password" id="pass" required placeholder="" />
+                <input type="password" id="pass" name="password" required placeholder="" />
                 <label htmlFor="pass">Password</label>
               </div>
 
@@ -119,7 +137,7 @@ const Login = () => {
                   <p className="forgot-pass">Forgot Password?</p>
                 </div>
               }
-              <button type="submit">Login</button>
+              <button type="submit">{login ? "Login" : "Sign Up"}</button>
             </form>
           </div>
         </div>
