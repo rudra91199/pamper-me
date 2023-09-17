@@ -77,7 +77,15 @@
   display: none;
 }
 .logout{
-  background: white;
+  background: #e32085;
   width: 100%;
-  color: #000 !important;
+  display: flex;
+  justify-content: center;
+  border-radius: 6px;
+  font-weight: bolder;
+  margin-top: 10px;
+
+}
+.logout:hover{
+  background: white;
 }
