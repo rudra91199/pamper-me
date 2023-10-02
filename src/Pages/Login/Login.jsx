@@ -1,6 +1,6 @@
 import "./Login.css";
 import { Link, useNavigate } from "react-router-dom";
-import { useSignInWithGoogle, useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
+import { useSignInWithGoogle, useCreateUserWithEmailAndPassword, useSignInWithEmailAndPassword, useUpdateProfile, useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
 import { useAuthState } from 'react-firebase-hooks/auth';
 
 
@@ -21,20 +21,25 @@ import "swiper/css/pagination";
 import { EffectFade, Pagination, Autoplay } from "swiper/modules";
 import { useEffect, useState } from "react";
 import auth from "../../../firebase.init";
+import Swal from "sweetalert2";
 
 
 const Login = () => {
   const [login, setLogin] = useState(true);
   const [user, loading, error] = useAuthState(auth);
   const [updateProfile, updating] = useUpdateProfile(auth);
-  const [
-    createUserWithEmailAndPassword
-  ] = useCreateUserWithEmailAndPassword(auth);
+  const [createUserWithEmailAndPassword] = useCreateUserWithEmailAndPassword(auth);
+  const [signInWithEmailAndPassword] = useSignInWithEmailAndPassword(auth);
+  const [sendPasswordResetEmail, sending, ] = useSendPasswordResetEmail(auth);
 
-  console.log(login)
+  
   const navigate = useNavigate();
 
   const [signInWithGoogle] = useSignInWithGoogle(auth);
+
+  const actionCodeSettings = {
+    url: 'https://www.example.com/login',
+  };
 
 
 
@@ -43,12 +48,14 @@ const Login = () => {
     const displayName = e.target.name.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
-    const phoneNumber ="+"+ e.target.number.value;
-
+    
     if (!login) {
+      const phoneNumber ="+"+ e.target.number.value;
       await createUserWithEmailAndPassword(email, password)
       await updateProfile({ displayName})
-
+    }
+    else{
+      signInWithEmailAndPassword(email, password)
     }
 
 
@@ -133,7 +140,30 @@ const Login = () => {
                     </label>
 
                   </div>
-                  <p className="forgot-pass">Forgot Password?</p>
+                  <p className="forgot-pass" onClick={async ()=>{
+                    const { value: email } = await Swal.fire({
+                      title: 'Reset Password',
+                      input: 'email',
+                      inputLabel: 'Your email address',
+                      inputPlaceholder: 'Enter your email address',
+                      confirmButtonText: "SEND",
+                      confirmButtonColor: '#e32085'
+                    })
+                    
+                    if (email) {
+                      console.log(email);
+                      const success = await sendPasswordResetEmail(
+                        email,
+                        actionCodeSettings
+                      );
+                      if(success){
+                        Swal.fire(`Password reset email sent to ${email}`)
+                      }
+                      else{
+                        Swal.fire(`400 Error`)
+                      }
+                    }
+                  }}>Forgot Password?</p>
                 </div>
               }
               <button type="submit">{login ? "Login" : "Sign Up"}</button>
