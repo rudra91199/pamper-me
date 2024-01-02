@@ -1,19 +1,19 @@
-.productCard {
-  display: flex;
-  flex-direction: column;
-  width: 25vw;
-  height: fit-content;
-  border: 1px solid black;
-  border-radius: 10px;
-  padding: 30px 25px 15px 25px;
-  background: white;
-  border: 1px solid #e32085;
-  font-family: "Raleway", sans-serif;
+.productCard{
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 450px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+    background: white;
+    border: 1px solid #e32085;
 }
-.productCard img {
-  width: 25vh;
-  height: 27vh;
-  margin: 0 auto;
+.productCard img{
+    width: 200px;
+    height: 250px;
+    margin: 20px auto;
 }
 .product-title {
   font-weight: bold;
