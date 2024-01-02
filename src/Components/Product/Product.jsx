@@ -10,20 +10,10 @@ const Product = ({ service }) => {
       />
       <p className="product-category">{service.category.toUpperCase()}</p>
       <p className="product-desc">{service.shortDescription}</p>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent:"space-between",
-          alignItems:"center",
-          gap: "20px",
-          fontFamily: "Arial, Helvetica, sans-serif",
-          marginTop: "10px"
-        }}
-      >
+      <p className='price-button'>
         <p className="product-price">TK. {service.price}</p>
         <button className='cart-btn'>Add to cart</button>
-      </div>
+      </p>
     </div>
   );
 };

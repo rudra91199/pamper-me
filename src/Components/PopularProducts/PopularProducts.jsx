@@ -18,7 +18,6 @@ const PopularProducts = () => {
       <div className="home-products-container">
         {services.slice(0, 3).map((service) => (
           <Product key={service?.name} service={service}>
-            {" "}
           </Product>
         ))}
       </div>
