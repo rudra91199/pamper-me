@@ -21,7 +21,7 @@ const HomeService = ({ service }) => {
           bottom: "10px",
         }}
       >
-        <p className="service-time">{service.time} min</p>
+        <p className="service-time">{service.duration}</p>
         <p className="service-price">TK. {service.price}</p>
       </div>
     </div>
