@@ -61,6 +61,8 @@ h2{
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  margin-bottom: 20px;
+  transition: all ease-in-out 200ms;
 }
 
 .all-product-btn:focus {
