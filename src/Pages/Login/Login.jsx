@@ -29,19 +29,14 @@ const Login = () => {
   const [user, loading, error] = useAuthState(auth);
   const [updateProfile, updating] = useUpdateProfile(auth);
   const [createUserWithEmailAndPassword] = useCreateUserWithEmailAndPassword(auth);
-  const [signInWithEmailAndPassword] = useSignInWithEmailAndPassword(auth);
+  const [signInWithEmailAndPassword,,,loginError] = useSignInWithEmailAndPassword(auth);
   const [sendPasswordResetEmail, sending, ] = useSendPasswordResetEmail(auth);
 
   
   const navigate = useNavigate();
+  console.log(loginError);
 
   const [signInWithGoogle] = useSignInWithGoogle(auth);
-
-  const actionCodeSettings = {
-    url: 'https://www.example.com/login',
-  };
-
-
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -152,10 +147,7 @@ const Login = () => {
                     
                     if (email) {
                       console.log(email);
-                      const success = await sendPasswordResetEmail(
-                        email,
-                        actionCodeSettings
-                      );
+                      const success = await sendPasswordResetEmail(email);
                       if(success){
                         Swal.fire(`Password reset email sent to ${email}`)
                       }
