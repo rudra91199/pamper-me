@@ -1,6 +1,18 @@
 .products{
-    padding: 60px 12%;
-    background: #e3208528;
+    padding: 20px 12%;
+    /* background: #e3208528; */
+    background-image: url('../../assets/Images/Banner/ty.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h2{
+    background: #ffffffa4;
+    color: #e32085;
+    text-align: center;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 10px;
 }
 .home-products-container{
     display: flex;

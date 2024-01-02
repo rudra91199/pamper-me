@@ -12,13 +12,7 @@ const PopularProducts = () => {
   }, []);
   return (
     <div className="products">
-      <h2
-        style={{
-          textAlign: "center",
-          fontSize: "40px",
-          color:"#e32085"
-        }}
-      >
+      <h2>
         Popular Products
       </h2>
       <div className="home-products-container">
