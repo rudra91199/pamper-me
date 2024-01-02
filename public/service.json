@@ -7,7 +7,7 @@
     "steps": "<ol><li><strong>Cleansing:</strong> Thoroughly clean the skin to remove impurities.</li><li><strong>Exfoliation:</strong> Gently exfoliate to prepare the skin for gold infusion.</li><li><strong>Gold Mask Application:</strong> Apply a luxurious gold-infused mask for antioxidant benefits.</li><li><strong>Massage:</strong> Enjoy a relaxing facial massage to enhance blood circulation.</li><li><strong>Moisturization:</strong> Hydrate the skin with a high-quality moisturizer containing gold elements.</li><li><strong>Final Touch:</strong> Conclude the treatment with a protective sunscreen.</li></ol>",
     "price": 150,
     "duration": "60 minutes",
-    "img": "url/to/luxury-gold-facial.jpg"
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSa6f5MQikUADkYwkI2C_ZbAQ4eiGMfBhsTkSNRn0h3uFri5bbcBHGV-f-4-sdPeHjUMrE&usqp=CAU"
   },
   {
     "title": "Thai Back Massage",
@@ -17,7 +17,7 @@
     "steps": "<ol><li><strong>Welcome:</strong> Arrive and relax in our tranquil spa environment.</li><li><strong>Consultation:</strong> Discuss your preferences and any specific areas of concern with our skilled massage therapist.</li><li><strong>Thai Back Massage:</strong> Enjoy the therapeutic benefits of the Thai Back Massage, combining stretching, acupressure, and Sen line techniques.</li><li><strong>Aromatherapy (Optional):</strong> Enhance your experience with the calming scents of Thai-inspired essential oils.</li><li><strong>Post-Massage Relaxation:</strong> Take your time to relax and rejuvenate before concluding your session.</li></ol>",
     "price": 90,
     "duration": "60 minutes",
-    "img": "url/to/thai-back-massage.jpg"
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5cIsbTiRBGKMC3cjdD6hcQ-GQLxnMTdnt0kZWsu2ZUk19VJMuPg9igfH3vyQXKDsHOQo&usqp=CAU"
   },
   {
     "title": "Aromatherapy Full Body Massage",
@@ -27,7 +27,7 @@
     "steps": "<ol><li><strong>Consultation:</strong> Discuss your preferences and any specific aromas you prefer with our skilled massage therapist.</li><li><strong>Aromatherapy Application:</strong> Enjoy the application of aromatic essential oils on your skin, selected to suit your needs.</li><li><strong>Full Body Massage:</strong> Experience the soothing touch of our therapist using Swedish techniques for overall relaxation.</li><li><strong>Gentle Pressure Points:</strong> Targeted pressure on specific points to enhance balance and harmony.</li><li><strong>Post-Massage Relaxation:</strong> Take your time to enjoy the lingering scents and relax before concluding your session.</li></ol>",
     "price": 8000,
     "duration": "75 minutes",
-    "img": "url/to/aromatherapy-full-body-massage.jpg"
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQG4n-_Et0QReFaC310Ol8mNKG8e9S-t8vowQ&usqp=CAU"
   },
   {
     "title": "Purifying Body Massage",

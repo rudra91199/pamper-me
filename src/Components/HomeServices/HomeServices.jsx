@@ -19,7 +19,7 @@ const HomeServices = () => {
         }}>Popular Services</h2>
       <div className="home-services-container">
         {services.slice(0,3).map((service) => 
-          <HomeService key={service?.name} service={service}> </HomeService>
+          <HomeService key={service?.title} service={service}> </HomeService>
         )}
       </div>
       <Link>View All Services</Link>

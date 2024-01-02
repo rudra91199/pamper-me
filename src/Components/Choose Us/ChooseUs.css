@@ -1,11 +1,17 @@
 .choose-us-section{
     margin-bottom: 80px;
+    margin-top: 40px;
 }
 
 .choose-us-section h2{
     text-align: center;
     font-size: 40px;
     margin-bottom: 60px;
+}
+
+h3{
+margin-top: 20px;
+margin-bottom: 10px;
 }
 
 .choose-us-container{
@@ -23,6 +29,7 @@
     border: 1px solid black;
     padding: 10px;
     border-radius: 10px;
+    padding: 20px;
 }
 
 .choose-us-card img{
