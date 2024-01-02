@@ -1,7 +1,8 @@
 import "./Login.css";
 import { Link, useNavigate } from "react-router-dom";
-import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useSignInWithGoogle, useCreateUserWithEmailAndPassword, useSignInWithEmailAndPassword, useUpdateProfile, useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
 import { useAuthState } from 'react-firebase-hooks/auth';
+
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import loginBanner1 from "../../assets/Images/LoginBanner/loginBanner2-01.png";
@@ -18,29 +19,47 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import { EffectFade, Pagination, Autoplay } from "swiper/modules";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import auth from "../../../firebase.init";
+import Swal from "sweetalert2";
 
 
 const Login = () => {
   const [login, setLogin] = useState(true);
   const [user, loading, error] = useAuthState(auth);
+  const [updateProfile, updating] = useUpdateProfile(auth);
+  const [createUserWithEmailAndPassword] = useCreateUserWithEmailAndPassword(auth);
+  const [signInWithEmailAndPassword,,,loginError] = useSignInWithEmailAndPassword(auth);
+  const [sendPasswordResetEmail, sending, ] = useSendPasswordResetEmail(auth);
 
-  console.log(login)
-  const navigate = useNavigate();
   
+  const navigate = useNavigate();
+  console.log(loginError);
+
   const [signInWithGoogle] = useSignInWithGoogle(auth);
 
-  console.log(user);
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const name = e.target.name.value;
+    const displayName = e.target.name.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
+    
+    if (!login) {
+      const phoneNumber ="+"+ e.target.number.value;
+      await createUserWithEmailAndPassword(email, password)
+      await updateProfile({ displayName})
+    }
+    else{
+      signInWithEmailAndPassword(email, password)
+    }
+
 
   };
 
+  useEffect(() => {
+    if (user)
+      navigate("/");
+  }, [user])
 
 
   return (
@@ -67,7 +86,7 @@ const Login = () => {
                 </div>
             }
 
-            <button onClick={()=>signInWithGoogle()}>
+            <button onClick={() => signInWithGoogle()}>
               <i className="fa-brands fa-google"></i>
               <img src={googleIcon} alt="" />
               <span>Sign in with Google</span>
@@ -84,7 +103,7 @@ const Login = () => {
               {
                 login ||
                 <div className="floating-label">
-                  <input type="text" id="name" required placeholder="" />
+                  <input type="text" id="name" name="name" required placeholder="" />
                   <label htmlFor="name">Name</label>
                 </div>
 
@@ -92,18 +111,18 @@ const Login = () => {
               {
                 login ||
                 <div className="floating-label">
-                  <input type="number" id="phone" required placeholder="" />
+                  <input type="number" id="phone" name="number" required placeholder="" defaultValue="880"/>
                   <label htmlFor="phone">Phone</label>
                 </div>
 
               }
               <div className="floating-label">
-                <input type="email" id="email" required placeholder="" />
+                <input type="email" id="email" name="email" required placeholder="" />
                 <label htmlFor="email">Email</label>
               </div>
 
               <div className="floating-label">
-                <input type="password" id="pass" required placeholder="" />
+                <input type="password" id="pass" name="password" required placeholder="" />
                 <label htmlFor="pass">Password</label>
               </div>
 
@@ -116,10 +135,30 @@ const Login = () => {
                     </label>
 
                   </div>
-                  <p className="forgot-pass">Forgot Password?</p>
+                  <p className="forgot-pass" onClick={async ()=>{
+                    const { value: email } = await Swal.fire({
+                      title: 'Reset Password',
+                      input: 'email',
+                      inputLabel: 'Your email address',
+                      inputPlaceholder: 'Enter your email address',
+                      confirmButtonText: "SEND",
+                      confirmButtonColor: '#e32085'
+                    })
+                    
+                    if (email) {
+                      console.log(email);
+                      const success = await sendPasswordResetEmail(email);
+                      if(success){
+                        Swal.fire(`Password reset email sent to ${email}`)
+                      }
+                      else{
+                        Swal.fire(`400 Error`)
+                      }
+                    }
+                  }}>Forgot Password?</p>
                 </div>
               }
-              <button type="submit">Login</button>
+              <button type="submit">{login ? "Login" : "Sign Up"}</button>
             </form>
           </div>
         </div>

@@ -1,7 +1,7 @@
-
+import "./Service.css"
 const Service = () => {
     return (
-        <div>
+        <div className="service-container">
             
         </div>
     );

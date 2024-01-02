@@ -16,11 +16,9 @@ const Product = ({ service }) => {
           flexDirection: "row",
           justifyContent:"space-between",
           alignItems:"center",
-          width:"88%",
           gap: "20px",
           fontFamily: "Arial, Helvetica, sans-serif",
-          position: "absolute",
-          bottom: "10px",
+          marginTop: "10px"
         }}
       >
         <p className="product-price">TK. {service.price}</p>

@@ -1,52 +1,885 @@
 [
-    {
-        "title": "FOUNDATION, HIGHLIGHT + GLOW",
-        "category": "makeup",
-        "shortDescription": "Select either Foundation for fresh, perfect skin or Highlight + Glow for a soft sheen to high-impact glow.",
-        "longDescription": "Introducing our exquisite FOUNDATION, HIGHLIGHT + GLOW service, a transformative beauty experience that brings out your inner radiance and enhances your natural allure.Indulge in a comprehensive and personalized session designed to elevate your skincare and makeup routine to new heights. Our skilled and passionate beauty artisans are dedicated to crafting a flawless canvas for you, combining three essential elements for a stunning and luminous appearance.",
-        "taskDescription1":"Foundation: Begin your journey to beauty perfection with our expertly applied foundation. Our artists meticulously match the ideal shade to your skin tone, creating a seamless and smooth base that blurs imperfections while maintaining a lightweight and breathable feel. The foundation sets the stage for the rest of the process, ensuring a radiant and even complexion that lasts throughout the day.",
-        "taskDescription2":"Elevate your features with strategic highlights that capture and reflect light in all the right places. Our skilled artists are adept at accentuating your best attributes, whether it's your cheekbones, brow bones, or the bridge of your nose. The artful application of highlights adds dimension and a touch of ethereal luminosity, creating a sculpted and captivating look that catches every gaze.",
-        "taskDescription3":"Embrace the allure of a natural, lit-from-within glow that emanates vitality and youthfulness. Our artists utilize carefully chosen products to enhance your skin's radiance, fostering a dewy and healthy finish. The glow aspect of our service ensures that your skin appears revitalized and rejuvenated, leaving you with an enchanting and vibrant visage.",
-        "price": "4000",
-        "time":"60-90",
-        "img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS22z6sbW6fZshC_LQmRjtjN9GsZUYCR5W3XQ&usqp=CAU"
-    },
-    {
-        "title": "INSTANT DARK CIRCLE ERASER",
-        "category": "makeup",
-        "shortDescription": "Correct and conceal to wake up your look.",
-        "longDescription": "Introducing our revolutionary Instant Dark Circle Eraser service – the ultimate solution to tired-looking eyes and unwanted shadows. Say goodbye to the telltale signs of fatigue and hello to a refreshed, vibrant appearance with this transformative and efficient treatment. Are dark circles and under-eye bags casting a shadow on your natural beauty? Our Instant Dark Circle Eraser is meticulously designed to target and eliminate these concerns in a matter of moments. Using advanced and specially formulated products, our skilled professionals employ innovative techniques to provide you with visible results that will leave you astonished.",
-        "taskDescription1":"Rapid Revitalization: Watch as your under-eye area undergoes a remarkable transformation within minutes. Our expert practitioners skillfully apply specialized products that work to instantly brighten and rejuvenate your skin, making it appear smoother, firmer, and more radiant.",
-        "taskDescription2":"Precision Techniques: Our professionals are trained in the art of targeted application. By strategically addressing the root causes of dark circles – including poor circulation, pigmentation, and skin thinness – they ensure an effective treatment that restores your skin's natural vibrancy.",
-        "taskDescription3":"Tailored Solutions: We recognize that every individual is unique. That's why our Instant Dark Circle Eraser service is tailored to your specific needs and skin type. Whether you're battling chronic dark circles or seeking a quick fix before a special event, our experts will customize the treatment to ensure optimal results.",
-        "price": "4000",
-        "time":"10-15",
-        "img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSdRqY_j5MUmRrtB3z-b1gUMSm6vaFk3sX-g&usqp=CAU"
-    },
-    {
-        "title": "COLOUR MATCH FOUNDATION",
-        "category": "makeup",
-        "shortDescription": "Foundation match.",
-        "longDescription": "Introducing our innovative Colour Match Foundation service – a personalized beauty experience that unlocks the secret to a flawless complexion that's uniquely tailored to you. Bid farewell to the frustration of mismatched foundation shades and embrace a new era of makeup that harmonizes seamlessly with your skin tone. At the heart of our Colour Match Foundation service lies a commitment to celebrating diversity and enhancing your natural beauty. Our skilled makeup artisans are dedicated to providing you with a foundation shade that perfectly complements your skin, ensuring a radiant and confidence-boosting look that lasts all day.",
-        "taskDescription1":"Precise Shade Matching: Our experts are trained in the art of discerning undertones, shades, and nuances that make your skin truly one-of-a-kind. Using advanced technology and their keen eye for detail, they pinpoint the ideal foundation match that melts into your skin, creating a virtually undetectable finish.",
-        "taskDescription2":"Customized Formulas: We understand that each person's skin has its own characteristics and needs. Our Colour Match Foundation service offers a range of formulas that cater to different skin types – from oily to dry, combination to sensitive. This personalized approach ensures not only a perfect color match but also a foundation that works harmoniously with your skin's unique traits.",
-        "taskDescription3":"Flawless Coverage: Experience the confidence of a flawless complexion that blurs imperfections and evens out skin tone without feeling heavy or cakey. Our foundation seamlessly blends into your skin, delivering buildable coverage that lets your skin breathe while still providing the coverage you desire.",
-        "price": "4000",
-        "time":"10-15",
-        "img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZQwsy7qEUqixGubDL7b61fGkc0jmUm9o-4w&usqp=CAU"
-    },
-    {
-        "title": "COLOUR MATCH FOUNDATION",
-        "category": "makeup",
-        "shortDescription": "Foundation match.",
-        "longDescription": "Introducing our innovative Colour Match Foundation service – a personalized beauty experience that unlocks the secret to a flawless complexion that's uniquely tailored to you. Bid farewell to the frustration of mismatched foundation shades and embrace a new era of makeup that harmonizes seamlessly with your skin tone. At the heart of our Colour Match Foundation service lies a commitment to celebrating diversity and enhancing your natural beauty. Our skilled makeup artisans are dedicated to providing you with a foundation shade that perfectly complements your skin, ensuring a radiant and confidence-boosting look that lasts all day.",
-        "taskDescription1":"Precise Shade Matching: Our experts are trained in the art of discerning undertones, shades, and nuances that make your skin truly one-of-a-kind. Using advanced technology and their keen eye for detail, they pinpoint the ideal foundation match that melts into your skin, creating a virtually undetectable finish.",
-        "taskDescription2":"Customized Formulas: We understand that each person's skin has its own characteristics and needs. Our Colour Match Foundation service offers a range of formulas that cater to different skin types – from oily to dry, combination to sensitive. This personalized approach ensures not only a perfect color match but also a foundation that works harmoniously with your skin's unique traits.",
-        "taskDescription3":"Flawless Coverage: Experience the confidence of a flawless complexion that blurs imperfections and evens out skin tone without feeling heavy or cakey. Our foundation seamlessly blends into your skin, delivering buildable coverage that lets your skin breathe while still providing the coverage you desire.",
-        "price": "4000",
-        "time":"10-15",
-        "img":"https://cdn.yesmadam.com/images/live/app/mainsubcategory/threading-subcategory-1-12-22.jpg"
-    }
+  {
+    "title": "Luxury Gold Facial",
+    "category": "Skincare",
+    "shortDescription": "Indulge in the ultimate luxury with our Gold Facial, designed to rejuvenate and enhance your skin's natural radiance.",
+    "longDescription": "<ol><li>Antioxidant Protection</li><li>Anti-Inflammatory Effects</li><li>Improved Blood Circulation</li><li>Radiant and Glowing Skin</li><li>Hydration and Moisture Retention</li><li>Reduction of Fine Lines and Wrinkles</li><li>Luxurious and Relaxing Experience</li><li>Enhanced Product Absorption</li></ol>",
+    "steps": "<ol><li><strong>Cleansing:</strong> Thoroughly clean the skin to remove impurities.</li><li><strong>Exfoliation:</strong> Gently exfoliate to prepare the skin for gold infusion.</li><li><strong>Gold Mask Application:</strong> Apply a luxurious gold-infused mask for antioxidant benefits.</li><li><strong>Massage:</strong> Enjoy a relaxing facial massage to enhance blood circulation.</li><li><strong>Moisturization:</strong> Hydrate the skin with a high-quality moisturizer containing gold elements.</li><li><strong>Final Touch:</strong> Conclude the treatment with a protective sunscreen.</li></ol>",
+    "price": 150,
+    "duration": "60 minutes",
+    "img": "url/to/luxury-gold-facial.jpg"
+  },
+  {
+    "title": "Thai Back Massage",
+    "category": "Massage",
+    "shortDescription": "Experience the therapeutic benefits of traditional Thai massage focused on the back to release tension and improve overall well-being.",
+    "longDescription": "<p>Our Thai Back Massage incorporates ancient Thai massage techniques, including:</p><ul><li>Stretching: Gentle stretching movements to improve flexibility.</li><li>Acupressure: Targeted pressure on specific points to release tension.</li><li>Sen Lines: Following the body's energy pathways for balance and harmony.</li></ul><p>Indulge in this rejuvenating experience for a holistic approach to relaxation.</p>",
+    "steps": "<ol><li><strong>Welcome:</strong> Arrive and relax in our tranquil spa environment.</li><li><strong>Consultation:</strong> Discuss your preferences and any specific areas of concern with our skilled massage therapist.</li><li><strong>Thai Back Massage:</strong> Enjoy the therapeutic benefits of the Thai Back Massage, combining stretching, acupressure, and Sen line techniques.</li><li><strong>Aromatherapy (Optional):</strong> Enhance your experience with the calming scents of Thai-inspired essential oils.</li><li><strong>Post-Massage Relaxation:</strong> Take your time to relax and rejuvenate before concluding your session.</li></ol>",
+    "price": 90,
+    "duration": "60 minutes",
+    "img": "url/to/thai-back-massage.jpg"
+  },
+  {
+    "title": "Aromatherapy Full Body Massage",
+    "category": "Massage",
+    "shortDescription": "Immerse yourself in the soothing scents of essential oils with our Aromatherapy Full Body Massage, promoting relaxation and overall well-being.",
+    "longDescription": "<p>Indulge in a sensory experience with our Aromatherapy Full Body Massage. This treatment incorporates:</p><ul><li>Essential Oils: Carefully selected oils to enhance relaxation and mood.</li><li>Swedish Massage Techniques: Long, flowing strokes to release tension and promote circulation.</li><li>Gentle Pressure: Applied to specific points for overall balance and harmony.</li></ul><p>Experience the benefits of aromatherapy for a tranquil and rejuvenating session.</p>",
+    "steps": "<ol><li><strong>Consultation:</strong> Discuss your preferences and any specific aromas you prefer with our skilled massage therapist.</li><li><strong>Aromatherapy Application:</strong> Enjoy the application of aromatic essential oils on your skin, selected to suit your needs.</li><li><strong>Full Body Massage:</strong> Experience the soothing touch of our therapist using Swedish techniques for overall relaxation.</li><li><strong>Gentle Pressure Points:</strong> Targeted pressure on specific points to enhance balance and harmony.</li><li><strong>Post-Massage Relaxation:</strong> Take your time to enjoy the lingering scents and relax before concluding your session.</li></ol>",
+    "price": 8000,
+    "duration": "75 minutes",
+    "img": "url/to/aromatherapy-full-body-massage.jpg"
+  },
+  {
+    "title": "Purifying Body Massage",
+    "category": "Massage",
+    "shortDescription": "Experience a rejuvenating Purifying Body Massage designed to eliminate toxins, promote relaxation, and enhance overall well-being.",
+    "longDescription": "<p>Indulge in the purifying benefits of our specialized body massage. This treatment includes:</p><ul><li>Detoxifying Techniques: Gentle massage strokes designed to stimulate the lymphatic system and promote toxin elimination.</li><li>Aromatherapy: The use of essential oils known for their purifying and revitalizing properties.</li><li>Deep Cleansing: Targeted massage techniques to release tension and promote a sense of renewal.</li></ul><p>Feel the stress melt away as your body undergoes a purifying and refreshing experience.</p>",
+    "steps": "<ol><li><strong>Consultation:</strong> Discuss your preferences and any specific areas of concern with our skilled massage therapist.</li><li><strong>Purifying Massage:</strong> Enjoy a specialized massage focusing on detoxification and relaxation.</li><li><strong>Aromatherapy Application:</strong> Breathe in the cleansing scents of carefully selected essential oils.</li><li><strong>Deep Cleansing Techniques:</strong> Experience targeted massage techniques to release tension and promote detoxification.</li><li><strong>Post-Massage Relaxation:</strong> Take your time to relax and rejuvenate before concluding your session.</li></ol>",
+    "price": 120,
+    "duration": "60 minutes",
+    "img": "url/to/purifying-body-massage.jpg"
+  },
+  {
+    "title": "Classic Manicure",
+    "category": "Manicure & Pedicure",
+    "shortDescription": "Our Classic Manicure includes nail shaping, cuticle care, a hand massage, and your choice of nail polish.",
+    "longDescription": "<p>Indulge in the timeless elegance of our Classic Manicure. This service includes meticulous nail shaping, cuticle care, and a relaxing hand massage. Choose from a wide range of high-quality nail polishes to complement your style and leave with perfectly manicured nails.</p>",
+    "steps": "<ol><li><strong>Nail Shaping:</strong> Achieve the perfect nail shape.</li><li><strong>Cuticle Care:</strong> Tend to and nourish the cuticles.</li><li><strong>Hand Massage:</strong> Enjoy a soothing hand massage.</li><li><strong>Polish Application:</strong> Choose your favorite color for a polished finish.</li></ol>",
+    "price": 25,
+    "duration": "30 minutes",
+    "img": "url/to/classic-manicure.jpg"
+  },
+  {
+    "title": "Spa Pedicure",
+    "category": "Manicure & Pedicure",
+    "shortDescription": "Indulge in a Spa Pedicure featuring a soothing foot soak, nail shaping, exfoliation, massage, and polish application.",
+    "longDescription": "<p>Escape into a realm of relaxation with our Spa Pedicure. This luxurious treatment includes a soothing foot soak, precise nail shaping, gentle exfoliation, a revitalizing massage, and your choice of nail polish. Pamper your feet and leave feeling refreshed and rejuvenated.</p>",
+    "steps": "<ol><li><strong>Foot Soak:</strong> Immerse your feet in a soothing soak.</li><li><strong>Nail Shaping:</strong> Achieve perfectly shaped toenails.</li><li><strong>Exfoliation:</strong> Gently remove dead skin cells for softness.</li><li><strong>Massage:</strong> Enjoy a relaxing foot and leg massage.</li><li><strong>Polish Application:</strong> Choose your preferred nail polish color.</li></ol>",
+    "price": 35,
+    "duration": "45 minutes",
+    "img": "url/to/spa-pedicure.jpg"
+  },
+  {
+    "title": "Gel Manicure",
+    "category": "Manicure & Pedicure",
+    "shortDescription": "Experience a longer-lasting Gel Manicure with nail shaping, cuticle care, gel polish application, and a hand massage.",
+    "longDescription": "<p>Elevate your manicure experience with our Gel Manicure. This long-lasting treatment includes expert nail shaping, cuticle care, and the application of high-quality gel polish. Enjoy a relaxing hand massage and leave with beautiful, durable nails that resist chipping.</p>",
+    "steps": "<ol><li><strong>Nail Shaping:</strong> Achieve the perfect nail shape.</li><li><strong>Cuticle Care:</strong> Tend to and nourish the cuticles.</li><li><strong>Gel Polish Application:</strong> Experience a durable and glossy finish.</li><li><strong>Hand Massage:</strong> Enjoy a soothing hand massage.</li></ol>",
+    "price": 40,
+    "duration": "45 minutes",
+    "img": "url/to/gel-manicure.jpg"
+  },
+  {
+    "title": "Deluxe Pedicure",
+    "category": "Manicure & Pedicure",
+    "shortDescription": "Treat your feet to a Deluxe Pedicure featuring a luxurious foot soak, nail shaping, callus removal, mask, massage, and polish.",
+    "longDescription": "<p>Indulge in the ultimate pampering with our Deluxe Pedicure. This top-tier treatment includes a luxurious foot soak, precise nail shaping, callus removal, a hydrating mask, a revitalizing massage, and the application of your favorite nail polish. Treat your feet to the extravagance they deserve.</p>",
+    "steps": "<ol><li><strong>Foot Soak:</strong> Immerse your feet in a luxurious and relaxing soak.</li><li><strong>Nail Shaping:</strong> Achieve perfectly shaped toenails.</li><li><strong>Callus Removal:</strong> Smooth away rough skin for softness.</li><li><strong>Hydrating Mask:</strong> Nourish and revitalize with a hydrating mask.</li><li><strong>Massage:</strong> Enjoy a rejuvenating foot and leg massage.</li><li><strong>Polish Application:</strong> Choose your preferred nail polish color.</li></ol>",
+    "price": 50,
+    "duration": "60 minutes",
+    "img": "url/to/deluxe-pedicure.jpg"
+  },
+  {
+    "title": "Relaxing Foot Massage",
+    "category": "Massage",
+    "shortDescription": "Indulge in a Relaxing Foot Massage to release tension, improve circulation, and promote overall well-being.",
+    "longDescription": "<p>Our Relaxing Foot Massage is designed to soothe and rejuvenate tired feet. This service includes:</p><ul><li>Foot Soak: A relaxing soak to prepare your feet for the massage.</li><li>Massage Techniques: Gentle kneading and pressure point massage to release tension.</li><li>Warm Towel Wrap: Experience a comforting warm towel wrap for ultimate relaxation.</li></ul><p>Treat your feet to a moment of bliss and leave feeling refreshed.</p>",
+    "steps": "<ol><li><strong>Foot Soak:</strong> Immerse your feet in a soothing soak.</li><li><strong>Massage Techniques:</strong> Enjoy gentle kneading and pressure point massage.</li><li><strong>Warm Towel Wrap:</strong> Experience the comforting warmth of a towel wrap.</li><li><strong>Post-Massage Relaxation:</strong> Take your time to relax and enjoy the rejuvenating effects.</li></ol>",
+    "price": 2500,
+    "duration": "45 minutes",
+    "img": "url/to/relaxing-foot-massage.jpg"
+  },
+
+  {
+    "title": "Aromatherapy Foot Massage",
+    "category": "Massage",
+    "shortDescription": "Immerse your senses in our Aromatherapy Foot Massage, combining the benefits of essential oils with therapeutic foot massage techniques.",
+    "longDescription": "<p>Experience a sensory journey with our Aromatherapy Foot Massage. This service includes:</p><ul><li>Essential Oils: Carefully selected for their soothing and aromatic properties.</li><li>Foot Massage Techniques: Therapeutic kneading and pressure point massage for relaxation.</li><li>Aromatherapy Benefits: Enjoy the holistic effects of aromatherapy on your mind and body.</li></ul><p>Treat your feet to the combined benefits of aromatherapy and massage for ultimate relaxation.</p>",
+    "steps": "<ol><li><strong>Essential Oils:</strong> Breathe in the soothing scents of carefully selected essential oils.</li><li><strong>Foot Massage Techniques:</strong> Experience therapeutic kneading and pressure point massage.</li><li><strong>Aromatherapy Benefits:</strong> Enjoy the holistic effects on your mind and body.</li><li><strong>Post-Massage Relaxation:</strong> Take your time to relax and savor the aromatic ambiance.</li></ol>",
+    "price": 3000,
+    "duration": "50 minutes",
+    "img": "url/to/aromatherapy-foot-massage.jpg"
+  },
+  {
+    "title": "Whole Body Elixir Glow",
+    "category": "Body Polish",
+    "shortDescription": "Experience the ultimate Whole Body Elixir Glow, a transformative treatment for radiant and rejuvenated skin.",
+    "longDescription": "<p>Indulge in the luxurious Whole Body Elixir Glow treatment. This service includes:</p><ul><li>Full Body Exfoliation: Gently scrub away dead skin cells with a revitalizing exfoliating polish.</li><li>Hydrating Body Mask: Nourish your skin with a hydrating mask for lasting moisture.</li><li>Silkening Massage: Enjoy a silkening massage to enhance the glow and relaxation.</li></ul><p>Immerse yourself in the holistic experience and emerge with luminous, revitalized skin.</p>",
+    "steps": "<ol><li><strong>Full Body Exfoliation:</strong> Gently scrub away dead skin cells with a revitalizing exfoliating polish.</li><li><strong>Hydrating Body Mask:</strong> Nourish your skin with a hydrating mask for lasting moisture.</li><li><strong>Silkening Massage:</strong> Enjoy a silkening massage to enhance the glow and relaxation.</li><li><strong>Post-Polish Relaxation:</strong> Take your time to relax and appreciate your renewed, radiant skin.</li></ol>",
+    "price": 5500,
+    "duration": "90 minutes",
+    "img": "url/to/whole-body-elixir-glow.jpg"
+  },
+  {
+    "title": "Back Bliss Polish",
+    "category": "Body Polish",
+    "shortDescription": "Indulge in the Back Bliss Polish, a revitalizing treatment to rejuvenate and exfoliate the skin on your back.",
+    "longDescription": "<p>Pamper your back with the rejuvenating Back Bliss Polish treatment. This service includes:</p><ul><li>Back Exfoliation: Gently exfoliate and renew the skin on your back.</li><li>Clarifying Mask: Apply a clarifying mask for a refreshed and revitalized back.</li><li>Relaxing Back Massage: Enjoy a soothing massage to complement the polishing experience.</li></ul><p>Feel the tension melt away as your back becomes smooth and revitalized.</p>",
+    "steps": "<ol><li><strong>Back Exfoliation:</strong> Gently exfoliate and renew the skin on your back.</li><li><strong>Clarifying Mask:</strong> Apply a clarifying mask for a refreshed and revitalized back.</li><li><strong>Relaxing Back Massage:</strong> Enjoy a soothing massage to complement the polishing experience.</li><li><strong>Post-Polish Relaxation:</strong> Take your time to relax and appreciate your renewed back skin.</li></ol>",
+    "price": 3500,
+    "duration": "60 minutes",
+    "img": "url/to/back-bliss-polish.jpg"
+  },
+  {
+    "title": "Glowing Half Leg Revive",
+    "category": "Body Polish",
+    "shortDescription": "Revive your lower limbs with the Glowing Half Leg Revive, an invigorating polish for smooth and radiant legs.",
+    "longDescription": "<p>Transform your legs with the Glowing Half Leg Revive treatment. This service includes:</p><ul><li>Half Leg Exfoliation: Renew and polish your lower limbs for a glowing effect.</li><li>Hydrating Leg Mask: Nourish your legs with a hydrating mask for lasting moisture.</li><li>Soothing Leg Massage: Enjoy a soothing massage to enhance the glow and relaxation.</li></ul><p>Step into renewed vitality with legs that feel and look revitalized.</p>",
+    "steps": "<ol><li><strong>Half Leg Exfoliation:</strong> Renew and polish your lower limbs for a glowing effect.</li><li><strong>Hydrating Leg Mask:</strong> Nourish your legs with a hydrating mask for lasting moisture.</li><li><strong>Soothing Leg Massage:</strong> Enjoy a soothing massage to enhance the glow and relaxation.</li><li><strong>Post-Polish Relaxation:</strong> Take your time to relax and appreciate your revitalized legs.</li></ol>",
+    "price": 3000,
+    "duration": "45 minutes",
+    "img": "url/to/glowing-half-leg-revive.jpg"
+  },
+  {
+    "title": "Radiant Full Leg Refinement",
+    "category": "Body Polish",
+    "shortDescription": "Undergo the Radiant Full Leg Refinement for an indulgent polish that leaves your legs feeling refined and silky.",
+    "longDescription": "<p>Experience the opulence of the Radiant Full Leg Refinement treatment. This service includes:</p><ul><li>Full Leg Exfoliation: Pamper your legs with a thorough exfoliation for refined skin.</li><li>Nourishing Leg Mask: Apply a nourishing mask to replenish your legs with moisture.</li><li>Luxurious Leg Massage: Enjoy a luxurious massage to enhance the refinement and relaxation.</li></ul><p>Step out with legs that exude radiance and refinement.</p>",
+    "steps": "<ol><li><strong>Full Leg Exfoliation:</strong> Pamper your legs with a thorough exfoliation for refined skin.</li><li><strong>Nourishing Leg Mask:</strong> Apply a nourishing mask to replenish your legs with moisture.</li><li><strong>Luxurious Leg Massage:</strong> Enjoy a luxurious massage to enhance the refinement and relaxation.</li><li><strong>Post-Polish Relaxation:</strong> Take your time to relax and appreciate your refined and radiant legs.</li></ol>",
+    "price": 4000,
+    "duration": "60 minutes",
+    "img": "url/to/radiant-full-leg-refinement.jpg"
+  },
+  {
+    "title": "Silken Full Hands Caress",
+    "category": "Body Polish",
+    "shortDescription": "Indulge in the Silken Full Hands Caress, a lavish polish to rejuvenate and pamper your hands for a silky touch.",
+    "longDescription": "<p>Savor the luxury of the Silken Full Hands Caress treatment. This service includes:</p><ul><li>Full Hands Exfoliation: Rejuvenate your hands with a gentle exfoliation for silky skin.</li><li>Moisturizing Hand Mask: Apply a moisturizing mask to replenish your hands with essential hydration.</li><li>Relaxing Hand Massage: Enjoy a relaxing hand massage to enhance the silken touch and relaxation.</li></ul><p>Treat your hands to opulence and leave with hands that feel irresistibly silky.</p>",
+    "steps": "<ol><li><strong>Full Hands Exfoliation:</strong> Rejuvenate your hands with a gentle exfoliation for silky skin.</li><li><strong>Moisturizing Hand Mask:</strong> Apply a moisturizing mask to replenish your hands with essential hydration.</li><li><strong>Relaxing Hand Massage:</strong> Enjoy a relaxing hand massage to enhance the silken touch and relaxation.</li><li><strong>Post-Polish Relaxation:</strong> Take your time to relax and appreciate your irresistibly silky hands.</li></ol>",
+    "price": 2500,
+    "duration": "45 minutes",
+    "img": "url/to/silken-full-hands-caress.jpg"
+  },
+  {
+    "title": "Pure Radiance Glow",
+    "category": "Skincare",
+    "shortDescription": "Indulge in the Pure Radiance Glow facial for a revitalizing and glowing complexion.",
+    "longDescription": "<p>Experience the luxurious Pure Radiance Glow facial. This service includes:</p><ul><li>Basic Cleansing: A thorough cleansing to remove impurities from your skin.</li><li>Gentle Exfoliation: Exfoliate and renew your skin for a fresh and radiant look.</li><li>Hydrating Mask: Nourish your skin with a hydrating mask for lasting moisture.</li></ul><p>Immerse yourself in the ultimate skincare experience and leave with a radiant glow.</p>",
+    "steps": "<ol><li><strong>Basic Cleansing:</strong> Thoroughly cleanse your skin to remove impurities.</li><li><strong>Gentle Exfoliation:</strong> Exfoliate and renew your skin for a fresh and radiant look.</li><li><strong>Hydrating Mask:</strong> Nourish your skin with a hydrating mask for lasting moisture.</li><li><strong>Post-Facial Glow:</strong> Take your time to appreciate the radiant and refreshed complexion.</li></ol>",
+    "price": 3000,
+    "duration": "60 minutes",
+    "img": "url/to/pure-radiance-glow.jpg"
+  },
+  {
+    "title": "Organic Harmony Rejuvenation",
+    "category": "Skincare",
+    "shortDescription": "Immerse yourself in the Organic Harmony Rejuvenation facial for a holistic and organic skincare experience.",
+    "longDescription": "<p>Discover the rejuvenating Organic Harmony Rejuvenation facial. This service includes:</p><ul><li>Organic Cleansing: Cleanse your skin with organic ingredients for a pure and gentle touch.</li><li>Natural Exfoliation: Gently exfoliate and renew your skin with natural elements.</li><li>Botanical Infusion: Infuse your skin with botanical extracts for a rejuvenated and balanced complexion.</li></ul><p>Experience the harmony of organic skincare and leave with a revitalized glow.</p>",
+    "steps": "<ol><li><strong>Organic Cleansing:</strong> Cleanse your skin with organic ingredients for a pure and gentle touch.</li><li><strong>Natural Exfoliation:</strong> Gently exfoliate and renew your skin with natural elements.</li><li><strong>Botanical Infusion:</strong> Infuse your skin with botanical extracts for a rejuvenated and balanced complexion.</li><li><strong>Post-Rejuvenation Glow:</strong> Take your time to appreciate the revitalized and harmonized skin.</li></ol>",
+    "price": 3500,
+    "duration": "75 minutes",
+    "img": "url/to/organic-harmony-rejuvenation.jpg"
+  },
+  {
+    "title": "Luminous Milk Elixir",
+    "category": "Skincare",
+    "shortDescription": "Treat yourself to the Luminous Milk Elixir facial, a nourishing experience for radiant and supple skin.",
+    "longDescription": "<p>Indulge in the nourishing Luminous Milk Elixir facial. This service includes:</p><ul><li>Milk Protein Cleansing: Cleanse your skin with the richness of milk protein for a luminous touch.</li><li>Gentle Milk Exfoliation: Gently exfoliate and renew your skin with the nourishing properties of milk.</li><li>Milky Hydration: Hydrate your skin with a milky mask for lasting moisture and suppleness.</li></ul><p>Experience the elixir of milk for luminous and radiant skin.</p>",
+    "steps": "<ol><li><strong>Milk Protein Cleansing:</strong> Cleanse your skin with the richness of milk protein for a luminous touch.</li><li><strong>Gentle Milk Exfoliation:</strong> Gently exfoliate and renew your skin with the nourishing properties of milk.</li><li><strong>Milky Hydration:</strong> Hydrate your skin with a milky mask for lasting moisture and suppleness.</li><li><strong>Post-Elixir Glow:</strong> Take your time to appreciate the luminosity and suppleness of your skin.</li></ol>",
+    "price": 3200,
+    "duration": "70 minutes",
+    "img": "url/to/luminous-milk-elixir.jpg"
+  },
+  {
+    "title": "Fruit Fusion Bliss",
+    "category": "Skincare",
+    "shortDescription": "Revel in the Fruit Fusion Bliss facial, a delightful experience for a fruity and refreshed complexion.",
+    "longDescription": "<p>Delight in the Fruit Fusion Bliss facial. This service includes:</p><ul><li>Mixed Fruit Cleansing: Cleanse your skin with the refreshing essence of mixed fruits for a blissful touch.</li><li>Fruitful Exfoliation: Gently exfoliate and renew your skin with a medley of fruity goodness.</li><li>Fruity Revitalization: Revitalize your skin with a fruity mask for a fresh and rejuvenated complexion.</li></ul><p>Experience the bliss of fruity skincare and leave with a refreshed glow.</p>",
+    "steps": "<ol><li><strong>Mixed Fruit Cleansing:</strong> Cleanse your skin with the refreshing essence of mixed fruits for a blissful touch.</li><li><strong>Fruitful Exfoliation:</strong> Gently exfoliate and renew your skin with a medley of fruity goodness.</li><li><strong>Fruity Revitalization:</strong> Revitalize your skin with a fruity mask for a fresh and rejuvenated complexion.</li><li><strong>Post-Blissful Glow:</strong> Take your time to appreciate the refreshing and revitalized skin.</li></ol>",
+    "price": 2800,
+    "duration": "55 minutes",
+    "img": "url/to/fruit-fusion-bliss.jpg"
+  },
+  {
+    "title": "Acne-Free Harmony",
+    "category": "Skincare",
+    "shortDescription": "Combat acne with the Acne-Free Harmony facial, a specialized treatment for clearer and healthier-looking skin.",
+    "longDescription": "<p>Tackle acne with the Acne-Free Harmony facial. This service includes:</p><ul><li>Anti-Acne Cleansing: Cleanse your skin with targeted ingredients to combat acne and blemishes.</li><li>Clarifying Exfoliation: Gently exfoliate and clarify your skin to reduce acne and promote healing.</li><li>Acne Soothing Mask: Apply a soothing mask to calm inflammation and promote a clearer complexion.</li></ul><p>Experience the harmony of acne-free skin and leave with a renewed confidence.</p>",
+    "steps": "<ol><li><strong>Anti-Acne Cleansing:</strong> Cleanse your skin with targeted ingredients to combat acne and blemishes.</li><li><strong>Clarifying Exfoliation:</strong> Gently exfoliate and clarify your skin to reduce acne and promote healing.</li><li><strong>Acne Soothing Mask:</strong> Apply a soothing mask to calm inflammation and promote a clearer complexion.</li><li><strong>Post-Harmony Glow:</strong> Take your time to appreciate the clarity and health of your skin.</li></ol>",
+    "price": 3800,
+    "duration": "65 minutes",
+    "img": "url/to/acne-free-harmony.jpg"
+  },
+  {
+    "title": "Aloe Serenity Soothe",
+    "category": "Skincare",
+    "shortDescription": "Soothe your skin with the Aloe Serenity Soothe facial, a calming experience for sensitive and irritated skin.",
+    "longDescription": "<p>Find serenity with the Aloe Serenity Soothe facial. This service includes:</p><ul><li>Aloe Vera Cleansing: Cleanse your skin with the calming properties of aloe vera for a soothing touch.</li><li>Gentle Aloe Exfoliation: Gently exfoliate and soothe your skin with the natural goodness of aloe.</li><li>Aloe Calming Mask: Apply a calming mask to alleviate sensitivity and promote tranquility.</li></ul><p>Experience the serenity of calm and soothed skin with this gentle facial.</p>",
+    "steps": "<ol><li><strong>Aloe Vera Cleansing:</strong> Cleanse your skin with the calming properties of aloe vera for a soothing touch.</li><li><strong>Gentle Aloe Exfoliation:</strong> Gently exfoliate and soothe your skin with the natural goodness of aloe.</li><li><strong>Aloe Calming Mask:</strong> Apply a calming mask to alleviate sensitivity and promote tranquility.</li><li><strong>Post-Serenity Glow:</strong> Take your time to appreciate the calm and soothed sensation on your skin.</li></ol>",
+    "price": 3200,
+    "duration": "60 minutes",
+    "img": "url/to/aloe-serenity-soothe.jpg"
+  },
+  {
+    "title": "Brightening Aura Cleanse",
+    "category": "Skincare",
+    "shortDescription": "Reveal a brighter complexion with the Brightening Aura Cleanse facial, a deep-cleaning experience for radiant skin.",
+    "longDescription": "<p>Unveil a brighter you with the Brightening Aura Cleanse facial. This service includes:</p><ul><li>Whitening Deep Cleansing: Cleanse your skin with specialized ingredients to reveal a brighter complexion.</li><li>Deep Brightening Exfoliation: Gently exfoliate and brighten your skin for a radiant glow.</li><li>Brightening Mask: Apply a brightening mask to enhance the luminosity of your skin.</li></ul><p>Experience the aura of brightness and leave with radiant and glowing skin.</p>",
+    "steps": "<ol><li><strong>Whitening Deep Cleansing:</strong> Cleanse your skin with specialized ingredients to reveal a brighter complexion.</li><li><strong>Deep Brightening Exfoliation:</strong> Gently exfoliate and brighten your skin for a radiant glow.</li><li><strong>Brightening Mask:</strong> Apply a brightening mask to enhance the luminosity of your skin.</li><li><strong>Post-Aura Glow:</strong> Take your time to appreciate the radiant and brightened complexion.</li></ol>",
+    "price": 4200,
+    "duration": "70 minutes",
+    "img": "url/to/brightening-aura-cleanse.jpg"
+  },
+  {
+    "title": "Signature Luminescent Glow",
+    "category": "Skincare",
+    "shortDescription": "Indulge in the Signature Luminescent Glow facial, a personalized experience for a signature bright and radiant complexion.",
+    "longDescription": "<p>Embark on the personalized Signature Luminescent Glow facial. This service includes:</p><ul><li>Signature Deep Cleansing: Cleanse your skin with a personalized approach for a signature brightening effect.</li><li>Signature Brightening Exfoliation: Gently exfoliate and reveal your unique luminescence.</li><li>Personalized Glow Mask: Apply a personalized glow mask to enhance your individual radiance.</li></ul><p>Experience the signature glow that complements your unique beauty.</p>",
+    "steps": "<ol><li><strong>Signature Deep Cleansing:</strong> Cleanse your skin with a personalized approach for a signature brightening effect.</li><li><strong>Signature Brightening Exfoliation:</strong> Gently exfoliate and reveal your unique luminescence.</li><li><strong>Personalized Glow Mask:</strong> Apply a personalized glow mask to enhance your individual radiance.</li><li><strong>Post-Luminescent Glow:</strong> Take your time to appreciate your signature bright and radiant complexion.</li></ol>",
+    "price": 4500,
+    "duration": "75 minutes",
+    "img": "url/to/signature-luminescent-glow.jpg"
+  },
+  {
+    "title": "Radiant Sun-Kissed Renewal",
+    "category": "Skincare",
+    "shortDescription": "Indulge in the Radiant Sun-Kissed Renewal facial, a rejuvenating treatment to combat tan and restore your skin's natural glow.",
+    "longDescription": "<p>Experience the Radiant Sun-Kissed Renewal facial. This skincare service includes:</p><ul><li>Tan Removal Treatment: Gently eliminate tan and even out your skin tone.</li><li>Hydrating Mask: Replenish your skin with a hydrating mask for lasting moisture.</li><li>Revitalizing Serum: Application of a revitalizing serum to boost your skin's natural radiance.</li></ul><p>Reveal a radiant and sun-kissed complexion with this revitalizing skincare experience.</p>",
+    "steps": "<ol><li><strong>Tan Removal Treatment:</strong> Gently eliminate tan and even out your skin tone.</li><li><strong>Hydrating Mask:</strong> Replenish your skin with a hydrating mask for lasting moisture.</li><li><strong>Revitalizing Serum:</strong> Application of a revitalizing serum to boost your skin's natural radiance.</li><li><strong>Post-Facial Relaxation:</strong> Take your time to relax and appreciate your renewed and radiant skin.</li></ol>",
+    "price": 3500,
+    "duration": "60 minutes",
+    "img": "url/to/radiant-sun-kissed-renewal.jpg"
+  },
+
+  {
+    "title": "Chic Bangs",
+    "category": "Hair Cut",
+    "shortDescription": "Transform your look with Chic Bangs, a stylish and trendy haircut to frame your face.",
+    "longDescription": "<p>Elevate your style with the Chic Bangs haircut. This hair cut service includes:</p><ul><li>Precision Bangs Cutting: Achieve a stylish and flattering frame for your face.</li><li>Texturizing: Enhance the overall texture for a modern and chic appearance.</li><li>Professional Styling: Leave with perfectly styled bangs that suit your personality.</li></ul><p>Step out with confidence and a refreshed look with our Chic Bangs haircut.</p>",
+    "steps": "<ol><li><strong>Precision Bangs Cutting:</strong> Achieve a stylish and flattering frame for your face.</li><li><strong>Texturizing:</strong> Enhance the overall texture for a modern and chic appearance.</li><li><strong>Professional Styling:</strong> Leave with perfectly styled bangs that suit your personality.</li><li><strong>Post-Haircut Glam:</strong> Take your time to admire and flaunt your chic new look.</li></ol>",
+    "price": 2500,
+    "duration": "30 minutes",
+    "img": "url/to/chic-bangs-haircut.jpg"
+  },
+  {
+    "title": "Sleek Straight Cut",
+    "category": "Hair Cut",
+    "shortDescription": "Opt for the Sleek Straight Cut, a classic and timeless haircut for a polished and sophisticated appearance.",
+    "longDescription": "<p>Achieve a polished and sophisticated look with the Sleek Straight Cut. This hair cut service includes:</p><ul><li>Precision Cutting: Attain a clean and straight look for a timeless appearance.</li><li>Blowout Styling: Get a smooth and sleek finish with professional blowout styling.</li><li>Finishing Touches: Ensure every strand is perfectly in place for a refined finish.</li></ul><p>Embrace a classic and timeless style with our Sleek Straight Cut.</p>",
+    "steps": "<ol><li><strong>Precision Cutting:</strong> Attain a clean and straight look for a timeless appearance.</li><li><strong>Blowout Styling:</strong> Get a smooth and sleek finish with professional blowout styling.</li><li><strong>Finishing Touches:</strong> Ensure every strand is perfectly in place for a refined finish.</li><li><strong>Post-Haircut Elegance:</strong> Take your time to appreciate the elegance of your sleek straight cut.</li></ol>",
+    "price": 3000,
+    "duration": "45 minutes",
+    "img": "url/to/sleek-straight-cut-haircut.jpg"
+  },
+  {
+    "title": "Regular U Cut",
+    "category": "Hair Cut",
+    "shortDescription": "Opt for the timeless and versatile Regular U Cut, a flattering haircut that suits various hair lengths and styles.",
+    "longDescription": "<p>Flatter your hair with the timeless Regular U Cut. This hair cut service includes:</p><ul><li>Precision U Shaped Cutting: Achieve a flattering and versatile U-shaped cut.</li><li>Layering (Optional): Add layers for added volume and movement.</li><li>Styling: Leave with a polished and well-styled U cut that suits your personality.</li></ul><p>Experience the versatility and elegance of the Regular U Cut.</p>",
+    "steps": "<ol><li><strong>Precision U Shaped Cutting:</strong> Achieve a flattering and versatile U-shaped cut.</li><li><strong>Layering (Optional):</strong> Add layers for added volume and movement.</li><li><strong>Styling:</strong> Leave with a polished and well-styled U cut that suits your personality.</li><li><strong>Post-Haircut Versatility:</strong> Take your time to explore the versatility of your U cut.</li></ol>",
+    "price": 2800,
+    "duration": "40 minutes",
+    "img": "url/to/regular-u-cut-haircut.jpg"
+  },
+  {
+    "title": "Deep U Cut",
+    "category": "Hair Cut",
+    "shortDescription": "Indulge in the Deep U Cut, a modern and edgy haircut that adds depth and style to your overall look.",
+    "longDescription": "<p>Elevate your style with the modern and edgy Deep U Cut. This hair cut service includes:</p><ul><li>Precision Deep U Shaped Cutting: Achieve a dramatic and stylish U-shaped cut with added depth.</li><li>Texturizing: Enhance the edginess with strategic texturizing for a bold appearance.</li><li>Professional Styling: Leave with a bold and fashionable Deep U Cut that reflects your individuality.</li></ul><p>Make a statement with the Deep U Cut for a modern and edgy look.</p>",
+    "steps": "<ol><li><strong>Precision Deep U Shaped Cutting:</strong> Achieve a dramatic and stylish U-shaped cut with added depth.</li><li><strong>Texturizing:</strong> Enhance the edginess with strategic texturizing for a bold appearance.</li><li><strong>Professional Styling:</strong> Leave with a bold and fashionable Deep U Cut that reflects your individuality.</li><li><strong>Post-Haircut Statement:</strong> Take your time to make a statement with your modern and edgy Deep U Cut.</li></ol>",
+    "price": 3200,
+    "duration": "50 minutes",
+    "img": "url/to/deep-u-cut-haircut.jpg"
+  },
+  {
+    "title": "Long Layer Loveliness",
+    "category": "Hair Cut",
+    "shortDescription": "Opt for Long Layer Loveliness, a haircut that adds beautiful layers for a voluminous and flowing appearance.",
+    "longDescription": "<p>Enhance your natural beauty with Long Layer Loveliness. This hair cut service includes:</p><ul><li>Precision Long Layer Cutting: Achieve beautiful and flowing layers for added volume.</li><li>Face-Framing Layers (Optional): Add layers that frame your face for a personalized touch.</li><li>Blowout Styling: Leave with effortlessly styled and voluminous long layers.</li></ul><p>Experience the loveliness of flowing and voluminous long layers.</p>",
+    "steps": "<ol><li><strong>Precision Long Layer Cutting:</strong> Achieve beautiful and flowing layers for added volume.</li><li><strong>Face-Framing Layers (Optional):</strong> Add layers that frame your face for a personalized touch.</li><li><strong>Blowout Styling:</strong> Leave with effortlessly styled and voluminous long layers.</li><li><strong>Post-Haircut Loveliness:</strong> Take your time to appreciate the loveliness of your long layers.</li></ol>",
+    "price": 3500,
+    "duration": "55 minutes",
+    "img": "url/to/long-layer-loveliness-haircut.jpg"
+  },
+  {
+    "title": "Front Layer Finesse",
+    "category": "Hair Cut",
+    "shortDescription": "Opt for Front Layer Finesse, a haircut that adds chic front layers for a stylish and face-framing appearance.",
+    "longDescription": "<p>Add a touch of chic to your look with Front Layer Finesse. This hair cut service includes:</p><ul><li>Precision Front Layer Cutting: Achieve chic and face-framing layers for added style.</li><li>Texturizing: Enhance the layers with texturizing for a modern and fashionable appearance.</li><li>Professional Styling: Leave with a stylish and perfectly styled front layers haircut.</li></ul><p>Elevate your style with the chic and fashionable Front Layer Finesse.</p>",
+    "steps": "<ol><li><strong>Precision Front Layer Cutting:</strong> Achieve chic and face-framing layers for added style.</li><li><strong>Texturizing:</strong> Enhance the layers with texturizing for a modern and fashionable appearance.</li><li><strong>Professional Styling:</strong> Leave with a stylish and perfectly styled front layers haircut.</li><li><strong>Post-Haircut Elegance:</strong> Take your time to appreciate the elegance of your front layer finesse.</li></ol>",
+    "price": 3000,
+    "duration": "45 minutes",
+    "img": "url/to/front-layer-finesse-haircut.jpg"
+  },
+  {
+    "title": "Volume Layer Verve",
+    "category": "Hair Cut",
+    "shortDescription": "Indulge in Volume Layer Verve, a haircut that adds volume and movement for a lively and dynamic appearance.",
+    "longDescription": "<p>Revitalize your look with Volume Layer Verve. This hair cut service includes:</p><ul><li>Precision Volume Layer Cutting: Achieve voluminous and dynamic layers for added movement.</li><li>Blowout Styling: Get a professionally styled finish that showcases the volume and verve.</li><li>Texturizing (Optional): Add texturizing for a playful and modern touch.</li></ul><p>Embrace a lively and dynamic appearance with Volume Layer Verve.</p>",
+    "steps": "<ol><li><strong>Precision Volume Layer Cutting:</strong> Achieve voluminous and dynamic layers for added movement.</li><li><strong>Blowout Styling:</strong> Get a professionally styled finish that showcases the volume and verve.</li><li><strong>Texturizing (Optional):</strong> Add texturizing for a playful and modern touch.</li><li><strong>Post-Haircut Dynamism:</strong> Take your time to embrace the dynamic volume and verve of your haircut.</li></ol>",
+    "price": 3300,
+    "duration": "50 minutes",
+    "img": "url/to/volume-layer-verve-haircut.jpg"
+  },
+  {
+    "title": "Volume Layer Verve Long",
+    "category": "Hair Cut",
+    "shortDescription": "Opt for Volume Layer Verve Long, a longer version of the haircut adding even more volume and movement for a dynamic appearance.",
+    "longDescription": "<p>Elevate your style with Volume Layer Verve Long. This extended hair cut service includes:</p><ul><li>Precision Volume Layer Cutting: Achieve voluminous and dynamic layers for added movement.</li><li>Blowout Styling: Get a professionally styled finish that showcases the extended volume and verve.</li><li>Texturizing (Optional): Add texturizing for a playful and modern touch.</li></ul><p>Experience the extended dynamic volume and verve with Volume Layer Verve Long.</p>",
+    "steps": "<ol><li><strong>Precision Volume Layer Cutting:</strong> Achieve voluminous and dynamic layers for added movement.</li><li><strong>Blowout Styling:</strong> Get a professionally styled finish that showcases the extended volume and verve.</li><li><strong>Texturizing (Optional):</strong> Add texturizing for a playful and modern touch.</li><li><strong>Post-Haircut Dynamism:</strong> Take your time to embrace the extended dynamic volume and verve of your haircut.</li></ol>",
+    "price": 3600,
+    "duration": "55 minutes",
+    "img": "url/to/volume-layer-verve-long-haircut.jpg"
+  },
+  {
+    "title": "Emo Elegance",
+    "category": "Hair Cut",
+    "shortDescription": "Express your individuality with Emo Elegance, a haircut that combines style and attitude for a unique and edgy look.",
+    "longDescription": "<p>Embrace your individuality with the Emo Elegance haircut. This hair cut service includes:</p><ul><li>Distinctive Emo Styling: Achieve a unique and edgy look that expresses your personality.</li><li>Texturizing (Optional): Add texturizing for a playful and modern touch.</li><li>Emo-Inspired Finish: Leave with a statement-making haircut that stands out.</li></ul><p>Step into the world of Emo Elegance and showcase your unique style.</p>",
+    "steps": "<ol><li><strong>Distinctive Emo Styling:</strong> Achieve a unique and edgy look that expresses your personality.</li><li><strong>Texturizing (Optional):</strong> Add texturizing for a playful and modern touch.</li><li><strong>Emo-Inspired Finish:</strong> Leave with a statement-making haircut that stands out.</li><li><strong>Post-Haircut Expression:</strong> Take your time to showcase your unique Emo Elegance.</li></ol>",
+    "price": 3000,
+    "duration": "45 minutes",
+    "img": "url/to/emo-elegance-haircut.jpg"
+  },
+  {
+    "title": "Bold Blunt Cut",
+    "category": "Hair Cut",
+    "shortDescription": "Make a statement with the Bold Blunt Cut, a haircut that exudes confidence and modern style.",
+    "longDescription": "<p>Make a bold statement with the Bold Blunt Cut. This hair cut service includes:</p><ul><li>Precision Blunt Cutting: Achieve a clean and bold look for a confident appearance.</li><li>Blowout Styling: Get a smooth and polished finish for a modern and stylish look.</li><li>Finishing Touches: Ensure every strand is perfectly in place for a sharp and bold finish.</li></ul><p>Stand out with confidence and modern style with the Bold Blunt Cut.</p>",
+    "steps": "<ol><li><strong>Precision Blunt Cutting:</strong> Achieve a clean and bold look for a confident appearance.</li><li><strong>Blowout Styling:</strong> Get a smooth and polished finish for a modern and stylish look.</li><li><strong>Finishing Touches:</strong> Ensure every strand is perfectly in place for a sharp and bold finish.</li><li><strong>Post-Haircut Confidence:</strong> Take your time to showcase your bold and confident Blunt Cut.</li></ol>",
+    "price": 3200,
+    "duration": "50 minutes",
+    "img": "url/to/bold-blunt-cut-haircut.jpg"
+  },
+  {
+    "title": "A-Line Bob Chic",
+    "category": "Hair Cut",
+    "shortDescription": "Opt for A-Line Bob Chic, a haircut that combines sophistication with a playful A-line shape for a trendy and chic appearance.",
+    "longDescription": "<p>Elevate your style with A-Line Bob Chic. This hair cut service includes:</p><ul><li>Precision A-Line Cutting: Achieve a sophisticated and playful A-line shape for a trendy appearance.</li><li>Texturizing (Optional): Add texturizing for a playful and modern touch.</li><li>Chic Styling: Leave with a stylish A-Line Bob that reflects your individuality.</li></ul><p>Experience the chic and trendy A-Line Bob Chic haircut.</p>",
+    "steps": "<ol><li><strong>Precision A-Line Cutting:</strong> Achieve a sophisticated and playful A-line shape for a trendy appearance.</li><li><strong>Texturizing (Optional):</strong> Add texturizing for a playful and modern touch.</li><li><strong>Chic Styling:</strong> Leave with a stylish A-Line Bob that reflects your individuality.</li><li><strong>Post-Haircut Trendiness:</strong> Take your time to embrace the chic and trendy A-Line Bob Chic.</li></ol>",
+    "price": 3500,
+    "duration": "55 minutes",
+    "img": "url/to/a-line-bob-chic-haircut.jpg"
+  },
+  {
+    "title": "Angled Bob Elegance",
+    "category": "Hair Cut",
+    "shortDescription": "Indulge in Angled Bob Elegance, a modern and stylish haircut that adds an angled twist for a bold and fashionable look.",
+    "longDescription": "<p>Step into modern style with Angled Bob Elegance. This hair cut service includes:</p><ul><li>Precision Angled Cutting: Achieve a bold and fashionable look with strategically angled layers.</li><li>Texturizing (Optional): Add texturizing for a playful and modern touch.</li><li>Professional Styling: Leave with a chic and angled bob that exudes elegance.</li></ul><p>Elevate your style with the bold and fashionable Angled Bob Elegance.</p>",
+    "steps": "<ol><li><strong>Precision Angled Cutting:</strong> Achieve a bold and fashionable look with strategically angled layers.</li><li><strong>Texturizing (Optional):</strong> Add texturizing for a playful and modern touch.</li><li><strong>Professional Styling:</strong> Leave with a chic and angled bob that exudes elegance.</li><li><strong>Post-Haircut Boldness:</strong> Take your time to showcase the bold and fashionable Angled Bob Elegance.</li></ol>",
+    "price": 3300,
+    "duration": "50 minutes",
+    "img": "url/to/angled-bob-elegance-haircut.jpg"
+  },
+  {
+    "title": "Long Bob Glamour",
+    "category": "Hair Cut",
+    "shortDescription": "Opt for Long Bob Glamour, a haircut that combines the sophistication of a bob with the versatility of longer lengths for a glamorous appearance.",
+    "longDescription": "<p>Experience sophistication with Long Bob Glamour. This hair cut service includes:</p><ul><li>Precision Long Bob Cutting: Achieve the classic bob look with added length for a glamorous appearance.</li><li>Blowout Styling: Get a professionally styled finish that showcases the glamour of the long bob.</li><li>Finishing Touches: Ensure every strand is perfectly in place for a polished and glamorous finish.</li></ul><p>Indulge in the sophistication and glamour of the Long Bob Glamour.</p>",
+    "steps": "<ol><li><strong>Precision Long Bob Cutting:</strong> Achieve the classic bob look with added length for a glamorous appearance.</li><li><strong>Blowout Styling:</strong> Get a professionally styled finish that showcases the glamour of the long bob.</li><li><strong>Finishing Touches:</strong> Ensure every strand is perfectly in place for a polished and glamorous finish.</li><li><strong>Post-Haircut Glamour:</strong> Take your time to embrace the sophistication and glamour of the Long Bob Glamour.</li></ol>",
+    "price": 3700,
+    "duration": "60 minutes",
+    "img": "url/to/long-bob-glamour-haircut.jpg"
+  },
+  {
+    "title": "Feather Layer Fantasy",
+    "category": "Hair Cut",
+    "shortDescription": "Indulge in Feather Layer Fantasy, a haircut that adds feathered layers for a soft and romantic appearance with a touch of fantasy.",
+    "longDescription": "<p>Escape into a world of fantasy with Feather Layer Fantasy. This hair cut service includes:</p><ul><li>Feathered Layer Cutting: Achieve soft and romantic layers for a fantasy-inspired appearance.</li><li>Texturizing (Optional): Add texturizing for a playful and modern touch.</li><li>Whimsical Styling: Leave with a haircut that captures the essence of a feathered fantasy.</li></ul><p>Immerse yourself in the whimsy of Feather Layer Fantasy.</p>",
+    "steps": "<ol><li><strong>Feathered Layer Cutting:</strong> Achieve soft and romantic layers for a fantasy-inspired appearance.</li><li><strong>Texturizing (Optional):</strong> Add texturizing for a playful and modern touch.</li><li><strong>Whimsical Styling:</strong> Leave with a haircut that captures the essence of a feathered fantasy.</li><li><strong>Post-Haircut Whimsy:</strong> Take your time to embrace the whimsy of Feather Layer Fantasy.</li></ol>",
+    "price": 3400,
+    "duration": "55 minutes",
+    "img": "url/to/feather-layer-fantasy-haircut.jpg"
+  },
+  {
+    "title": "Henna Pack Application (S)",
+    "category": "Hair Color",
+    "shortDescription": "Try the Henna Pack Application (S) for a subtle and natural hair color enhancement.",
+    "longDescription": "<p>Enhance your natural beauty with the Henna Pack Application (S). This hair color service includes:</p><ul><li>Subtle Henna Coloring: Achieve a natural and subtle enhancement of your hair color.</li><li>Application Technique: Precise application for a seamless and beautiful result.</li><li>Short Hair Coverage: Suitable for short hair lengths.</li></ul><p>Experience the subtle beauty of the Henna Pack Application (S).</p>",
+    "steps": "<ol><li><strong>Subtle Henna Coloring:</strong> Achieve a natural and subtle enhancement of your hair color.</li><li><strong>Application Technique:</strong> Precise application for a seamless and beautiful result.</li><li><strong>Short Hair Coverage:</strong> Suitable for short hair lengths.</li><li><strong>Post-Application Delight:</strong> Take your time to enjoy the subtle beauty of your Henna Pack Application (S).</li></ol>",
+    "price": 2500,
+    "duration": "30 minutes",
+    "img": "url/to/henna-pack-application-s.jpg"
+  },
+  {
+    "title": "Henna Pack Application (M)",
+    "category": "Hair Color",
+    "shortDescription": "Opt for the Henna Pack Application (M) for a medium coverage and a vibrant hair color transformation.",
+    "longDescription": "<p>Transform your look with the Henna Pack Application (M). This hair color service includes:</p><ul><li>Vibrant Henna Coloring: Achieve a medium coverage and a vibrant transformation of your hair color.</li><li>Application Technique: Precise application for an even and striking result.</li><li>Medium Hair Coverage: Suitable for medium-length hair.</li></ul><p>Experience the vibrant transformation of the Henna Pack Application (M).</p>",
+    "steps": "<ol><li><strong>Vibrant Henna Coloring:</strong> Achieve a medium coverage and a vibrant transformation of your hair color.</li><li><strong>Application Technique:</strong> Precise application for an even and striking result.</li><li><strong>Medium Hair Coverage:</strong> Suitable for medium-length hair.</li><li><strong>Post-Application Radiance:</strong> Take your time to embrace the vibrant transformation of your Henna Pack Application (M).</li></ol>",
+    "price": 3000,
+    "duration": "45 minutes",
+    "img": "url/to/henna-pack-application-m.jpg"
+  },
+  {
+    "title": "Henna Pack Application (L)",
+    "category": "Hair Color",
+    "shortDescription": "Indulge in the Henna Pack Application (L) for full coverage and a rich, luscious hair color.",
+    "longDescription": "<p>Indulge in the richness of the Henna Pack Application (L). This hair color service includes:</p><ul><li>Full Coverage Henna Coloring: Achieve complete coverage for a rich and luscious hair color.</li><li>Application Technique: Precise application for a seamless and full result.</li><li>Long Hair Coverage: Suitable for long hair lengths.</li></ul><p>Experience the luxurious richness of the Henna Pack Application (L).</p>",
+    "steps": "<ol><li><strong>Full Coverage Henna Coloring:</strong> Achieve complete coverage for a rich and luscious hair color.</li><li><strong>Application Technique:</strong> Precise application for a seamless and full result.</li><li><strong>Long Hair Coverage:</strong> Suitable for long hair lengths.</li><li><strong>Post-Application Opulence:</strong> Take your time to enjoy the luxurious richness of your Henna Pack Application (L).</li></ol>",
+    "price": 3500,
+    "duration": "60 minutes",
+    "img": "url/to/henna-pack-application-l.jpg"
+  },
+  {
+    "title": "Henna Pack Application (XL)",
+    "category": "Hair Color",
+    "shortDescription": "Opt for the Henna Pack Application (XL) for an extra-large coverage and a bold, statement-making hair color.",
+    "longDescription": "<p>Make a bold statement with the Henna Pack Application (XL). This hair color service includes:</p><ul><li>Extra-Large Coverage Henna Coloring: Achieve an extensive coverage for a bold and statement-making hair color.</li><li>Application Technique: Precise application for an even and impactful result.</li><li>XL Hair Coverage: Suitable for extra-long hair lengths.</li></ul><p>Make a bold statement with the Henna Pack Application (XL).</p>",
+    "steps": "<ol><li><strong>Extra-Large Coverage Henna Coloring:</strong> Achieve an extensive coverage for a bold and statement-making hair color.</li><li><strong>Application Technique:</strong> Precise application for an even and impactful result.</li><li><strong>XL Hair Coverage:</strong> Suitable for extra-long hair lengths.</li><li><strong>Post-Application Boldness:</strong> Take your time to make a bold statement with your Henna Pack Application (XL).</li></ol>",
+    "price": 4000,
+    "duration": "75 minutes",
+    "img": "url/to/henna-pack-application-xl.jpg"
+  },
+  {
+    "title": "Shine Rebonding (S)",
+    "category": "Hair Straightening",
+    "shortDescription": "Experience sleek and shiny hair with Shine Rebonding (S) for a subtle straightening effect.",
+    "longDescription": "<p>Transform your look with Shine Rebonding (S). This hair straightening service includes:</p><ul><li>Subtle Straightening: Achieve a sleek and shiny look with a subtle straightening effect.</li><li>Professional Application: Precise application for a seamless and beautiful result.</li><li>Short Hair Coverage: Suitable for short hair lengths.</li></ul><p>Experience the subtle beauty of Shine Rebonding (S).</p>",
+    "steps": "<ol><li><strong>Subtle Straightening:</strong> Achieve a sleek and shiny look with a subtle straightening effect.</li><li><strong>Professional Application:</strong> Precise application for a seamless and beautiful result.</li><li><strong>Short Hair Coverage:</strong> Suitable for short hair lengths.</li><li><strong>Post-Rebonding Delight:</strong> Take your time to enjoy the subtle beauty of Shine Rebonding (S).</li></ol>",
+    "price": 3500,
+    "duration": "2 hours",
+    "img": "url/to/shine-rebonding-s.jpg"
+  },
+  {
+    "title": "Shine Rebonding (M)",
+    "category": "Hair Straightening",
+    "shortDescription": "Opt for Shine Rebonding (M) for a medium coverage and a sleek, straightened hair look.",
+    "longDescription": "<p>Achieve a sleek and straightened look with Shine Rebonding (M). This hair straightening service includes:</p><ul><li>Medium Coverage Straightening: Achieve a sleek and straightened look with medium coverage.</li><li>Professional Application: Precise application for an even and striking result.</li><li>Medium Hair Coverage: Suitable for medium-length hair.</li></ul><p>Experience the sleekness of Shine Rebonding (M).</p>",
+    "steps": "<ol><li><strong>Medium Coverage Straightening:</strong> Achieve a sleek and straightened look with medium coverage.</li><li><strong>Professional Application:</strong> Precise application for an even and striking result.</li><li><strong>Medium Hair Coverage:</strong> Suitable for medium-length hair.</li><li><strong>Post-Rebonding Radiance:</strong> Take your time to embrace the sleekness of Shine Rebonding (M).</li></ol>",
+    "price": 4500,
+    "duration": "3 hours",
+    "img": "url/to/shine-rebonding-m.jpg"
+  },
+  {
+    "title": "Shine Rebonding (L)",
+    "category": "Hair Straightening",
+    "shortDescription": "Indulge in Shine Rebonding (L) for full coverage and a luscious, straightened hair finish.",
+    "longDescription": "<p>Indulge in the luxurious finish of Shine Rebonding (L). This hair straightening service includes:</p><ul><li>Full Coverage Straightening: Achieve a luscious and straightened look with complete coverage.</li><li>Professional Application: Precise application for a seamless and full result.</li><li>Long Hair Coverage: Suitable for long hair lengths.</li></ul><p>Experience the luxurious straightening of Shine Rebonding (L).</p>",
+    "steps": "<ol><li><strong>Full Coverage Straightening:</strong> Achieve a luscious and straightened look with complete coverage.</li><li><strong>Professional Application:</strong> Precise application for a seamless and full result.</li><li><strong>Long Hair Coverage:</strong> Suitable for long hair lengths.</li><li><strong>Post-Rebonding Opulence:</strong> Take your time to enjoy the luxurious straightening of Shine Rebonding (L).</li></ol>",
+    "price": 5500,
+    "duration": "4 hours",
+    "img": "url/to/shine-rebonding-l.jpg"
+  },
+  {
+    "title": "Shine Rebonding (XL)",
+    "category": "Hair Straightening",
+    "shortDescription": "Opt for Shine Rebonding (XL) for an extra-large coverage and an ultra-sleek, straightened hair look.",
+    "longDescription": "<p>Make a bold statement with Shine Rebonding (XL). This hair straightening service includes:</p><ul><li>Extra-Large Coverage Straightening: Achieve an extensive straightened look with extra-large coverage.</li><li>Professional Application: Precise application for an even and impactful result.</li><li>XL Hair Coverage: Suitable for extra-long hair lengths.</li></ul><p>Make a bold statement with Shine Rebonding (XL).</p>",
+    "steps": "<ol><li><strong>Extra-Large Coverage Straightening:</strong> Achieve an extensive straightened look with extra-large coverage.</li><li><strong>Professional Application:</strong> Precise application for an even and impactful result.</li><li><strong>XL Hair Coverage:</strong> Suitable for extra-long hair lengths.</li><li><strong>Post-Rebonding Boldness:</strong> Take your time to make a bold statement with Shine Rebonding (XL).</li></ol>",
+    "price": 6500,
+    "duration": "5 hours",
+    "img": "url/to/shine-rebonding-xl.jpg"
+  },
+  {
+    "title": "Milk Rebonding (S)",
+    "category": "Hair Straightening",
+    "shortDescription": "Experience silky-smooth hair with Milk Rebonding (S) for a subtle straightening effect.",
+    "longDescription": "<p>Transform your hair into silky-smooth perfection with Milk Rebonding (S). This hair straightening service includes:</p><ul><li>Subtle Straightening: Achieve a subtle straightening effect for silky and smooth hair.</li><li>Milk Infusion: Nourish your hair with the goodness of milk for added shine and health.</li><li>Short Hair Coverage: Suitable for short hair lengths.</li></ul><p>Indulge in the subtle beauty of Milk Rebonding (S).</p>",
+    "steps": "<ol><li><strong>Subtle Straightening:</strong> Achieve a subtle straightening effect for silky and smooth hair.</li><li><strong>Milk Infusion:</strong> Nourish your hair with the goodness of milk for added shine and health.</li><li><strong>Short Hair Coverage:</strong> Suitable for short hair lengths.</li><li><strong>Post-Rebonding Delight:</strong> Take your time to enjoy the silky-smooth results of Milk Rebonding (S).</li></ol>",
+    "price": 4000,
+    "duration": "2.5 hours",
+    "img": "url/to/milk-rebonding-s.jpg"
+  },
+  {
+    "title": "Milk Rebonding (M)",
+    "category": "Hair Straightening",
+    "shortDescription": "Opt for Milk Rebonding (M) for medium coverage and luxuriously smooth, straightened hair.",
+    "longDescription": "<p>Indulge in the luxury of Milk Rebonding (M) for a medium coverage straightening experience. This hair straightening service includes:</p><ul><li>Luxurious Straightening: Achieve luxuriously smooth and straightened hair with medium coverage.</li><li>Milk Infusion: Nourish your hair with the goodness of milk for added shine and health.</li><li>Medium Hair Coverage: Suitable for medium-length hair.</li></ul><p>Experience the indulgence of Milk Rebonding (M).</p>",
+    "steps": "<ol><li><strong>Luxurious Straightening:</strong> Achieve luxuriously smooth and straightened hair with medium coverage.</li><li><strong>Milk Infusion:</strong> Nourish your hair with the goodness of milk for added shine and health.</li><li><strong>Medium Hair Coverage:</strong> Suitable for medium-length hair.</li><li><strong>Post-Rebonding Radiance:</strong> Take your time to embrace the luxurious results of Milk Rebonding (M).</li></ol>",
+    "price": 5000,
+    "duration": "3 hours",
+    "img": "url/to/milk-rebonding-m.jpg"
+  },
+  {
+    "title": "Milk Rebonding (L)",
+    "category": "Hair Straightening",
+    "shortDescription": "Immerse yourself in Milk Rebonding (L) for full coverage and exceptionally smooth, straightened hair.",
+    "longDescription": "<p>Immerse yourself in the richness of Milk Rebonding (L) for a full coverage straightening experience. This hair straightening service includes:</p><ul><li>Exceptionally Smooth Straightening: Achieve exceptionally smooth and straightened hair with full coverage.</li><li>Milk Infusion: Nourish your hair with the goodness of milk for added shine and health.</li><li>Long Hair Coverage: Suitable for long hair lengths.</li></ul><p>Experience the richness of Milk Rebonding (L).</p>",
+    "steps": "<ol><li><strong>Exceptionally Smooth Straightening:</strong> Achieve exceptionally smooth and straightened hair with full coverage.</li><li><strong>Milk Infusion:</strong> Nourish your hair with the goodness of milk for added shine and health.</li><li><strong>Long Hair Coverage:</strong> Suitable for long hair lengths.</li><li><strong>Post-Rebonding Opulence:</strong> Take your time to enjoy the exceptionally smooth results of Milk Rebonding (L).</li></ol>",
+    "price": 6000,
+    "duration": "4 hours",
+    "img": "url/to/milk-rebonding-l.jpg"
+  },
+  {
+    "title": "Milk Rebonding (XL)",
+    "category": "Hair Straightening",
+    "shortDescription": "Opt for Milk Rebonding (XL) for extra-large coverage and the ultimate smooth, straightened hair look.",
+    "longDescription": "<p>Make a statement with Milk Rebonding (XL) for an extra-large coverage straightening experience. This hair straightening service includes:</p><ul><li>Ultimate Smooth Straightening: Achieve the ultimate in smooth and straightened hair with extra-large coverage.</li><li>Milk Infusion: Nourish your hair with the goodness of milk for added shine and health.</li><li>XL Hair Coverage: Suitable for extra-long hair lengths.</li></ul><p>Make a bold statement with Milk Rebonding (XL).</p>",
+    "steps": "<ol><li><strong>Ultimate Smooth Straightening:</strong> Achieve the ultimate in smooth and straightened hair with extra-large coverage.</li><li><strong>Milk Infusion:</strong> Nourish your hair with the goodness of milk for added shine and health.</li><li><strong>XL Hair Coverage:</strong> Suitable for extra-long hair lengths.</li><li><strong>Post-Rebonding Boldness:</strong> Take your time to make a bold statement with Milk Rebonding (XL).</li></ol>",
+    "price": 7000,
+    "duration": "5 hours",
+    "img": "url/to/milk-rebonding-xl.jpg"
+  },
+  {
+    "title": "Hair Oil Massage",
+    "category": "Hair Treatment",
+    "shortDescription": "Relaxing and nourishing hair oil massage for a healthier scalp and vibrant hair.",
+    "longDescription": "<p>Indulge in a rejuvenating hair oil massage to nourish your scalp and promote healthy, lustrous hair.</p>",
+    "steps": "<ol><li>Gently apply warm oil to the scalp.</li><li>Massage the oil in circular motions to stimulate blood flow.</li><li>Leave the oil on for a recommended duration.</li><li>Shampoo and rinse thoroughly.</li></ol>",
+    "price": 500,
+    "duration": "30 minutes",
+    "img": "url/to/hair-oil-massage.jpg"
+  },
+  {
+    "title": "Protein Treatment (S)",
+    "category": "Hair Treatment",
+    "shortDescription": "A small-sized protein treatment for strengthening and repairing damaged hair.",
+    "longDescription": "<p>Give your hair the care it deserves with our small-sized protein treatment. Perfect for strengthening and repairing damaged strands.</p>",
+    "steps": "<ol><li>Apply the protein treatment evenly to damp hair.</li><li>Leave on for the recommended time.</li><li>Rinse thoroughly and style as usual.</li></ol>",
+    "price": 800,
+    "duration": "45 minutes",
+    "img": "protein_treatment_s.jpg"
+  },
+  {
+    "title": "Protein Treatment (M)",
+    "category": "Hair Treatment",
+    "shortDescription": "A medium-sized protein treatment for intense nourishment and repair.",
+    "longDescription": "<p>Experience intense nourishment and repair with our medium-sized protein treatment, designed for optimum hair health.</p>",
+    "steps": "<ol><li>Apply the protein treatment generously to clean, towel-dried hair.</li><li>Leave on for the recommended time.</li><li>Rinse thoroughly and style as usual.</li></ol>",
+    "price": 1200,
+    "duration": "60 minutes",
+    "img": "protein_treatment_m.jpg"
+  },
+  {
+    "title": "Protein Treatment (L)",
+    "category": "Hair Treatment",
+    "shortDescription": "A large-sized protein treatment for deep nourishment and repair, suitable for long hair.",
+    "longDescription": "<p>Indulge in deep nourishment and repair with our large-sized protein treatment, specially formulated for long hair.</p>",
+    "steps": "<ol><li>Apply the protein treatment generously to clean, towel-dried hair.</li><li>Leave on for the recommended time.</li><li>Rinse thoroughly and style as usual.</li></ol>",
+    "price": 1500,
+    "duration": "75 minutes",
+    "img": "protein_treatment_l.jpg"
+  },
+  {
+    "title": "Protein Treatment (XL)",
+    "category": "Hair Treatment",
+    "shortDescription": "An extra-large protein treatment for maximum nourishment and repair.",
+    "longDescription": "<p>Experience maximum nourishment and repair with our extra-large protein treatment, suitable for all hair types.</p>",
+    "steps": "<ol><li>Apply the protein treatment generously to clean, towel-dried hair.</li><li>Leave on for the recommended time.</li><li>Rinse thoroughly and style as usual.</li></ol>",
+    "price": 1800,
+    "duration": "90 minutes",
+    "img": "protein_treatment_xl.jpg"
+  },
+  {
+    "title": "Keratin Spa (S)",
+    "category": "Hair Treatment",
+    "shortDescription": "A small-sized Keratin Spa treatment for smooth and frizz-free hair.",
+    "longDescription": "<p>Indulge in a small-sized Keratin Spa treatment for smooth and frizz-free hair. Experience the luxurious benefits of keratin for a revitalized look.</p>",
+    "steps": "<ol><li>Apply the Keratin Spa treatment evenly to clean, towel-dried hair.</li><li>Leave on for the recommended time.</li><li>Rinse thoroughly and enjoy the silky results.</li></ol>",
+    "price": 1200,
+    "duration": "60 minutes",
+    "img": "keratin_spa_s.jpg"
+  },
+  {
+    "title": "Keratin Spa (M)",
+    "category": "Hair Treatment",
+    "shortDescription": "A medium-sized Keratin Spa treatment for enhanced smoothness and manageability.",
+    "longDescription": "<p>Opt for the medium-sized Keratin Spa treatment to achieve enhanced smoothness and manageability. Transform your hair into a sleek masterpiece.</p>",
+    "steps": "<ol><li>Apply the Keratin Spa treatment generously to clean, towel-dried hair.</li><li>Leave on for the recommended time.</li><li>Rinse thoroughly and savor the silky perfection.</li></ol>",
+    "price": 1500,
+    "duration": "75 minutes",
+    "img": "keratin_spa_m.jpg"
+  },
+  {
+    "title": "Keratin Spa (L)",
+    "category": "Hair Treatment",
+    "shortDescription": "A large-sized Keratin Spa treatment for deep nourishment and long-lasting smoothness.",
+    "longDescription": "<p>Indulge in a large-sized Keratin Spa treatment for deep nourishment and long-lasting smoothness. Pamper your hair with the goodness of keratin.</p>",
+    "steps": "<ol><li>Apply the Keratin Spa treatment generously to clean, towel-dried hair.</li><li>Leave on for the recommended time.</li><li>Rinse thoroughly and revel in the luxurious smoothness.</li></ol>",
+    "price": 1800,
+    "duration": "90 minutes",
+    "img": "keratin_spa_l.jpg"
+  },
+  {
+    "title": "Keratin Spa (XL)",
+    "category": "Hair Treatment",
+    "shortDescription": "An extra-large Keratin Spa treatment for ultimate nourishment and a sleek, polished finish.",
+    "longDescription": "<p>Experience ultimate nourishment with our extra-large Keratin Spa treatment. Achieve a sleek, polished finish that lasts.</p>",
+    "steps": "<ol><li>Apply the Keratin Spa treatment generously to clean, towel-dried hair.</li><li>Leave on for the recommended time.</li><li>Rinse thoroughly and admire the ultimate sleekness.</li></ol>",
+    "price": 2000,
+    "duration": "120 minutes",
+    "img": "keratin_spa_xl.jpg"
+  },
+  {
+    "title": "Pamper Me Luxury Herbal Straightening (S)",
+    "category": "Hair Straightening",
+    "shortDescription": "Indulge in silky-smooth hair with Pamper Me Luxury Herbal Straightening (S) for a subtle and luxurious straightening effect.",
+    "longDescription": "<p>Experience the epitome of luxury with Pamper Me Luxury Herbal Straightening (S). This hair straightening service includes:</p><ul><li>Subtle Herbal Straightening: Achieve silky-smooth hair with a subtle and luxurious straightening effect.</li><li>Luxury Herbal Infusion: Indulge your hair in a blend of premium herbal extracts for added shine and health.</li><li>Short Hair Coverage: Suitable for short hair lengths.</li></ul><p>Immerse yourself in the luxury of Pamper Me Luxury Herbal Straightening (S).</p>",
+    "steps": "<ol><li><strong>Subtle Herbal Straightening:</strong> Achieve silky-smooth hair with a subtle and luxurious straightening effect.</li><li><strong>Luxury Herbal Infusion:</strong> Indulge your hair in a blend of premium herbal extracts for added shine and health.</li><li><strong>Short Hair Coverage:</strong> Suitable for short hair lengths.</li><li><strong>Post-Straightening Indulgence:</strong> Take your time to enjoy the luxurious results of Pamper Me Luxury Herbal Straightening (S).</li></ol>",
+    "price": 5000,
+    "duration": "2.5 hours",
+    "img": "url/to/pamper-me-luxury-herbal-straightening-s.jpg"
+  },
+  {
+    "title": "Pamper Me Luxury Herbal Straightening (M)",
+    "category": "Hair Straightening",
+    "shortDescription": "Immerse yourself in the richness of Pamper Me Luxury Herbal Straightening (M) for medium coverage and exceptionally smooth, straightened hair.",
+    "longDescription": "<p>Indulge in the richness of Pamper Me Luxury Herbal Straightening (M) for a medium coverage straightening experience. This hair straightening service includes:</p><ul><li>Exceptionally Smooth Straightening: Achieve luxuriously smooth and straightened hair with medium coverage.</li><li>Luxury Herbal Infusion: Nourish your hair with a blend of premium herbal extracts for added shine and health.</li><li>Medium Hair Coverage: Suitable for medium-length hair.</li></ul><p>Experience the richness of Pamper Me Luxury Herbal Straightening (M).</p>",
+    "steps": "<ol><li><strong>Exceptionally Smooth Straightening:</strong> Achieve luxuriously smooth and straightened hair with medium coverage.</li><li><strong>Luxury Herbal Infusion:</strong> Nourish your hair with a blend of premium herbal extracts for added shine and health.</li><li><strong>Medium Hair Coverage:</strong> Suitable for medium-length hair.</li><li><strong>Post-Straightening Indulgence:</strong> Take your time to enjoy the richness of Pamper Me Luxury Herbal Straightening (M).</li></ol>",
+    "price": 6000,
+    "duration": "3 hours",
+    "img": "url/to/pamper-me-luxury-herbal-straightening-m.jpg"
+  },
+  {
+    "title": "Pamper Me Luxury Herbal Straightening (L)",
+    "category": "Hair Straightening",
+    "shortDescription": "Immerse yourself in the opulence of Pamper Me Luxury Herbal Straightening (L) for full coverage and irresistibly smooth, straightened hair.",
+    "longDescription": "<p>Indulge in the opulence of Pamper Me Luxury Herbal Straightening (L) for a full coverage straightening experience. This hair straightening service includes:</p><ul><li>Irresistibly Smooth Straightening: Achieve luxuriously smooth and straightened hair with full coverage.</li><li>Luxury Herbal Infusion: Nourish your hair with a blend of premium herbal extracts for added shine and health.</li><li>Long Hair Coverage: Suitable for long hair lengths.</li></ul><p>Experience the opulence of Pamper Me Luxury Herbal Straightening (L).</p>",
+    "steps": "<ol><li><strong>Irresistibly Smooth Straightening:</strong> Achieve luxuriously smooth and straightened hair with full coverage.</li><li><strong>Luxury Herbal Infusion:</strong> Nourish your hair with a blend of premium herbal extracts for added shine and health.</li><li><strong>Long Hair Coverage:</strong> Suitable for long hair lengths.</li><li><strong>Post-Straightening Opulence:</strong> Take your time to enjoy the irresistible results of Pamper Me Luxury Herbal Straightening (L).</li></ol>",
+    "price": 7000,
+    "duration": "4 hours",
+    "img": "url/to/pamper-me-luxury-herbal-straightening-l.jpg"
+  },
+  {
+    "title": "Pamper Me Luxury Herbal Straightening (XL)",
+    "category": "Hair Straightening",
+    "shortDescription": "Immerse yourself in the ultimate luxury of Pamper Me Luxury Herbal Straightening (XL) for extra-large coverage and the epitome of smooth, straightened hair.",
+    "longDescription": "<p>Immerse yourself in the ultimate luxury of Pamper Me Luxury Herbal Straightening (XL) for an extra-large coverage straightening experience. This hair straightening service includes:</p><ul><li>Epitome of Smooth Straightening: Achieve the ultimate in smooth and straightened hair with extra-large coverage.</li><li>Luxury Herbal Infusion: Nourish your hair with a blend of premium herbal extracts for added shine and health.</li><li>XL Hair Coverage: Suitable for extra-long hair lengths.</li></ul><p>Experience the ultimate luxury of Pamper Me Luxury Herbal Straightening (XL).</p>",
+    "steps": "<ol><li><strong>Epitome of Smooth Straightening:</strong> Achieve the ultimate in smooth and straightened hair with extra-large coverage.</li><li><strong>Luxury Herbal Infusion:</strong> Nourish your hair with a blend of premium herbal extracts for added shine and health.</li><li><strong>XL Hair Coverage:</strong> Suitable for extra-long hair lengths.</li><li><strong>Post-Straightening Elegance:</strong> Take your time to bask in the ultimate luxury of Pamper Me Luxury Herbal Straightening (XL).</li></ol>",
+    "price": 8000,
+    "duration": "5 hours",
+    "img": "url/to/pamper-me-luxury-herbal-straightening-xl.jpg"
+  },
+  {
+    "title": "Anti-Dandruff Spa (S) - Refresh",
+    "category": "Hair Treatment",
+    "shortDescription": "A small-sized Anti-Dandruff Spa treatment for a flake-free and refreshed scalp.",
+    "longDescription": "<p>Experience a flake-free and refreshed scalp with our small-sized Anti-Dandruff Spa treatment. Say goodbye to dandruff troubles.</p>",
+    "steps": "<ol><li>Apply the Anti-Dandruff Spa treatment to the scalp and hair roots.</li><li>Leave on for the recommended time.</li><li>Rinse thoroughly for a revitalized scalp.</li></ol>",
+    "price": 1000,
+    "duration": "45 minutes",
+    "img": "anti_dandruff_spa_s.jpg"
+  },
+  {
+    "title": "Anti-Dandruff Spa (M) - Intensive Care",
+    "category": "Hair Treatment",
+    "shortDescription": "A medium-sized Anti-Dandruff Spa treatment for intensive dandruff control and scalp care.",
+    "longDescription": "<p>Opt for the medium-sized Anti-Dandruff Spa treatment for intensive dandruff control and comprehensive scalp care. Rejuvenate your scalp for a healthier look.</p>",
+    "steps": "<ol><li>Apply the Anti-Dandruff Spa treatment to the scalp and hair roots.</li><li>Leave on for the recommended time.</li><li>Rinse thoroughly for a revitalized scalp.</li></ol>",
+    "price": 1300,
+    "duration": "60 minutes",
+    "img": "anti_dandruff_spa_m.jpg"
+  },
+  {
+    "title": "Anti-Dandruff Spa (L) - Deep Cleanse",
+    "category": "Hair Treatment",
+    "shortDescription": "A large-sized Anti-Dandruff Spa treatment for deep cleansing and long-lasting dandruff relief.",
+    "longDescription": "<p>Indulge in a large-sized Anti-Dandruff Spa treatment for deep cleansing and long-lasting dandruff relief. Reclaim the health of your scalp with our specialized spa.</p>",
+    "steps": "<ol><li>Apply the Anti-Dandruff Spa treatment to the scalp and hair roots.</li><li>Leave on for the recommended time.</li><li>Rinse thoroughly for a revitalized scalp.</li></ol>",
+    "price": 1600,
+    "duration": "75 minutes",
+    "img": "anti_dandruff_spa_l.jpg"
+  },
+  {
+    "title": "Anti-Dandruff Spa (XL) - Maximum Care",
+    "category": "Hair Treatment",
+    "shortDescription": "An extra-large Anti-Dandruff Spa treatment for maximum scalp care and dandruff elimination.",
+    "longDescription": "<p>Experience maximum scalp care and dandruff elimination with our extra-large Anti-Dandruff Spa treatment. Enjoy a rejuvenated and flake-free scalp.</p>",
+    "steps": "<ol><li>Apply the Anti-Dandruff Spa treatment to the scalp and hair roots.</li><li>Leave on for the recommended time.</li><li>Rinse thoroughly for a revitalized scalp.</li></ol>",
+    "price": 1900,
+    "duration": "90 minutes",
+    "img": "anti_dandruff_spa_xl.jpg"
+  },
+  {
+    "title": "X-tenso Smoothing Treatment (S)",
+    "category": "Hair Straightening",
+    "shortDescription": "Experience sleek and smooth hair with X-tenso Smoothing Treatment (S) for a subtle straightening effect.",
+    "longDescription": "<p>Transform your look with X-tenso Smoothing Treatment (S). This hair straightening service includes:</p><ul><li>Subtle Straightening: Achieve sleek and smooth hair with a subtle straightening effect.</li><li>Professional Application: Precise application for a seamless and beautiful result.</li><li>Short Hair Coverage: Suitable for short hair lengths.</li></ul><p>Experience the subtle beauty of X-tenso Smoothing Treatment (S).</p>",
+    "steps": "<ol><li><strong>Subtle Straightening:</strong> Achieve sleek and smooth hair with a subtle straightening effect.</li><li><strong>Professional Application:</strong> Precise application for a seamless and beautiful result.</li><li><strong>Short Hair Coverage:</strong> Suitable for short hair lengths.</li><li><strong>Post-Treatment Delight:</strong> Take your time to enjoy the subtle beauty of X-tenso Smoothing Treatment (S).</li></ol>",
+    "price": 3500,
+    "duration": "2 hours",
+    "img": "url/to/xtenso-smoothing-s.jpg"
+  },
+  {
+    "title": "X-tenso Smoothing Treatment (M)",
+    "category": "Hair Straightening",
+    "shortDescription": "Opt for X-tenso Smoothing Treatment (M) for medium coverage and a sleek, straightened hair look.",
+    "longDescription": "<p>Achieve a sleek and straightened look with X-tenso Smoothing Treatment (M). This hair straightening service includes:</p><ul><li>Medium Coverage Straightening: Achieve sleek and straightened hair with medium coverage.</li><li>Professional Application: Precise application for an even and striking result.</li><li>Medium Hair Coverage: Suitable for medium-length hair.</li></ul><p>Experience the sleekness of X-tenso Smoothing Treatment (M).</p>",
+    "steps": "<ol><li><strong>Medium Coverage Straightening:</strong> Achieve sleek and straightened hair with medium coverage.</li><li><strong>Professional Application:</strong> Precise application for an even and striking result.</li><li><strong>Medium Hair Coverage:</strong> Suitable for medium-length hair.</li><li><strong>Post-Treatment Radiance:</strong> Take your time to embrace the sleekness of X-tenso Smoothing Treatment (M).</li></ol>",
+    "price": 4500,
+    "duration": "3 hours",
+    "img": "url/to/xtenso-smoothing-m.jpg"
+  },
+  {
+    "title": "X-tenso Smoothing Treatment (L)",
+    "category": "Hair Straightening",
+    "shortDescription": "Indulge in X-tenso Smoothing Treatment (L) for full coverage and a luscious, straightened hair finish.",
+    "longDescription": "<p>Indulge in the luxurious finish of X-tenso Smoothing Treatment (L). This hair straightening service includes:</p><ul><li>Full Coverage Straightening: Achieve a luscious and straightened look with complete coverage.</li><li>Professional Application: Precise application for a seamless and full result.</li><li>Long Hair Coverage: Suitable for long hair lengths.</li></ul><p>Experience the luxurious straightening of X-tenso Smoothing Treatment (L).</p>",
+    "steps": "<ol><li><strong>Full Coverage Straightening:</strong> Achieve a luscious and straightened look with complete coverage.</li><li><strong>Professional Application:</strong> Precise application for a seamless and full result.</li><li><strong>Long Hair Coverage:</strong> Suitable for long hair lengths.</li><li><strong>Post-Treatment Opulence:</strong> Take your time to enjoy the luxurious straightening of X-tenso Smoothing Treatment (L).</li></ol>",
+    "price": 5500,
+    "duration": "4 hours",
+    "img": "url/to/xtenso-smoothing-l.jpg"
+  },
+  {
+    "title": "X-tenso Smoothing Treatment (XL)",
+    "category": "Hair Straightening",
+    "shortDescription": "Opt for X-tenso Smoothing Treatment (XL) for extra-large coverage and an ultra-sleek, straightened hair look.",
+    "longDescription": "<p>Make a bold statement with X-tenso Smoothing Treatment (XL). This hair straightening service includes:</p><ul><li>Extra-Large Coverage Straightening: Achieve an ultra-sleek and straightened look with extra-large coverage.</li><li>Professional Application: Precise application for a stunning and complete result.</li><li>XL Hair Coverage: Suitable for extra-long hair lengths.</li></ul><p>Make a bold statement with X-tenso Smoothing Treatment (XL).</p>",
+    "steps": "<ol><li><strong>Extra-Large Coverage Straightening:</strong> Achieve an ultra-sleek and straightened look with extra-large coverage.</li><li><strong>Professional Application:</strong> Precise application for a stunning and complete result.</li><li><strong>XL Hair Coverage:</strong> Suitable for extra-long hair lengths.</li><li><strong>Post-Treatment Boldness:</strong> Take your time to make a bold statement with X-tenso Smoothing Treatment (XL).</li></ol>",
+    "price": 6500,
+    "duration": "5 hours",
+    "img": "url/to/xtenso-smoothing-xl.jpg"
+  },
+  {
+    "title": "Anti-Hair Fall Spa (S) - Revitalize",
+    "category": "Hair Treatment",
+    "shortDescription": "A small-sized Anti-Hair Fall Spa treatment for revitalizing and strengthening hair.",
+    "longDescription": "<p>Revitalize and strengthen your hair with our small-sized Anti-Hair Fall Spa treatment. Combat hair fall and promote healthier strands.</p>",
+    "steps": "<ol><li>Apply the Anti-Hair Fall Spa treatment to the scalp and hair roots.</li><li>Leave on for the recommended time.</li><li>Rinse thoroughly for revitalized and strengthened hair.</li></ol>",
+    "price": 1100,
+    "duration": "50 minutes",
+    "img": "anti_hair_fall_spa_s.jpg"
+  },
+  {
+    "title": "Anti-Hair Fall Spa (M) - Intensive Care",
+    "category": "Hair Treatment",
+    "shortDescription": "A medium-sized Anti-Hair Fall Spa treatment for intensive care and reduction of hair fall.",
+    "longDescription": "<p>Opt for the medium-sized Anti-Hair Fall Spa treatment for intensive care and significant reduction of hair fall. Nourish your hair for a voluminous look.</p>",
+    "steps": "<ol><li>Apply the Anti-Hair Fall Spa treatment to the scalp and hair roots.</li><li>Leave on for the recommended time.</li><li>Rinse thoroughly for nourished and voluminous hair.</li></ol>",
+    "price": 1400,
+    "duration": "65 minutes",
+    "img": "anti_hair_fall_spa_m.jpg"
+  },
+  {
+    "title": "Anti-Hair Fall Spa (L) - Strengthen",
+    "category": "Hair Treatment",
+    "shortDescription": "A large-sized Anti-Hair Fall Spa treatment for strengthening and minimizing hair fall.",
+    "longDescription": "<p>Indulge in a large-sized Anti-Hair Fall Spa treatment for effective strengthening and minimizing of hair fall. Enhance the resilience of your hair.</p>",
+    "steps": "<ol><li>Apply the Anti-Hair Fall Spa treatment to the scalp and hair roots.</li><li>Leave on for the recommended time.</li><li>Rinse thoroughly for strengthened and resilient hair.</li></ol>",
+    "price": 1700,
+    "duration": "80 minutes",
+    "img": "anti_hair_fall_spa_l.jpg"
+  },
+  {
+    "title": "Anti-Hair Fall Spa (XL) - Maximum Strength",
+    "category": "Hair Treatment",
+    "shortDescription": "An extra-large Anti-Hair Fall Spa treatment for maximum strength and reduction in hair fall.",
+    "longDescription": "<p>Experience maximum strength and a significant reduction in hair fall with our extra-large Anti-Hair Fall Spa treatment. Achieve healthier and more resilient hair.</p>",
+    "steps": "<ol><li>Apply the Anti-Hair Fall Spa treatment to the scalp and hair roots.</li><li>Leave on for the recommended time.</li><li>Rinse thoroughly for maximally strengthened and revitalized hair.</li></ol>",
+    "price": 2000,
+    "duration": "100 minutes",
+    "img": "anti_hair_fall_spa_xl.jpg"
+  },
+  {
+    "title": "Rebonding Aftercare Wash",
+    "category": "Hair Straightening",
+    "shortDescription": "Follow the recommended aftercare routine with our specialized Rebonding Aftercare Wash.",
+    "longDescription": "<p>Ensure the longevity of your straightened hair with our Rebonding Aftercare Wash. This hair straightening service includes:</p><ul><li>Gentle Cleansing Formula: A specially formulated shampoo for rebonded hair, providing gentle yet effective cleansing.</li><li>Post-Rebonding Care: Follow the recommended aftercare routine to maintain the smoothness and health of your straightened hair.</li><li>Professional Guidance: Our expert stylists will guide you on the proper washing technique for the best results.</li></ul><p>Experience the care your rebonded hair deserves with our Rebonding Aftercare Wash.</p>",
+    "steps": "<ol><li><strong>Gentle Cleansing Formula:</strong> A specially formulated shampoo for rebonded hair, providing gentle yet effective cleansing.</li><li><strong>Post-Rebonding Care:</strong> Follow the recommended aftercare routine to maintain the smoothness and health of your straightened hair.</li><li><strong>Professional Guidance:</strong> Our expert stylists will guide you on the proper washing technique for the best results.</li><li><strong>Post-Wash Delight:</strong> Enjoy the refreshing and clean feel of your rebonded hair after the Rebonding Aftercare Wash.</li></ol>",
+    "price": 2500,
+    "duration": "1 hour",
+    "img": "url/to/rebonding-aftercare-wash.jpg"
+  },
+  {
+    "title": "Color Guard Spa (S) - Lively Care",
+    "category": "Hair Treatment",
+    "shortDescription": "A small-sized Color Guard Spa treatment for lively care and extended color brilliance.",
+    "longDescription": "<p>Preserve the vivacity of your colored hair with our small-sized Color Guard Spa treatment. Enjoy lively care and prolonged color brilliance.</p>",
+    "steps": "<ol><li>Apply the Color Guard Spa treatment evenly to colored hair.</li><li>Leave on for the recommended time.</li><li>Rinse thoroughly for lively and brilliantly colored hair.</li></ol>",
+    "price": 1300,
+    "duration": "55 minutes",
+    "img": "color_protect_spa_s.jpg"
+  },
+  {
+    "title": "Color Shield Spa (M) - Robust Protection",
+    "category": "Hair Treatment",
+    "shortDescription": "A medium-sized Color Shield Spa treatment for robust protection and color retention.",
+    "longDescription": "<p>Opt for the medium-sized Color Shield Spa treatment for robust protection and enhanced color retention. Shield your colored hair for lasting brilliance.</p>",
+    "steps": "<ol><li>Apply the Color Shield Spa treatment evenly to colored hair.</li><li>Leave on for the recommended time.</li><li>Rinse thoroughly for robustly protected and brilliantly colored hair.</li></ol>",
+    "price": 1600,
+    "duration": "70 minutes",
+    "img": "color_protect_spa_m.jpg"
+  },
+  {
+    "title": "Color Preserve Spa (L) - Radiant Safeguard",
+    "category": "Hair Treatment",
+    "shortDescription": "A large-sized Color Preserve Spa treatment for radiant safeguard and enhanced color vibrancy.",
+    "longDescription": "<p>Indulge in a large-sized Color Preserve Spa treatment for a radiant safeguard and heightened color vibrancy. Maintain the brilliance of your colored hair with our specialized spa.</p>",
+    "steps": "<ol><li>Apply the Color Preserve Spa treatment evenly to colored hair.</li><li>Leave on for the recommended time.</li><li>Rinse thoroughly for a radiant safeguard and brilliantly colored hair.</li></ol>",
+    "price": 1900,
+    "duration": "85 minutes",
+    "img": "color_protect_spa_l.jpg"
+  },
+  {
+    "title": "Color Radiance Spa (XL) - Supreme Luminosity",
+    "category": "Hair Treatment",
+    "shortDescription": "An extra-large Color Radiance Spa treatment for supreme luminosity and extended color brilliance.",
+    "longDescription": "<p>Experience supreme luminosity and extended color brilliance with our extra-large Color Radiance Spa treatment. Ensure your colored hair stays brilliantly vibrant for an extended period.</p>",
+    "steps": "<ol><li>Apply the Color Radiance Spa treatment evenly to colored hair.</li><li>Leave on for the recommended time.</li><li>Rinse thoroughly for supreme luminance and brilliantly colored hair.</li></ol>",
+    "price": 2200,
+    "duration": "110 minutes",
+    "img": "color_protect_spa_xl.jpg"
+  },
+  {
+    "title": "Glamorous Evening Makeover",
+    "category": "Makeover",
+    "shortDescription": "Transform your look for a glamorous evening with our expert makeover service.",
+    "longDescription": "<p>Indulge in a glamorous evening makeover and let our experts enhance your features for a stunning and elegant appearance. Perfect for special events and celebrations.</p>",
+    "steps": "<ol><li>Consultation with our makeup artist to discuss your desired look.</li><li>Professional makeup application, highlighting your best features.</li><li>Styling of hair for a polished and sophisticated finish.</li><li>Final touch-ups to ensure perfection.</li></ol>",
+    "price": 2500,
+    "duration": "2 hours",
+    "img": "glamorous_evening_makeover.jpg"
+  },
+  {
+    "title": "Natural Daytime Makeover",
+    "category": "Makeover",
+    "shortDescription": "Achieve a fresh and natural look with our daytime makeover service.",
+    "longDescription": "<p>Experience the beauty of a natural daytime makeover. Our skilled makeup artists will enhance your features for a radiant and effortless look suitable for daytime activities.</p>",
+    "steps": "<ol><li>Discussion with our makeup artist to understand your preferences.</li><li>Application of light and natural makeup to enhance your natural beauty.</li><li>Gentle styling of hair for a casual and relaxed appearance.</li><li>Final touches to achieve a flawless and natural look.</li></ol>",
+    "price": 1800,
+    "duration": "1.5 hours",
+    "img": "natural_daytime_makeover.jpg"
+  },
+  {
+    "title": "Bold and Edgy Makeover",
+    "category": "Makeover",
+    "shortDescription": "Make a statement with a bold and edgy makeover for a unique and daring look.",
+    "longDescription": "<p>Step out of your comfort zone with a bold and edgy makeover. Our creative makeup artists will craft a unique and daring look that makes a powerful statement.</p>",
+    "steps": "<ol><li>Creative consultation to discuss your preferences and desired level of boldness.</li><li>Application of vibrant and bold makeup to create a unique look.</li><li>Daring hairstyling to complement the bold makeup.</li><li>Final adjustments to ensure a striking and confident appearance.</li></ol>",
+    "price": 2800,
+    "duration": "2.5 hours",
+    "img": "bold_and_edgy_makeover.jpg"
+  },
+  {
+    "title": "Party Glam Makeover",
+    "category": "Makeover",
+    "shortDescription": "Get ready to shine at the party with our glamorous makeover service.",
+    "longDescription": "<p>Prepare to dazzle at the party with our Party Glam Makeover. Our skilled makeup artists will enhance your features for a glamorous and sophisticated look that steals the spotlight.</p>",
+    "steps": "<ol><li>Consultation with our makeup artist to understand your outfit and party theme.</li><li>Professional application of glamorous makeup, highlighting your best features.</li><li>Elegant hairstyling to complement your party look.</li><li>Final touch-ups for a flawless appearance.</li></ol>",
+    "price": 3000,
+    "duration": "2.5 hours",
+    "img": "party_glam_makeover.jpg"
+  },
+  {
+    "title": "Bold and Vibrant Party Makeover",
+    "category": "Makeover",
+    "shortDescription": "Stand out with a bold and vibrant makeover designed for party vibes.",
+    "longDescription": "<p>Make a bold statement at the party with our Bold and Vibrant Party Makeover. Our creative makeup artists will craft a lively and energetic look that matches the party atmosphere.</p>",
+    "steps": "<ol><li>Creative consultation to discuss your party theme and preferences.</li><li>Application of vibrant and bold makeup to create an energetic look.</li><li>Daring hairstyling to complement the lively makeup.</li><li>Final adjustments for a standout party appearance.</li></ol>",
+    "price": 3200,
+    "duration": "3 hours",
+    "img": "bold_and_vibrant_party_makeover.jpg"
+  },
+  {
+    "title": "Chic Cocktail Party Makeover",
+    "category": "Makeover",
+    "shortDescription": "Achieve a chic and sophisticated look perfect for cocktail parties.",
+    "longDescription": "<p>Elevate your style for cocktail parties with our Chic Cocktail Party Makeover. Our experienced makeup artists will create a chic and sophisticated look that suits the elegance of cocktail events.</p>",
+    "steps": "<ol><li>Consultation to understand the cocktail party theme and your outfit.</li><li>Application of chic and sophisticated makeup for a polished appearance.</li><li>Stylish hairstyling to complement your cocktail party attire.</li><li>Final adjustments for a refined and sophisticated look.</li></ol>",
+    "price": 2800,
+    "duration": "2 hours",
+    "img": "chic_cocktail_party_makeover.jpg"
+  },
+  {
+    "title": "Everyday Natural Look",
+    "category": "Makeover",
+    "shortDescription": "Achieve an everyday natural look that enhances your beauty effortlessly.",
+    "longDescription": "<p>Simplify your beauty routine with our Everyday Natural Look makeover. Our makeup artists will create a natural and effortless look that's perfect for your day-to-day activities.</p>",
+    "steps": "<ol><li>Brief consultation to understand your everyday preferences and lifestyle.</li><li>Application of minimal and natural makeup for a fresh appearance.</li><li-Casual hairstyling to maintain the effortless vibe of the look.</li><li>Final adjustments for a naturally beautiful appearance.</li></ol>",
+    "price": 1800,
+    "duration": "1 hour",
+    "img": "everyday_natural_look.jpg"
+  },
+  {
+    "title": "No-Makeup Makeup Look",
+    "category": "Makeover",
+    "shortDescription": "Master the art of the no-makeup makeup look for an ultra-natural appearance.",
+    "longDescription": "<p>Learn the art of looking naturally flawless with our No-Makeup Makeup Look. Our expert makeup artists will create a barely-there makeup look that enhances your features without looking overly done.</p>",
+    "steps": "<ol><li>Discussion to understand your preferences for the no-makeup makeup look.</li><li>Application of minimal and lightweight makeup for an ultra-natural appearance.</li><li-Subtle hairstyling to complement the understated makeup.</li><li>Final adjustments for a naturally radiant look.</li></ol>",
+    "price": 2000,
+    "duration": "1.5 hours",
+    "img": "no_makeup_makeup_look.jpg"
+  }
 
 ]
-

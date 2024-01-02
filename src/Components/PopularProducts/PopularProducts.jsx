@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import './PopularProducts.css'
+import "./PopularProducts.css";
 import { Link } from "react-router-dom";
 import Product from "../Product/Product";
 
@@ -22,7 +22,9 @@ const PopularProducts = () => {
           </Product>
         ))}
       </div>
-      <Link>View All Products</Link>
+      <button className="all-product-btn">
+        <Link>View All Products</Link>
+      </button>
     </div>
   );
 };
