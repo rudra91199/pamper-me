@@ -1,23 +1,30 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
 import { signOut } from "firebase/auth";
 import { useState } from "react";
+import faceLogo from "../../assets/Images/Logo/FaceLogo-01.png"
+
 const Navbar = () => {
   const [user] = useAuthState(auth);
   const [profileHover,setProfileHover] = useState(false)
   const navigate = useNavigate();
+  const location = useLocation()
   return (
     <div
-      className={`nav-menu ${location.pathname == "/login" ? "d-none" : ""}`}
+      className={`nav-menu ${location.pathname == "/login" ? "d-none" : ""} ${location.pathname == "/services" ? "services-nav" : ""}`}
     >
+    {
+      location.pathname==="/services"&&
+      <img className="serviceLogo" src={faceLogo} alt="logo"></img>
+    }
       <Link>Home</Link>
-      <Link>Services</Link>
-      <Link>Shop</Link>
-      <Link>Blog</Link>
-      <Link>About Us</Link>
-      <Link>Bookings</Link>
+      <Link to="/services">Services</Link>
+      <Link to="/shop">Shop</Link>
+      <Link to="/blog">Blog</Link>
+      <Link to="/about">About Us</Link>
+      <Link to="/bookings">Bookings</Link>
       <Link className="bag">
         <svg
           xmlns="http://www.w3.org/2000/svg"
