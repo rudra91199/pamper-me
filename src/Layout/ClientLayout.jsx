@@ -8,7 +8,10 @@ const ClientLayout = () => {
     const location = useLocation();
     return (
         <div>
+        {
+            (location.pathname==="/" || location.pathname==="/home")&&
             <Logo ></Logo>
+        }
             <Navbar ></Navbar>
             <Outlet/>
             <Footer></Footer>

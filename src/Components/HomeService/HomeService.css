@@ -6,11 +6,13 @@
   border-radius: 10px;
   padding: 40px 30px;
   position: relative;
-  box-shadow: 10px 10px 50px #e3208556;
+  box-shadow: 0px 0px 10px #e3208556;
   border-radius: 60px 60px 60px 0;
+  transition: all 200ms ease-in-out;
 }
 .serviceCard:hover {
-  box-shadow: 5px 5px 40px #e320859c;
+  box-shadow: 0px 0px 20px #e3208585;
+  scale: 100.5%;
 }
 .serviceCard img {
   width: 95%;

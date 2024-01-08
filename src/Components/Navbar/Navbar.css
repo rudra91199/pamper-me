@@ -4,7 +4,9 @@
   justify-content: center;
   gap: 50px;
   padding: 10px;
+  align-items: center;
 }
+
 .nav-menu a {
   color: black;
   transition: all ease-in-out 200ms;
@@ -88,4 +90,15 @@
 }
 .logout:hover{
   background: white;
+}
+
+.services-nav{
+  margin-top: 20px;
+  justify-content: end;
+  padding: 20px 12%;
+}
+.serviceLogo{
+  position: absolute;
+  left: 12%;
+  width: 80px;
 }

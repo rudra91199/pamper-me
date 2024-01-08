@@ -1,0 +1,26 @@
+.servicesTab{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--pink);
+    margin: 0 auto;
+    border-radius: 20px;
+}
+.servicesTab button{
+    padding: 15px 40px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: transparent;
+    transition: all ease-in-out 200ms;
+}
+.servicesTab button:hover{
+    background-color: black;
+    border-radius: 20px;
+}
+.selected{
+    background-color: black !important;
+    color: white !important;
+
+}
