@@ -26,12 +26,12 @@
 .service-category {
   color: #962986;
   font-weight: bold;
-  margin: 10px 0;
+  margin: 20px 0;
 }
 
 .service-desc {
   margin-bottom: 10px;
-  color: white;
+  /* color: white; */
 }
 
 .service-time {
