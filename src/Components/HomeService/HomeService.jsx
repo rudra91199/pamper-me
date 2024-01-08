@@ -10,7 +10,7 @@ const HomeService = ({ service }) => {
         alt=""
       />
       <p className="service-category">{service.category.toUpperCase()}</p>
-      <p className="service-desc">{service.shortDescription}</p>
+      {/* <p className="service-desc">{service.shortDescription}</p> */}
       <div
         style={{
           display: "flex",
