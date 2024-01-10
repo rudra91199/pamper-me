@@ -23,10 +23,31 @@ const Services = () => {
         selectedTab={selectedTab}
         setSelectedTab={setSelectedTab}
       ></ServicesTab>
-      <div className="service-container">
-        {services?.map((service) => (
-          <Service service={service}></Service>
-        ))}
+      <div style={{ display: "flex" }}>
+        <div className="filter-container">
+          <div className="filterCategory">
+            <p>Filter by category</p>
+            <button>category1</button>
+            <button>category2</button>
+            <button>category3</button>
+            <button>category4</button>
+            <button>category5</button>
+            <button>category6</button>
+          </div>
+          <div className="filterPrice">
+            <p>Filter by price</p>
+            <input type="number" placeholder="From"/>
+            <input type="number" placeholder="To"/>
+          </div>
+          <button className="filterBtn">
+            Filter
+          </button>
+        </div>
+        <div className="service-container">
+          {services?.map((service) => (
+            <Service service={service}></Service>
+          ))}
+        </div>
       </div>
     </div>
   );
