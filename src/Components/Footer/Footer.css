@@ -3,12 +3,8 @@
     line-height: 21px;
     background-size: cover;
     background-repeat: no-repeat;
-    padding-bottom: 100px;
-    padding-top: 100px;
-    height: 20vh;
-    background: url("../../assets/Images/Footer Banner/footer.jpg");
-    background-size: contain;
-    
+    height: 100vh;
+    background: url("../../assets/Images/Footer Banner/footer.jpg");    
 }
 
 
