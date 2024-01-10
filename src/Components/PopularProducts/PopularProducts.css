@@ -41,7 +41,13 @@
 
 .all-product-btn a{
     color: #962986;
+    font-weight: 700;
 }
+
+.all-product-btn a:hover{
+  color: var(--pink);
+}
+
 
 @media (min-width: 768px) {
   .button-53 {
