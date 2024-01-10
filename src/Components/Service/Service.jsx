@@ -4,10 +4,10 @@ const Service = ({service}) => {
         <div className="serviceCard">
         <p className="service-title">{service?.title}</p>
         <img
-          src={service.img}
+          src={service?.img}
           alt=""
         />
-        <p className="service-category">{service.category.toUpperCase()}</p>
+        <p className="service-category">{service?.category?.toUpperCase()}</p>
         {/* <p className="service-desc">{service.shortDescription}</p> */}
         <div
           style={{
@@ -19,8 +19,8 @@ const Service = ({service}) => {
             bottom: "10px",
           }}
         >
-          <p className="service-time">{service.duration}</p>
-          <p className="service-price">TK. {service.price}</p>
+          <p className="service-time">{service?.duration}</p>
+          <p className="service-price">TK. {service?.price}</p>
         </div>
       </div>
     );
