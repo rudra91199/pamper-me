@@ -1,0 +1,13 @@
+.services{
+    padding: 20px 12%;
+}
+.serviceBanner{
+    width: 100%;
+    border-radius: 20px;
+}
+.service-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    margin: 40px 0;
+}

@@ -3,13 +3,13 @@ import "./HomeService.css";
 
 const HomeService = ({ service }) => {
   return (
-    <div className="serviceCard">
-      <p className="service-title">{service?.title}</p>
+    <div className="homeServiceCard">
+      <p className="homeService-title">{service?.title}</p>
       <img
         src={service.img}
         alt=""
       />
-      <p className="service-category">{service.category.toUpperCase()}</p>
+      <p className="home-service-category">{service.category.toUpperCase()}</p>
       {/* <p className="service-desc">{service.shortDescription}</p> */}
       <div
         style={{
@@ -21,8 +21,8 @@ const HomeService = ({ service }) => {
           bottom: "10px",
         }}
       >
-        <p className="service-time">{service.duration}</p>
-        <p className="service-price">TK. {service.price}</p>
+        <p className="home-service-time">{service.duration}</p>
+        <p className="home-service-price">TK. {service.price}</p>
       </div>
     </div>
   );
