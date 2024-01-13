@@ -17,7 +17,7 @@ const Navbar = () => {
     >
     {
       location.pathname==="/services"&&
-      <img className="serviceLogo" src={faceLogo} alt="logo"></img>
+      <img onClick={()=>navigate("/")} className="serviceLogo" src={faceLogo} alt="logo"></img>
     }
       <Link>Home</Link>
       <Link to="/services">Services</Link>
