@@ -23,16 +23,20 @@ const Services = () => {
         selectedTab={selectedTab}
         setSelectedTab={setSelectedTab}
       ></ServicesTab>
-      <div style={{ display: "flex" }}>
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 3fr", width:"100%" }}>
         <div className="filter-container">
           <div className="filterCategory">
             <p>Filter by category</p>
-            <button>category1</button>
-            <button>category2</button>
-            <button>category3</button>
-            <button>category4</button>
-            <button>category5</button>
-            <button>category6</button>
+            <div className="hr"></div>
+            <button>Skin care</button>
+            <div className="hr"></div>
+            <button>Hair care</button>
+            <div className="hr"></div>
+            <button>Makeover</button>
+            <div className="hr"></div>
+            <button>Body polish</button>
+            <div className="hr"></div>
+            <button>Massage</button>
           </div>
           <div className="filterPrice">
             <p>Filter by price</p>
@@ -45,7 +49,7 @@ const Services = () => {
         </div>
         <div className="service-container">
           {services?.map((service) => (
-            <Service service={service}></Service>
+            <Service key={service.name} service={service}></Service>
           ))}
         </div>
       </div>
