@@ -33,6 +33,7 @@ const Services = () => {
             <button>category4</button>
             <button>category5</button>
             <button>category6</button>
+            <button>category7</button>
           </div>
           <div className="filterPrice">
             <p>Filter by price</p>
@@ -45,7 +46,7 @@ const Services = () => {
         </div>
         <div className="service-container">
           {services?.map((service) => (
-            <Service service={service}></Service>
+            <Service key={service.name} service={service}></Service>
           ))}
         </div>
       </div>
