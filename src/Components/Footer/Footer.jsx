@@ -2,6 +2,7 @@ import "./Footer.css";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const year = new Date().getFullYear()
   return (
     <div className={`footer ${location.pathname == "/login" ? "d-none" : ""}`}>
       <div className="footer-background">
@@ -50,7 +51,7 @@ const Footer = () => {
           </div>
         </footer>
         <div className="footer-end">
-          <p>Copyright © 2023 - All right reserved by pamper me services Ltd</p>
+          <p>Copyright © {year} - All right reserved by pamper me services Ltd</p>
         </div>
       </div>
     </div>
