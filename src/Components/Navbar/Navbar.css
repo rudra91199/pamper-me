@@ -12,12 +12,15 @@
   transition: all ease-in-out 200ms;
   font-size: 1vw;
 }
+
 .nav-menu a:hover {
   color: #e32085;
 }
+
 .bag {
   position: relative;
 }
+
 .badge {
   position: absolute;
   bottom: 10px;
@@ -92,10 +95,11 @@
   background: white;
 }
 
-.services-nav{
-  margin-top: 20px;
+.allNav{
+  margin: 20px 0;
   justify-content: end;
   padding: 20px 12%;
+  
 }
 .serviceLogo{
   position: absolute;

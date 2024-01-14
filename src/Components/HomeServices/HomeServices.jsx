@@ -12,11 +12,7 @@ const HomeServices = () => {
   }, []);
   return (
     <div className="services">
-        <h2 style={{
-          textAlign:"center",
-          fontSize:"40px",
-          color:"#E32085"
-        }}>Popular Services</h2>
+        <h2>Popular Services</h2>
       <div className="home-services-container">
         {services.slice(0,3).map((service) => 
           <HomeService key={service?.title} service={service}> </HomeService>

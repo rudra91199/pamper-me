@@ -13,10 +13,10 @@ const Navbar = () => {
   const location = useLocation()
   return (
     <div
-      className={`nav-menu ${location.pathname == "/login" ? "d-none" : ""} ${location.pathname == "/services" ? "services-nav" : ""}`}
+      className={`nav-menu ${location.pathname == "/login" ? "d-none" : ""} ${location.pathname !== "/" ? "allNav" : ""}`}
     >
     {
-      location.pathname==="/services"&&
+      location.pathname!=="/"&&
       <img onClick={()=>navigate("/")} className="serviceLogo" src={faceLogo} alt="logo"></img>
     }
       <Link>Home</Link>

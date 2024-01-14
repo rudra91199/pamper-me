@@ -64,8 +64,15 @@
     margin: 0 0 15px 0;
 }
 
-.form-container h2 span {
-    color: var(--pink);
+
+.form-container h2{
+    /* color: var(--pink); */
+    background:linear-gradient(to right, var(--pink), var(--purple));
+    -webkit-background-clip: text;
+    width: fit-content;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    color: transparent;
 }
 
 .form-container p {

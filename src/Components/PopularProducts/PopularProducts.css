@@ -7,11 +7,17 @@
     text-align: center;
 }
 .products h2{
-    color: #e32085;
-    text-align: center;
+    /* color: #e32085; */
+    /* text-align: center; */
     padding: 10px;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     font-size: 40px;
+    background:linear-gradient(to right, var(--pink), var(--purple));
+    -webkit-background-clip: text;
+    width: fit-content;
+    color: transparent;
+    font-size: 35px;
+    margin: 20px auto;
 }
 .home-products-container {
   display: flex;

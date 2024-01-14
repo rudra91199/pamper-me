@@ -5,21 +5,26 @@
     display: flex;
 }
 
-
-
-.choose-us-section h3 {
-    margin-top: 20px;
+.choose-us-section h2 {
+    margin: 20px 0;
     height: 45px;
+    font-size: 35px;
+    background:linear-gradient(to right, var(--pink), var(--purple));
+    background-clip: text;
+    width: fit-content;
+    color: transparent;
+}
+
+.choose-us-section p{
+    width: 80%;
+    color: darkgray;
+    line-height: 25px;
 }
 
 .choose-us-section img {
     display: block;
     width: 30%;
-    height: 300px;
     border-radius: 30px;
 }
 
 
-.choose-us-card p {
-    /* width: 90%; */
-}
