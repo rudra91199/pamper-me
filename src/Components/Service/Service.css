@@ -14,9 +14,7 @@
     scale: 100.5%;
   }
   .serviceCard img {
-    /* width: 95%;
-    height: 300px; */
-    margin: 20px auto;
+    margin: 20px 0px;
     border-radius: 20px;
   }
   .service-title {
