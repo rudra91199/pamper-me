@@ -18,7 +18,7 @@ const Services = () => {
 
   return (
     <div className="services">
-      <img className="serviceBanner" src={serviceBanner} alt="" />
+      <p className="servicesBanner"></p>
       <ServicesTab
         selectedTab={selectedTab}
         setSelectedTab={setSelectedTab}
