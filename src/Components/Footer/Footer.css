@@ -3,23 +3,22 @@
     line-height: 21px;
     background-size: cover;
     background-repeat: no-repeat;
-    padding-bottom: 100px;
-    padding-top: 100px;
-    height: 20vh;
-    background: url("../../assets/Images/Footer Banner/footer.jpg");
-    background-size: contain;
-    
+    height: 60vh;
+    background: url("../../assets/Images/Footer Banner/footer.jpg");    
+    padding: 20vh;
 }
 
 
 .footer a {
-    color:white;
+    /* color:white; */
+    color:black;
     font-size: 14px;
     font-weight: bold;
+    transition: all ease-in-out 200ms;
 }
 
 .footer a:hover {
-    color: black;
+    color: #e32085;
     font-weight: bold;
 }
 
@@ -44,5 +43,7 @@
 .footer-end {
     text-align: center;
     margin-top: 60px;
-    color: rgb(255, 255, 255);
+    /* color: rgb(255, 255, 255); */
+    font-weight: bold;
+    color: rgb(0, 0, 0);
 }
