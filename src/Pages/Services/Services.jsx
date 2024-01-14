@@ -23,7 +23,7 @@ const Services = () => {
         selectedTab={selectedTab}
         setSelectedTab={setSelectedTab}
       ></ServicesTab>
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 3fr", width:"100%" }}>
+      <div className="service-grid">
         <div className="filter-container">
           <div className="filterCategory">
             <p>Filter by category</p>
