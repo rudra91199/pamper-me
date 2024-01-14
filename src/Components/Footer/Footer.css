@@ -1,11 +1,24 @@
 .footer {
     letter-spacing: 0.5px;
     line-height: 21px;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
-    height: 60vh;
+    height: 79dvh;
     background: url("../../assets/Images/Footer Banner/footer.jpg");    
     padding: 20vh;
+}
+
+.footerLogo{
+ width: 140px;
+}
+.footer-section1{
+    width: 22%;
+}
+.footer-section2{
+    width: 38%;
+}
+.footer-section3{
+    width: 40%;
 }
 
 
@@ -13,16 +26,17 @@
     /* color:white; */
     color:black;
     font-size: 14px;
-    font-weight: bold;
+    /* font-weight: bold; */
     transition: all ease-in-out 200ms;
+    margin: 4px 0;
 }
 
 .footer a:hover {
     color: #e32085;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 
-.link-container {
+.link-container{
     display: flex;
     flex-direction: column;
 }
