@@ -15,7 +15,7 @@
     color: transparent;
 }
 
-.choose-us-section p{
+.choose-us-section>div>p{
     width: 80%;
     color: darkgray;
     line-height: 25px;
