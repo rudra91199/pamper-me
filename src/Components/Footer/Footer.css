@@ -1,11 +1,18 @@
 .footer {
     letter-spacing: 0.5px;
     line-height: 21px;
-    background-size: contain;
+    background: url("../../assets/Images/Footer Banner/footer.jpg");  
+    background-size: cover;
     background-repeat: no-repeat;
-    height: 79dvh;
-    background: url("../../assets/Images/Footer Banner/footer.jpg");    
-    padding: 20vh;
+    background-attachment: fixed;
+    height: 83vh;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 12%;
+    padding: 7% 5%;
 }
 
 .footerLogo{
@@ -48,11 +55,6 @@
     color:#e32085;
 }
 
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 12%;
-}
 
 .footer-end {
     text-align: center;
