@@ -1,11 +1,11 @@
 .footer {
     letter-spacing: 0.5px;
     line-height: 21px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 79dvh;
+    background-size: cover;
+    background-repeat: no-repeat !important;
+    height: 80vh;
     background: url("../../assets/Images/Footer Banner/footer.jpg");    
-    padding: 20vh;
+    padding: 10vh 0;
 }
 
 .footerLogo{
