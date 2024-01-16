@@ -1,55 +1,130 @@
-.service-details{
-    padding: 4% 12%;
+.service-details {
+  padding: 2% 8%;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 20px;
 }
-.service-details-container{
-    display: flex;
-    gap: 80px;
-    justify-content: center;
+.service-details-container {
+  display: flex;
+  gap: 80px;
+  justify-content: center;
 }
-.img-container img{
-    margin: 40px 20px ;
-    width: 400px;
-    border-radius: 90px 120px 60px 180px;
+.img-container img {
+  margin: 40px 20px;
+  width: 400px;
+  border-radius: 90px 120px 60px 180px;
 }
-.details{
+.details {
+}
+.details h1 {
+  color: var(--pink);
+}
+.category {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.description {
+  margin-bottom: 20px;
+  margin-left: 15px;
+  color: rgba(0, 0, 0, 0.61);
+}
+.steps {
+  /* margin: 20px 10%; */
+  display: flex;
+  justify-content: center;
+  color: rgba(0, 0, 0, 0.61);
+}
+.duration {
+  font-weight: bold;
+}
+.price {
+  font-weight: bold;
+  color: var(--purple);
+}
+.book-btn {
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: var(--pink);
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  transition: all ease-in-out 200ms;
+}
+.book-btn:hover {
+  background-color: var(--purple);
+}
+.relatedServices {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.recomendedTitle {
+  font-size: 18px;
+  font-weight: bold;
+}
+.underline {
+  height: 4px;
+  width: 160px;
+  background: var(--pink);
+  margin-top: 10px;
+}
+.relatedService {
+  margin: 10px;
+  width: 100% !important;
+  display: flex;
+  gap: 10px;
+  border-radius: 10px;
+}
+.relatedServices-container {
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 30px;
+  height: 75vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  box-shadow: 5px 5px 40px rgba(0, 0, 0, 0.13);
+}
+.relatedService {
+  width: fit-content;
+}
+.relatedImg {
+  width: 30%;
+  display: flex;
+}
+.relatedImg img {
+  width: 100%;
+  border-radius: 10px;
+}
+.bookBtn {
+  background-color: #e32085;
+  width: 100px;
+  padding: 10px;
+  margin-top: 10px;
+  color: white;
+  border-radius: 6px;
+  transition: all ease-in-out 200ms;
+}
+.bookBtn:hover {
+  background-color: var(--purple);
+}
+.relatedDetails {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+}
+.relatedServices-container::-webkit-scrollbar {
+  width: 6px;
+  margin: 20px;
+}
 
+.relatedServices-container::-webkit-scrollbar-thumb {
+  background-color: var(--pink);
+  border-radius: 20px;
 }
-.details h1{
-    color: var(--pink);
-}
-.category{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-weight: bold;
-}
-.description{
-    margin-bottom: 20px;
-    margin-left: 15px;
-    color: rgba(0, 0, 0, 0.61);
-}
-.steps{
-    /* margin: 20px 10%; */
-    display: flex;
-    justify-content: center;
-    color: rgba(0, 0, 0, 0.61);
-}
-.duration{
-    font-weight: bold;
-}
-.price{
-    font-weight: bold;
-    color: var(--purple);
-}
-.book-btn{
-    padding: 10px 20px;
-    border-radius: 20px;
-    background-color: var(--pink);
-    color: white;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-weight: bold;
-    transition: all ease-in-out 200ms;
-}
-.book-btn:hover{
-    background-color: var(--purple);
+
+.relatedServices-container::-webkit-scrollbar-track {
+  background-color: white;
+  margin: 60px;
 }
