@@ -4,14 +4,12 @@
     background: url("../../assets/Images/Footer Banner/footer.jpg");  
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     height: 83vh;
 }
 
 .footer-container {
     display: flex;
     justify-content: space-between;
-    padding: 0 12%;
     padding: 7% 5%;
 }
 
