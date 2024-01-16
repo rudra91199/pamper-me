@@ -4,7 +4,7 @@
     background: url("../../assets/Images/Footer Banner/footer.jpg");  
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     height: 83vh;
 }
 
