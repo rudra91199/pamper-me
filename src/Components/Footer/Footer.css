@@ -41,6 +41,14 @@
 .submitBtn{
     width: 200px;
     display: block;
+    background: var(--purple);
+    color: white;
+    font-weight: bold;
+    transition: all ease-in-out 200ms;
+    cursor: pointer;
+}
+.submitBtn:hover{
+    background: var(--pink);
 }
 
 .footer a {
