@@ -27,6 +27,12 @@
     margin-left: 15px;
     color: rgba(0, 0, 0, 0.61);
 }
+.steps{
+    /* margin: 20px 10%; */
+    display: flex;
+    justify-content: center;
+    color: rgba(0, 0, 0, 0.61);
+}
 .duration{
     font-weight: bold;
 }
