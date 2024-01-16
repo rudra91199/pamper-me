@@ -3,7 +3,7 @@ import "./Service.css"
 const Service = ({service}) => {
   const navigate = useNavigate()
     return (
-        <div onClick={()=>navigate(`/serviceDetails/${service?.title}`)} className="serviceCard">
+        <div onClick={()=>navigate(`/service/${service?.title}`)} className="serviceCard">
         <p className="service-title">{service?.title}</p>
         <img
           src={service?.img}
