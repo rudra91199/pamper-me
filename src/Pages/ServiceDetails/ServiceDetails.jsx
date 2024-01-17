@@ -7,7 +7,7 @@ const ServiceDetails = () => {
   const [services, setServices] = useState([]);
   const [relatedCategory, setRelatedCategory] = useState([]);
   useEffect(() => {
-    fetch("../../../public/service.json")
+    fetch("/public/service.json")
       .then((res) => res.json())
       .then((data) => {
         setService(data?.find((s) => s?.title == title));
