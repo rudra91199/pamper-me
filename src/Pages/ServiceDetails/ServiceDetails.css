@@ -80,11 +80,13 @@
 .relatedServices-container {
   width: 100%;
   margin-top: 20px;
-  border-radius: 30px;
-  height: 75vh;
+  border-radius: 10px;
+  height: 70vh;
   overflow-y: scroll;
   overflow-x: hidden;
   box-shadow: 5px 5px 40px rgba(0, 0, 0, 0.13);
+  padding: 10px;
+  box-sizing: border-box;
 }
 .relatedService {
   width: fit-content;
@@ -110,7 +112,7 @@
   background-color: var(--purple);
 }
 .relatedDetails {
-  width: 55%;
+  width: 70%;
   display: flex;
   flex-direction: column;
 }
