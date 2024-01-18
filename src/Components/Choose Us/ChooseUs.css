@@ -1,7 +1,10 @@
 .choose-us-section {
-    margin-bottom: 80px;
-    margin-top: 80px;
-    padding: 0 12%;
+    padding: 80px 12%;
+    margin-top: 40px;
+    background:url("../../assets/Images/chooseUs/choose-us-banner.png");
+    background-repeat: no-repeat;
+    background-position:108% ;
+    background-size: contain;
     display: flex;
 }
 
@@ -15,13 +18,16 @@
     color: transparent;
 }
 
-.choose-us-section>div>p{
-    width: 80%;
-    color: darkgray;
-    line-height: 25px;
+.choose-us-section div{
+    width: 55vw;
 }
 
-.choose-us-section img {
+.choose-us-section>div>p{
+    color: darkgray;
+    line-height: 35px;
+}
+
+.choose-us-section>img {
     display: block;
     width: 30%;
     border-radius: 30px;
@@ -31,8 +37,19 @@
     margin-top: 40px;
     gap: 40px;
 }
+
+.icons-container div{
+    text-align: center;
+    width: 25%;
+}
+
 .icons-container img{
-   width: 60px;
+   width: 78px;
+}
+
+.icon-counts{
+    font-size: 56px;
+    font-weight: 500;
 }
 
 

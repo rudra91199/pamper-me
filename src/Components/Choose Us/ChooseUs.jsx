@@ -1,9 +1,8 @@
 import "./ChooseUs.css";
-import chooseUs from '../../assets/Images/chooseUs/beautiful-face-young-woman-with-maroon-makeup-portrait-gorgeous-girl-with-vinous-lips.jpg'
 import face from '../../assets/Images/chooseUsIcon/face.png'
-import mirror from '../../assets/Images/chooseUsIcon/mirror.png'
 import cream from '../../assets/Images/chooseUsIcon/cream.png'
 import faceMask from '../../assets/Images/chooseUsIcon/facial-massage.png'
+import location from '../../assets/Images/chooseUsIcon/location.png'
 
 const ChooseUs = () => {
 
@@ -18,21 +17,29 @@ const ChooseUs = () => {
           Quality is our mantra. Pamper Me exclusively uses top-tier beauty products, ensuring a flawless finish every time. Hygiene is non-negotiable – our professionals follow stringent practices to guarantee a clean and safe beauty session in the comfort of your home.</p>
 
         <div className="icons-container">
-            <span>
+            <div>
               <img src={face} alt="" />
-            </span>
-            <span>
-              <img src={mirror} alt="" />
-            </span>
-            <span>
-              <img src={cream} alt="" />
-            </span>
-            <span>
-              <img src={faceMask} alt="" />
-            </span>
+              <br />
+              <span className="icon-counts">+3500</span> <br />
+              <span>Happy Clients</span>
+            </div>
+            <div>
+              <img src={location} alt="" /><br />
+              <span className="icon-counts">12</span> <br />
+              <span>New Location</span>
+            </div>
+            <div>
+              <img src={cream} alt="" /><br />
+              <span className="icon-counts">+175</span> <br />
+              <span>Great Employees</span>
+            </div>
+            <div>
+              <img src={faceMask} alt="" /><br />
+              <span className="icon-counts">56K</span> <br />
+              <span>Happy Clients</span>
+            </div>
         </div>
       </div>
-      <img src={chooseUs} alt="" />
 
     </div>
   );
