@@ -9,23 +9,23 @@ import ServiceDetails from "../Pages/ServiceDetails/ServiceDetails";
 const router = createBrowserRouter([
     {
         path: '/',
-        element: <ClientLayout></ClientLayout>, 
+        element: <ClientLayout></ClientLayout>,
         children: [
             {
                 path: '/',
-                element:<Home></Home> ,
+                element: <Home></Home>,
             },
             {
                 path: '/login',
-                element:<Login></Login>,
+                element: <Login></Login>,
             },
             {
                 path: '/services',
-                element:<Services></Services>,
+                element: <Services></Services>,
             },
             {
-                path: '/service/:title',
-                element:<ServiceDetails></ServiceDetails>,
+                path: '/service/:slug',
+                element: <ServiceDetails></ServiceDetails>,
             },
 
         ]
