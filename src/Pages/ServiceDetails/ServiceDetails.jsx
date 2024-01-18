@@ -6,14 +6,16 @@ const ServiceDetails = () => {
   const [service, setService] = useState();
   const [services, setServices] = useState([]);
   const [relatedCategory, setRelatedCategory] = useState([]);
+  
   useEffect(() => {
     fetch("/public/service.json")
       .then((res) => res.json())
       .then((data) => {
-        setService(data?.find((s) => s?.title == title));
+        setService(data?.find((s) => s?.title == slug));
         setServices(data);
       });
   }, []);
+
   useEffect(() => {
     setRelatedCategory(
       services?.filter(
