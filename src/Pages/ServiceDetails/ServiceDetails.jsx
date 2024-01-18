@@ -1,28 +1,15 @@
 import { useParams } from "react-router-dom";
 import "./ServiceDetails.css";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { Context } from "../../Providers/PamperContext";
 const ServiceDetails = () => {
   const { slug } = useParams();
-  const [service, setService] = useState();
-  const [services, setServices] = useState([]);
-  const [relatedCategory, setRelatedCategory] = useState([]);
-  
-  useEffect(() => {
-    fetch("/public/service.json")
-      .then((res) => res.json())
-      .then((data) => {
-        setService(data?.find((s) => s?.title == slug));
-        setServices(data);
-      });
-  }, []);
+  const {services, setServices} = useContext(Context);
+  const service = services?.find((s) => s?.title == slug);
+  const relatedCategory=services?.filter(
+    (r) => r?.category == service?.category && r?.title != service?.title
+  )
 
-  useEffect(() => {
-    setRelatedCategory(
-      services?.filter(
-        (r) => r.category == service.category && r.title != service.title
-      )
-    );
-  }, [service]);
   return (
     <div className="service-details">
       <div>

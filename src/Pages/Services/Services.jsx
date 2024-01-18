@@ -1,20 +1,15 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import "./Services.css";
 import { useEffect } from "react";
 import ServicesTab from "../../Components/ServicesTab/ServicesTab";
 import serviceBanner from "../../assets/Images/Banner/service-pamper-me-banner.jpg";
 import Service from "../../Components/Service/Service";
+import { Context } from "../../Providers/PamperContext";
 const Services = () => {
-  const [services, setServices] = useState([]);
   const [selectedTab, setSelectedTab] = useState(0);
   const [loading, setLoading] = useState(false);
+  const {services, setServices} = useContext(Context);
 
-  useEffect(() => {
-    setLoading(true);
-    fetch("service.json")
-      .then((res) => res.json())
-      .then((data) => setServices(data));
-  }, []);
 
   return (
     <div className="services">
