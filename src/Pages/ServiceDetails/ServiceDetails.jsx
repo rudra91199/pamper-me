@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import "./ServiceDetails.css";
 import { useEffect, useState } from "react";
 const ServiceDetails = () => {
-  const { title } = useParams();
+  const { slug } = useParams();
   const [service, setService] = useState();
   const [services, setServices] = useState([]);
   const [relatedCategory, setRelatedCategory] = useState([]);
