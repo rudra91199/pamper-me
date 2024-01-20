@@ -10,8 +10,8 @@
 
 .choose-us-section h2 {
     margin: 20px 0;
-    height: 45px;
-    font-size: 35px;
+    height: 50px;
+    font-size: 45px;
     background:linear-gradient(to right, var(--pink), var(--purple));
     background-clip: text;
     width: fit-content;
