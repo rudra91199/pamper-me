@@ -1,14 +1,23 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import "./ServiceDetails.css";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { Context } from "../../Providers/PamperContext";
+import BookingModal from "../../Components/BookingModal/BookingModal";
 const ServiceDetails = () => {
   const { slug } = useParams();
-  const {services, setServices} = useContext(Context);
+  const { services, setServices } = useContext(Context);
   const service = services?.find((s) => s?.title == slug);
-  const relatedCategory=services?.filter(
+  const navigate = useNavigate()
+  const relatedCategory = services?.filter(
     (r) => r?.category == service?.category && r?.title != service?.title
-  )
+  );
+  const dialogRef = useRef(null);
+  const handleOpen = () => {
+    dialogRef.current.showModal();
+  };
+  const handleClose = () => {
+    dialogRef.current.close();
+  };
 
   return (
     <div className="service-details">
@@ -28,7 +37,13 @@ const ServiceDetails = () => {
               <p className="duration">{service?.duration}</p>
               <p className="price">BDT. {service?.price}</p>
             </div>
-            <button className="book-btn">BOOK NOW</button>
+            <button onClick={handleOpen} className="book-btn">
+              BOOK NOW
+            </button>
+            <BookingModal
+              handleClose={handleClose}
+              dialogRef={dialogRef}
+            ></BookingModal>
           </div>
         </div>
         <p style={{ textAlign: "center", fontWeight: "bold", margin: "40px" }}>
@@ -50,11 +65,11 @@ const ServiceDetails = () => {
                   <img src={related?.img} alt="" />
                 </div>
                 <div className="relatedDetails">
-                  <p style={{fontSize:"14px"}}>{related?.title}</p>
+                  <p style={{ fontSize: "14px" }}>{related?.title}</p>
                   <div style={{ color: "#e32085", fontWeight: "bold" }}>
                     BDT {related?.price}
                   </div>
-                  <button className="bookBtn">Book Now</button>
+                  <button onClick={()=>navigate(`/service/${related?.title}`)} className="viewBtn">VIEW</button>
                 </div>
               </div>
             ))}
