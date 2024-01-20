@@ -5,11 +5,11 @@ const PamperContext = ({children}) => {
   const [services, setServices] = useState([]);
 
     useEffect(() => {
-        fetch("pamper-me-backend.vercel.app/services")
+        fetch("https://pamper-me-backend.vercel.app/services")
           .then((res) => res.json())
           .then((data) => {
             setServices(data);
-          });
+          })
       }, []);
       const info = {
         services,setServices
