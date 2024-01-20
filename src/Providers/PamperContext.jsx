@@ -5,7 +5,7 @@ const PamperContext = ({children}) => {
   const [services, setServices] = useState([]);
 
     useEffect(() => {
-        fetch("service.json")
+        fetch("pamper-me-backend.vercel.app/services")
           .then((res) => res.json())
           .then((data) => {
             setServices(data);
