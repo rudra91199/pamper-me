@@ -5,11 +5,12 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: white;
-    border: 1px solid #ccc; /* Add border if desired */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add box shadow for a subtle effect */
-    z-index: 1000; /* Ensure the modal is above other elements */
+    border: 1px solid #ccc; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
     width: 400px;
-    height: 400px;
+    height: 350px;
+    border-radius: 20px;
   }
   .modalTop{
     display: flex;
@@ -21,4 +22,30 @@
     color: white;
     font-weight: bolder;
     border-radius: 10px;
+    transition: all ease-in-out 200ms;
+  }
+  .modalTop button:hover{
+    background: var(--pink);
+  }
+  .modalBody{
+    margin-top: 20px;
+  }
+  .modalBody input{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--purple);
+  }
+  .bookingConfirm{
+    width: 97%;
+    padding: 15px !important;
+    background-color: var(--pink);
+    color: white;
+    border: none !important;
+    border-radius: 10px;
+    transition: all ease-in-out 200ms;
+    cursor: pointer;
+  }
+  .bookingConfirm:hover{
+    background-color: var(--purple);
   }
