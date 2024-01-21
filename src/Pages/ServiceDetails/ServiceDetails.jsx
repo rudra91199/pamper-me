@@ -43,6 +43,7 @@ const ServiceDetails = () => {
             <BookingModal
               handleClose={handleClose}
               dialogRef={dialogRef}
+              serviceId={service?._id}
             ></BookingModal>
           </div>
         </div>
