@@ -10,7 +10,6 @@ const Footer = () => {
   const {services}= useContext(Context)
   const year = new Date().getFullYear();
 
-  const filteredCategory = services.filter((service))
   return (
     <div className={`footer ${location.pathname == "/login" ? "d-none" : ""}`}>
       <footer className="footer-container">
