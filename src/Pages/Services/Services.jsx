@@ -6,10 +6,11 @@ import serviceBanner from "../../assets/Images/Banner/service-pamper-me-banner.j
 import Service from "../../Components/Service/Service";
 import { Context } from "../../Providers/PamperContext";
 const Services = () => {
-  const [selectedTab, setSelectedTab] = useState(0);
+  const [selectedTab, setSelectedTab] = useState(null);
   const [loading, setLoading] = useState(false);
   const {services, setServices} = useContext(Context);
 
+  const filteredServices = services?.filter(service=>service?.category==selectedTab)
 
   return (
     <div className="services">
@@ -19,7 +20,7 @@ const Services = () => {
         setSelectedTab={setSelectedTab}
       ></ServicesTab>
       <div className="service-grid">
-        <div className="filter-container">
+        {/* <div className="filter-container">
           <div className="filterCategory">
             <p>Filter by category</p>
             <div className="hr"></div>
@@ -41,9 +42,9 @@ const Services = () => {
           <button className="filterBtn">
             Filter
           </button>
-        </div>
+        </div> */}
         <div className="service-container">
-          {services?.map((service) => (
+          {(filteredServices.length>0?filteredServices:services)?.map((service) => (
             <Service key={service.name} service={service}></Service>
           ))}
         </div>

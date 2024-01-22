@@ -7,7 +7,7 @@
     border-radius: 0 0 20px 20px;
 }
 .servicesTab button{
-    padding: 15px 40px;
+    padding: 20px;
     color: #ffffff;
     text-shadow: 0px 0px 4px rgba(192,34,166,0.82);
     font-weight: bold;
@@ -15,6 +15,8 @@
     background-color: transparent;
     transition: all ease-in-out 200ms;
     cursor: pointer;
+    font-size: 16px;
+    border-radius: 10px;
 }
 .servicesTab button:hover{
     background-color: rgba(255, 3, 133, 0.452) ;
