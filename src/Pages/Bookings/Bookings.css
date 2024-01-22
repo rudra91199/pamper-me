@@ -1,0 +1,21 @@
+.bookings{
+    padding: 40px 12%;
+}
+.bookings input{
+    padding: 8px 10px;
+    border: 1px solid var(--pink);
+    width: 20%;
+}
+.searchBookingBtn{
+    padding: 8px 10px;
+    background: var(--purple);
+    color: white;
+    cursor: pointer;
+    transition: all ease-in-out 200ms;
+    border: 1px solid var(--purple);
+    margin-left: 20px;
+}
+.searchBookingBtn:hover{
+    background: var(--pink);
+    border: 1px solid var(--pink);
+}
