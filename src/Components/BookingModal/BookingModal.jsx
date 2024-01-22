@@ -82,7 +82,6 @@ const BookingModal = ({ setIsDialogOpen, dialogRef, handleClose,serviceId }) => 
                 <p style={{ marginLeft: "10px" }}>Start Time</p>
                 <input
                   onChange={(e) => setStartTime(e.target.value)}
-                  style={{ width: "160px" }}
                   type="time"
                   required
                 />
@@ -91,7 +90,6 @@ const BookingModal = ({ setIsDialogOpen, dialogRef, handleClose,serviceId }) => 
                 <p style={{ marginLeft: "10px" }}>End Time</p>
                 <input
                   onChange={(e) => setEndTime(e.target.value)}
-                  style={{ width: "160px" }}
                   type="time"
                   required
                 />
