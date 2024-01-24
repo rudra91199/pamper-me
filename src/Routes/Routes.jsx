@@ -5,6 +5,7 @@ import Login from "../Pages/Login/Login";
 import Services from "../Pages/Services/Services";
 import ServiceDetails from "../Pages/ServiceDetails/ServiceDetails";
 import Bookings from "../Pages/Bookings/Bookings";
+import Shop from "../Pages/Shop/Shop";
 
 
 const router = createBrowserRouter([
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
             {
                 path: '/bookings',
                 element: <Bookings></Bookings>
+            },
+            {
+                path: '/shop',
+                element: <Shop></Shop>
             },
 
         ]

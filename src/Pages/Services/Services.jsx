@@ -19,37 +19,12 @@ const Services = () => {
         selectedTab={selectedTab}
         setSelectedTab={setSelectedTab}
       ></ServicesTab>
-      <div className="service-grid">
-        {/* <div className="filter-container">
-          <div className="filterCategory">
-            <p>Filter by category</p>
-            <div className="hr"></div>
-            <button>Skin care</button>
-            <div className="hr"></div>
-            <button>Hair care</button>
-            <div className="hr"></div>
-            <button>Makeover</button>
-            <div className="hr"></div>
-            <button>Body polish</button>
-            <div className="hr"></div>
-            <button>Massage</button>
-          </div>
-          <div className="filterPrice">
-            <p>Filter by price</p>
-            <input type="number" placeholder="From"/>
-            <input type="number" placeholder="To"/>
-          </div>
-          <button className="filterBtn">
-            Filter
-          </button>
-        </div> */}
         <div className="service-container">
           {(filteredServices.length>0?filteredServices:services)?.map((service) => (
             <Service key={service.name} service={service}></Service>
           ))}
         </div>
       </div>
-    </div>
   );
 };
 
