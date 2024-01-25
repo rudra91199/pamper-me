@@ -31,6 +31,105 @@
         "taskDescription3":"Flawless Coverage: Experience the confidence of a flawless complexion that blurs imperfections and evens out skin tone without feeling heavy or cakey. Our foundation seamlessly blends into your skin, delivering buildable coverage that lets your skin breathe while still providing the coverage you desire.",
         "price": "1080",
         "img":"https://d1ak51zwgmtslz.cloudfront.net/PRODUCTS_EN/8682536017916_1.jpg"
+    },
+    {
+        "title": "Contour Palette 001 LIGHT",
+        "category": "Foundation",
+        "shortDescription": "Select either Foundation for fresh, perfect skin or Highlight.",
+        "longDescription": "Introducing our exquisite FOUNDATION, HIGHLIGHT + GLOW service, a transformative beauty experience that brings out your inner radiance and enhances your natural allure.Indulge in a comprehensive and personalized session designed to elevate your skincare and makeup routine to new heights. Our skilled and passionate beauty artisans are dedicated to crafting a flawless canvas for you, combining three essential elements for a stunning and luminous appearance.",
+        "taskDescription1":"Foundation: Begin your journey to beauty perfection with our expertly applied foundation. Our artists meticulously match the ideal shade to your skin tone, creating a seamless and smooth base that blurs imperfections while maintaining a lightweight and breathable feel. The foundation sets the stage for the rest of the process, ensuring a radiant and even complexion that lasts throughout the day.",
+        "taskDescription2":"Elevate your features with strategic highlights that capture and reflect light in all the right places. Our skilled artists are adept at accentuating your best attributes, whether it's your cheekbones, brow bones, or the bridge of your nose. The artful application of highlights adds dimension and a touch of ethereal luminosity, creating a sculpted and captivating look that catches every gaze.",
+        "taskDescription3":"Embrace the allure of a natural, lit-from-within glow that emanates vitality and youthfulness. Our artists utilize carefully chosen products to enhance your skin's radiance, fostering a dewy and healthy finish. The glow aspect of our service ensures that your skin appears revitalized and rejuvenated, leaving you with an enchanting and vibrant visage.",
+        "price": "1090",
+        "img":"https://d1ak51zwgmtslz.cloudfront.net/PRODUCTS_EN/8690604370788_1.jpg"
+    },
+    {
+        "title": "Flormar Nail Enamel 517 Chic Raspberry",
+        "category": "Nail Polish",
+        "shortDescription": "Correct and conceal to wake up your look.",
+        "longDescription": "Introducing our revolutionary Instant Dark Circle Eraser service – the ultimate solution to tired-looking eyes and unwanted shadows. Say goodbye to the telltale signs of fatigue and hello to a refreshed, vibrant appearance with this transformative and efficient treatment. Are dark circles and under-eye bags casting a shadow on your natural beauty? Our Instant Dark Circle Eraser is meticulously designed to target and eliminate these concerns in a matter of moments. Using advanced and specially formulated products, our skilled professionals employ innovative techniques to provide you with visible results that will leave you astonished.",
+        "taskDescription1":"Rapid Revitalization: Watch as your under-eye area undergoes a remarkable transformation within minutes. Our expert practitioners skillfully apply specialized products that work to instantly brighten and rejuvenate your skin, making it appear smoother, firmer, and more radiant.",
+        "taskDescription2":"Precision Techniques: Our professionals are trained in the art of targeted application. By strategically addressing the root causes of dark circles – including poor circulation, pigmentation, and skin thinness – they ensure an effective treatment that restores your skin's natural vibrancy.",
+        "taskDescription3":"Tailored Solutions: We recognize that every individual is unique. That's why our Instant Dark Circle Eraser service is tailored to your specific needs and skin type. Whether you're battling chronic dark circles or seeking a quick fix before a special event, our experts will customize the treatment to ensure optimal results.",
+        "price": "400",
+        "img":"https://www.saffron.com.bd/images/detailed/274/9a13fc35d834eb07ca19cbe2fafd2ea4.jpg"
+    },
+    {
+        "title": "Flormar Color Master Lipstick",
+        "category": "Lipstick",
+        "shortDescription": "Foundation match.",
+        "longDescription": "Introducing our innovative Colour Match Foundation service – a personalized beauty experience that unlocks the secret to a flawless complexion that's uniquely tailored to you. Bid farewell to the frustration of mismatched foundation shades and embrace a new era of makeup that harmonizes seamlessly with your skin tone. At the heart of our Colour Match Foundation service lies a commitment to celebrating diversity and enhancing your natural beauty. Our skilled makeup artisans are dedicated to providing you with a foundation shade that perfectly complements your skin, ensuring a radiant and confidence-boosting look that lasts all day.",
+        "taskDescription1":"Precise Shade Matching: Our experts are trained in the art of discerning undertones, shades, and nuances that make your skin truly one-of-a-kind. Using advanced technology and their keen eye for detail, they pinpoint the ideal foundation match that melts into your skin, creating a virtually undetectable finish.",
+        "taskDescription2":"Customized Formulas: We understand that each person's skin has its own characteristics and needs. Our Colour Match Foundation service offers a range of formulas that cater to different skin types – from oily to dry, combination to sensitive. This personalized approach ensures not only a perfect color match but also a foundation that works harmoniously with your skin's unique traits.",
+        "taskDescription3":"Flawless Coverage: Experience the confidence of a flawless complexion that blurs imperfections and evens out skin tone without feeling heavy or cakey. Our foundation seamlessly blends into your skin, delivering buildable coverage that lets your skin breathe while still providing the coverage you desire.",
+        "price": "1080",
+        "img":"https://d1ak51zwgmtslz.cloudfront.net/PRODUCTS_EN/8682536017916_1.jpg"
+    },
+    {
+        "title": "Contour Palette 001 LIGHT",
+        "category": "Foundation",
+        "shortDescription": "Select either Foundation for fresh, perfect skin or Highlight.",
+        "longDescription": "Introducing our exquisite FOUNDATION, HIGHLIGHT + GLOW service, a transformative beauty experience that brings out your inner radiance and enhances your natural allure.Indulge in a comprehensive and personalized session designed to elevate your skincare and makeup routine to new heights. Our skilled and passionate beauty artisans are dedicated to crafting a flawless canvas for you, combining three essential elements for a stunning and luminous appearance.",
+        "taskDescription1":"Foundation: Begin your journey to beauty perfection with our expertly applied foundation. Our artists meticulously match the ideal shade to your skin tone, creating a seamless and smooth base that blurs imperfections while maintaining a lightweight and breathable feel. The foundation sets the stage for the rest of the process, ensuring a radiant and even complexion that lasts throughout the day.",
+        "taskDescription2":"Elevate your features with strategic highlights that capture and reflect light in all the right places. Our skilled artists are adept at accentuating your best attributes, whether it's your cheekbones, brow bones, or the bridge of your nose. The artful application of highlights adds dimension and a touch of ethereal luminosity, creating a sculpted and captivating look that catches every gaze.",
+        "taskDescription3":"Embrace the allure of a natural, lit-from-within glow that emanates vitality and youthfulness. Our artists utilize carefully chosen products to enhance your skin's radiance, fostering a dewy and healthy finish. The glow aspect of our service ensures that your skin appears revitalized and rejuvenated, leaving you with an enchanting and vibrant visage.",
+        "price": "1090",
+        "img":"https://d1ak51zwgmtslz.cloudfront.net/PRODUCTS_EN/8690604370788_1.jpg"
+    },
+    {
+        "title": "Flormar Nail Enamel 517 Chic Raspberry",
+        "category": "Nail Polish",
+        "shortDescription": "Correct and conceal to wake up your look.",
+        "longDescription": "Introducing our revolutionary Instant Dark Circle Eraser service – the ultimate solution to tired-looking eyes and unwanted shadows. Say goodbye to the telltale signs of fatigue and hello to a refreshed, vibrant appearance with this transformative and efficient treatment. Are dark circles and under-eye bags casting a shadow on your natural beauty? Our Instant Dark Circle Eraser is meticulously designed to target and eliminate these concerns in a matter of moments. Using advanced and specially formulated products, our skilled professionals employ innovative techniques to provide you with visible results that will leave you astonished.",
+        "taskDescription1":"Rapid Revitalization: Watch as your under-eye area undergoes a remarkable transformation within minutes. Our expert practitioners skillfully apply specialized products that work to instantly brighten and rejuvenate your skin, making it appear smoother, firmer, and more radiant.",
+        "taskDescription2":"Precision Techniques: Our professionals are trained in the art of targeted application. By strategically addressing the root causes of dark circles – including poor circulation, pigmentation, and skin thinness – they ensure an effective treatment that restores your skin's natural vibrancy.",
+        "taskDescription3":"Tailored Solutions: We recognize that every individual is unique. That's why our Instant Dark Circle Eraser service is tailored to your specific needs and skin type. Whether you're battling chronic dark circles or seeking a quick fix before a special event, our experts will customize the treatment to ensure optimal results.",
+        "price": "400",
+        "img":"https://www.saffron.com.bd/images/detailed/274/9a13fc35d834eb07ca19cbe2fafd2ea4.jpg"
+    },
+    {
+        "title": "Flormar Color Master Lipstick",
+        "category": "Lipstick",
+        "shortDescription": "Foundation match.",
+        "longDescription": "Introducing our innovative Colour Match Foundation service – a personalized beauty experience that unlocks the secret to a flawless complexion that's uniquely tailored to you. Bid farewell to the frustration of mismatched foundation shades and embrace a new era of makeup that harmonizes seamlessly with your skin tone. At the heart of our Colour Match Foundation service lies a commitment to celebrating diversity and enhancing your natural beauty. Our skilled makeup artisans are dedicated to providing you with a foundation shade that perfectly complements your skin, ensuring a radiant and confidence-boosting look that lasts all day.",
+        "taskDescription1":"Precise Shade Matching: Our experts are trained in the art of discerning undertones, shades, and nuances that make your skin truly one-of-a-kind. Using advanced technology and their keen eye for detail, they pinpoint the ideal foundation match that melts into your skin, creating a virtually undetectable finish.",
+        "taskDescription2":"Customized Formulas: We understand that each person's skin has its own characteristics and needs. Our Colour Match Foundation service offers a range of formulas that cater to different skin types – from oily to dry, combination to sensitive. This personalized approach ensures not only a perfect color match but also a foundation that works harmoniously with your skin's unique traits.",
+        "taskDescription3":"Flawless Coverage: Experience the confidence of a flawless complexion that blurs imperfections and evens out skin tone without feeling heavy or cakey. Our foundation seamlessly blends into your skin, delivering buildable coverage that lets your skin breathe while still providing the coverage you desire.",
+        "price": "1080",
+        "img":"https://d1ak51zwgmtslz.cloudfront.net/PRODUCTS_EN/8682536017916_1.jpg"
+    },
+    {
+        "title": "Contour Palette 001 LIGHT",
+        "category": "Foundation",
+        "shortDescription": "Select either Foundation for fresh, perfect skin or Highlight.",
+        "longDescription": "Introducing our exquisite FOUNDATION, HIGHLIGHT + GLOW service, a transformative beauty experience that brings out your inner radiance and enhances your natural allure.Indulge in a comprehensive and personalized session designed to elevate your skincare and makeup routine to new heights. Our skilled and passionate beauty artisans are dedicated to crafting a flawless canvas for you, combining three essential elements for a stunning and luminous appearance.",
+        "taskDescription1":"Foundation: Begin your journey to beauty perfection with our expertly applied foundation. Our artists meticulously match the ideal shade to your skin tone, creating a seamless and smooth base that blurs imperfections while maintaining a lightweight and breathable feel. The foundation sets the stage for the rest of the process, ensuring a radiant and even complexion that lasts throughout the day.",
+        "taskDescription2":"Elevate your features with strategic highlights that capture and reflect light in all the right places. Our skilled artists are adept at accentuating your best attributes, whether it's your cheekbones, brow bones, or the bridge of your nose. The artful application of highlights adds dimension and a touch of ethereal luminosity, creating a sculpted and captivating look that catches every gaze.",
+        "taskDescription3":"Embrace the allure of a natural, lit-from-within glow that emanates vitality and youthfulness. Our artists utilize carefully chosen products to enhance your skin's radiance, fostering a dewy and healthy finish. The glow aspect of our service ensures that your skin appears revitalized and rejuvenated, leaving you with an enchanting and vibrant visage.",
+        "price": "1090",
+        "img":"https://d1ak51zwgmtslz.cloudfront.net/PRODUCTS_EN/8690604370788_1.jpg"
+    },
+    {
+        "title": "Flormar Nail Enamel 517 Chic Raspberry",
+        "category": "Nail Polish",
+        "shortDescription": "Correct and conceal to wake up your look.",
+        "longDescription": "Introducing our revolutionary Instant Dark Circle Eraser service – the ultimate solution to tired-looking eyes and unwanted shadows. Say goodbye to the telltale signs of fatigue and hello to a refreshed, vibrant appearance with this transformative and efficient treatment. Are dark circles and under-eye bags casting a shadow on your natural beauty? Our Instant Dark Circle Eraser is meticulously designed to target and eliminate these concerns in a matter of moments. Using advanced and specially formulated products, our skilled professionals employ innovative techniques to provide you with visible results that will leave you astonished.",
+        "taskDescription1":"Rapid Revitalization: Watch as your under-eye area undergoes a remarkable transformation within minutes. Our expert practitioners skillfully apply specialized products that work to instantly brighten and rejuvenate your skin, making it appear smoother, firmer, and more radiant.",
+        "taskDescription2":"Precision Techniques: Our professionals are trained in the art of targeted application. By strategically addressing the root causes of dark circles – including poor circulation, pigmentation, and skin thinness – they ensure an effective treatment that restores your skin's natural vibrancy.",
+        "taskDescription3":"Tailored Solutions: We recognize that every individual is unique. That's why our Instant Dark Circle Eraser service is tailored to your specific needs and skin type. Whether you're battling chronic dark circles or seeking a quick fix before a special event, our experts will customize the treatment to ensure optimal results.",
+        "price": "400",
+        "img":"https://www.saffron.com.bd/images/detailed/274/9a13fc35d834eb07ca19cbe2fafd2ea4.jpg"
+    },
+    {
+        "title": "Flormar Color Master Lipstick",
+        "category": "Lipstick",
+        "shortDescription": "Foundation match.",
+        "longDescription": "Introducing our innovative Colour Match Foundation service – a personalized beauty experience that unlocks the secret to a flawless complexion that's uniquely tailored to you. Bid farewell to the frustration of mismatched foundation shades and embrace a new era of makeup that harmonizes seamlessly with your skin tone. At the heart of our Colour Match Foundation service lies a commitment to celebrating diversity and enhancing your natural beauty. Our skilled makeup artisans are dedicated to providing you with a foundation shade that perfectly complements your skin, ensuring a radiant and confidence-boosting look that lasts all day.",
+        "taskDescription1":"Precise Shade Matching: Our experts are trained in the art of discerning undertones, shades, and nuances that make your skin truly one-of-a-kind. Using advanced technology and their keen eye for detail, they pinpoint the ideal foundation match that melts into your skin, creating a virtually undetectable finish.",
+        "taskDescription2":"Customized Formulas: We understand that each person's skin has its own characteristics and needs. Our Colour Match Foundation service offers a range of formulas that cater to different skin types – from oily to dry, combination to sensitive. This personalized approach ensures not only a perfect color match but also a foundation that works harmoniously with your skin's unique traits.",
+        "taskDescription3":"Flawless Coverage: Experience the confidence of a flawless complexion that blurs imperfections and evens out skin tone without feeling heavy or cakey. Our foundation seamlessly blends into your skin, delivering buildable coverage that lets your skin breathe while still providing the coverage you desire.",
+        "price": "1080",
+        "img":"https://d1ak51zwgmtslz.cloudfront.net/PRODUCTS_EN/8682536017916_1.jpg"
     }
 
 ]

@@ -5,12 +5,15 @@ import ServicesTab from "../../Components/ServicesTab/ServicesTab";
 import serviceBanner from "../../assets/Images/Banner/service-pamper-me-banner.jpg";
 import Service from "../../Components/Service/Service";
 import { Context } from "../../Providers/PamperContext";
+import Product from "../../Components/Product/Product";
 const Shop = () => {
   const [selectedTab, setSelectedTab] = useState(null);
   const [loading, setLoading] = useState(false);
-  const {services, setServices} = useContext(Context);
+  const { products } = useContext(Context);
 
-  const filteredServices = services?.filter(service=>service?.category==selectedTab)
+  const filteredProducts = products?.filter(
+    (service) => service?.category == selectedTab
+  );
 
   return (
     <div className="shopProducts">
@@ -36,17 +39,17 @@ const Shop = () => {
           </div>
           <div className="filterPrice">
             <p>Filter by price</p>
-            <input type="number" placeholder="From"/>
-            <input type="number" placeholder="To"/>
+            <input type="number" placeholder="From" />
+            <input type="number" placeholder="To" />
           </div>
-          <button className="filterBtn">
-            Filter
-          </button>
+          <button className="filterBtn">Filter</button>
         </div>
         <div className="shopProduct-container">
-          {(filteredServices.length>0?filteredServices:services)?.map((service) => (
-            <Service key={service.name} service={service}></Service>
-          ))}
+          {(filteredProducts.length > 0 ? filteredProducts : products)?.map(
+            (product) => (
+              <Product key={product.title} product={product}></Product>
+            )
+          )}
         </div>
       </div>
     </div>
