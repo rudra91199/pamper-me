@@ -6,6 +6,7 @@ import Services from "../Pages/Services/Services";
 import ServiceDetails from "../Pages/ServiceDetails/ServiceDetails";
 import Bookings from "../Pages/Bookings/Bookings";
 import Shop from "../Pages/Shop/Shop";
+import ProductDetails from "../Pages/ProductDetails/ProductDetails";
 
 
 const router = createBrowserRouter([
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
             {
                 path: '/service/:slug',
                 element: <ServiceDetails></ServiceDetails>
+            },
+            {
+                path: '/product/:slug',
+                element: <ProductDetails></ProductDetails>
             },
             {
                 path: '/bookings',
