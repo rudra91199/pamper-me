@@ -4,14 +4,32 @@ import { useContext, useEffect, useRef, useState } from "react";
 import { Context } from "../../Providers/PamperContext";
 import BookingModal from "../../Components/BookingModal/BookingModal";
 import Product from "./../../Components/Product/Product";
+import { addToDb } from "../../Utilities/CartDb";
 const ProductDetails = () => {
   const { slug } = useParams();
   const { products } = useContext(Context);
+  const [quantity, setQuantity] = useState(1);
+  const { cart, setCart } = useContext(Context);
   const product = products?.find((p) => p?.title == slug);
   const navigate = useNavigate();
   const relatedCategory = products?.filter(
     (r) => r?.category == product?.category && r?.title != product?.title
   );
+  const handleAddToCart = (item) => {
+    let newCart = [];
+    const exists = cart.find((product) => product?._id == item._id);
+    if (!exists) {
+      item.quantity = quantity;
+      newCart = [...cart, item];
+    } else {
+      item.quantity = exists.quantity + quantity;
+      const rest = cart.filter((product) => product?._id !== item._id);
+      newCart = [...rest, item];
+    }
+    setCart(newCart);
+    addToDb(item._id, quantity);
+
+  };
 
   return (
     <div className="product-details-grid">
@@ -29,7 +47,7 @@ const ProductDetails = () => {
             />
             <p className="product-price">BDT. {product?.price}</p>
             <div style={{display:"flex",gap:"20px"}}>
-            <button className="buy-btn">ADD TO CART</button>
+            <button onClick={() => handleAddToCart(product)} className="buy-btn">ADD TO CART</button>
             <button className="buy-btn">BUY NOW</button>
             </div>
           </div>
