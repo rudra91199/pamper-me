@@ -8,6 +8,12 @@
   background: white;
   transition: all 0.3s ease-in-out;
 }
+.width-350{
+  width: 350px;
+}
+.product-border{
+  box-shadow: 0px 0px 10px #e3208556;
+}
 
 .productCard:hover{
   box-shadow: 0 0 20px #e3208564;
