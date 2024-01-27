@@ -6,7 +6,6 @@ const PamperContext = ({children}) => {
   const [services, setServices] = useState([]);
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useCart(products);
-  console.log(cart)
 
     useEffect(() => {
         fetch("https://pamper-me-backend.vercel.app/services")
