@@ -20,9 +20,8 @@
     margin: 20px auto;
 }
 .home-products-container {
-  display: grid;
-  padding: 0 8%;
-  grid-template-columns: repeat(3,1fr);
+  display: flex;
+  flex-direction: row;
   gap: 40px;
   justify-content: center;
   margin-top: 40px;
@@ -31,8 +30,6 @@
 .products span {
   color: white;
 }
-
-
 
 .all-product-btn {
   font-family: "Raleway", sans-serif;

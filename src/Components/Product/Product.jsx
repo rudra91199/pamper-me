@@ -1,8 +1,11 @@
 /* eslint-disable react/prop-types */
+import { useLocation } from 'react-router-dom';
 import './Product.css'
 const Product = ({ product }) => {
+const location = useLocation();
+console.log(location)
   return (
-    <div className="productCard">
+    <div className={`productCard ${location.pathname ==="/"?"width-350":"product-border"}`}>
       <p className="product-title">{product?.title}</p>
       <img
         src={product?.img}
