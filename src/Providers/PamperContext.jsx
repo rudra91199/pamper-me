@@ -1,9 +1,12 @@
 import { createContext, useEffect, useState } from "react";
+import useCart from "../Hooks/UseCart";
 
 export const Context = createContext();
 const PamperContext = ({children}) => {
   const [services, setServices] = useState([]);
   const [products, setProducts] = useState([]);
+  const [cart, setCart] = useCart(products);
+  console.log(cart)
 
     useEffect(() => {
         fetch("https://pamper-me-backend.vercel.app/services")
@@ -18,7 +21,7 @@ const PamperContext = ({children}) => {
           })
       }, []);
       const info = {
-        services,setServices,products
+        services,setServices,products,cart,setCart
       }
     return <Context.Provider value={info} >{children}</Context.Provider>;
 };
