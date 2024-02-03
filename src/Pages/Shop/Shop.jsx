@@ -9,7 +9,7 @@ import Product from "../../Components/Product/Product";
 const Shop = () => {
   const [selectedTab, setSelectedTab] = useState(null);
   const [loading, setLoading] = useState(false);
-  const { products } = useContext(Context);
+  const { products, services } = useContext(Context);
 
   const filteredProducts = products?.filter(
     (service) => service?.category == selectedTab
@@ -19,6 +19,7 @@ const Shop = () => {
     <div className="shopProducts">
       <p className="shopProductBanner"></p>
       <ServicesTab
+        services={services}
         selectedTab={selectedTab}
         setSelectedTab={setSelectedTab}
       ></ServicesTab>
