@@ -10,6 +10,8 @@ const Footer = () => {
   const { services } = useContext(Context)
   const year = new Date().getFullYear();
 
+  let categoryArray = [...new Set(services.map((service) => service.category))];
+
   return (
     <div className={`footer ${location.pathname == "/login" ? "d-none" : ""}`}>
 
@@ -19,9 +21,8 @@ const Footer = () => {
           <img src={logo} className="footerLogo" alt="" />
           <h3>One stop beauty solution</h3>
           <div className="footer-logo-content">
-            <p>
-              In vitae nisi aliquam, scelerisque leo a, volu- tpat sem. Vivamus
-              rutrum dui fermentum eros hendrerit, id lobortis leo volutpat.
+            <p> 
+            Welcome to Pamper Me, your One Stop Beauty Solution, where luxury meets convenience. Our commitment to using premium products ensures a flawless finish, while stringent hygiene practices prioritize your safety.
             </p>
             <i className="fa-brands fa-pinterest"></i>
             <i className="fa-brands fa-facebook-f"></i>
