@@ -7,10 +7,11 @@ import { useContext } from "react";
 import { Context } from "../../Providers/PamperContext";
 
 const Footer = () => {
-  const {services}= useContext(Context)
+  const { services } = useContext(Context);
   const year = new Date().getFullYear();
 
-  const filteredCategory = services.filter((service))
+  let categoryArray = [...new Set(services.map((service) => service.category))];
+
   return (
     <div className={`footer ${location.pathname == "/login" ? "d-none" : ""}`}>
       <footer className="footer-container">
@@ -18,9 +19,8 @@ const Footer = () => {
           <img src={logo} className="footerLogo" alt="" />
           <h3>One stop beauty solution</h3>
           <div className="footer-logo-content">
-            <p>
-              In vitae nisi aliquam, scelerisque leo a, volu- tpat sem. Vivamus
-              rutrum dui fermentum eros hendrerit, id lobortis leo volutpat.
+            <p> 
+            Welcome to Pamper Me, your One Stop Beauty Solution, where luxury meets convenience. Our commitment to using premium products ensures a flawless finish, while stringent hygiene practices prioritize your safety.
             </p>
             <i className="fa-brands fa-pinterest"></i>
             <i className="fa-brands fa-facebook-f"></i>
@@ -34,7 +34,7 @@ const Footer = () => {
         <div className="footer-section2">
           <div>
             <img src={serviceIcon} alt="" />
-            <p className="link-title">OUR SERVICES</p>
+            <p className="link-title">Our Services</p>
             <div style={{ display: "flex", gap: "50px", marginTop: "20px" }}>
               <div style={{ display: "flex", flexDirection: "column" }}>
                 <Link>Make up</Link>
@@ -59,17 +59,16 @@ const Footer = () => {
         <div className="footer-section3">
           <div>
             <img src={contactIcon} className="footerLogo" alt="" />
-            <p className="link-title">CONTACT US</p>
+            <p className="link-title">Get In Touch With Us</p>
             <form>
               <div>
-                <input type="text" />
+                <input type="text" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <select name="interests" id="">
-                  {
-                    services.map((service)=> (
-                      
-                      <option key={service._id} value="">{service.category}</option>
-                    ))
-                  }
+                  {categoryArray.map((category) => (
+                    <option key={category} value={category}>
+                      {category}
+                    </option>
+                  ))}
                 </select>
               </div>
               <div>
