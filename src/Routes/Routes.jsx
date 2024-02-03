@@ -4,6 +4,9 @@ import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
 import Services from "../Pages/Services/Services";
 import ServiceDetails from "../Pages/ServiceDetails/ServiceDetails";
+import Bookings from "../Pages/Bookings/Bookings";
+import Shop from "../Pages/Shop/Shop";
+import ProductDetails from "../Pages/ProductDetails/ProductDetails";
 
 
 const router = createBrowserRouter([
@@ -13,19 +16,31 @@ const router = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element: <Home></Home>,
+                element: <Home></Home>
             },
             {
                 path: '/login',
-                element: <Login></Login>,
+                element: <Login></Login>
             },
             {
                 path: '/services',
-                element: <Services></Services>,
+                element: <Services></Services>
             },
             {
                 path: '/service/:slug',
-                element: <ServiceDetails></ServiceDetails>,
+                element: <ServiceDetails></ServiceDetails>
+            },
+            {
+                path: '/product/:slug',
+                element: <ProductDetails></ProductDetails>
+            },
+            {
+                path: '/bookings',
+                element: <Bookings></Bookings>
+            },
+            {
+                path: '/shop',
+                element: <Shop></Shop>
             },
 
         ]

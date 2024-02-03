@@ -1,23 +1,20 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import "./PopularProducts.css";
 import { Link } from "react-router-dom";
 import Product from "../Product/Product";
+import { Context } from "../../Providers/PamperContext";
 
 const PopularProducts = () => {
-  const [services, setServices] = useState([]);
-  useEffect(() => {
-    fetch(`products.json`)
-      .then((res) => res.json())
-      .then((data) => setServices(data));
-  }, []);
+  const {products} = useContext(Context);
+
   return (
     <div className="products">
       <h2>
         Popular Products
       </h2>
       <div className="home-products-container">
-        {services.slice(0, 3).map((service) => (
-          <Product key={service?.name} service={service}>
+        {products?.slice(0, 3).map((product) => (
+          <Product key={product?.name} product={product}>
           </Product>
         ))}
       </div>
