@@ -1,23 +1,30 @@
 import { useRef, useState } from "react";
 import "./BookingModal.css";
-const BookingModal = ({ setIsDialogOpen, dialogRef, handleClose,serviceId }) => {
+import auth from "../../../firebase.init";
+import { useAuthState } from "react-firebase-hooks/auth";
+const BookingModal = ({
+  setIsDialogOpen,
+  dialogRef,
+  handleClose,
+  serviceId,
+}) => {
+  const [user] = useAuthState(auth);
   const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
   const [ph, setPh] = useState("");
   const [address, setAddress] = useState("");
   const [startTime, setStartTime] = useState("");
   const [endTime, setEndTime] = useState("");
 
-  const handleBooking = async(e) => {
+  const handleBooking = async (e) => {
     e.preventDefault();
     const data = {
       name,
-      email,
+      email:user?.email,
       ph,
       address,
       startTime,
       endTime,
-      serviceId
+      serviceId,
     };
     await fetch("https://pamper-me-backend.vercel.app/confirmBooking", {
       method: "post",
@@ -28,16 +35,15 @@ const BookingModal = ({ setIsDialogOpen, dialogRef, handleClose,serviceId }) => 
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data)
+        console.log(data);
       });
-      setAddress("");
-      setEmail("");
-      setEndTime("");
-      setName("");
-      setStartTime("");
-      setPh("");
-      e.target.reset();
-      handleClose();
+    setAddress("");
+    setEndTime("");
+    setName("");
+    setStartTime("");
+    setPh("");
+    e.target.reset();
+    handleClose();
   };
 
   return (
@@ -57,11 +63,7 @@ const BookingModal = ({ setIsDialogOpen, dialogRef, handleClose,serviceId }) => 
                 placeholder="Full Name"
                 required
               />
-              <input
-                onChange={(e) => setEmail(e.target.value)}
-                type="email"
-                placeholder="Email"
-              />
+              <input type="email" value={user?.email} />
             </div>
             <div style={{ display: "flex" }}>
               <input
