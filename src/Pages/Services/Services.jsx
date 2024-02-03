@@ -16,6 +16,7 @@ const Services = () => {
     <div className="services">
       <p className="servicesBanner"></p>
       <ServicesTab
+      services={services}
         selectedTab={selectedTab}
         setSelectedTab={setSelectedTab}
       ></ServicesTab>

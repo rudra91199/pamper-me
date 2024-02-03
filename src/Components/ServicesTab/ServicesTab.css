@@ -3,21 +3,25 @@
     justify-content: center;
     align-items: center;
     background-color: #f1a1c4;
-    margin: 0 auto;
+    /* padding: 0 20px; */
     border-radius: 0 0 20px 20px;
+    overflow: hidden;
 }
 .servicesTab button{
-    padding: 20px;
+    width: 200px;
+    height: min(60px,9vh);
+    padding: 0 20px;
     color: #ffffff;
     text-shadow: 0px 0px 4px rgba(192,34,166,0.82);
     font-weight: bold;
-    font-size: 18px;
     background-color: transparent;
     transition: all ease-in-out 200ms;
     cursor: pointer;
-    font-size: 16px;
-    border-radius: 10px;
+    font-size: 14px;
+    /* border-radius: 10px; */
 }
+
+
 .servicesTab button:hover{
     background-color: rgba(255, 3, 133, 0.452) ;
     color: white;
@@ -28,5 +32,6 @@ button.selected{
     color: white;
     pointer-events: none;
     text-shadow: none;
+    /* font-size: 14px; */
 
 }
