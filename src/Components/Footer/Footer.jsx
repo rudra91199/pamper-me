@@ -21,8 +21,8 @@ const Footer = () => {
           <img src={logo} className="footerLogo" alt="" />
           <h3>One stop beauty solution</h3>
           <div className="footer-logo-content">
-            <p> 
-            Welcome to Pamper Me, your One Stop Beauty Solution, where luxury meets convenience. Our commitment to using premium products ensures a flawless finish, while stringent hygiene practices prioritize your safety.
+            <p>
+              Welcome to Pamper Me, your One Stop Beauty Solution, where luxury meets convenience. Our commitment to using premium products ensures a flawless finish, while stringent hygiene practices prioritize your safety.
             </p>
             <i className="fa-brands fa-pinterest"></i>
             <i className="fa-brands fa-facebook-f"></i>
@@ -61,9 +61,9 @@ const Footer = () => {
           <img src={contactIcon} className="footerLogo" alt="" />
           <p className="link-title">CONTACT US</p>
           <form>
-            <div>
-              <input type="text" />
-              <select name="interests" id="">
+            <div className="input-container">
+              <input type="text" placeholder="Your Name" />
+              <select name="interests" >
                 {
                   services.map((service) => (
 
@@ -71,12 +71,10 @@ const Footer = () => {
                   ))
                 }
               </select>
+              <input type="email" placeholder="Your Email" />
+              <input type="number" placeholder="Your Number" />
             </div>
-            <div>
-              <input type="text" />
-              <input type="text" />
-            </div>
-            <input style={{ width: "100%" }} type="text" />
+            <textarea style={{ width: "100%" }} type="text" rows={5} placeholder="Your Message" />
             <input className="submitBtn" type="submit" value="Submit" />
           </form>
 
