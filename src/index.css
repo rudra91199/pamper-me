@@ -24,6 +24,7 @@ a {
 button {
   border: none;
   cursor: url('./assets/Images/Cursor/brush3-01.png'), auto;
+  font-family: "Raleway", sans-serif;
 }
 
 body {

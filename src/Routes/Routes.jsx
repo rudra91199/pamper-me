@@ -7,6 +7,7 @@ import ServiceDetails from "../Pages/ServiceDetails/ServiceDetails";
 import Bookings from "../Pages/Bookings/Bookings";
 import Shop from "../Pages/Shop/Shop";
 import ProductDetails from "../Pages/ProductDetails/ProductDetails";
+import Category from "../Components/Category/Category";
 
 
 const router = createBrowserRouter([
@@ -40,11 +41,23 @@ const router = createBrowserRouter([
             },
             {
                 path: '/shop',
-                element: <Shop></Shop>
+                element: <Shop></Shop>,
+                children:[
+                    {
+                        path:":category",
+                        element:<Category/>,
+                        children:[
+                            {
+                                path:":subcategory",
+                                element:<Category/>
+                            }
+                        ]
+                    }
+                ]
             },
 
         ]
-    },
+    }
 
 
 ])

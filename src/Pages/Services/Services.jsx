@@ -16,9 +16,10 @@ const Services = () => {
     <div className="services">
       <p className="servicesBanner"></p>
       <ServicesTab
-      services={services}
+        services={services}
         selectedTab={selectedTab}
         setSelectedTab={setSelectedTab}
+        name="services"
       ></ServicesTab>
         <div className="service-container">
           {(filteredServices.length>0?filteredServices:services)?.map((service) => (

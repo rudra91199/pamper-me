@@ -35,10 +35,12 @@
 }
 .filterCategory{
     background: #fff;
-    padding: 20px;
+    padding:10px 20px;
     border-radius: 10px;
     width: 80%;
+
 }
+
 .hr{
    height: 1px;
    width: 80%;
@@ -48,8 +50,9 @@
 .filterCategory button{
     display: block; 
     background: transparent;
-    padding: 10px;
-    font-size: 18px;
+    padding:7px 10px;
+    font-size: 16px;
+    font-weight: 600;
     transition: all ease-in-out 200ms;
 }
 .filterCategory button:hover{
@@ -57,10 +60,12 @@
 }
 
 .filterCategory p{
-    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
     font-weight: bold;
     margin: 10px;
-    margin-bottom: 20px;
 }
 
 .filterPrice{
@@ -100,6 +105,24 @@
 }
 .filterBtn:hover{
     background: var(--purple);
+}
+
+.sub-category{
+    transition: all 0.3s ease-in-out;
+    max-height: 0px;
+    overflow: hidden;
+    padding-left: 7%;
+}
+
+.show{
+    padding-top: 5px;
+    max-height: 100vh;
+}
+
+
+
+.isActive{
+    color: var(--pink);
 }
 
 @media screen and (max-width:1860px) {
