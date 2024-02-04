@@ -1,21 +1,31 @@
-.bookings{
-    padding: 40px 12%;
+.bookings {
+  padding: 40px 12%;
 }
-.bookings input{
-    padding: 8px 10px;
-    border: 1px solid var(--pink);
-    width: 20%;
+.bookingTable {
+  width: 100%;
 }
-.searchBookingBtn{
-    padding: 8px 10px;
-    background: var(--purple);
-    color: white;
-    cursor: pointer;
-    transition: all ease-in-out 200ms;
-    border: 1px solid var(--purple);
-    margin-left: 20px;
+.tableHeader {
+  background: var(--pink);
+  color: white;
 }
-.searchBookingBtn:hover{
-    background: var(--pink);
-    border: 1px solid var(--pink);
+.tableHeader td {
+  padding: 10px;
+  font-weight: bold;
+}
+.bookingTable tr {
+  padding: 20px;
+}
+.tableRow td {
+  padding: 10px;
+  font-weight: bold;
+  background: rgba(128, 0, 128, 0.288);
+}
+.actions a {
+  text-decoration: underline;
+  margin-left: 10px;
+  font-weight: bold;
+  transition: all ease-in-out 200ms;
+}
+.actions a:hover {
+  color: var(--pink);
 }

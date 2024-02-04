@@ -3,11 +3,14 @@ import "./ServiceDetails.css";
 import { useContext, useEffect, useRef, useState } from "react";
 import { Context } from "../../Providers/PamperContext";
 import BookingModal from "../../Components/BookingModal/BookingModal";
+import auth from "../../../firebase.init";
+import { useAuthState } from "react-firebase-hooks/auth";
 const ServiceDetails = () => {
+  const [user] = useAuthState(auth);
   const { slug } = useParams();
   const { services, setServices } = useContext(Context);
   const service = services?.find((s) => s?.title == slug);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const relatedCategory = services?.filter(
     (r) => r?.category == service?.category && r?.title != service?.title
   );
@@ -37,7 +40,10 @@ const ServiceDetails = () => {
               <p className="duration">{service?.duration}</p>
               <p className="price">BDT. {service?.price}</p>
             </div>
-            <button onClick={handleOpen} className="book-btn">
+            <button
+              onClick={user?.email ? handleOpen : () => navigate("/login")}
+              className="book-btn"
+            >
               BOOK NOW
             </button>
             <BookingModal
@@ -70,7 +76,12 @@ const ServiceDetails = () => {
                   <div style={{ color: "#e32085", fontWeight: "bold" }}>
                     BDT {related?.price}
                   </div>
-                  <button onClick={()=>navigate(`/service/${related?.title}`)} className="viewBtn">VIEW</button>
+                  <button
+                    onClick={() => navigate(`/service/${related?.title}`)}
+                    className="viewBtn"
+                  >
+                    VIEW
+                  </button>
                 </div>
               </div>
             ))}
