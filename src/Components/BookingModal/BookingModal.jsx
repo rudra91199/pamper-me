@@ -24,7 +24,7 @@ const BookingModal = ({
       address,
       startTime,
       endTime,
-      serviceId,
+      serviceId
     };
     await fetch("https://pamper-me-backend.vercel.app/confirmBooking", {
       method: "post",
