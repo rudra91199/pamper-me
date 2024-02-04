@@ -7,20 +7,22 @@ import { useContext } from "react";
 import { Context } from "../../Providers/PamperContext";
 
 const Footer = () => {
-  const { services } = useContext(Context);
+  const { services } = useContext(Context)
   const year = new Date().getFullYear();
 
   let categoryArray = [...new Set(services.map((service) => service.category))];
 
   return (
     <div className={`footer ${location.pathname == "/login" ? "d-none" : ""}`}>
+
       <footer className="footer-container">
+
         <div className="footer-section1">
           <img src={logo} className="footerLogo" alt="" />
           <h3>One stop beauty solution</h3>
           <div className="footer-logo-content">
-            <p> 
-            Welcome to Pamper Me, your One Stop Beauty Solution, where luxury meets convenience. Our commitment to using premium products ensures a flawless finish, while stringent hygiene practices prioritize your safety.
+            <p>
+              Welcome to Pamper Me, your One Stop Beauty Solution, where luxury meets convenience. Our commitment to using premium products ensures a flawless finish, while stringent hygiene practices prioritize your safety.
             </p>
             <i className="fa-brands fa-pinterest"></i>
             <i className="fa-brands fa-facebook-f"></i>
@@ -32,53 +34,50 @@ const Footer = () => {
         </div>
 
         <div className="footer-section2">
-          <div>
-            <img src={serviceIcon} alt="" />
-            <p className="link-title">Our Services</p>
-            <div style={{ display: "flex", gap: "50px", marginTop: "20px" }}>
-              <div style={{ display: "flex", flexDirection: "column" }}>
-                <Link>Make up</Link>
-                <Link>Facial</Link>
-                <Link>Hair treatment</Link>
-                <Link>Body massage</Link>
-                <Link>Waxing</Link>
-                <Link>Baby care</Link>
-              </div>
-              <div style={{ display: "flex", flexDirection: "column" }}>
-                <Link>Pre Bridal Care</Link>
-                <Link>Bridal Makeover</Link>
-                <Link>Beauty Complete </Link>
-                <Link>Canvas Makeup </Link>
-                <Link>Glamour Glow</Link>
-                <Link>Hair Dressing</Link>
-              </div>
+          <img src={serviceIcon} alt="" />
+          <p className="link-title">OUR SERVICES</p>
+          <div style={{ display: "flex", gap: "50px", marginTop: "20px" }}>
+            <div style={{ display: "flex", flexDirection: "column" }}>
+              <Link>Make up</Link>
+              <Link>Facial</Link>
+              <Link>Hair treatment</Link>
+              <Link>Body massage</Link>
+              <Link>Waxing</Link>
+              <Link>Baby care</Link>
+            </div>
+            <div style={{ display: "flex", flexDirection: "column" }}>
+              <Link>Pre Bridal Care</Link>
+              <Link>Bridal Makeover</Link>
+              <Link>Beauty Complete </Link>
+              <Link>Canvas Makeup </Link>
+              <Link>Glamour Glow</Link>
+              <Link>Hair Dressing</Link>
             </div>
           </div>
         </div>
 
+
         <div className="footer-section3">
-          <div>
-            <img src={contactIcon} className="footerLogo" alt="" />
-            <p className="link-title">Get In Touch With Us</p>
-            <form>
-              <div>
-                <input type="text" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <select name="interests" id="">
-                  {categoryArray.map((category) => (
-                    <option key={category} value={category}>
-                      {category}
-                    </option>
-                  ))}
-                </select>
-              </div>
-              <div>
-                <input type="text" />
-                <input type="text" />
-              </div>
-              <input style={{ width: "100%" }} type="text" />
-              <input className="submitBtn" type="submit" value="Submit" />
-            </form>
-          </div>
+          <img src={contactIcon} className="footerLogo" alt="" />
+          <p className="link-title">CONTACT US</p>
+          <form>
+            <div className="input-container">
+              <input type="text" placeholder="Your Name" />
+              <select name="interests" >
+                {
+                  services.map((service) => (
+
+                    <option key={service._id} value="">{service.category}</option>
+                  ))
+                }
+              </select>
+              <input type="email" placeholder="Your Email" />
+              <input type="number" placeholder="Your Number" />
+            </div>
+            <textarea style={{ width: "100%" }} type="text" rows={5} placeholder="Your Message" />
+            <input className="submitBtn" type="submit" value="Submit" />
+          </form>
+
         </div>
       </footer>
     </div>
