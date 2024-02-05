@@ -8,23 +8,58 @@ import { Context } from "../../Providers/PamperContext";
 import Product from "../../Components/Product/Product";
 import { Outlet, useLocation, useNavigate, useParams } from "react-router-dom";
 const Shop = () => {
+  const { products, services } = useContext(Context);
+
   const [selectedTab, setSelectedTab] = useState(null);
   const [loading, setLoading] = useState(false);
-  const { products, services } = useContext(Context);
-  const [active, setActive] = useState(false);
+  const [active, setActive] = useState({
+    category: false,
+    brand: false,
+  });
+  const [filteredProducts, setFilterProducts] = useState([]);
+  const [subProducts, setSubProducts] = useState([]);
+  const [brandProducts, setBrandProducts] = useState([]);
+
+  const { category, subcategory, brand } = useParams();
   const location = useLocation();
   const navigate = useNavigate();
 
-  const {subcategory} = useParams();
+  useEffect(() => {
+    // `http://localhost:5000/getProductsByCategory?${category && `category=${category}`}&${subcategory && `subcategory=${subcategory}`}`
+ 
+      fetch(
+        `http://localhost:5000/getProductsByCategory?category=${category}&subcategory=${subcategory}&Brand=${brand}`
+      )
+        .then((res) => res.json())
+        .then((data) => setFilterProducts(data));
+  }, [category, subcategory, brand]);
 
-  let filteredProducts = products?.filter(
-    (product) => product?.category == selectedTab
-  );
+  console.log(filteredProducts);
 
   const uniqueSubCategories = [
     ...new Set(
       (filteredProducts.length > 0 ? filteredProducts : products)?.map(
         (product) => product.subcategory
+      )
+    ),
+  ];
+
+  // useEffect(() => {
+  //   if (subcategory) {
+  //     setSubProducts(
+  //       filteredProducts?.filter(
+  //         (product) => product.subcategory === subcategory
+  //       )
+  //     );
+  //   } else {
+  //     setSubProducts([]);
+  //   }
+  // }, [subcategory, filteredProducts]);
+
+  const uniqueBrands = [
+    ...new Set(
+      (filteredProducts.length > 0 ? filteredProducts : products)?.map(
+        (product) => product.Brand
       )
     ),
   ];
@@ -42,33 +77,85 @@ const Shop = () => {
 
   useEffect(() => {
     if (location.pathname == "/shop") {
-      filteredProducts = [];
+      setFilterProducts([]);
       setSelectedTab([]);
     }
   }, [location.pathname]);
+
+  console.log(products.category)
 
   return (
     <div className="shopProducts">
       <p className="shopProductBanner"></p>
       <ServicesTab
-        services={products}
+        services={products.category}
         selectedTab={selectedTab}
         setSelectedTab={setSelectedTab}
       ></ServicesTab>
       <div className="shopProduct-grid">
         <div className="filter-container">
           <div className={`filterCategory `}>
-            <p onClick ={()=> setActive(!active)}>Filter by category {active ? <i class="fa-solid fa-minus"></i> : <i class="fa-solid fa-plus"></i>}</p>
-            <div className={`sub-category ${active ? "show":""}`}>
-            {uniqueSubCategories?.map((uniqueSubCategory, i) => (
-              <div key={i}>
-                <button className={`${subcategory ==uniqueSubCategory ?  "isActive" :""}`} onClick={() => handleNavigate(uniqueSubCategory)}>
-                  {uniqueSubCategory}
-                </button>
-              </div>
-            ))}
+            <p
+              onClick={() =>
+                setActive({
+                  category: !active.category,
+                  brand: active.brand,
+                })
+              }
+            >
+              Filter by category{" "}
+              {active.category ? (
+                <i class="fa-solid fa-minus"></i>
+              ) : (
+                <i class="fa-solid fa-plus"></i>
+              )}
+            </p>
+            <div className={`sub-category ${active.category ? "show" : ""}`}>
+              {uniqueSubCategories?.map((uniqueSubCategory, i) => (
+                <div key={i}>
+                  <button
+                    className={`${
+                      subcategory == uniqueSubCategory ? "isActive" : ""
+                    }`}
+                    onClick={() => handleNavigate(uniqueSubCategory)}
+                  >
+                    {uniqueSubCategory}
+                  </button>
+                </div>
+              ))}
             </div>
           </div>
+
+          <div className={`filterCategory `} style={{ marginTop: 20 }}>
+            <p
+              onClick={() =>
+                setActive({
+                  category: active.category,
+                  brand: !active.brand,
+                })
+              }
+            >
+              Filter by Brands{" "}
+              {active.brand ? (
+                <i class="fa-solid fa-minus"></i>
+              ) : (
+                <i class="fa-solid fa-plus"></i>
+              )}
+            </p>
+            <div className={`sub-category ${active.brand ? "show" : ""}`}>
+              {uniqueBrands?.map((uniqueBrand, i) => (
+                <div key={i}>
+                  <button
+                    className={`${brand == uniqueBrand ? "isActive" : ""}`}
+                    onClick={() => handleNavigate(uniqueBrand)}
+                  >
+                    {uniqueBrand}
+                  </button>
+                </div>
+              ))}
+            </div>
+          </div>
+
           <div className="filterPrice">
             <p>Filter by price</p>
             <input type="number" placeholder="From" />
@@ -77,13 +164,15 @@ const Shop = () => {
           <button className="filterBtn">Filter</button>
         </div>
         <div className="shopProduct-container">
-          {filteredProducts.length > 0 ? (
-            <Outlet />
-          ) : (
-            products.map((product) => (
-              <Product key={product._id} product={product}></Product>
-            ))
-          )}
+          {
+            // filteredProducts.length > 0 ? (
+            <Outlet context={{ subProducts, filteredProducts }} />
+            // ) : (
+            //   products.map((product) => (
+            //     <Product key={product._id} product={product}></Product>
+            //   ))
+            // )
+          }
         </div>
       </div>
     </div>

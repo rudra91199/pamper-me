@@ -49,7 +49,13 @@ const router = createBrowserRouter([
                         children:[
                             {
                                 path:":subcategory",
-                                element:<Category/>
+                                element:<Category/>,
+                                children:[
+                                    {
+                                        path:":brand",
+                                        element:<Category/>
+                                    }
+                                ]
                             }
                         ]
                     }

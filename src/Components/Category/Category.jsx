@@ -4,24 +4,12 @@ import Product from "../Product/Product";
 import { useState } from "react";
 
 const Category = () => {
-  const [filteredProducts, setFilterProducts] = useState([]);
-   const [subProducts, setSubProducts] = useState([]);
-  const {category, subcategory} = useParams()
+ const {subProducts, filteredProducts} = useOutletContext()
 
-  useEffect(() =>{
-      fetch(`https://pamper-me-backend.vercel.app/getProductsByCategory?category=${category}`)
-    .then(res => res.json())
-    .then(data => setFilterProducts(data));
-  },[category]);
-
-  useEffect(() =>{
-    if(subcategory){
-      setSubProducts(filteredProducts?.filter(product => product.subcategory === subcategory))
-    }
-  },[subcategory,filteredProducts]);
+ console.log(filteredProducts)
 
   return <>
-    {(subProducts.length > 0 ? subProducts:filteredProducts)?.map(
+    {filteredProducts?.map(
             (product) => (
               <Product key={product._id} product={product}></Product>
             )

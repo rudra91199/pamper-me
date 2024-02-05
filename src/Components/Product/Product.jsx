@@ -29,11 +29,11 @@ const handleAddToCart = (item) => {
     <div className={`productCard ${location.pathname ==="/"?"width-350":"product-border"}`}>
       <p className="product-title">{product?.name}</p>
       <img
-        src={product?.images[0]?.src}
+        // src={product?.images[0]?.src}
         alt=""
         onClick={()=>navigate(`/product/${product?.name}`)}
       />
-      <p className="product-category">{product?.category.toUpperCase()}</p>
+      {/* <p className="product-category">{product?.category?.toUpperCase()}</p> */}
       <p className="product-desc">{product?.shortDescription}</p>
       <p className='price-button'>
         <p className="product-price">TK. {product?.price}</p>
