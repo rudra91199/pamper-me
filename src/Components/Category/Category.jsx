@@ -9,7 +9,7 @@ const Category = () => {
  console.log(filteredProducts)
 
   return <>
-    {filteredProducts?.map(
+    {(subProducts.length > 0 ? subProducts: filteredProducts)?.map(
             (product) => (
               <Product key={product._id} product={product}></Product>
             )

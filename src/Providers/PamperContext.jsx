@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 export const Context = createContext();
 const PamperContext = ({children}) => {
   const [services, setServices] = useState([]);
-  const [products, setProducts] = useState({});
+  const [products, setProducts] = useState([]);
   const [cart, setCart] = useCart(products);
   const { category, subcategory, brand } = useParams();
 
