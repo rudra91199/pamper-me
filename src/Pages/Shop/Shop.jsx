@@ -19,6 +19,7 @@ const Shop = () => {
   const [filteredProducts, setFilterProducts] = useState([]);
   const [subProducts, setSubProducts] = useState([]);
   const [brandProducts, setBrandProducts] = useState([]);
+  const [uniqueSubcategory, setUniqueSubcategory] = useState([]);
 
   const { category, subcategory, brand } = useParams();
   const location = useLocation();
@@ -27,42 +28,67 @@ const Shop = () => {
   useEffect(() => {
     // `http://localhost:5000/getProductsByCategory?${category && `category=${category}`}&${subcategory && `subcategory=${subcategory}`}`
  
-      fetch(
-        `http://localhost:5000/getProductsByCategory?category=${category}&subcategory=${subcategory}&Brand=${brand}`
-      )
-        .then((res) => res.json())
-        .then((data) => setFilterProducts(data));
+      if(category || subcategory || brand){
+        fetch(
+          `http://localhost:5000/getProductsByCategory?category=${category}&subcategory=${subcategory}&Brand=${brand}`
+        )
+          .then((res) => res.json())
+          .then((data) => {
+            if(category && subcategory)
+            setSubProducts(data);
+          else
+            setFilterProducts(data);
+          });
+      }
   }, [category, subcategory, brand]);
 
-  console.log(filteredProducts);
+  console.log(category,subcategory)
+  console.log(subProducts.length);
 
-  const uniqueSubCategories = [
-    ...new Set(
-      (filteredProducts.length > 0 ? filteredProducts : products)?.map(
-        (product) => product.subcategory
-      )
-    ),
-  ];
-
-  // useEffect(() => {
-  //   if (subcategory) {
-  //     setSubProducts(
-  //       filteredProducts?.filter(
-  //         (product) => product.subcategory === subcategory
-  //       )
-  //     );
-  //   } else {
-  //     setSubProducts([]);
-  //   }
-  // }, [subcategory, filteredProducts]);
 
   const uniqueBrands = [
     ...new Set(
-      (filteredProducts.length > 0 ? filteredProducts : products)?.map(
+       products.map(
         (product) => product.Brand
       )
     ),
   ];
+  const uniqueCategory = [
+    ...new Set(
+       products.map(
+        (product) => product.category
+      )
+    ),
+  ];
+
+  useEffect(() => {
+
+    if(subcategory){
+      let filteredSub = [];
+      products.forEach(
+       (product) => {
+        if(product.category == category){
+          filteredSub.push(product.subcategory)
+        }
+      }
+      )
+      setUniqueSubcategory([...new Set(filteredSub)])
+    }
+    else{
+      setUniqueSubcategory([
+        ...new Set(
+           (filteredProducts.length > 0 ? filteredProducts : products).map(
+            (product) => product.subcategory
+          )
+        ),
+      ]);
+      console.log(uniqueSubcategory)
+      setSubProducts([]);
+
+     }
+    
+  }, [subcategory, filteredProducts,products]);
+
 
   const handleNavigate = (subcategory) => {
     if (location.pathname === "/shop") {
@@ -82,13 +108,13 @@ const Shop = () => {
     }
   }, [location.pathname]);
 
-  console.log(products.category)
+  console.log(uniqueSubcategory)
 
   return (
     <div className="shopProducts">
       <p className="shopProductBanner"></p>
       <ServicesTab
-        services={products.category}
+        services={uniqueCategory}
         selectedTab={selectedTab}
         setSelectedTab={setSelectedTab}
       ></ServicesTab>
@@ -111,7 +137,7 @@ const Shop = () => {
               )}
             </p>
             <div className={`sub-category ${active.category ? "show" : ""}`}>
-              {uniqueSubCategories?.map((uniqueSubCategory, i) => (
+              {uniqueSubcategory?.map((uniqueSubCategory, i) => (
                 <div key={i}>
                   <button
                     className={`${
@@ -165,13 +191,13 @@ const Shop = () => {
         </div>
         <div className="shopProduct-container">
           {
-            // filteredProducts.length > 0 ? (
-            <Outlet context={{ subProducts, filteredProducts }} />
-            // ) : (
-            //   products.map((product) => (
-            //     <Product key={product._id} product={product}></Product>
-            //   ))
-            // )
+            (subcategory?.length> 0 || filteredProducts?.length > 0) ? (
+            <Outlet context={{ filteredProducts ,subProducts}} />
+            ) : (
+              products?.map((product) => (
+                <Product key={product._id} product={product}></Product>
+              ))
+            )
           }
         </div>
       </div>
