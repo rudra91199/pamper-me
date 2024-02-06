@@ -35,6 +35,10 @@ body {
 
 }
 
+select{
+  font-family: "Raleway", sans-serif;
+}
+
 .d-none {
   display: none !important;
 }

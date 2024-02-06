@@ -23,7 +23,7 @@ const PamperContext = ({children}) => {
       }, []);
 
       const info = {
-        services,setServices,products,cart,setCart
+        services,setServices,products,cart,setCart,setProducts
       }
     return <Context.Provider value={info} >{children}</Context.Provider>;
 };
