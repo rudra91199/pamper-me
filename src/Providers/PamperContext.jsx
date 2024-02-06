@@ -15,7 +15,7 @@ const PamperContext = ({children}) => {
           .then((data) => {
             setServices(data);
           })
-        fetch("http://localhost:5000/products")
+        fetch("https://pamper-me-backend.vercel.app/products")
           .then((res) => res.json())
           .then((data) => {
             setProducts(data);
