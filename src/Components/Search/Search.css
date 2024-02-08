@@ -89,10 +89,3 @@ input.input-hide {
     display: none;
 }
 
-.search-popUp-show {
-    display: block;
-}
-
-.search-popUp.search-popUp-hide {
-    display: none;
-}
