@@ -13,7 +13,7 @@ const PopularProducts = () => {
         Popular Products
       </h2>
       <div className="home-products-container">
-        {products?.slice(0, 3).map((product) => (
+        {products?.products?.slice(0, 3).map((product) => (
           <Product key={product?.name} product={product}>
           </Product>
         ))}

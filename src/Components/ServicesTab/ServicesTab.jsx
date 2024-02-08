@@ -12,7 +12,7 @@ const ServicesTab = ({services,selectedTab,setSelectedTab,name}) => {
     },[category])
     return (
         <div className={`tab-container ${name ? "scroll-service":"servicesTab"}`}>
-            {(name ? uniqueCategories : services).map(uniqueTab => <button key={uniqueTab} 
+            {(name ? uniqueCategories : services)?.map(uniqueTab => <button key={uniqueTab} 
             onClick={()=>{
                 setSelectedTab(uniqueTab)
                 name!='services' && navigate(`/shop/${uniqueTab}`)

@@ -11,7 +11,7 @@ import sortIcon from "../../assets/Images/icons/sort.png";
 import axios from "axios";
 import Search from "../../Components/Search/Search";
 const Shop = () => {
-  const { products, services, setProducts } = useContext(Context);
+  const { products, services, setProducts, setRoutes } = useContext(Context);
 
   const [selectedTab, setSelectedTab] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -22,7 +22,6 @@ const Shop = () => {
   const [filteredProducts, setFilterProducts] = useState([]);
   const [subProducts, setSubProducts] = useState([]);
   const [brandProducts, setBrandProducts] = useState([]);
-  const [uniqueSubcategory, setUniqueSubcategory] = useState([]);
 
   const { category, subcategory, brand } = useParams();
   const location = useLocation();
@@ -55,6 +54,7 @@ const Shop = () => {
           }
         });
     }
+    setRoutes({ category, subcategory, brand });
 
     // fetch(
     //   `http://localhost:5000/getProductsByCategory?category=${category}&subcategory=${subcategory}&Brand=${brand}`
@@ -69,53 +69,14 @@ const Shop = () => {
     // }
   }, [category, subcategory, brand]);
 
-  const uniqueBrands = [...new Set(products.map((product) => product.Brand))];
-  const uniqueCategory = [
-    ...new Set(products.map((product) => product.category)),
-  ];
-
-  useEffect(() => {
-    
-    if (selectRef?.current?.value == '' ) {
-      if (brandProducts.length > 0 && category == "all") {
-        setUniqueSubcategory([
-          ...new Set(brandProducts.map((product) => product.subcategory)),
-        ]);
-      } else if (subcategory) {
-        let filteredSub = [];
-        products.forEach((product) => {
-          if (product.category == category) {
-            filteredSub.push(product.subcategory);
-          }
-        });
-        setUniqueSubcategory([...new Set(filteredSub)]);
-      } else {
-        setUniqueSubcategory([
-          ...new Set(
-            (filteredProducts.length > 0 ? filteredProducts : products).map(
-              (product) => product.subcategory
-            )
-          ),
-        ]);
-        setSubProducts([]);
-      }
-    }
-  }, [
-    subcategory,
-    filteredProducts,
-    products,
-    brandProducts,
-    selectRef
-  ]);
-
   const handleNavigate = (subcategory) => {
     if (location.pathname === "/shop") {
-      const category = products.find(
+      const category = products.products.find(
         (product) => product.subcategory == subcategory
       ).category;
       navigate(`/shop/${category}/${subcategory}`);
     } else if (brand) {
-      const category = products.find(
+      const category = products.products.find(
         (product) => product.subcategory == subcategory
       ).category;
       navigate(`/shop/${category}/${subcategory}/${brand}`);
@@ -160,19 +121,64 @@ const Shop = () => {
         setFilterProducts([...sortedProduct]);
       }
     } else {
+      const { uniqueBrand, uniqueCategory, uniqueSubCategory } = products;
       if (sort === "lowToHigh") {
-        const sortedProduct = products.sort((a, b) => a.price - b.price);
-        setProducts([...sortedProduct]);
+        const sortedProduct = products.products.sort(
+          (a, b) => a.price - b.price
+        );
+        setProducts({
+          products: sortedProduct,
+          uniqueBrand,
+          uniqueCategory,
+          uniqueSubCategory,
+        });
       } else {
-        const sortedProduct = products.sort((a, b) => b.price - a.price);
-        setProducts([...sortedProduct]);
+        const sortedProduct = products.products.sort(
+          (a, b) => b.price - a.price
+        );
+        setProducts({
+          products: sortedProduct,
+          uniqueBrand,
+          uniqueCategory,
+          uniqueSubCategory,
+        });
       }
     }
   };
 
-  useEffect(() => {
-    console.log(products);
-  }, [products]);
+  const handleFilerByPrice = (e) => {
+    e.preventDefault();
+    const min = e.target.min.value || 0;
+    const max = e.target.max.value || 9999;
+
+    if (brandProducts.length > 0) {
+      const filteredProductsByPrice = brandProducts.filter(
+        (product) => product.price > min && product.price < max
+      );
+      setBrandProducts([...filteredProductsByPrice]);
+    } else if (subProducts.length > 0) {
+      const filteredProductsByPrice = subProducts.filter(
+        (product) => product.price > min && product.price < max
+      );
+      setSubProducts([...filteredProductsByPrice]);
+    } else if (filteredProducts.length > 0) {
+      const filteredProductsByPrice = filteredProducts.filter(
+        (product) => product.price > min && product.price < max
+      );
+      setFilterProducts([...filteredProductsByPrice]);
+    } else {
+      const { uniqueBrand, uniqueCategory, uniqueSubCategory } = products;
+      const filteredProductsByPrice = products.products.filter(
+        (product) => product.price > min && product.price < max
+      );
+      setProducts({
+        products: filteredProductsByPrice,
+        uniqueBrand,
+        uniqueCategory,
+        uniqueSubCategory,
+      });
+    }
+  };
 
   useEffect(() => {
     if (location.pathname == "/shop") {
@@ -187,7 +193,7 @@ const Shop = () => {
     <div className="shopProducts">
       <p className="shopProductBanner"></p>
       <ServicesTab
-        services={uniqueCategory}
+        services={products.uniqueCategory}
         selectedTab={selectedTab}
         setSelectedTab={setSelectedTab}
       ></ServicesTab>
@@ -210,7 +216,7 @@ const Shop = () => {
               )}
             </p>
             <div className={`sub-category ${active.category ? "show" : ""}`}>
-              {uniqueSubcategory?.map((uniqueSubCategory, i) => (
+              {products?.uniqueSubCategory?.map((uniqueSubCategory, i) => (
                 <div key={i}>
                   <button
                     className={`${
@@ -242,7 +248,7 @@ const Shop = () => {
               )}
             </p>
             <div className={`sub-category ${active.brand ? "show" : ""}`}>
-              {uniqueBrands?.map((uniqueBrand, i) => (
+              {products?.uniqueBrand?.map((uniqueBrand, i) => (
                 <div key={i}>
                   <button
                     className={`${brand == uniqueBrand ? "isActive" : ""}`}
@@ -257,11 +263,16 @@ const Shop = () => {
 
           <div className="filterPrice">
             <p>Filter by price</p>
-            <input type="number" placeholder="From" />
-            <input type="number" placeholder="To" />
+            <form action="" onSubmit={handleFilerByPrice}>
+              <input type="number" placeholder="From" name="min" />
+              <input type="number" placeholder="To" name="max" />
+              <button className="filterBtn" type="submit">
+                Filter
+              </button>
+            </form>
           </div>
-          <button className="filterBtn">Filter</button>
         </div>
+
         <div>
           <div className="sorting">
             <div>
@@ -292,7 +303,7 @@ const Shop = () => {
                 context={{ filteredProducts, subProducts, brandProducts }}
               />
             ) : (
-              products?.map((product) => (
+              products?.products?.map((product) => (
                 <Product key={product._id} product={product}></Product>
               ))
             )}
