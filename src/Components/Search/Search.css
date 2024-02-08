@@ -1,0 +1,29 @@
+.search-container {
+
+    position: relative;
+}
+
+.search-container>div:first-child {
+    display: flex;
+    align-items: center;
+}
+
+.search-container input {}
+
+.search-container button {
+    background-color: transparent;
+}
+
+.search-container button:hover {
+    color: var(--pink);
+}
+
+.search-popUp {
+    position: absolute;
+    top: 30px;
+    left: -35%;
+    z-index: 999;
+    background-color: #fbe5f1;
+    width: 170%;
+    height: 40vh;
+}
