@@ -50,6 +50,6 @@
 .tab-container button.selected {
   background-color: var(--pink);
   color: white;
-  pointer-events: none;
+  
   text-shadow: none;
 }
