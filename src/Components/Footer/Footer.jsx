@@ -18,8 +18,11 @@ const Footer = () => {
       <footer className="footer-container">
 
         <div className="footer-section1">
-          <img src={logo} className="footerLogo" alt="" />
-          <h3>One stop beauty solution</h3>
+          <div>
+            <img src={logo} alt="" />
+            <h3>One stop beauty solution</h3>
+          </div>
+
           <div className="footer-logo-content">
             <p>
               Welcome to Pamper Me, your One Stop Beauty Solution, where luxury meets convenience. Our commitment to using premium products ensures a flawless finish, while stringent hygiene practices prioritize your safety.
@@ -34,9 +37,13 @@ const Footer = () => {
         </div>
 
         <div className="footer-section2">
-          <img src={serviceIcon} alt="" />
-          <p className="link-title">OUR SERVICES</p>
-          <div style={{ display: "flex", gap: "50px", marginTop: "20px" }}>
+
+          <div>
+            <img src={serviceIcon} alt="" />
+            <h3 >Our Services</h3>
+          </div>
+
+          <div style={{ display: "flex", gap: "50px", marginTop: "40px" }}>
             <div style={{ display: "flex", flexDirection: "column" }}>
               <Link>Make up</Link>
               <Link>Facial</Link>
@@ -58,23 +65,27 @@ const Footer = () => {
 
 
         <div className="footer-section3">
-          <img src={contactIcon} className="footerLogo" alt="" />
-          <p className="link-title">CONTACT US</p>
+          <div>
+            <img src={contactIcon} alt="" />
+            <h3>Contact Us</h3>
+          </div>
           <form>
             <div className="input-container">
-              <input type="text" placeholder="Your Name" />
+              <input type="text" placeholder=" Name" />
               <select name="interests" >
+                <option disabled value="">Services</option>
+                <hr />
                 {
-                  services.map((service) => (
+                  categoryArray.map((service) => (
 
-                    <option key={service._id} value="">{service.category}</option>
+                    <option key={service} value="">{service}</option>
                   ))
                 }
               </select>
-              <input type="email" placeholder="Your Email" />
-              <input type="number" placeholder="Your Number" />
+              <input type="email" placeholder=" Email" />
+              <input type="number" placeholder=" Number" />
             </div>
-            <textarea style={{ width: "100%" }} type="text" rows={5} placeholder="Your Message" />
+            <textarea type="text" rows={5} placeholder=" Your Message" />
             <input className="submitBtn" type="submit" value="Submit" />
           </form>
 
