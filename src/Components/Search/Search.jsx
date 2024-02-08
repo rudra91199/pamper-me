@@ -1,20 +1,34 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react'
-import SearchPopUp from '../SearchPopup/SearchPopUp';
-import './Search.css'
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import SearchPopUp from "../SearchPopup/SearchPopUp";
+import "./Search.css";
 
 const Search = () => {
   const [searchedProducts, setSearchedProducts] = useState([]);
   const [searchIcon, setSearchIcon] = useState(false);
+  const [searchText, setSearchText] = useState("");
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/getProductsByCategory?search`).then(res => setSearchedProducts(res.data));
-  }, []);
+    if (searchText.length > 2) {
+      axios
+        .get(`http://localhost:5000/getProductsByQuery?search=${searchText}`)
+        .then((res) => setSearchedProducts(res.data));
+    }
+  }, [searchText]);
+
+
+  console.log(searchedProducts)
 
   return (
     <div className={`search-container ${!searchIcon ? "small-container" : "fit-container"}`}>
       <div>
-        <input type="text" name="search" id="" placeholder="Search" className={`${searchIcon ? "input-show" : "input-hide"}`} />
+        <input
+          type="text"
+          name="search"
+          id=""
+          placeholder="Search" className={`${searchIcon ? "input-show" : "input-hide"}`}
+          onChange={(e) => setSearchText(e.target.value)}
+        />
         <button onClick={() => setSearchIcon(true)} className={`${searchIcon ? "button-hide" : "button-show"}`}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -34,7 +48,7 @@ const Search = () => {
       </div>
       <SearchPopUp searchedProducts={searchedProducts} searchIcon={searchIcon} />
     </div>
-  )
-}
+  );
+};
 
-export default Search
+export default Search;

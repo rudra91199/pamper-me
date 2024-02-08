@@ -1,31 +1,61 @@
 .bookings {
   padding: 40px 12%;
 }
+
+.bookings>div:first-child{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.bookings>div:first-child button{
+  background-color: #e32085;
+  width: 100px;
+  padding: 10px;
+  font-size: 16px;
+  color: white;
+  border-radius: 6px;
+  transition: all ease-in-out 200ms;
+}
+
+.bookings-select{
+  position: relative;
+}
+
+.bookings-select select{
+  width: 100%;
+  padding: 10px 0px 10px 40px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius:10px;
+  border: none;
+  background: linear-gradient(to right, hsla(329, 78%, 95%, 0.95), hsla(309, 57%, 95%, 0.95));
+}
+
+.bookings-select img{
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  translate: 0 -50%;
+  z-index: 99;
+  width: 24px;
+}
+
+.bookings>div:last-child hr{
+  margin: 20px auto;
+  width: 99%;
+}
+
+
+
 .bookingTable {
   width: 100%;
 }
-.tableHeader {
-  background: var(--pink);
-  color: white;
+
+.bookingTable *{
+  font-weight: 500;
 }
-.tableHeader td {
-  padding: 10px;
-  font-weight: bold;
-}
-.bookingTable tr {
-  padding: 20px;
-}
-.tableRow td {
-  padding: 10px;
-  font-weight: bold;
-  background: rgba(128, 0, 128, 0.288);
-}
-.actions a {
-  text-decoration: underline;
-  margin-left: 10px;
-  font-weight: bold;
-  transition: all ease-in-out 200ms;
-}
-.actions a:hover {
-  color: var(--pink);
+
+.actions a:last-child{
+  margin-left:5px ;
 }
