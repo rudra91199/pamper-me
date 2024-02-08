@@ -26,4 +26,18 @@
     background-color: #fbe5f1;
     width: 170%;
     height: 40vh;
+    overflow-y: scroll;
+    padding: 15px;
+    display: none;
+}
+
+.search-popUp > div {
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+.search-popUp div img{
+    width: 100%;
 }
