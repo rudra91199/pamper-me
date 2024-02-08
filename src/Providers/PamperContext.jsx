@@ -17,7 +17,7 @@ const PamperContext = ({ children }) => {
         setServices(data);
       });
     fetch(
-      `http://localhost:5000/products?category=${
+      `https://pamper-me-backend.vercel.app/products?category=${
         routes?.category || ""
       }&subcategory=${routes?.subcategory || ""}&brand=${routes.brand || ""}`
     )

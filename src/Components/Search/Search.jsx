@@ -5,15 +5,17 @@ import './Search.css'
 
 const Search = () => {
   const [searchedProducts, setSearchedProducts] = useState([]);
+  const [searchIcon, setSearchIcon] = useState(false);
 
   useEffect(() => {
     axios.get(`http://localhost:5000/getProductsByCategory?search`).then(res => setSearchedProducts(res.data));
   }, []);
+
   return (
-    <div className='search-container'>
+    <div className={`search-container ${!searchIcon ? "small-container" : "fit-container"}`}>
       <div>
-        <input type="text" name="search" id="" placeholder="Search" />
-        <button>
+        <input type="text" name="search" id="" placeholder="Search" className={`${searchIcon ? "input-show" : "input-hide"}`} />
+        <button onClick={() => setSearchIcon(true)} className={`${searchIcon ? "button-hide" : "button-show"}`}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -30,7 +32,7 @@ const Search = () => {
           </svg>
         </button>
       </div>
-      <SearchPopUp searchedProducts={searchedProducts} />
+      <SearchPopUp searchedProducts={searchedProducts} searchIcon={searchIcon} />
     </div>
   )
 }
