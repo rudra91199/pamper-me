@@ -5,6 +5,7 @@ import "./Search.css";
 
 const Search = () => {
   const [searchedProducts, setSearchedProducts] = useState([]);
+  const [searchIcon, setSearchIcon] = useState(false);
   const [searchText, setSearchText] = useState("");
 
   useEffect(() => {
@@ -15,19 +16,20 @@ const Search = () => {
     }
   }, [searchText]);
 
+
   console.log(searchedProducts)
 
   return (
-    <div className="search-container">
+    <div className={`search-container ${!searchIcon ? "small-container" : "fit-container"}`}>
       <div>
         <input
           type="text"
           name="search"
           id=""
-          placeholder="Search"
+          placeholder="Search" className={`${searchIcon ? "input-show" : "input-hide"}`}
           onChange={(e) => setSearchText(e.target.value)}
         />
-        <button>
+        <button onClick={() => setSearchIcon(true)} className={`${searchIcon ? "button-hide" : "button-show"}`}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -44,7 +46,7 @@ const Search = () => {
           </svg>
         </button>
       </div>
-      <SearchPopUp searchedProducts={searchedProducts} />
+      <SearchPopUp searchedProducts={searchedProducts} searchIcon={searchIcon} searchText={searchText}/>
     </div>
   );
 };

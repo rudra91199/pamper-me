@@ -49,22 +49,6 @@
   align-items: start;
 }
 
-.search-container {
-  display: flex;
-  align-items: center;
-}
-
-.search-container input {
-  
-}
-
-.search-container button {
-  background-color: transparent;
-}
-
-.search-container button:hover {
-  color: var(--pink);
-}
 
 .profile {
   position: absolute;
