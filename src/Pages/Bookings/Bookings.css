@@ -1,5 +1,7 @@
 .bookings {
   padding: 40px 12%;
+  /* position: relative; */
+  min-height: 70vh;
 }
 
 .bookings>div:first-child{
@@ -37,11 +39,11 @@
   left: 10px;
   top: 50%;
   translate: 0 -50%;
-  z-index: 99;
+  z-index: 9;
   width: 24px;
 }
 
-.bookings>div:last-child hr{
+.bookings>div:nth-child(2) hr{
   margin: 20px auto;
   width: 99%;
 }
@@ -56,6 +58,14 @@
   font-weight: 500;
 }
 
-.actions a:last-child{
-  margin-left:5px ;
+.bookings td button{
+  font-size: 18px;
+  background: none;
+
 }
+
+.bookings td button:hover{
+  color: var(--pink);
+}
+
+

@@ -1,0 +1,37 @@
+/*----bookings popup----*/
+
+.booking-popup {
+  position: absolute;
+  right: -30%;
+  top: 50%;
+  translate: 0 -50%;
+  height: 95vh;
+  background: rgb(240, 236, 236);
+  width: 25%;
+  z-index: 99;
+  transition: all 0.3s ease-in-out;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.show-popup {
+  right: 10px;
+}
+
+.booking-popup .close-btn {
+  position: absolute;
+  left: -35px;
+  border-radius: 50%;
+  font-size: 20px;
+  width: 30px;
+  background: none;
+  height: 30px;
+}
+
+.fa-xmark{
+    border: none !important;
+}
+
+
+
+
