@@ -46,7 +46,7 @@ const Search = () => {
           </svg>
         </button>
       </div>
-      <SearchPopUp searchedProducts={searchedProducts} searchIcon={searchIcon} />
+      <SearchPopUp searchedProducts={searchedProducts} searchIcon={searchIcon} searchText={searchText}/>
     </div>
   );
 };
