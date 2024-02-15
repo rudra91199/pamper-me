@@ -3,7 +3,7 @@ import icon from "../../assets/Images/Logo/logo.png"
 
 const SearchPopUp = ({searchIcon, searchedProducts,searchText}) => {
   return (
-    <div className={`search-popUp ${searchedProducts.length>2 ? 'search-popUp-show':'search-popUp-hide'}`}>
+    <div className={`search-popUp ${searchedProducts.length>0 ? 'search-popUp-show':'search-popUp-hide'}`}>
       {searchedProducts?.map((product,i) => <div key={i}>
         <img src={product?.images?.src || icon} alt="" />
         <div>

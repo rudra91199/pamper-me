@@ -8,6 +8,11 @@ import Bookings from "../Pages/Bookings/Bookings";
 import Shop from "../Pages/Shop/Shop";
 import ProductDetails from "../Pages/ProductDetails/ProductDetails";
 import Category from "../Components/Category/Category";
+import BookNow from "../Pages/BookNow/BookNow";
+import ChooseEmployee from "../Components/BookNow/ChooseEmployee/ChooseEmployee";
+import ChooseLocation from "../Components/BookNow/ChooseLocation/ChooseLocation";
+import ChooseDate_Time from "../Components/BookNow/ChooseDate_Time/ChooseDate_Time";
+import Recurring from "../Components/BookNow/Recurring/Recurring";
 
 
 const router = createBrowserRouter([
@@ -38,6 +43,30 @@ const router = createBrowserRouter([
             {
                 path: '/bookings',
                 element: <Bookings></Bookings>
+            },
+            {
+                path:"/booknow",
+                element:<BookNow/>,
+                children:[
+                    {
+                        path:"/booknow",
+                        element:<ChooseEmployee/>,
+                        index:true
+                    },
+                    {
+                        path:"choose-location",
+                        element:<ChooseLocation/>
+                    },
+                    {
+                        path:"choose-date&time",
+                        element:<ChooseDate_Time/>
+                    },
+                    {
+                        path:"recurring",
+                        element:<Recurring/>
+                    },
+
+                ]
             },
             {
                 path: '/shop',

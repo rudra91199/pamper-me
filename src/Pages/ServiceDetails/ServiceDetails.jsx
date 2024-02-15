@@ -41,7 +41,16 @@ const ServiceDetails = () => {
               <p className="price">BDT. {service?.price}</p>
             </div>
             <button
-              onClick={user?.email ? handleOpen : () => navigate("/login")}
+              onClick={() =>
+                navigate("/booknow", {
+                  state: {service:{
+                    id:service.id,
+                    title:service.title,
+                    price:service.price,
+                    duration:service.duration
+                  }},
+                })
+              }
               className="book-btn"
             >
               BOOK NOW

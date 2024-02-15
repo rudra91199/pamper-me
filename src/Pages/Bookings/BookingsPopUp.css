@@ -12,6 +12,9 @@
   transition: all 0.3s ease-in-out;
   border-radius: 5px;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .show-popup {
@@ -22,14 +25,115 @@
   position: absolute;
   left: -35px;
   border-radius: 50%;
-  font-size: 20px;
-  width: 30px;
+  width: 25px;
   background: none;
-  height: 30px;
+  height: 25px;
+  background-color: var(--pink);
+  display: grid;
+  place-items: center;
 }
 
-.fa-xmark{
-    border: none !important;
+.close-btn img{
+  width: 12px;
+
+}
+
+.booking-details-container > h3{
+  font-weight: 600;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, var(--pink), var(--purple));
+  background-clip: text;
+  color: transparent;
+}
+
+.booking-details-container hr,.booking-popup-btn hr{
+  margin: 20px 0;
+  border: none;
+  height: .5px;
+  width: 100%;
+  background-color: rgb(209, 209, 209);
+}
+
+.booking-service-details{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.booking-service-details h3{
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.booking-service-details p{
+  font-size: 14px;
+  color: var(--pink);
+  font-weight: 500;
+}
+
+.booking-service-details img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.booking-details{
+  display: flex;
+  gap: 5px;
+}
+
+.booking-details .icon{
+  color: hsl(309, 78%, 22%);
+}
+
+.booking-details > div{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.booking-details .title{
+  font-size: 13px;
+  font-weight: 600;
+  color: rgb(156, 156, 156);
+}
+
+.booking-details p{
+  font-size: 15px;
+}
+
+.booking-details span{
+  font-size: 13px;
+  color: rgb(156, 156, 156);
+}
+
+.booking-details .price{
+  color: black;
+  font-size: 20px;
+  font-weight:600;
+}
+
+
+
+.booking-popup-btn{
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.booking-popup-btn button{
+  width: 100%;
+  background: none ;
+  font-size: 16px;
+  border: 1px solid var(--purple);
+  border-radius: 5px;
+  padding: 5px 0;
+  font-weight: 600;
+}
+
+.booking-popup-btn button:last-child{
+  border: 1px solid red;
 }
 
 

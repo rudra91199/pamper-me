@@ -9,6 +9,8 @@ const PamperContext = ({ children }) => {
   const [cart, setCart] = useCart(products);
   const { category, subcategory, brand } = useParams();
   const [routes, setRoutes] = useState({});
+  const [selectedDate, setSelectedDate] = useState(new Date());
+
 
   useEffect(() => {
     fetch("https://pamper-me-backend.vercel.app/services")
@@ -17,7 +19,7 @@ const PamperContext = ({ children }) => {
         setServices(data);
       });
     fetch(
-      `https://pamper-me-backend.vercel.app/products?category=${
+      `http://localhost:5000/products?category=${
         routes?.category || ""
       }&subcategory=${routes?.subcategory || ""}&brand=${routes.brand || ""}`
     )
@@ -28,9 +30,6 @@ const PamperContext = ({ children }) => {
       });
   }, [routes]);
 
-  console.log(products);
-  console.log(routes);
-
   const info = {
     services,
     setServices,
@@ -39,6 +38,7 @@ const PamperContext = ({ children }) => {
     setCart,
     setProducts,
     setRoutes,
+    selectedDate,setSelectedDate
   };
   return <Context.Provider value={info}>{children}</Context.Provider>;
 };

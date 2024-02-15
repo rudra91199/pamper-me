@@ -37,8 +37,9 @@ const Bookings = () => {
 
   return (
     <div className="bookings">
+      <div className={`layer ${showPopUp ? "layer-show" : "layer-hide"}`}></div>
       <div>
-        <h1>Bookings</h1>
+        <h1>Bookings</h1>s
         <button>Book Now</button>
       </div>
       <div>
