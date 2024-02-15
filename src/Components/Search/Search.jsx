@@ -11,13 +11,22 @@ const Search = () => {
   useEffect(() => {
     if (searchText.length > 2) {
       axios
-        .get(`http://localhost:5000/getProductsByQuery?search=${searchText}`)
+        .get(`https://pamper-me-backend.vercel.app/getProductsByQuery?search=${searchText}`)
         .then((res) => setSearchedProducts(res.data));
     }
   }, [searchText]);
 
+  useEffect(() => {
+    if (searchIcon == true) {
+      document.body.addEventListener("click", () => {
+        setSearchIcon(false)
+        setSearchText("")
+      })
+    }
+  }, [searchIcon])
 
-  console.log(searchedProducts)
+  console.log(searchIcon)
+
 
   return (
     <div className={`search-container ${!searchIcon ? "small-container" : "fit-container"}`}>
@@ -25,11 +34,15 @@ const Search = () => {
         <input
           type="text"
           name="search"
-          id=""
+          value={searchText}
           placeholder="Search" className={`${searchIcon ? "input-show" : "input-hide"}`}
+          onClick={(e) => e.stopPropagation()}
           onChange={(e) => setSearchText(e.target.value)}
         />
-        <button onClick={() => setSearchIcon(true)} className={`${searchIcon ? "button-hide" : "button-show"}`}>
+        <button onClick={(e) => {
+          e.stopPropagation();
+          setSearchIcon(true)
+        }} className={`${searchIcon ? "button-hide" : "button-show"}`}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -46,7 +59,7 @@ const Search = () => {
           </svg>
         </button>
       </div>
-      <SearchPopUp searchedProducts={searchedProducts} searchIcon={searchIcon} searchText={searchText}/>
+      <SearchPopUp searchedProducts={searchedProducts} searchIcon={searchIcon} searchText={searchText} />
     </div>
   );
 };
