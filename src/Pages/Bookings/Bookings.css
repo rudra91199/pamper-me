@@ -1,14 +1,36 @@
 .bookings {
   padding: 40px 12%;
+  /* position: relative; */
+  min-height: 70vh;
 }
 
-.bookings>div:first-child{
+.bookings .layer{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  top: 0;
+  left: 0;
+  z-index: 10;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+
+.layer-hide {
+  opacity: 0;
+}
+
+.layer-show {
+  opacity: 1;
+}
+
+.bookings>div:nth-child(2){
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
 }
 
-.bookings>div:first-child button{
+.bookings>div:nth-child(2) button{
   background-color: #e32085;
   width: 100px;
   padding: 10px;
@@ -37,11 +59,11 @@
   left: 10px;
   top: 50%;
   translate: 0 -50%;
-  z-index: 99;
+  z-index: 9;
   width: 24px;
 }
 
-.bookings>div:last-child hr{
+.bookings>div:nth-child(3) hr{
   margin: 20px auto;
   width: 99%;
 }
@@ -56,6 +78,14 @@
   font-weight: 500;
 }
 
-.actions a:last-child{
-  margin-left:5px ;
+.bookings td button{
+  font-size: 18px;
+  background: none;
+
 }
+
+.bookings td button:hover{
+  color: var(--pink);
+}
+
+

@@ -36,10 +36,10 @@
 footer h3 {
     background: linear-gradient(to right, var(--pink), var(--purple));
     background-clip: text;
+    color: transparent;
     width: fit-content;
     font-weight: 700;
     font-size: 22px;
-    color: transparent;
 }
 
 .footer-logo-content {
