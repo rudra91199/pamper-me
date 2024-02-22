@@ -13,6 +13,8 @@ import ChooseEmployee from "../Components/BookNow/ChooseEmployee/ChooseEmployee"
 import ChooseLocation from "../Components/BookNow/ChooseLocation/ChooseLocation";
 import ChooseDate_Time from "../Components/BookNow/ChooseDate_Time/ChooseDate_Time";
 import Recurring from "../Components/BookNow/Recurring/Recurring";
+import RecurringDates from "../Components/BookNow/RecurringDates/RecurringDates";
+import Checkout from "../Components/BookNow/Checkout/Checkout";
 
 
 const router = createBrowserRouter([
@@ -64,6 +66,14 @@ const router = createBrowserRouter([
                     {
                         path:"recurring",
                         element:<Recurring/>
+                    },
+                    {
+                        path:"recurring-dates",
+                        element:<RecurringDates/>
+                    },
+                    {
+                        path:"checkout/:serviceName",
+                        element:<Checkout/>
                     },
 
                 ]

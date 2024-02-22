@@ -1,8 +1,27 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
+import RepeatCounter from './RepeatCounter'
+import RepeatOccurrence from './RepeatOccurrence'
+import { useLocation } from 'react-router-dom';
+import { addDays } from 'date-fns';
+import { Context } from '../../../Providers/PamperContext';
 
-const RecurringWeekly = () => {
+const RecurringWeekly = ({counter,setCounter}) => {
+    const { setAllBookingDates } = useContext(Context);
+    const location = useLocation();
+    const {date,time} = location.state;
+    useEffect(() => {
+      const recurringNextDates = [{date,time}];
+        for (let i = 0; i < counter.end; i++) {
+          const recurringNextDate = addDays(date, counter.repeat * (i + 1)*7);
+          recurringNextDates.push({date:recurringNextDate,time});
+        }
+        setAllBookingDates(recurringNextDates);
+      }, [counter]);
   return (
-    <div>RecurringWeekly</div>
+    <>
+        <RepeatCounter counter={counter} setCounter={setCounter} repeat={"Week"}/>
+        <RepeatOccurrence counter={counter} setCounter={setCounter}/>
+    </>
   )
 }
 

@@ -1,63 +1,28 @@
-import React, { useState } from "react";
-import { FiMinus, FiPlus } from "react-icons/fi";
-import OccurrenceInfo from "./OccurrenceInfo";
+import React, { useContext, useEffect } from "react";
+import RepeatCounter from "./RepeatCounter";
+import RepeatOccurrence from "./RepeatOccurrence";
+import { useLocation } from "react-router-dom";
+import { addDays } from "date-fns";
+import { Context } from "../../../Providers/PamperContext";
 
-const RecurringDaily = () => {
-  const [counter, setCounter] = useState({
-    repeat: 1,
-    end: 1,
-  });
+const RecurringDaily = ({ counter, setCounter }) => {
+  const { setAllBookingDates } = useContext(Context);
+  const location = useLocation();
+  const { date, time } = location.state;
 
+  useEffect(() => {
+    const recurringNextDates = [{date,time}];
+    for (let i = 0; i < counter.end; i++) {
+      const recurringNextDate = addDays(date, counter.repeat * (i + 1));
+      recurringNextDates.push({date:recurringNextDate,time});
+    }
+    setAllBookingDates(recurringNextDates);
+  }, [counter]);
   return (
-    <div className="recurring-daily">
-      <div className="repeat-days">
-        <p>Repeat every</p>
-        <div>
-          <button
-            onClick={() =>
-              setCounter({ repeat: counter.repeat - 1, end: counter.end })
-            }
-            disabled={counter.repeat <= 1}
-          >
-            {" "}
-            <FiMinus />
-          </button>
-          <p>{counter.repeat}</p>
-          <button
-            onClick={() =>
-              setCounter({ repeat: counter.repeat + 1, end: counter.end })
-            }
-          >
-            <FiPlus />
-          </button>
-        </div>
-        <p>{counter.repeat > 1 ? "days" : "day"}</p>
-      </div>
-      <div className="repeat-occurrence">
-        <p>End after</p>
-        <div>
-          <button
-            onClick={() =>
-              setCounter({ repeat: counter.repeat, end: counter.end - 1 })
-            }
-            disabled={counter.end <= 1}
-          >
-            <FiMinus />
-          </button>
-          <p>{counter.end}</p>
-          <button
-            onClick={() =>
-              setCounter({ repeat: counter.repeat, end: counter.end + 1 })
-            }
-            disabled={counter.end > 9}
-          >
-            <FiPlus />
-          </button>
-        </div>
-        <p>{counter.end > 1 ? "occurrences" : "occurrence"}</p>
-      </div>
-      <OccurrenceInfo/>
-    </div>
+    <>
+      <RepeatCounter counter={counter} setCounter={setCounter} repeat={"Day"} />
+      <RepeatOccurrence counter={counter} setCounter={setCounter} />
+    </>
   );
 };
 

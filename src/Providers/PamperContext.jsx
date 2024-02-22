@@ -10,6 +10,7 @@ const PamperContext = ({ children }) => {
   const { category, subcategory, brand } = useParams();
   const [routes, setRoutes] = useState({});
   const [selectedDate, setSelectedDate] = useState(new Date());
+  const [allBookingDates, setAllBookingDates] = useState([]);
 
 
   useEffect(() => {
@@ -38,7 +39,8 @@ const PamperContext = ({ children }) => {
     setCart,
     setProducts,
     setRoutes,
-    selectedDate,setSelectedDate
+    selectedDate,setSelectedDate,
+    allBookingDates, setAllBookingDates
   };
   return <Context.Provider value={info}>{children}</Context.Provider>;
 };
