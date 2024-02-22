@@ -1,7 +1,7 @@
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
-const TimeCell = ({ timeBlock, selectedDate }) => {
+const TimeCell = ({ timeBlock, selectedDate, currentWeek }) => {
   const navigate = useNavigate();
   const location = useLocation();
   const { service, employee, address } = location.state;

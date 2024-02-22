@@ -124,3 +124,46 @@
   font-size: 18px;
   font-weight: 600;
 }
+
+/*--------Next Nav---------*/
+
+.nextnav-service-details div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.nextnav-service-details hr{
+  margin: 20px 0;
+    border: none;
+    height: 0.5px;
+    width: 100%;
+    background-color: rgb(209, 209, 209);
+}
+
+.nextnav-service-details div img{
+  height: 40px;
+  width: 40px;
+  border-radius: 10px;
+}
+
+.nextnav-service-details h3{
+  font-weight: 500;
+}
+
+.nextnav-service-details button{
+  height: fit-content;
+  background: var(--purple);
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-weight: bold;
+  transition: all ease-in-out 200ms;
+}
+
+.nextnav-service-details button:hover{
+  background-color: var(--pink);
+}

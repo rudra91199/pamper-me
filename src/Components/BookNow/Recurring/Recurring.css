@@ -31,7 +31,7 @@
   border-radius: 10px;
 }
 
-.recurring-daily div {
+.recurring-content div {
   display: flex;
   gap: 20px;
   align-items: center;
@@ -42,7 +42,7 @@
   margin-bottom: 20px;
 }
 
-.recurring-daily .repeat-days div,
+.recurring-content .repeat-days div,
 .repeat-occurrence div {
   background-color: white;
   padding: 5px;
@@ -52,6 +52,30 @@
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+.repeat-week{
+  margin-bottom: 20px;
+  gap: 10px !important;
+}
+
+.repeat-week .date{
+  background-color: white;
+
+  width: 70px;
+  text-align: center;
+  padding-block: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,.1);
+  transition: all 0.2s ease-in-out;
+}
+
+
+.repeat-week .date:hover,.date.selected-day{
+  background-color: hsl(335, 100%, 45%, 0.7);
+  color: white;
+  /* border: 1px solid var(--lightPink); */
+
+}
+
 .repeat-days div button,
 .repeat-occurrence div button {
   padding: 0 5px;
@@ -59,6 +83,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.recurring-monthly{
+  display: block !important;
+  margin-bottom: 10px;
+}
+
+.recurring-monthly > label{
+  /* display: block; */
+}
+
+.recurring-monthly input{
+  margin-bottom: 15px !important;
 }
 
 .occurrence-limit-info {

@@ -47,7 +47,8 @@ const ServiceDetails = () => {
                     id:service.id,
                     title:service.title,
                     price:service.price,
-                    duration:service.duration
+                    duration:service.duration,
+                    img:service.img
                   }},
                 })
               }
