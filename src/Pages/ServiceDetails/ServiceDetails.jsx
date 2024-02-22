@@ -1,6 +1,6 @@
 import { useNavigate, useParams } from "react-router-dom";
 import "./ServiceDetails.css";
-import { useContext, useEffect, useRef, useState } from "react";
+import { useContext } from "react";
 import { Context } from "../../Providers/PamperContext";
 
 import auth from "../../../firebase.init";

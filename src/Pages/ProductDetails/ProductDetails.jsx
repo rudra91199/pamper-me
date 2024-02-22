@@ -2,8 +2,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import "./ProductDetails.css";
 import { useContext, useEffect, useRef, useState } from "react";
 import { Context } from "../../Providers/PamperContext";
-import BookingModal from "../../Components/BookingModal/BookingModal";
-import Product from "./../../Components/Product/Product";
+
 import { addToDb } from "../../Utilities/CartDb";
 const ProductDetails = () => {
   const { slug } = useParams();
