@@ -29,12 +29,11 @@ const Shop = () => {
   const selectRef = useRef();
 
   useEffect(() => {
-    // `http://localhost:5000/getProductsByCategory?${category && `category=${category}`}&${subcategory && `subcategory=${subcategory}`}`
 
     if (category || subcategory || brand) {
       axios
         .get(
-          `http://localhost:5000/getProductsByCategory?category=${
+          `http://pamper-me-backend.vercel.app/getProductsByCategory?category=${
             category || ""
           }&subcategory=${subcategory || ""}&Brand=${brand || ""}`
         )
@@ -56,17 +55,7 @@ const Shop = () => {
     }
     setRoutes({ category, subcategory, brand });
 
-    // fetch(
-    //   `http://localhost:5000/getProductsByCategory?category=${category}&subcategory=${subcategory}&Brand=${brand}`
-    // )
-    //   .then((res) => res.json())
-    //   .then((data) => {
-    //     if(category && subcategory)
-    //     setSubProducts(data);
-    //   else
-    //     setFilterProducts(data);
-    //   });
-    // }
+
   }, [category, subcategory, brand]);
 
   const handleNavigate = (subcategory) => {
