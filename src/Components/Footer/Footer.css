@@ -100,12 +100,16 @@ footer .input-container {
 .footer-section3 select,
 .footer-section3 textarea {
     border: none;
+    outline: none;
     padding: 10px;
     border-radius: 5px;
     /* background: linear-gradient(to right, hsl(329, 48%, 51%, .9), hsl(309, 27%, 37%, .9)); */
-    background: linear-gradient(to right, hsla(329, 78%, 95%, 0.95), hsla(309, 57%, 95%, 0.95));
-
+    background: linear-gradient(to right, hsla(329, 78%, 95%, 0.95), hsla(312, 60%, 95%, 0.7));
+    backdrop-filter: blur(5px);
+    /* transition: all 0.3s ease-in-out; */
 }
+
+
 
 .footer-section3 select option {
     color: black;
@@ -120,16 +124,26 @@ footer .input-container {
 .footer-section3 input::placeholder,
 .footer-section3 textarea::placeholder,
 .footer-section3 select {
-    color: rgb(116, 116, 116);
+    color: rgb(65, 65, 65);
     font-size: 14px;
     font-weight: 500;
+}
+
+.footer-section3 input:hover,
+.footer-section3 textarea:hover,
+.footer-section3 select:hover {
+    outline: 2px solid #e3208528;
+    background: hsla(0, 0%, 100%);
+    backdrop-filter: blur(0);
+    box-shadow: 0px 0px 10px rgba(255, 92, 176, 0.7);
 }
 
 .footer-section3 input:focus,
 .footer-section3 textarea:focus,
 .footer-section3 select:focus {
-    outline: 2px solid rgba(227, 32, 133, 0.5);
-
+    outline: 2px solid #e3208528;
+    background: hsla(0, 0%, 100%);
+    backdrop-filter: blur(0);
     box-shadow: 0px 0px 10px rgba(255, 92, 176, 0.7);
 }
 

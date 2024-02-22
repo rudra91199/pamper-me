@@ -25,10 +25,7 @@ const PamperContext = ({ children }) => {
       }&subcategory=${routes?.subcategory || ""}&brand=${routes.brand || ""}`
     )
       .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        setProducts(data);
-      });
+      .then((data) => setProducts(data));
   }, [routes]);
 
   const info = {
