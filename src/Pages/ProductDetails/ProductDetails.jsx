@@ -9,10 +9,11 @@ const ProductDetails = () => {
   const { products } = useContext(Context);
   const [quantity, setQuantity] = useState(1);
   const { cart, setCart } = useContext(Context);
-  const product = products?.find((p) => p?.title == slug);
+  const product = products?.products?.find((p) => p?.name == slug);
+  console.log(product);
   const navigate = useNavigate();
-  const relatedCategory = products?.filter(
-    (r) => r?.category == product?.category && r?.title != product?.title
+  const relatedCategory = products?.products?.filter(
+    (r) => r?.category == product?.category && r?.name != product?.name
   );
   const handleAddToCart = (item) => {
     let newCart = [];
@@ -27,7 +28,6 @@ const ProductDetails = () => {
     }
     setCart(newCart);
     addToDb(item._id, quantity);
-
   };
 
   return (
@@ -35,19 +35,24 @@ const ProductDetails = () => {
       <div>
         <div className="product-details-container">
           <div className="product-img-container">
-            <img src={product?.img} />
+            <img src={product?.images[0].src} />
           </div>
           <div className="productDetails">
-            <h1>{product?.title}</h1>
+            <h1>{product?.name}</h1>
             <p className="product-details-category">{product?.category}</p>
             <div
               className="product-details-description"
-              dangerouslySetInnerHTML={{ __html: product?.longDescription }}
+              dangerouslySetInnerHTML={{ __html: product?.description }}
             />
             <p className="product-price">BDT. {product?.price}</p>
-            <div style={{display:"flex",gap:"20px"}}>
-            <button onClick={() => handleAddToCart(product)} className="buy-btn">ADD TO CART</button>
-            <button className="buy-btn">BUY NOW</button>
+            <div style={{ display: "flex", gap: "20px" }}>
+              <button
+                onClick={() => handleAddToCart(product)}
+                className="buy-btn"
+              >
+                ADD TO CART
+              </button>
+              <button className="buy-btn">BUY NOW</button>
             </div>
           </div>
         </div>
@@ -72,18 +77,18 @@ const ProductDetails = () => {
         <div className="underline"></div>
         <div className="relatedProduct-container">
           <div>
-            {relatedCategory.map((related) => (
-              <div key={related.title} className="relatedProduct">
+            {relatedCategory?.map((related) => (
+              <div key={related.name} className="relatedProduct">
                 <div className="relatedProductImg">
-                  <img src={related?.img} alt="" />
+                  <img src={related?.images[0].src} alt="" />
                 </div>
                 <div className="relatedProductDetails">
-                  <p style={{ fontSize: "14px" }}>{related?.title}</p>
+                  <p style={{ fontSize: "14px" }}>{related?.name}</p>
                   <div style={{ color: "#e32085", fontWeight: "bold" }}>
                     BDT {related?.price}
                   </div>
                   <button
-                    onClick={() => navigate(`/product/${related?.title}`)}
+                    onClick={() => navigate(`/product/${related?.name}`)}
                     className="viewBtn"
                   >
                     VIEW
