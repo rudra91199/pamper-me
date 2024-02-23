@@ -3,6 +3,7 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 :root {
@@ -17,22 +18,23 @@
 a {
   font-weight: 500;
   text-decoration: none;
-  cursor: url('./assets/Images/Cursor/brush3-01.png'), auto;
+  cursor: url("./assets/Images/Cursor/brush3-01.png"), auto;
 }
-
 
 button {
   border: none;
-  cursor: url('./assets/Images/Cursor/brush3-01.png'), auto;
   font-family: "Raleway", sans-serif;
 }
 
 body {
   font-family: "Raleway", sans-serif;
-  margin: 0;
-  padding: 0;
-  cursor: url('./assets/Images/Cursor/brush3-01.png'), auto;
+  cursor: url("./assets/Images/Cursor/brush3-01.png"), auto;
+  overflow-x: hidden;
+}
 
+select,
+textarea {
+  font-family: "Raleway", sans-serif;
 }
 
 .d-none {

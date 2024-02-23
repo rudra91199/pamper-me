@@ -1,0 +1,29 @@
+.recurring-dates p {
+  font-size: 14px;
+  color: gray;
+}
+
+.recurring-dates ul {
+  padding: 20px;
+}
+
+.recurring-dates ul li {
+  list-style: none;
+  padding: 10px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 500;
+}
+
+.recurring-dates ul li span {
+  color: gray;
+  font-size: 14px;
+}
+
+.recurring-dates hr {
+  margin: 20px 0;
+  border: none;
+  height: 0.5px;
+  width: 100%;
+  background-color: rgb(209, 209, 209);
+}

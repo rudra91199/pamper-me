@@ -22,6 +22,7 @@ import { EffectFade, Pagination, Autoplay } from "swiper/modules";
 import { useEffect, useState } from "react";
 import auth from "../../../firebase.init";
 import Swal from "sweetalert2";
+import useToken from "../../Hooks/useToken";
 
 
 const Login = () => {
@@ -34,9 +35,13 @@ const Login = () => {
 
   
   const navigate = useNavigate();
-  console.log(loginError);
+  console.log(user);
 
   const [signInWithGoogle] = useSignInWithGoogle(auth);
+
+  const [token] = useToken(user);
+
+  console.log(token);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -104,7 +109,7 @@ const Login = () => {
                 login ||
                 <div className="floating-label">
                   <input type="text" id="name" name="name" required placeholder="" />
-                  <label htmlFor="name">Name</label>
+                  <label htmlFor="name">User Name</label>
                 </div>
 
               }

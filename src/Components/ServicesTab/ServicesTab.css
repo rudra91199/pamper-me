@@ -1,34 +1,55 @@
-.servicesTab{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f1a1c4;
-    border-radius: 0 0 20px 20px;
-    overflow: hidden;
+.tab-container {
+  background-color: #f1a1c4;
+  border-radius: 0 0 20px 20px;
+  overflow: hidden;
+}
+
+.servicesTab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll-service {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 20%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 1rem;
+}
+
+.scroll-service > * {
+  scroll-snap-align: start;
+}
+
+.tab-container button {
+  width: auto;
+  height: min(60px, 9vh);
+  padding: 0 20px;
+  color: #ffffff;
+  text-shadow: 0px 0px 4px rgba(192, 34, 166, 0.82);
+  font-weight: bold;
+  background-color: transparent;
+  transition: all ease-in-out 200ms;
+  cursor: pointer;
+  font-size: 14px;
 }
 
 .servicesTab button{
     width: 200px;
-    height: min(60px,9vh);
-    padding: 0 20px;
-    color: #ffffff;
-    text-shadow: 0px 0px 4px rgba(192,34,166,0.82);
-    font-weight: bold;
-    background-color: transparent;
-    transition: all ease-in-out 200ms;
-    cursor: pointer;
-    font-size: 14px;
 }
 
-.servicesTab button:hover{
-    background-color: rgba(255, 3, 133, 0.452) ;
-    color: white;
-    scale: 105%;
+
+.tab-container button:hover {
+  background-color: rgba(255, 3, 133, 0.452);
+  color: white;
+  scale: 105%;
 }
 
-button.selected{
-    background-color: var(--pink) ;
-    color: white;
-    pointer-events: none;
-    text-shadow: none;
+.tab-container button.selected {
+  background-color: var(--pink);
+  color: white;
+  
+  text-shadow: none;
 }

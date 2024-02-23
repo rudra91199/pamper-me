@@ -1,0 +1,169 @@
+.book-now {
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+  gap: 60px;
+  width: 65%;
+  margin: 60px auto;
+  min-height: 70vh;
+}
+
+.book-now-outlet,
+.booknow-service {
+  padding: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.13);
+  border-radius: 5px;
+  height: fit-content;
+}
+
+.book-now-heading-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.booknow-heading {
+  background: linear-gradient(to right, var(--pink), var(--purple));
+  background-clip: text;
+  color: transparent;
+}
+
+.booknow-nav-btn {
+  background: linear-gradient(to right, var(--pink), var(--purple));
+  background-clip: text;
+  border: 1px solid var(--pink);
+  padding: 8px 12px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  transition: all ease-in-out 200ms;
+}
+
+.booknow-nav-btn:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.book-now-details-container {
+  border: 1px solid rgba(0, 0, 0, 0.123);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.book-now-btn {
+  height: fit-content;
+  background: var(--purple);
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-weight: bold;
+  transition: all ease-in-out 200ms;
+}
+
+.book-now-btn:hover {
+  background-color: var(--pink);
+}
+
+/*----------Booknow-services-----------*/
+
+.booknow-service > h3 {
+  background: linear-gradient(to right, var(--pink), var(--purple));
+  background-clip: text;
+  color: transparent;
+}
+
+.booknow-service hr {
+  margin: 15px 0;
+  border: none;
+  height: 0.5px;
+  width: 100%;
+  background-color: rgb(209, 209, 209);
+}
+
+.booknow-service > div {
+  display: flex;
+  gap: 5px;
+}
+
+.book-now .icon {
+  color: hsl(309, 78%, 22%);
+}
+
+.booknow-service > div > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.booknow-service .title {
+  font-size: 13px;
+  font-weight: 600;
+  color: rgb(156, 156, 156);
+}
+
+.booknow-service p {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.Booking-details-date,
+.booknow-service .price {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.Booking-details-date{
+  font-size: 14px !important;
+  font-weight: 500 !important;
+}
+
+.booknow-service .price {
+  color: black;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/*--------Next Nav---------*/
+
+.nextnav-service-details div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.nextnav-service-details hr{
+  margin: 20px 0;
+    border: none;
+    height: 0.5px;
+    width: 100%;
+    background-color: rgb(209, 209, 209);
+}
+
+.nextnav-service-details div img{
+  height: 40px;
+  width: 40px;
+  border-radius: 10px;
+}
+
+.nextnav-service-details h3{
+  font-weight: 500;
+}
+
+.nextnav-service-details button{
+  height: fit-content;
+  background: var(--purple);
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-weight: bold;
+  transition: all ease-in-out 200ms;
+}
+
+.nextnav-service-details button:hover{
+  background-color: var(--pink);
+}

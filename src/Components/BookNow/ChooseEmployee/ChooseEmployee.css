@@ -1,0 +1,22 @@
+.employee-details{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.employee-details > div{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.employee-details div> img{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+}
+
+.employee-details-container p{
+    font-size: 14px;
+    font-weight: 500;
+}

@@ -33,7 +33,7 @@ const handleAddToCart = (item) => {
         alt=""
         onClick={()=>navigate(`/product/${product?.name}`)}
       />
-      <p className="product-category">{product?.category?.toUpperCase()}</p>
+      {/* <p className="product-category">{product?.category?.toUpperCase()}</p> */}
       <p className="product-desc">{product?.shortDescription}</p>
       <p className='price-button'>
         <p className="product-price">TK. {product?.price}</p>

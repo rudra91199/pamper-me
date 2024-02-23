@@ -1,8 +1,8 @@
 import { useNavigate, useParams } from "react-router-dom";
 import "./ServiceDetails.css";
-import { useContext, useEffect, useRef, useState } from "react";
+import { useContext } from "react";
 import { Context } from "../../Providers/PamperContext";
-import BookingModal from "../../Components/BookingModal/BookingModal";
+
 import auth from "../../../firebase.init";
 import { useAuthState } from "react-firebase-hooks/auth";
 const ServiceDetails = () => {
@@ -14,13 +14,6 @@ const ServiceDetails = () => {
   const relatedCategory = services?.filter(
     (r) => r?.category == service?.category && r?.title != service?.title
   );
-  const dialogRef = useRef(null);
-  const handleOpen = () => {
-    dialogRef.current.showModal();
-  };
-  const handleClose = () => {
-    dialogRef.current.close();
-  };
 
   return (
     <div className="service-details">
@@ -41,16 +34,22 @@ const ServiceDetails = () => {
               <p className="price">BDT. {service?.price}</p>
             </div>
             <button
-              onClick={user?.email ? handleOpen : () => navigate("/login")}
+              onClick={() =>
+                navigate("/booknow", {
+                  state: {service:{
+                    id:service.id,
+                    title:service.title,
+                    price:service.price,
+                    duration:service.duration,
+                    img:service.img
+                  }},
+                })
+              }
               className="book-btn"
             >
               BOOK NOW
             </button>
-            <BookingModal
-              handleClose={handleClose}
-              dialogRef={dialogRef}
-              serviceId={service?._id}
-            ></BookingModal>
+
           </div>
         </div>
         <p style={{ textAlign: "center", fontWeight: "bold", margin: "40px" }}>

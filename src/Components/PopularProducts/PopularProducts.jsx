@@ -5,7 +5,8 @@ import Product from "../Product/Product";
 import { Context } from "../../Providers/PamperContext";
 
 const PopularProducts = () => {
-  const {products} = useContext(Context);
+  const { products } = useContext(Context);
+  console.log(products)
 
   return (
     <div className="products">
@@ -13,7 +14,7 @@ const PopularProducts = () => {
         Popular Products
       </h2>
       <div className="home-products-container">
-        {products?.slice(0, 3).map((product) => (
+        {products?.products?.slice(0, 3).map((product) => (
           <Product key={product?.name} product={product}>
           </Product>
         ))}
