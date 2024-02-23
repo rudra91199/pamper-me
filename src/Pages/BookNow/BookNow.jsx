@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import { Outlet, useLocation } from "react-router-dom";
-import "./BookNow.css";
+import "./Booknow.css";
 import { FiShoppingBag } from "react-icons/fi";
 import { MdOutlineDateRange } from "react-icons/md";
 import { IoLocationSharp } from "react-icons/io5";
