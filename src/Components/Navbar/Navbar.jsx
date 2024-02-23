@@ -7,6 +7,7 @@ import { useContext, useState } from "react";
 import faceLogo from "../../assets/Images/Logo/FaceLogo-01.png"
 import { Context } from "../../Providers/PamperContext";
 import Search from "../Search/Search";
+import { MdOutlineLogin } from "react-icons/md";
 
 const Navbar = () => {
   const [user] = useAuthState(auth);
@@ -78,23 +79,15 @@ const Navbar = () => {
             <hr />
             <div className="dashboardLink">
               <Link>Purchase History</Link>
-              <Link>Update Profile</Link>
+              <Link to={"/update-profile"}>Update Profile</Link>
               <Link>Bookings</Link>
               <Link className="logout" to="/login" onClick={() => signOut(auth)}>Log Out</Link>
             </div>
           </div>
         </div>
       ) : (
-        <button onClick={() => navigate("/login")}>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="1em"
-            viewBox="0 0 448 512"
-            className="w-6 h-6"
-          >
-            <path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z" />
-          </svg>
-        </button>
+        <MdOutlineLogin className="w-6 h-6"/>
+
       )}
     </div>
   );

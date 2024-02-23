@@ -15,96 +15,96 @@ import ChooseDate_Time from "../Components/BookNow/ChooseDate_Time/ChooseDate_Ti
 import Recurring from "../Components/BookNow/Recurring/Recurring";
 import RecurringDates from "../Components/BookNow/RecurringDates/RecurringDates";
 import Checkout from "../Components/BookNow/Checkout/Checkout";
-
+import UpdateProfile from "../Pages/UpdateProfile/UpdateProfile";
 
 const router = createBrowserRouter([
-    {
-        path: '/',
-        element: <ClientLayout></ClientLayout>,
+  {
+    path: "/",
+    element: <ClientLayout></ClientLayout>,
+    children: [
+      {
+        path: "/",
+        element: <Home></Home>,
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/services",
+        element: <Services></Services>,
+      },
+      {
+        path: "/service/:slug",
+        element: <ServiceDetails></ServiceDetails>,
+      },
+      {
+        path: "/product/:slug",
+        element: <ProductDetails></ProductDetails>,
+      },
+      {
+        path: "/bookings",
+        element: <Bookings></Bookings>,
+      },
+      {
+        path: "/update-profile",
+        element: <UpdateProfile />,
+      },
+      {
+        path: "/booknow",
+        element: <BookNow />,
         children: [
-            {
-                path: '/',
-                element: <Home></Home>
-            },
-            {
-                path: '/login',
-                element: <Login></Login>
-            },
-            {
-                path: '/services',
-                element: <Services></Services>
-            },
-            {
-                path: '/service/:slug',
-                element: <ServiceDetails></ServiceDetails>
-            },
-            {
-                path: '/product/:slug',
-                element: <ProductDetails></ProductDetails>
-            },
-            {
-                path: '/bookings',
-                element: <Bookings></Bookings>
-            },
-            {
-                path:"/booknow",
-                element:<BookNow/>,
-                children:[
-                    {
-                        path:"/booknow",
-                        element:<ChooseEmployee/>,
-                        index:true
-                    },
-                    {
-                        path:"choose-location",
-                        element:<ChooseLocation/>
-                    },
-                    {
-                        path:"choose-date&time",
-                        element:<ChooseDate_Time/>
-                    },
-                    {
-                        path:"recurring",
-                        element:<Recurring/>
-                    },
-                    {
-                        path:"recurring-dates",
-                        element:<RecurringDates/>
-                    },
-                    {
-                        path:"checkout/:serviceName",
-                        element:<Checkout/>
-                    },
-
-                ]
-            },
-            {
-                path: '/shop',
-                element: <Shop></Shop>,
-                children:[
-                    {
-                        path:":category",
-                        element:<Category/>,
-                        children:[
-                            {
-                                path:":subcategory",
-                                element:<Category/>,
-                                children:[
-                                    {
-                                        path:":brand",
-                                        element:<Category/>
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ]
-            },
-
-        ]
-    }
-
-
-])
+          {
+            path: "/booknow",
+            element: <ChooseEmployee />,
+            index: true,
+          },
+          {
+            path: "choose-location",
+            element: <ChooseLocation />,
+          },
+          {
+            path: "choose-date&time",
+            element: <ChooseDate_Time />,
+          },
+          {
+            path: "recurring",
+            element: <Recurring />,
+          },
+          {
+            path: "recurring-dates",
+            element: <RecurringDates />,
+          },
+          {
+            path: "checkout/:serviceName",
+            element: <Checkout />,
+          },
+        ],
+      },
+      {
+        path: "/shop",
+        element: <Shop></Shop>,
+        children: [
+          {
+            path: ":category",
+            element: <Category />,
+            children: [
+              {
+                path: ":subcategory",
+                element: <Category />,
+                children: [
+                  {
+                    path: ":brand",
+                    element: <Category />,
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+]);
 
 export default router;

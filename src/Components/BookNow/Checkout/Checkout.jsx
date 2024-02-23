@@ -5,7 +5,7 @@ import BackNav from "../Navigation/BackNav";
 
 const Checkout = () => {
   const state = useLocation().state;
-  console.log(state);
+  
   return (
     <div>
       <div className="book-now-heading-container">
