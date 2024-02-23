@@ -29,7 +29,7 @@ const handleAddToCart = (item) => {
     <div className={`productCard ${location.pathname ==="/"?"width-350":"product-border"}`}>
       <p className="product-title">{product?.name}</p>
       <img
-        // src={product?.images[0]?.src}
+        src={product?.images[0]?.src}
         alt=""
         onClick={()=>navigate(`/product/${product?.name}`)}
       />

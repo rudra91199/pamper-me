@@ -15,6 +15,7 @@ import ChooseDate_Time from "../Components/BookNow/ChooseDate_Time/ChooseDate_Ti
 import Recurring from "../Components/BookNow/Recurring/Recurring";
 import RecurringDates from "../Components/BookNow/RecurringDates/RecurringDates";
 import Checkout from "../Components/BookNow/Checkout/Checkout";
+import SearchProducts from "../Pages/SearchProducts/SearchProducts";
 
 
 const router = createBrowserRouter([
@@ -100,6 +101,10 @@ const router = createBrowserRouter([
                     }
                 ]
             },
+            {
+                path:'/searchProducts',
+                element: <SearchProducts/>
+            }
 
         ]
     }
