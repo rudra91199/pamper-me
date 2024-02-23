@@ -3,17 +3,21 @@ import React, { useState } from "react";
 const ProfileDetails = ({ user }) => {
     const [imgSrc, setImgSrc] = useState("");
 
-    const setFileToBase = (file) => {
-        console.log(file)
+    const setFileToBase = (e) => {
+        const file = e.target.files[0]
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = () =>{
+          setImgSrc(reader.result);
+        }
     }
-  console.log(user);
   return (
     <div>
       <div className="user-img-container">
-        <img src={user?.photoURL} alt="" />
-        <label htmlFor="uploaded-img">Upload new picture</label>
+        <img src={imgSrc || user?.photoURL} alt="" />
+        <label htmlFor="uploaded-img">Choose new picture</label>
         <input type="file" name="uploadedImg" id="uploaded-img" onChange={(e) => setFileToBase(e)}/>
-        <button>Delete</button>
+        <button>Upload</button>
       </div>
       <form className="name-form" action="">
         <div>
@@ -23,6 +27,7 @@ const ProfileDetails = ({ user }) => {
             name="firsName"
             id="first-name"
             placeholder="First Name"
+            accept="image/png, image/gif, image/jpeg"
           />
         </div>
         <div>

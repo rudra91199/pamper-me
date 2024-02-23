@@ -6,7 +6,6 @@ import { Context } from "../../Providers/PamperContext";
 
 const PopularProducts = () => {
   const { products } = useContext(Context);
-  console.log(products)
 
   return (
     <div className="products">

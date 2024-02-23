@@ -8,7 +8,6 @@ import faceLogo from "../../assets/Images/Logo/FaceLogo-01.png";
 import { Context } from "../../Providers/PamperContext";
 import Search from "../Search/Search";
 import { MdOutlineLogin } from "react-icons/md";
-import CartSlider from "../CartSlider/CartSlider";
 import Cart from "../Cart/Cart";
 
 const Navbar = () => {
@@ -16,6 +15,7 @@ const Navbar = () => {
   const [profileHover, setProfileHover] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
+  const { cart } = useContext(Context);
 
   return (
     <div
@@ -37,7 +37,7 @@ const Navbar = () => {
       <Link to="/blog">Blog</Link>
       <Link to="/about">About Us</Link>
       <Link to="/bookings">Bookings</Link>
-      <Cart/>
+      <Cart />
 
       <Search />
 

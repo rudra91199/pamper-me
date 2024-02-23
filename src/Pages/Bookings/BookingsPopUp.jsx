@@ -24,7 +24,7 @@ const BookingsPopUp = ({ showPopUp, setShowPopUp, popupRef, booking }) => {
       <div className="booking-details-container">
         <h3>Booking Details</h3>
         <div className="booking-service-details">
-          <img src={img ? img : ""} alt="" />
+          {/* <img src={img ? img : ""} alt="" /> */}
           <div>
             <h3>{title}</h3>
             <p>{category}</p>
