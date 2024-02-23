@@ -12,16 +12,16 @@ import { format } from "date-fns";
 import TimeCell from "../../Components/BookNow/ChooseDate_Time/ChooseTime/TimeCell";
 
 const BookNow = () => {
-  const { selectedDate,setSelectedDate, allBookingDates } = useContext(Context);
+  const { selectedDate, setSelectedDate, allBookingDates } = useContext(Context);
   const location = useLocation();
 
-  const { service, employee, address, time, date,dates } = location?.state;
+  const { service, employee, address, time, date, dates } = location?.state;
 
   useEffect(() => {
-    if(location.pathname == "/booknow"){
+    if (location.pathname == "/booknow") {
       setSelectedDate(new Date());
     }
-  },[location]);
+  }, [location]);
 
   return (
     <div className="book-now">
@@ -77,15 +77,15 @@ const BookNow = () => {
         </div>
         {dates?.length > 1 && <>
           <hr />
-        <div>
-          <RxLoop className="icon" />
           <div>
-            <p className="title"> Recurrings</p>
-            <p className="Booking-details-date">
-              {dates?.length} recurring bookings
-            </p>
+            <RxLoop className="icon" />
+            <div>
+              <p className="title"> Recurrings</p>
+              <p className="Booking-details-date">
+                {dates?.length} recurring bookings
+              </p>
+            </div>
           </div>
-        </div>
         </>}
         <hr />
         <div>
