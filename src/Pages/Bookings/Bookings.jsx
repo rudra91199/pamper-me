@@ -23,6 +23,8 @@ const Bookings = () => {
       });
   }, [user?.email]);
 
+  console.log(bookings)
+
   useEffect(() => {
     let handler = (e) => {
       if (!popupRef?.current?.contains(e.target)) {
