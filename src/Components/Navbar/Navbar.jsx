@@ -7,8 +7,9 @@ import { useContext, useState } from "react";
 import faceLogo from "../../assets/Images/Logo/FaceLogo-01.png";
 import { Context } from "../../Providers/PamperContext";
 import Search from "../Search/Search";
-import { MdOutlineLogin } from "react-icons/md";
+import { FiLogIn } from "react-icons/fi";
 import Cart from "../Cart/Cart";
+import UserPopUp from "../UserPopUp/UserPopUp";
 
 const Navbar = () => {
   const [user] = useAuthState(auth);
@@ -48,48 +49,20 @@ const Navbar = () => {
 
       {user ? (
         <div
-          onMouseEnter={() => setProfileHover(true)}
-          onMouseLeave={() => setProfileHover(false)}
+          onClick={(e) => {
+            e.stopPropagation();
+            setProfileHover(!profileHover);
+          }}
           className="relative"
         >
-          <button>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="1em"
-              viewBox="0 0 448 512"
-              className="w-6 h-6"
-            >
-              <path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z" />
-            </svg>
+          <button className="user-button">
+            <img src={user.photoURL} alt="" className="user-button-img" />
+            <span className="user-button-displayName">{user.displayName}</span>
           </button>
-          <div className={`profile ${profileHover ? "show" : "hide"}`}>
-            <div className="userImage">
-              <img
-                src={
-                  user?.photoURL ||
-                  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmEwalaRUsDXz_hi03tVaA56X2bP3ocnStKw&usqp=CAU"
-                }
-                alt=""
-              />
-              <p className="userName">{user.displayName || "User Name"}</p>
-            </div>
-            <hr />
-            <div className="dashboardLink">
-              <Link>Purchase History</Link>
-              <Link to={"/update-profile"}>Update Profile</Link>
-              <Link>Bookings</Link>
-              <Link
-                className="logout"
-                to="/login"
-                onClick={() => signOut(auth)}
-              >
-                Log Out
-              </Link>
-            </div>
-          </div>
+          <UserPopUp profileHover={profileHover} user={user} />
         </div>
       ) : (
-        <MdOutlineLogin className="w-6 h-6" />
+        <FiLogIn className="w-6 h-6 login" onClick={()=>navigate('/login')}/>
       )}
     </div>
   );
