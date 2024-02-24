@@ -15,7 +15,9 @@ const Search = () => {
   useEffect(() => {
     if (searchText.length > 2) {
       axios
-        .get(`https://pamper-me-backend.vercel.app/getProductsByQuery?search=${searchText}`)
+        .get(
+          `https://pamper-me-backend.vercel.app/getProductsByQuery?search=${searchText}`
+        )
         .then((res) => setSearchedProducts(res.data));
     }
   }, [searchText]);
@@ -23,9 +25,9 @@ const Search = () => {
   useEffect(() => {
     if (searchIcon == true) {
       document.body.addEventListener("click", () => {
-        setSearchIcon(false)
-        setSearchText("")
-      })
+        setSearchIcon(false);
+        setSearchText("");
+      });
     }
 
     if(profileHover == true){
@@ -37,15 +39,21 @@ const Search = () => {
 
 
 
+  // console.log(searchIcon)
 
   return (
-    <div className={`search-container ${!searchIcon ? "small-container" : "fit-container"}`}>
+    <div
+      className={`search-container ${
+        !searchIcon ? "small-container" : "fit-container"
+      }`}
+    >
       <div>
         <input
           type="text"
           name="search"
           value={searchText}
-          placeholder="Search" className={`${searchIcon ? "input-show" : "input-hide"}`}
+          placeholder="Search"
+          className={`${searchIcon ? "input-show" : "input-hide"}`}
           onClick={(e) => e.stopPropagation()}
           onChange={(e) => setSearchText(e.target.value)}
         />
@@ -56,7 +64,11 @@ const Search = () => {
           <TbSearch className="w-6 h-6"/>
         </button>
       </div>
-      <SearchPopUp searchedProducts={searchedProducts} searchIcon={searchIcon} searchText={searchText} />
+      <SearchPopUp
+        searchedProducts={searchedProducts}
+        searchIcon={searchIcon}
+        searchText={searchText}
+      />
     </div>
   );
 };
