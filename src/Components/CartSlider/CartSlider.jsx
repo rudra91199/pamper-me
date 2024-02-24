@@ -18,7 +18,7 @@ const CartSlider = ({ isCartOpen, handleCartOpen }) => {
             <img src={item?.images[0]?.src} alt="" />
             <div className="cartSliderItem-details">
               <p className="cartSliderItem-name">{item?.name}</p>
-              <p className="cartSliderItem-price">BDT. {item?.price}</p>
+              <p className="cartSliderItem-price">BDT. {item?.price} taka</p>
             </div>
             <button>
               <i class="fa fa-trash-o" aria-hidden="true"></i>
