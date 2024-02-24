@@ -21,14 +21,14 @@ const PamperContext = ({ children }) => {
 
   useEffect(() => {
 
-    fetch("https://pamper-me-backend.vercel.app/services")
+    fetch("https://pamper-me-backend.vercel.app/api/services/all")
       .then((res) => res.json())
       .then((data) => {
         setServices(data);
       });
 
     fetch(
-      `http://pamper-me-backend.vercel.app/products?category=${
+      `http://pamper-me-backend.vercel.app/api/products/all?category=${
         routes?.category || ""
       }&subcategory=${routes?.subcategory || ""}&brand=${routes.brand || ""}`
     )
@@ -38,7 +38,7 @@ const PamperContext = ({ children }) => {
 
   useEffect(() => {
     if(user?.email){
-      axios.get(`http://localhost:5000/users/${user.email}`).then((res) => setUserData(res.data));
+      axios.get(`https://pamper-me-backend.vercel.app/api/users/${user.email}`).then((res) => setUserData(res.data));
     }
     else{
       setUserData({});

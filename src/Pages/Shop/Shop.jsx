@@ -33,7 +33,7 @@ const Shop = () => {
     if (category || subcategory || brand) {
       axios
         .get(
-          `http://pamper-me-backend.vercel.app/getProductsByCategory?category=${
+          `http://pamper-me-backend.vercel.app/api/products/getProductsByCategory?category=${
             category || ""
           }&subcategory=${subcategory || ""}&Brand=${brand || ""}`
         )

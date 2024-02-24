@@ -25,7 +25,7 @@ const useToken = (user) => {
     };
     if (email) {
       axios
-        .put(`http://localhost:5000/users/${email}`, userData)
+        .put(`https://pamper-me-backend.vercel.app/api/users/${email}`, userData)
         .then((res) => {
           if (res.data) {
             setToken(res.data.accessToken);

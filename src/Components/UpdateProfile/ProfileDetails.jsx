@@ -52,7 +52,7 @@ const ProfileDetails = ({ user }) => {
   //   );
   //   console.log(data);
   //   if (data) {
-  //     axios.put(`http://localhost:5000/users/user/${user?.email}`, {
+  //     axios.put(`https://pamper-me-backend.vercel.app/api/users/user/${user?.email}`, {
   //       Image: {
   //         url: data.url,
   //         id: data.public_id,

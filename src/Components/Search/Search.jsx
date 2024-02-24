@@ -16,7 +16,7 @@ const Search = () => {
     if (searchText.length > 2) {
       axios
         .get(
-          `https://pamper-me-backend.vercel.app/getProductsByQuery?search=${searchText}`
+          `https://pamper-me-backend.vercel.app/api/products/getProductsByQuery?search=${searchText}`
         )
         .then((res) => setSearchedProducts(res.data));
     }
