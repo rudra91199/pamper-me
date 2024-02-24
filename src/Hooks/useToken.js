@@ -7,8 +7,19 @@ const useToken = (user) => {
 
   useEffect(() => {
     const email = user?.email;
+    const splittedname = user?.displayName?.split(" ");
+    const lastname = user?.displayName && splittedname[splittedname?.length - 1];
+    let firstname = ""
+    splittedname?.forEach((split,i) => {
+      if(i < splittedname.length-1)
+      firstname = firstname  + split + " "
+    })
+  
+  
+    console.log(firstname, lastname);
     const userData = {
-      name: user?.displayName,
+      firstName: firstname,
+      lastName:lastname,
       email: user?.email,
       image:user?.photoURL
     };

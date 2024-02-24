@@ -21,6 +21,7 @@ const Navbar = () => {
   cart?.forEach((product) => {
     quantity = quantity + product?.quantity;
   });
+
   return (
     <div
       className={`nav-menu ${location.pathname == "/login" ? "d-none" : ""} ${location.pathname !== "/" ? "allNav" : ""}`}

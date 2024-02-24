@@ -39,7 +39,7 @@ const Login = () => {
   const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
 
   const navigate = useNavigate();
-  console.log(user);
+
 
   const [signInWithGoogle] = useSignInWithGoogle(auth);
 
