@@ -4,7 +4,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  
 }
 
 :root {
@@ -19,9 +18,8 @@
 a {
   font-weight: 500;
   text-decoration: none;
-  cursor: url('./assets/Images/Cursor/brush3-01.png'), auto;
+  cursor: url("./assets/Images/Cursor/brush3-01.png"), auto;
 }
-
 
 button {
   border: none;
@@ -30,14 +28,13 @@ button {
 
 body {
   font-family: "Raleway", sans-serif;
-  cursor: url('./assets/Images/Cursor/brush3-01.png'), auto;
-overflow-x: hidden;
+  cursor: url("./assets/Images/Cursor/brush3-01.png"), auto;
+  overflow-x: hidden !important;
 }
 
 select,
 textarea {
   font-family: "Raleway", sans-serif;
-
 }
 
 .d-none {

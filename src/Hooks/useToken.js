@@ -1,20 +1,40 @@
 import axios from "axios";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useEffect } from "react";
+import { Context } from "../Providers/PamperContext";
 
 const useToken = (user) => {
   const [token, setToken] = useState("");
-
+  const {number} = useContext(Context);
   useEffect(() => {
     const email = user?.email;
+    const splittedname = user?.displayName?.split(" ");
+    const lastname =
+      user?.displayName && splittedname[splittedname?.length - 1];
+    let firstname = "";
+    splittedname?.forEach((split, i) => {
+      if (i < splittedname.length - 1) firstname = firstname + split + " ";
+    });
+
     const userData = {
-      name: user?.displayName,
+      ...(user?.providerData[0].providerId === "google.com" && {
+        firstName: firstname,
+        lastName: lastname,
+        image: {url:user?.photoURL},
+      }),
+      ...((user?.providerData[0].providerId === "password" && number) && {
+        phone:number
+      }),
       email: user?.email,
-      image:user?.photoURL
+      //
     };
+
     if (email) {
       axios
-        .put(`http://localhost:5000/users/${email}`, userData)
+        .put(
+          `https://pamper-me-backend.vercel.app/api/users/${email}`,
+          userData
+        )
         .then((res) => {
           if (res.data) {
             setToken(res.data.accessToken);

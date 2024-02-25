@@ -23,10 +23,11 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import { EffectFade, Pagination, Autoplay } from "swiper/modules";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import auth from "../../../firebase.init";
 import Swal from "sweetalert2";
 import useToken from "../../Hooks/useToken";
+import { Context } from "../../Providers/PamperContext";
 
 const Login = () => {
   const [login, setLogin] = useState(true);
@@ -37,9 +38,9 @@ const Login = () => {
   const [signInWithEmailAndPassword, , , loginError] =
     useSignInWithEmailAndPassword(auth);
   const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
-
+  const {setNumber} = useContext(Context);
   const navigate = useNavigate();
-  console.log(user);
+
 
   const [signInWithGoogle] = useSignInWithGoogle(auth);
 
@@ -52,14 +53,16 @@ const Login = () => {
     const password = e.target.password.value;
 
     if (!login) {
-      const phoneNumber = "+" + e.target.number.value;
+      const phoneNumber = parseInt("88" + e.target.number.value);
+      setNumber(phoneNumber);
       await createUserWithEmailAndPassword(email, password);
       await updateProfile({ displayName });
     } else {
       signInWithEmailAndPassword(email, password);
+      setNumber(null);
     }
   };
-
+  
   useEffect(() => {
     if (token) navigate("/");
   }, [token]);
@@ -133,7 +136,6 @@ const Login = () => {
                     name="number"
                     required
                     placeholder=""
-                    defaultValue="880"
                   />
                   <label htmlFor="phone">Phone</label>
                 </div>

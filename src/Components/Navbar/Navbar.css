@@ -137,13 +137,24 @@ transition: all 0.3s ease-in-out;
 cursor: pointer;
 }
 
-.user-button-img{
+.default-user-button-img{
+
+height: 36px;
+display: grid;
+place-items: center;
+font-size: 18px;
+color: var(--purple);
+font-weight: 700;
+}
+
+.user-button-img,.default-user-button-img{
 width: 36px;
 border-radius: 50%;
 background-color: hsl(329, 78%, 82%);
 padding: 2px;
 transition: all 0.3s ease-in-out;
 }
+
 
 .user-button-displayName{
   font-weight: 600;
