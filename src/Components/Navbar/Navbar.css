@@ -75,8 +75,6 @@
   position: relative;
 }
 
-
-
 .userName {
   color: white;
   margin-top: 10px;
@@ -125,44 +123,51 @@
   }
 }
 
-.user-button{
-background: transparent;
-background-color: hsl(329, 78%, 90%);
-padding: 5px 10px;
-border-radius: 2em;
-display: flex;
-align-items: center;
-gap: 10px;
-transition: all 0.3s ease-in-out;
-cursor: pointer;
+.user-button {
+  background: transparent;
+  background-color: hsl(329, 78%, 90%);
+  padding: 5px 10px;
+  border-radius: 2em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
 
-.user-button-img{
-width: 36px;
-border-radius: 50%;
-background-color: hsl(329, 78%, 82%);
-padding: 2px;
-transition: all 0.3s ease-in-out;
+.user-button-img {
+  width: 36px;
+  border-radius: 50%;
+  background-color: hsl(329, 78%, 82%);
+  padding: 2px;
+  transition: all 0.3s ease-in-out;
 }
 
-.user-button-displayName{
+.user-button-displayName {
   font-weight: 600;
-  color:  #630054;
+  color: #630054;
   margin-right: 5px;
-transition: all 0.3s ease-in-out;
-
+  transition: all 0.3s ease-in-out;
 }
 
-.user-button:hover{
-background-color: hsl(329, 78%, 95%);
-
+.user-button:hover {
+  background-color: hsl(329, 78%, 95%);
 }
 
-.user-button:hover .user-button-img{
-background-color: hsl(329, 78%, 90%) !important;
+.user-button:hover .user-button-img {
+  background-color: hsl(329, 78%, 90%) !important;
 }
 
-.user-button:hover .user-button-displayName{
-  color:  #9c288b;
+.user-button:hover .user-button-displayName {
+  color: #9c288b;
+}
 
+@media (width < 1400px) {
+  .serviceLogo {
+    left: 6%;
+  }
+  .allNav {
+    margin: 10px 0;
+    padding: 20px 6%;
+  }
 }

@@ -7,7 +7,7 @@ import { IoLocationSharp } from "react-icons/io5";
 import { TbUserPentagon } from "react-icons/tb";
 import { FaCalculator } from "react-icons/fa6";
 
-const BookingsPopUp = ({ showPopUp, setShowPopUp, popupRef, booking }) => {
+const BookingsPopUp = ({ showPopUp, setShowPopUp, booking }) => {
   const { services } = useContext(Context);
   // const service = services?.find(
   //   (service) => service?._id === booking.serviceId
@@ -15,7 +15,6 @@ const BookingsPopUp = ({ showPopUp, setShowPopUp, popupRef, booking }) => {
   const { img, title, category, price, duration } = services[0];
   return (
     <div
-      ref={popupRef}
       className={`booking-popup ${showPopUp && "show-popup"}`}
     >
       <button className="close-btn" onClick={() => setShowPopUp(false)}>
