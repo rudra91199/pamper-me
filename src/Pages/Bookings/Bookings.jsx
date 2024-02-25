@@ -24,21 +24,9 @@ const Bookings = () => {
   }, [user?.email]);
 
 
-  useEffect(() => {
-    let handler = (e) => {
-      if (!popupRef?.current?.contains(e.target)) {
-        setShowPopUp(false);
-      }
-    };
-    document.addEventListener("mousedown", handler);
-    // return () => {
-    //   document.removeEventListener("mousedown", handler);
-    // };
-  });
-
   return (
     <div className="bookings">
-      <div className={`layer ${showPopUp ? "layer-show" : "layer-hide"}`}></div>
+      <div onClick={()=>{setShowPopUp(false)}} className={`layer ${showPopUp ? "layer-show" : "layer-hide"}`}></div>
       <div>
         <h1>Bookings</h1>s
         <button>Book Now</button>
@@ -81,7 +69,6 @@ const Bookings = () => {
                 </td>
               </tr>
               <BookingsPopUp
-                popupRef={popupRef}
                 showPopUp={showPopUp}
                 setShowPopUp={setShowPopUp}
                 booking={booking}
