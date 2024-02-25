@@ -237,7 +237,6 @@
 }
 
 .floating-label input:focus+label,
-.floating-label input:valid+label,
 .floating-label input:not(:placeholder-shown)+label {
     top: -9px;
     font-size: 12px;

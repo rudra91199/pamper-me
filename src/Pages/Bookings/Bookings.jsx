@@ -16,7 +16,7 @@ const Bookings = () => {
   const { services } = useContext(Context);
   const popupRef = useRef();
   useEffect(() => {
-    fetch(`https://pamper-me-backend.vercel.app/bookingsByEmail/${user?.email}`)
+    fetch(`https://pamper-me-backend.vercel.app/api/bookings/bookingsByEmail/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         setBookings(data);
