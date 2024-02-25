@@ -56,7 +56,12 @@ const Navbar = () => {
           className="relative"
         >
           <button className="user-button">
-            <img src={user.photoURL} alt="" className="user-button-img" />
+            {
+              user.photoURL?
+              <img src={user.photoURL} alt="" className="user-button-img" />
+              :
+              <span className="default-user-button-img">{user?.displayName.slice(0,1)}</span>
+            }
             <span className="user-button-displayName">{user.displayName}</span>
           </button>
           <UserPopUp profileHover={profileHover} user={user} />

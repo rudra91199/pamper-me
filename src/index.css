@@ -29,8 +29,7 @@ button {
 body {
   font-family: "Raleway", sans-serif;
   cursor: url("./assets/Images/Cursor/brush3-01.png"), auto;
-  overflow-x: hidden;
-  
+  overflow-x: hidden !important;
 }
 
 select,

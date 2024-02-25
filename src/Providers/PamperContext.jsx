@@ -17,7 +17,7 @@ const PamperContext = ({ children }) => {
   const [profileHover, setProfileHover] = useState(false);
   const [userData, setUserData] = useState({});
   const [user] = useAuthState(auth);
-  
+  const [number,setNumber] = useState(null);
 
   useEffect(() => {
 
@@ -59,7 +59,8 @@ const PamperContext = ({ children }) => {
     setAllBookingDates,
     profileHover,
     setProfileHover,
-    userData
+    userData,
+    number,setNumber
   };
   return <Context.Provider value={info}>{children}</Context.Provider>;
 };
