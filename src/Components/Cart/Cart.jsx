@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import "./Cart.css";
 import CartSlider from "../CartSlider/CartSlider";
 import { Link } from "react-router-dom";
@@ -12,9 +12,11 @@ const Cart = () => {
     setIsCartOpen(!isCartOpen);
     console.log(isCartOpen);
     if (!isCartOpen) {
-      document.body.style.overflow = "hidden";
+      document.body.style.overflowY = "hidden";
+      document.body.style.paddingRight = "16px";
     } else {
-      document.body.style.overflow = "visible";
+      document.body.style.overflowY = "visible";
+      document.body.style.paddingRight = "0px";
     }
   };
 
@@ -26,6 +28,7 @@ const Cart = () => {
   return (
     <div className="cart">
       <div
+        onClick={() => setIsCartOpen(false)}
         className={`layer ${isCartOpen ? "layer-show" : "layer-hide"}`}
       ></div>
       <button
@@ -49,7 +52,11 @@ const Cart = () => {
         </svg>
         <p className="badge">{quantity}</p>
       </button>
-      <CartSlider isCartOpen={isCartOpen} handleCartOpen={handleCartOpen} />
+      <CartSlider
+        isCartOpen={isCartOpen}
+        handleCartOpen={handleCartOpen}
+        // popupRef={popupRef}
+      />
     </div>
   );
 };

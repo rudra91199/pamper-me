@@ -1,105 +1,110 @@
-.services{
-    padding: 0px 12%;
+.services {
+  padding: 0px 12%;
 }
-.servicesBanner{
-    background: url('../../assets/Images/Banner/service-pamper-me-banner.jpg');
-    border-radius: 20px 20px 0 0;
-    height: 44vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.service-container{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 20px;
-    margin: 40px 0;
-}
-.filter-container{
-    height: 90vh;
-    background: #FCDCE7;
-    margin: 40px 20px;
-    border-radius: 10px;
-    padding: 30px 20px;
-    position: sticky;
-    top: 0px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* width: 300px; */
-}
-.filterCategory{
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    width: 80%;
-}
-.hr{
-   height: 1px;
-   width: 80%;
-   background: var(--pink);
-   margin-left: 10px;
-}
-.filterCategory button{
-    display: block; 
-    background: transparent;
-    padding: 10px;
-    font-size: 18px;
-    transition: all ease-in-out 200ms;
-}
-.filterCategory button:hover{
-    color: var(--pink);
+.servicesBanner {
+  background: url("../../assets/Images/Banner/service-pamper-me-banner.jpg");
+  border-radius: 20px 20px 0 0;
+  height: 44vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: -30px;
 }
 
-.filterCategory p{
-    font-size: 20px;
-    font-weight: bold;
-    margin: 10px;
-    margin-bottom: 20px;
+.service-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin: 40px 0;
+}
+.filter-container {
+  height: 90vh;
+  background: #fcdce7;
+  margin: 40px 20px;
+  border-radius: 10px;
+  padding: 30px 20px;
+  position: sticky;
+  top: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* width: 300px; */
+}
+.filterCategory {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+}
+.hr {
+  height: 1px;
+  width: 80%;
+  background: var(--pink);
+  margin-left: 10px;
+}
+.filterCategory button {
+  display: block;
+  background: transparent;
+  padding: 10px;
+  font-size: 18px;
+  transition: all ease-in-out 200ms;
+}
+.filterCategory button:hover {
+  color: var(--pink);
 }
 
-.filterPrice{
- background: #fff;
- padding: 20px;
- border-radius: 10px;    
- margin-top: 20px;
- width: 80%;
+.filterCategory p {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px;
+  margin-bottom: 20px;
 }
 
-.filterPrice input{
-    padding: 10px;
-    margin: 10px;
-    border: none;
-    border-radius: 10px;
-    width: 80%;
-    background: #96298617;
+.filterPrice {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  width: 80%;
 }
 
-.filterPrice p{
-    font-size: 20px;
-    font-weight: bold;
-    margin: 10px;
-    margin-bottom: 20px;
+.filterPrice input {
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  border-radius: 10px;
+  width: 80%;
+  background: #96298617;
 }
 
-.filterBtn{
-    padding: 10px;
-    margin: 10px;
-    border: none;
-    border-radius: 10px;
-    width: 90%;
-    background: var(--pink);
-    color: white;
-    transition: all ease-in-out 200ms;
-    margin-top: 20px;
-}
-.filterBtn:hover{
-    background: var(--purple);
+.filterPrice p {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px;
+  margin-bottom: 20px;
 }
 
-@media screen and (max-width:1860px) {
-    .service-container{
-        grid-template-columns: repeat(3,1fr);
-    }
-    
+.filterBtn {
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  border-radius: 10px;
+  width: 90%;
+  background: var(--pink);
+  color: white;
+  transition: all ease-in-out 200ms;
+  margin-top: 20px;
+}
+.filterBtn:hover {
+  background: var(--purple);
+}
+
+@media screen and (max-width: 1860px) {
+  .service-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 1400px) {
+  .services {
+    padding: 0px 6%;
+  }
 }
