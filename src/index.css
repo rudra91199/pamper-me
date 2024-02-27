@@ -32,6 +32,7 @@ body {
   overflow-x: hidden !important;
 }
 
+
 select,
 textarea {
   font-family: "Raleway", sans-serif;
@@ -47,4 +48,16 @@ textarea {
 
 .opacity-1 {
   opacity: 1;
+}
+
+.swal2-shown{
+  padding-right: 0 !important;
+}
+
+.gradient{
+  background:linear-gradient(to right, var(--pink), var(--purple));
+  background-clip: text;
+  color: transparent;
+  width: fit-content;
+
 }

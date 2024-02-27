@@ -60,6 +60,7 @@ const PamperContext = ({ children }) => {
     profileHover,
     setProfileHover,
     userData,
+    setUserData,
     number,setNumber
   };
   return <Context.Provider value={info}>{children}</Context.Provider>;

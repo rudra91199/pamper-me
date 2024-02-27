@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useContext, useState } from "react";
-import { Context } from "../../Providers/PamperContext";
+import { Context } from "../../../Providers/PamperContext";
+import "./ProfileDetails.css";
 
 const ProfileDetails = ({ user }) => {
   const [imgSrc, setImgSrc] = useState("");
@@ -68,7 +69,10 @@ const ProfileDetails = ({ user }) => {
     );
 
     if (filteredUserInfo) {
-      axios.put(`http://localhost:5000/api/users/user/${user?.email}`, filteredUserInfo);
+      axios.put(
+        `http://localhost:5000/api/users/user/${user?.email}`,
+        filteredUserInfo
+      );
     }
   };
 
@@ -113,31 +117,67 @@ const ProfileDetails = ({ user }) => {
           </div>
 
           <div className="floating-label">
-            <input type="text" name="city" id="city" placeholder="" />
+            <input
+              type="text"
+              name="city"
+              id="city"
+              placeholder=""
+              defaultValue={userData?.city}
+            />
             <label htmlFor="city">City</label>
           </div>
 
           <div className="floating-label">
-            <input type="text" name="apartment" id="apartment" placeholder="" />
+            <input
+              type="text"
+              name="apartment"
+              id="apartment"
+              placeholder=""
+              defaultValue={userData?.apartment}
+            />
             <label htmlFor="apartment">Apartment</label>
           </div>
 
           <div className="floating-label">
-            <input type="text" name="house" id="house" placeholder="" />
+            <input
+              type="text"
+              name="house"
+              id="house"
+              placeholder=""
+              defaultValue={userData?.house}
+            />
             <label htmlFor="house">House No.</label>
           </div>
           <div className="floating-label">
-            <input type="text" name="road" id="road" placeholder="" />
+            <input
+              type="text"
+              name="road"
+              id="road"
+              placeholder=""
+              defaultValue={userData?.road}
+            />
             <label htmlFor="road">Road No.</label>
           </div>
 
           <div className="floating-label">
-            <input type="text" name="block" id="block" placeholder="" />
+            <input
+              type="text"
+              name="block"
+              id="block"
+              placeholder=""
+              defaultValue={userData?.block}
+            />
             <label htmlFor="block">Block</label>
           </div>
 
           <div className="floating-label">
-            <input type="text" name="area" id="area" placeholder="" />
+            <input
+              type="text"
+              name="area"
+              id="area"
+              placeholder=""
+              defaultValue={userData?.area}
+            />
             <label htmlFor="area">Area</label>
           </div>
         </div>

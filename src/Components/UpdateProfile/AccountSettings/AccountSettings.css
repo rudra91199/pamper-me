@@ -1,0 +1,81 @@
+.account-settings {
+  padding: 30px 100px;
+}
+
+.account-settings .floating-label-readOnly input{
+  outline: none;
+  box-shadow: none;
+  /* border: none !important; */
+  color: var(--pink);
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.account-settings .floating-label-readOnly label{
+  top: -20px !important;
+}
+
+.account-settings p {
+  font-weight: 500;
+}
+
+.account-settings hr {
+  margin: 20px 0;
+}
+
+.account-settings .account-delete {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.your-email{
+  margin-bottom: 10px;
+  font-weight: 700 !important;
+}
+
+.password-change{
+  transition: all 0.3s ease-in-out;
+}
+
+.change-password{
+  margin-bottom: 20px;
+  font-weight: 700 !important;
+}
+
+.password-change .floating-label{
+  margin-bottom: 8px;
+}
+
+.err-msg {
+  color: red;
+  /* margin-bottom: 25px !important; */
+  transition: all 0.3s ease-in-out;
+}
+
+.floating-err-msg {
+  margin-bottom: 0 !important;
+}
+
+.account-delete p {
+  color: red;
+}
+
+.account-delete span {
+  font-size: 15px;
+}
+
+.account-delete button {
+  background-color: red;
+}
+
+
+.error-msg-show{
+opacity: 1;
+min-height: 40px;
+}
+
+.error-msg-hide{
+opacity: 0;
+height: 0px;
+/* margin-bottom: 0 !important; */
+}

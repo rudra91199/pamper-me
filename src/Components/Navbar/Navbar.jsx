@@ -18,6 +18,10 @@ const Navbar = () => {
   const location = useLocation();
   const { cart } = useContext(Context);
 
+  console.log(user)
+//725NnxAErwMCiC3RbgDDZkcCdI02
+
+
   let quantity = 0;
   cart?.forEach((product) => {
     quantity = quantity + product?.quantity;

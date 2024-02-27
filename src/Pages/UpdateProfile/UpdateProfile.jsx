@@ -5,9 +5,8 @@ import { useState } from "react";
 import { IoMdSettings } from "react-icons/io";
 import { FaRegUser } from "react-icons/fa6";
 import { IoLockOpen } from "react-icons/io5";
-import ProfileDetails from "../../Components/UpdateProfile/ProfileDetails";
-import AccountSettings from "../../Components/UpdateProfile/AccountSettings";
-import ChangePassword from "../../Components/UpdateProfile/ChangePassword";
+import ProfileDetails from "../../Components/UpdateProfile/ProfileDetails/ProfileDetails";
+import AccountSettings from "../../Components/UpdateProfile/AccountSettings/AccountSettings";
 
 const UpdateProfile = () => {
   const [user] = useAuthState(auth);
@@ -29,25 +28,18 @@ const UpdateProfile = () => {
             onClick={() => setActiveTab("profile-details")}
             className={`${activeTab === "profile-details" && "activeTab"}`}
           >
-           <FaRegUser /> Profile Details
+            <FaRegUser /> Profile Details
           </button>
           <button
             onClick={() => setActiveTab("account-settings")}
             className={`${activeTab === "account-settings" && "activeTab"}`}
           >
-           <IoMdSettings /> Account settings
-          </button>
-          <button
-            onClick={() => setActiveTab("change-password")}
-            className={`${activeTab === "change-password" && "activeTab"}`}
-          >
-           <IoLockOpen /> Change Password
+            <IoMdSettings /> Account settings
           </button>
         </div>
         <div className="content">
-          {activeTab === "profile-details" && <ProfileDetails user={user}/>}
-          {activeTab === "account-settings" && <AccountSettings user={user}/>}
-          {activeTab === "change-password" && <ChangePassword user={user}/>}
+          {activeTab === "profile-details" && <ProfileDetails user={user} />}
+          {activeTab === "account-settings" && <AccountSettings user={user} />}
         </div>
       </div>
     </div>
