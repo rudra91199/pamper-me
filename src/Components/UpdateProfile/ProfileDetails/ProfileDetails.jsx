@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useContext, useState } from "react";
 import { Context } from "../../../Providers/PamperContext";
 import "./ProfileDetails.css";
+import Swal from "sweetalert2";
 
 const ProfileDetails = ({ user }) => {
   const [imgSrc, setImgSrc] = useState("");
@@ -31,11 +32,24 @@ const ProfileDetails = ({ user }) => {
       );
 
       if (data) {
-        axios.put(`https://pamper-me-backend.vercel.app/api/users/user/${user?.email}`, {
+        
+        axios.put(`https://pamper-me-backend.vercel.app/api/users/user/${user?.email}?id=${userData?.image?.id}`, {
           image: {
             url: data.url,
             id: data.public_id,
           },
+        }).then(res => {
+          if(res.data.modifiedCount > 0) {
+            Swal.fire({
+              title: "Profile photo updated",
+              icon: "success",
+              showCancelButton: false,
+              confirmButtonColor: "#3085d6",
+              cancelButtonColor: "#d33",
+              confirmButtonText: "OK",
+            }).then(() => {
+            });
+          }
         });
       }
     }
