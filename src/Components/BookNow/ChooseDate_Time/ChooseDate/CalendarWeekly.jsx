@@ -1,11 +1,10 @@
-import { addDays, format, getWeek, isSameDay, lastDayOfWeek, startOfWeek } from 'date-fns';
+import { addDays, format, getMonth, getWeek, isSameDay, isSameMonth, isSameWeek, lastDayOfWeek, startOfWeek } from 'date-fns';
 import React from 'react'
 
 const CalendarWeekly = ({currentMonth, onDateClickHandle,selectedDate}) => {
     const startDate = startOfWeek(currentMonth, { weekStartsOn: 1 });
     const endDate = lastDayOfWeek(currentMonth, { weekStartsOn: 1 });
   const currentDate = format(new Date(), "dd");
-
 
     const dateFormat = "d";
     const rows = [];
@@ -26,7 +25,7 @@ const CalendarWeekly = ({currentMonth, onDateClickHandle,selectedDate}) => {
                 : ""
             }
             ${
-              getWeek(new Date()) == getWeek(day) &&
+              (isSameWeek(new Date(), day) && isSameMonth(new Date(), day)) &&
               parseInt(formattedDate) < parseInt(currentDate) &&
               "disable-date"
             }

@@ -1,0 +1,85 @@
+.checkout .book-now-address div label {
+  font-size: 14px;
+}
+
+.checkout .book-now-address div input {
+  margin-top: 5px;
+}
+
+.checkout .checkbox {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 500;
+  margin: 10px 0 30px;
+}
+
+#checkout-checkbox{
+    accent-color: var(--pink);
+    mix-blend-mode: multiply;
+}
+
+.checkout .coupon div:first-child {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  gap: 5px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.checkout .coupon div:last-child input {
+  padding: 0 20px;
+  height: 35px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  width: 200px;
+  background-color: rgba(227, 32, 133, 0.08);
+  border-radius: 5px;
+}
+
+.checkout .coupon div:last-child button {
+  padding: 0 20px;
+  height: 35px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  border-radius: 5px;
+  margin-left: 10px;
+  font-weight: 500;
+}
+
+.checkout .payment {
+  background-color: hsl(329, 78%, 95%);
+  padding: 20px;
+  border-radius: 5px;
+  font-size: 15px;
+  margin: 20px 0px;
+}
+
+.checkout .payment div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.checkout .payment hr {
+  border: 0.2 solid rgba(0, 0, 0, 0.205);
+  margin: 10px 0;
+}
+
+.checkout .payment div p {
+  font-weight: 600;
+}
+
+.checkout .payment > p {
+  margin-top: 20px;
+  background-color: white;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-weight: 500;
+}
