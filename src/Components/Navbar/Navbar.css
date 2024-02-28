@@ -42,34 +42,7 @@
   height: 24px;
 }
 
-.profile {
-  position: absolute;
-  z-index: 10;
-  right: -90px;
-  width: 170px;
-  padding: 10px;
-  background: #000;
-  border: 6px solid #e32085;
-  top: 30px;
-  border-radius: 20px;
-}
 
-.profile a {
-  padding: 8px 0px;
-  color: white;
-}
-
-.userImage {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.userImage img {
-  width: 60px;
-  border-radius: 50%;
-}
 
 .relative {
   position: relative;
@@ -80,13 +53,7 @@
   margin-top: 10px;
 }
 
-.show {
-  display: block;
-}
 
-.hide {
-  display: none;
-}
 
 .logout {
   background: #e32085;
@@ -157,7 +124,7 @@ transition: all 0.3s ease-in-out;
 .user-button-displayName{
   font-weight: 600;
   color: #630054;
-  margin-right: 5px;
+  /* margin-right: 5px; */
   transition: all 0.3s ease-in-out;
 }
 

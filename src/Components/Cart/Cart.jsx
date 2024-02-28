@@ -15,7 +15,7 @@ const Cart = () => {
       document.body.style.overflowY = "hidden";
       document.body.style.paddingRight = "16px";
     } else {
-      document.body.style.overflowY = "visible";
+      document.body.style.overflowY = "auto";
       document.body.style.paddingRight = "0px";
     }
   };
@@ -28,7 +28,7 @@ const Cart = () => {
   return (
     <div className="cart">
       <div
-        onClick={() => setIsCartOpen(false)}
+        onClick={handleCartOpen}
         className={`layer ${isCartOpen ? "layer-show" : "layer-hide"}`}
       ></div>
       <button
@@ -55,7 +55,7 @@ const Cart = () => {
       <CartSlider
         isCartOpen={isCartOpen}
         handleCartOpen={handleCartOpen}
-        // popupRef={popupRef}
+      // popupRef={popupRef}
       />
     </div>
   );

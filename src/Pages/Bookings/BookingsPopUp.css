@@ -6,7 +6,7 @@
   top: 50%;
   translate: 0 -50%;
   height: 95vh;
-  background: rgb(240, 236, 236);
+  background: white;
   width: 25%;
   z-index: 99;
   transition: all 0.3s ease-in-out;
@@ -33,12 +33,12 @@
   place-items: center;
 }
 
-.close-btn img{
+.close-btn img {
   width: 12px;
 
 }
 
-.booking-details-container > h3{
+.booking-details-container>h3 {
   font-weight: 600;
   margin-bottom: 20px;
   background: linear-gradient(to right, var(--pink), var(--purple));
@@ -46,7 +46,8 @@
   color: transparent;
 }
 
-.booking-details-container hr,.booking-popup-btn hr{
+.booking-details-container hr,
+.booking-popup-btn hr {
   margin: 20px 0;
   border: none;
   height: .5px;
@@ -54,77 +55,77 @@
   background-color: rgb(209, 209, 209);
 }
 
-.booking-service-details{
+.booking-service-details {
   display: flex;
   gap: 10px;
   align-items: center;
   margin-bottom: 40px;
 }
 
-.booking-service-details h3{
+.booking-service-details h3 {
   font-weight: 600;
   margin-bottom: 5px;
 }
 
-.booking-service-details p{
+.booking-service-details p {
   font-size: 14px;
   color: var(--pink);
   font-weight: 500;
 }
 
-.booking-service-details img{
+.booking-service-details img {
   width: 50px;
   height: 50px;
   border-radius: 50%;
 }
 
-.booking-details{
+.booking-details {
   display: flex;
   gap: 5px;
 }
 
-.booking-details .icon{
+.booking-details .icon {
   color: hsl(309, 78%, 22%);
 }
 
-.booking-details > div{
+.booking-details>div {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
 
-.booking-details .title{
+.booking-details .title {
   font-size: 13px;
   font-weight: 600;
   color: rgb(156, 156, 156);
 }
 
-.booking-details p{
+.booking-details p {
   font-size: 15px;
 }
 
-.booking-details span{
+.booking-details span {
   font-size: 13px;
   color: rgb(156, 156, 156);
 }
 
-.booking-details .price{
+.booking-details .price {
   color: black;
   font-size: 20px;
-  font-weight:600;
+  font-weight: 600;
 }
 
 
 
-.booking-popup-btn{
+.booking-popup-btn {
   display: flex;
   gap: 10px;
   flex-direction: column;
 }
 
-.booking-popup-btn button{
+.booking-popup-btn button {
   width: 100%;
-  background: none ;
+  background: none;
   font-size: 16px;
   border: 1px solid var(--purple);
   border-radius: 5px;
@@ -132,10 +133,6 @@
   font-weight: 600;
 }
 
-.booking-popup-btn button:last-child{
+.booking-popup-btn button:last-child {
   border: 1px solid red;
 }
-
-
-
-

@@ -4,7 +4,7 @@
   top: 50%;
   translate: 0 -50%;
   height: 95vh;
-  background: rgb(240, 236, 236);
+  background: rgb(255, 255, 255);
   width: 28%;
   z-index: 99;
   transition: all 0.3s ease-in-out;

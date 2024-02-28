@@ -19,7 +19,7 @@ const PamperContext = ({ children }) => {
   const [user] = useAuthState(auth);
   const [number,setNumber] = useState(null);
 
-  useEffect(() => {
+useEffect(() => {
 
     fetch("https://pamper-me-backend.vercel.app/api/services/all")
       .then((res) => res.json())
@@ -28,7 +28,7 @@ const PamperContext = ({ children }) => {
       });
 
     fetch(
-      `http://pamper-me-backend.vercel.app/api/products/all?category=${
+      `https://pamper-me-backend.vercel.app/api/products/all?category=${
         routes?.category || ""
       }&subcategory=${routes?.subcategory || ""}&brand=${routes.brand || ""}`
     )

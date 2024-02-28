@@ -277,15 +277,7 @@
     font-weight: 500;
 }
 
-.remember-me-label input {
-    background-color: aqua;
-}
 
-.remember-me-label input:checked {
-    background-color: black;
-    border: 2px solid pink !important;
-
-}
 
 .form button {
     background: linear-gradient(to right, var(--pink), var(--purple));

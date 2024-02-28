@@ -31,7 +31,7 @@ const ProfileDetails = ({ user }) => {
       );
 
       if (data) {
-        axios.put(`http://localhost:5000/api/users/user/${user?.email}`, {
+        axios.put(`https://pamper-me-backend.vercel.app/api/users/user/${user?.email}`, {
           image: {
             url: data.url,
             id: data.public_id,
@@ -70,7 +70,7 @@ const ProfileDetails = ({ user }) => {
 
     if (filteredUserInfo) {
       axios.put(
-        `http://localhost:5000/api/users/user/${user?.email}`,
+        `https://pamper-me-backend.vercel.app/api/users/user/${user?.email}`,
         filteredUserInfo
       );
     }

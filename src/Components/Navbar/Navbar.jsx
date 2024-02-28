@@ -54,20 +54,20 @@ const Navbar = () => {
 
       {user ? (
         <div
-          onClick={(e) => {
+        onClick={(e) => {
             e.stopPropagation();
             setProfileHover(!profileHover);
           }}
           className="relative"
         >
           <button className="user-button">
+            <span className="user-button-displayName">{user.displayName}</span>
             {
               user.photoURL?
               <img src={user.photoURL} alt="" className="user-button-img" />
               :
               <span className="default-user-button-img">{user?.displayName.slice(0,1)}</span>
             }
-            <span className="user-button-displayName">{user.displayName}</span>
           </button>
           <UserPopUp profileHover={profileHover} user={user} />
         </div>
