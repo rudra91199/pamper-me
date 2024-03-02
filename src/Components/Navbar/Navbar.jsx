@@ -16,9 +16,9 @@ const Navbar = () => {
   const [profileHover, setProfileHover] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
-  const { cart } = useContext(Context);
+  const { cart,userData } = useContext(Context);
 
-  console.log(user)
+
 //725NnxAErwMCiC3RbgDDZkcCdI02
 
 
@@ -46,7 +46,6 @@ const Navbar = () => {
       <Link to="/shop">Shop</Link>
       <Link to="/blog">Blog</Link>
       <Link to="/about">About Us</Link>
-      <Link to="/bookings">Bookings</Link>
       
       <Cart />
 
@@ -63,8 +62,8 @@ const Navbar = () => {
           <button className="user-button">
             <span className="user-button-displayName">{user.displayName}</span>
             {
-              user.photoURL?
-              <img src={user.photoURL} alt="" className="user-button-img" />
+              userData?.image?.url ?
+              <img src={userData?.image?.url} alt="" className="user-button-img" />
               :
               <span className="default-user-button-img">{user?.displayName.slice(0,1)}</span>
             }

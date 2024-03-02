@@ -1,0 +1,13 @@
+.address-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.address {
+  width: 100%;
+  color: var(--purple);
+  font-weight: 600;
+  padding: 0 20px;
+  height: 45px;
+}

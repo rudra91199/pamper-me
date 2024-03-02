@@ -22,7 +22,7 @@
     align-items: center;
     gap: 15px;
     border-radius: 5px;
-    /* font-size: 18px; */
+    font-size: 16px;
 }
 
 .profile-popUp a:hover {
@@ -52,7 +52,7 @@
 }
 
 .user-button-email {
-    font-size: 12px;
+    font-size: 14px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 

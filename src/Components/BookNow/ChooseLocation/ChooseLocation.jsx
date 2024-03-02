@@ -46,7 +46,7 @@ const ChooseLocation = () => {
             <input type="text" placeholder="House No." name="house" defaultValue={userData?.house} required/>
             <input type="text" placeholder="Road No." name="road" defaultValue={userData?.road} required/>
             <input type="text" placeholder="Block" name="block" defaultValue={userData?.block} required/>
-            <input type="text" placeholder="Area" name="area" defaultValue={userData?.defaultValue} required/>
+            <input type="text" placeholder="Area" name="area" defaultValue={userData?.area} required/>
           </div>
           
         </form>

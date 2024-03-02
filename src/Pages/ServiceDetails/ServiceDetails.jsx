@@ -37,7 +37,7 @@ const ServiceDetails = () => {
               onClick={() =>
                 navigate("/booknow", {
                   state: {service:{
-                    id:service.id,
+                    id:service._id,
                     title:service.title,
                     price:service.price,
                     duration:service.duration,

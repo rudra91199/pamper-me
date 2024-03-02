@@ -32,25 +32,28 @@ const ProfileDetails = ({ user }) => {
       );
 
       if (data) {
-        
-        axios.put(`https://pamper-me-backend.vercel.app/api/users/user/${user?.email}?id=${userData?.image?.id}`, {
-          image: {
-            url: data.url,
-            id: data.public_id,
-          },
-        }).then(res => {
-          if(res.data.modifiedCount > 0) {
-            Swal.fire({
-              title: "Profile photo updated",
-              icon: "success",
-              showCancelButton: false,
-              confirmButtonColor: "#3085d6",
-              cancelButtonColor: "#d33",
-              confirmButtonText: "OK",
-            }).then(() => {
-            });
-          }
-        });
+        axios
+          .put(
+            `https://pamper-me-backend.vercel.app/api/users/user/${user?.email}?id=${userData?.image?.id}`,
+            {
+              image: {
+                url: data.url,
+                id: data.public_id,
+              },
+            }
+          )
+          .then((res) => {
+            if (res.data.modifiedCount > 0) {
+              Swal.fire({
+                title: "Profile photo updated",
+                icon: "success",
+                showCancelButton: false,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "OK",
+              }).then(() => {});
+            }
+          });
       }
     }
   };
@@ -61,32 +64,34 @@ const ProfileDetails = ({ user }) => {
     const target = e.target;
 
     const userInfo = {
-      image: imageData && { url: imageData.url, id: imageData.public_id },
       firstName: target.firstName.value,
       lastName: target.lastName.value,
-      city: target.city.value,
-      apartment: target.apartment.value,
-      house: target.house.value,
-      road: target.road.value,
-      block: target.block.value,
-      area: target.area.value,
     };
 
-    const filteredUserInfo = Object.entries(userInfo).reduce(
-      (ac, [key, value]) => {
-        if (value) {
-          ac[key] = value;
-        }
-        return ac;
-      },
-      {}
-    );
-
-    if (filteredUserInfo) {
+    // const filteredUserInfo = Object.entries(userInfo).reduce(
+    //   (ac, [key, value]) => {
+    //     if (value) {
+    //       ac[key] = value;
+    //     }
+    //     return ac;
+    //   },
+    //   {}
+    // );
+    if (userInfo) {
       axios.put(
         `https://pamper-me-backend.vercel.app/api/users/user/${user?.email}`,
-        filteredUserInfo
-      );
+        userInfo
+      ).then(({data}) => {
+        if(data.modifiedCount > 0){
+          Swal.fire({
+            title: "Name Updated",
+            icon: "success",
+            showCancelButton: false,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "OK",
+        })
+      }})
     }
   };
 
@@ -110,11 +115,11 @@ const ProfileDetails = ({ user }) => {
           <div className="floating-label">
             <input
               type="text"
-              // required
               id="name"
               name="firstName"
               placeholder=""
               defaultValue={userData?.firstName}
+              required
             />
             <label htmlFor="firstName">First Name</label>
           </div>
@@ -126,73 +131,9 @@ const ProfileDetails = ({ user }) => {
               name="lastName"
               placeholder=""
               id="last-name"
+              required
             />
             <label htmlFor="last-name">Last Name</label>
-          </div>
-
-          <div className="floating-label">
-            <input
-              type="text"
-              name="city"
-              id="city"
-              placeholder=""
-              defaultValue={userData?.city}
-            />
-            <label htmlFor="city">City</label>
-          </div>
-
-          <div className="floating-label">
-            <input
-              type="text"
-              name="apartment"
-              id="apartment"
-              placeholder=""
-              defaultValue={userData?.apartment}
-            />
-            <label htmlFor="apartment">Apartment</label>
-          </div>
-
-          <div className="floating-label">
-            <input
-              type="text"
-              name="house"
-              id="house"
-              placeholder=""
-              defaultValue={userData?.house}
-            />
-            <label htmlFor="house">House No.</label>
-          </div>
-          <div className="floating-label">
-            <input
-              type="text"
-              name="road"
-              id="road"
-              placeholder=""
-              defaultValue={userData?.road}
-            />
-            <label htmlFor="road">Road No.</label>
-          </div>
-
-          <div className="floating-label">
-            <input
-              type="text"
-              name="block"
-              id="block"
-              placeholder=""
-              defaultValue={userData?.block}
-            />
-            <label htmlFor="block">Block</label>
-          </div>
-
-          <div className="floating-label">
-            <input
-              type="text"
-              name="area"
-              id="area"
-              placeholder=""
-              defaultValue={userData?.area}
-            />
-            <label htmlFor="area">Area</label>
           </div>
         </div>
         <hr />

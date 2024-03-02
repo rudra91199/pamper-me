@@ -19,7 +19,7 @@ const ChooseDate_Time = () => {
   const onDateClickHandle = (day, dayStr) => {
     setSelectedDate(day);
   };
-
+  
   return (
     <div className="calendar">
       <CalenderHeader

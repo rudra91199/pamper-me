@@ -1,5 +1,4 @@
-import { addDays, format, getMonth, getWeek, isSameDay, isSameMonth, isSameWeek, lastDayOfWeek, startOfWeek } from 'date-fns';
-import React from 'react'
+import { addDays, format, getMonth, getWeek, isSameDay, isSameMonth, isSameWeek, isSameYear, lastDayOfWeek, startOfWeek } from 'date-fns';
 
 const CalendarWeekly = ({currentMonth, onDateClickHandle,selectedDate}) => {
     const startDate = startOfWeek(currentMonth, { weekStartsOn: 1 });
@@ -25,10 +24,15 @@ const CalendarWeekly = ({currentMonth, onDateClickHandle,selectedDate}) => {
                 : ""
             }
             ${
-              (isSameWeek(new Date(), day) && isSameMonth(new Date(), day)) &&
-              parseInt(formattedDate) < parseInt(currentDate) &&
+              isSameYear(day, new Date()) &&
+              getMonth(day) < getMonth(new Date()) &&
               "disable-date"
             }
+            ${
+              getMonth(new Date()) == getMonth(day) &&
+            parseInt(format(day, "d")) < parseInt(currentDate) &&
+            "disable-date"
+          }
             `}
             key={day}
             onClick={() => {
