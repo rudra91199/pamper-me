@@ -3,11 +3,12 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
 import { useState } from "react";
 import { IoMdSettings } from "react-icons/io";
-import { FaRegUser } from "react-icons/fa6";
+import { FaLocationDot, FaRegUser } from "react-icons/fa6";
 import { IoLockOpen } from "react-icons/io5";
 import ProfileDetails from "../../Components/UpdateProfile/ProfileDetails/ProfileDetails";
 import AccountSettings from "../../Components/UpdateProfile/AccountSettings/AccountSettings";
 import ChangePassword from "../../Components/UpdateProfile/ChangePassword/ChangePassword";
+import Address from "../../Components/UpdateProfile/Address/Address";
 
 const UpdateProfile = () => {
   const [user] = useAuthState(auth);
@@ -32,6 +33,12 @@ const UpdateProfile = () => {
             <FaRegUser /> Profile Details
           </button>
           <button
+            onClick={() => setActiveTab("address")}
+            className={`${activeTab === "address" && "activeTab"}`}
+          >
+            <FaLocationDot /> Address
+          </button>
+          <button
             onClick={() => setActiveTab("change-password")}
             className={`${activeTab === "change-password" && "activeTab"}`}
           >
@@ -46,6 +53,7 @@ const UpdateProfile = () => {
         </div>
         <div className="content">
           {activeTab === "profile-details" && <ProfileDetails user={user} />}
+          {activeTab === "address" && <Address user={user} />}
           {activeTab === "change-password" && <ChangePassword user={user} />}
           {activeTab === "account-settings" && <AccountSettings user={user} />}
         </div>

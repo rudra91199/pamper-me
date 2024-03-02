@@ -1,0 +1,40 @@
+.confirmed-booking{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 425px;
+}
+
+.confirmed-booking img{
+    width: 170px;
+}
+
+.confirmed-booking-content h3{
+    text-align: center;
+    margin: 20px 0 10px;
+}
+
+
+.confirmed-booking-btns{
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.confirmed-booking-btns button{
+    height: fit-content;
+    background: var(--purple);
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    font-weight: 500 !important;
+    font-weight: bold;
+    transition: all ease-in-out 200ms;
+    width: 120px;
+}
+
+.confirmed-booking-btns button:hover{
+    background-color: var(--pink);
+}

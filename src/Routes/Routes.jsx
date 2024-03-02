@@ -17,6 +17,7 @@ import RecurringDates from "../Components/BookNow/RecurringDates/RecurringDates"
 import Checkout from "../Components/BookNow/Checkout/Checkout";
 import SearchProducts from "../Pages/SearchProducts/SearchProducts";
 import UpdateProfile from "../Pages/UpdateProfile/UpdateProfile";
+import ConfirmedBooking from "../Components/BookNow/ConfirmedBooking/ConfirmedBooking";
 
 const router = createBrowserRouter([
   {
@@ -79,6 +80,10 @@ const router = createBrowserRouter([
           {
             path: "checkout/:serviceName",
             element: <Checkout />,
+          },
+          {
+            path: "bookingConfirmed/:serviceName",
+            element: <ConfirmedBooking />,
           },
         ],
       },
