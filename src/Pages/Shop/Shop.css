@@ -10,6 +10,20 @@
   background-size: cover;
 }
 
+@media (width<430px) {
+  .shopProducts {
+    padding: 0 !important;
+  }
+
+  .shopProductBanner {
+    background: url('../../assets/Images/mobileBanner/prdct-banner.jpg');
+    height: 43vh;
+  }
+
+  .shopProduct-grid {}
+
+}
+
 .shopProduct-grid {
   display: grid;
   grid-template-columns: 1fr 3fr;
