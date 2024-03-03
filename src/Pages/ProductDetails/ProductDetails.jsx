@@ -2,15 +2,21 @@ import { useNavigate, useParams } from "react-router-dom";
 import "./ProductDetails.css";
 import { useContext, useEffect, useRef, useState } from "react";
 import { Context } from "../../Providers/PamperContext";
+import { FiMinus, FiPlus } from "react-icons/fi";
 
 import { addToDb } from "../../Utilities/CartDb";
+import Rating from "react-rating";
 const ProductDetails = () => {
   const { slug } = useParams();
   const { products } = useContext(Context);
   const [quantity, setQuantity] = useState(1);
   const { cart, setCart } = useContext(Context);
   const product = products?.products?.find((p) => p?.name == slug);
+  const [selectedImage, setSelectedImage] = useState("");
+  const [counter, setCounter] = useState(1);
+
   console.log(product);
+
   const navigate = useNavigate();
   const relatedCategory = products?.products?.filter(
     (r) => r?.category == product?.category && r?.name != product?.name
@@ -30,49 +36,74 @@ const ProductDetails = () => {
     addToDb(item._id, quantity);
   };
 
+  useEffect(() => {
+    setSelectedImage(product?.images[0]?.src);
+  }, [product]);
+
   return (
-    <div className="product-details-grid">
-      <div>
-        <div className="product-details-container">
-          <div className="product-img-container">
-            <img src={product?.images[0].src} />
+    <div className="product-details-container">
+      <div className="product-details-content">
+        <div className="product-img-container">
+          <div className="images">
+            {product?.images?.map((image, i) => (
+              <img
+                key={i}
+                src={image.src}
+                onClick={() => setSelectedImage(image.src)}
+                className={`${selectedImage === image.src && "selected-image"}`}
+              />
+            ))}
           </div>
-          <div className="productDetails">
-            <h1>{product?.name}</h1>
-            <p className="product-details-category">{product?.category}</p>
-            <div
-              className="product-details-description"
-              dangerouslySetInnerHTML={{ __html: product?.description }}
-            />
-            <p className="product-price">BDT. {product?.price}</p>
-            <div style={{ display: "flex", gap: "20px" }}>
-              <button
-                onClick={() => handleAddToCart(product)}
-                className="buy-btn"
-              >
-                ADD TO CART
-              </button>
-              <button className="buy-btn">BUY NOW</button>
-            </div>
-          </div>
+
+          <img src={selectedImage} alt="" />
         </div>
-        <p style={{ textAlign: "center", fontWeight: "bold", margin: "40px" }}>
-          HOW TO USE
-        </p>
-        <div
-          className="productSteps"
-          dangerouslySetInnerHTML={{ __html: product?.taskDescription1 }}
-        />
-        <div
-          className="productSteps"
-          dangerouslySetInnerHTML={{ __html: product?.taskDescription2 }}
-        />
-        <div
-          className="productSteps"
-          dangerouslySetInnerHTML={{ __html: product?.taskDescription3 }}
-        />
+        <div className="productDetails">
+          <h1 className="gradient">{product?.name}</h1>
+          <p className="product-details-category">{product?.category}</p>
+          <p className="product-price">BDT. {product?.price}</p>
+          <div className="product-rating">
+            <Rating
+              emptySymbol="fa fa-star-o fa-2x"
+              fullSymbol="fa fa-star fa-2x"
+              initialRating={4.4}
+              fractions={10}
+            />
+          </div>
+          <p className="product-details-description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
+            maxime delectus nulla repellat aliquid, aperiam inventore, eaque,
+            ullam numquam tenetur voluptate itaque molestiae. Ad eos ipsa ex
+            recusandae aliquid, nobis illo at fugiat.
+          </p>
+          <div className="add-to-cart">
+            <div className="quantity">
+              <button
+                onClick={() => setCounter(counter - 1)}
+                disabled={counter <= 1}
+              >
+                {" "}
+                <FiMinus />
+              </button>
+              <p>{counter}</p>
+              <button onClick={() => setCounter(counter + 1)}>
+                <FiPlus />
+              </button>
+            </div>
+            <button
+              onClick={() => handleAddToCart(product)}
+              className="buy-btn"
+            >
+              ADD TO CART
+            </button>
+            <button className="buy-btn">BUY NOW</button>
+          </div>
+          <p className="sku">
+            SKU: <span className="font">{product.sku}</span>
+          </p>
+          <p className="tags">TAGS: FASHION / WOMAN</p>
+        </div>
       </div>
-      <div className="relatedProducts">
+      {/* <div className="relatedProducts">
         <p className="recomendedTitle">Recomended for you</p>
         <div className="underline"></div>
         <div className="relatedProduct-container">
@@ -98,7 +129,7 @@ const ProductDetails = () => {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
