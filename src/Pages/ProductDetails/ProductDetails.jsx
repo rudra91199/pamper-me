@@ -103,8 +103,8 @@ const ProductDetails = () => {
           </p>
           <p className="tags">TAGS: FASHION / WOMAN</p>
         </div>
-        <AdditionalInformation/>
       </div>
+        <AdditionalInformation/>
       {/* <div className="relatedProducts">
         <p className="recomendedTitle">Recomended for you</p>
         <div className="underline"></div>
