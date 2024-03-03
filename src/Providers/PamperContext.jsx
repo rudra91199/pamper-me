@@ -28,7 +28,7 @@ useEffect(() => {
       });
 
     fetch(
-      `http://localhost:5000/api/products/all?category=${
+      `https://pamper-me-backend.vercel.app/api/products/all?category=${
         routes?.category || ""
       }&subcategory=${routes?.subcategory || ""}&brand=${routes.brand || ""}`
     )

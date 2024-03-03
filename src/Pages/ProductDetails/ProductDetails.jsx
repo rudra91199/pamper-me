@@ -6,6 +6,7 @@ import { FiMinus, FiPlus } from "react-icons/fi";
 
 import { addToDb } from "../../Utilities/CartDb";
 import Rating from "react-rating";
+import AdditionalInformation from "../../Components/ProductDetails/AdditionalInformation";
 const ProductDetails = () => {
   const { slug } = useParams();
   const { products } = useContext(Context);
@@ -102,6 +103,7 @@ const ProductDetails = () => {
           </p>
           <p className="tags">TAGS: FASHION / WOMAN</p>
         </div>
+        <AdditionalInformation/>
       </div>
       {/* <div className="relatedProducts">
         <p className="recomendedTitle">Recomended for you</p>
