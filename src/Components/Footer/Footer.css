@@ -100,13 +100,13 @@ footer .input-container {
 .footer-section3 select,
 .footer-section3 textarea {
     border: none;
-    outline: none;
+    /* outline: none; */
     padding: 10px;
     border-radius: 5px;
     /* background: linear-gradient(to right, hsl(329, 48%, 51%, .9), hsl(309, 27%, 37%, .9)); */
     background: linear-gradient(to right, hsla(329, 78%, 95%, 0.95), hsla(312, 60%, 95%, 0.7));
     backdrop-filter: blur(5px);
-    /* transition: all 0.3s ease-in-out; */
+    transition: all 0.3s ease-in-out;
 }
 
 
