@@ -82,7 +82,6 @@ const ProductDetails = () => {
                 onClick={() => setCounter(counter - 1)}
                 disabled={counter <= 1}
               >
-                {" "}
                 <FiMinus />
               </button>
               <p>{counter}</p>
@@ -104,34 +103,8 @@ const ProductDetails = () => {
           <p className="tags">TAGS: FASHION / WOMAN</p>
         </div>
       </div>
-        <AdditionalInformation/>
-      {/* <div className="relatedProducts">
-        <p className="recomendedTitle">Recomended for you</p>
-        <div className="underline"></div>
-        <div className="relatedProduct-container">
-          <div>
-            {relatedCategory?.map((related) => (
-              <div key={related.name} className="relatedProduct">
-                <div className="relatedProductImg">
-                  <img src={related?.images[0].src} alt="" />
-                </div>
-                <div className="relatedProductDetails">
-                  <p style={{ fontSize: "14px" }}>{related?.name}</p>
-                  <div style={{ color: "#e32085", fontWeight: "bold" }}>
-                    BDT {related?.price}
-                  </div>
-                  <button
-                    onClick={() => navigate(`/product/${related?.name}`)}
-                    className="viewBtn"
-                  >
-                    VIEW
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div> */}
+      <AdditionalInformation />
+
     </div>
   );
 };
