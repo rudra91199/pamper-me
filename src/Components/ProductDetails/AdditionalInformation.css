@@ -1,6 +1,6 @@
 .additional-info-tabs {
   width: 70%;
-  margin: 50px auto 10px;
+  margin: 100px auto 10px;
   display: flex;
   justify-content: center;
   gap: 40px;
@@ -33,4 +33,123 @@
   height: 0.5px;
   width: 100%;
   background-color: rgb(209, 209, 209);
+  margin-bottom: 30px;
+}
+
+.additional-info-content li{
+    list-style: none;
+    margin-bottom: 5px;
+}
+
+.additional-info-content li span{
+    font-weight: 600;
+}
+
+.additional-info-content h4{
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+/*-------desc--------*/
+
+.product_desc{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 100px;
+}
+
+.product_desc div > p{
+    line-height: 1.5;
+}
+
+/*---------product-reviews-----------*/
+
+/*reviews*/
+.product-reviews .review{
+    margin-bottom: 30px;
+}
+
+.product-reviews h3{
+    margin-bottom: 30px;
+}
+
+.product-reviews .reviews .review{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.review-img{
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+}
+
+.review-rating{
+    margin-bottom: 5px;
+}
+
+.review-name{
+    margin-bottom: 5px;
+}
+
+.review-name span{
+    font-weight: 600;
+}
+
+/*add-reviews*/
+
+.add-review h4{
+    margin-top: 20px;
+}
+
+.add-review p{
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.add-review .add-rating{
+    margin-bottom: 20px;
+}
+
+.add-review textarea{
+    width: 100%;
+    height: 150px;
+    resize: none;
+    font-size: 15px;
+    padding: 15px;
+    outline: none;
+}
+
+.add-review .user-name{
+    margin: 20px 0;
+    display: flex;
+    gap: 20px;
+}
+
+.add-review .user-name input{
+    border: none;
+    border-bottom: 1px solid black;
+    width: 100%;
+    font-size: 15px;
+    padding: 10px 0;
+    outline: none;
+}
+
+.add-review button{
+    height: fit-content;
+    width: 150px;
+    background: var(--purple);
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-weight: bold;
+    transition: all ease-in-out 200ms;
+    margin-top: 10px;
+}
+
+.add-review button:hover{
+    background-color: var(--pink);
 }

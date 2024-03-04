@@ -68,13 +68,11 @@ const ProductDetails = () => {
               fullSymbol="fa fa-star fa-2x"
               initialRating={4.4}
               fractions={10}
+              readonly
             />
           </div>
           <p className="product-details-description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
-            maxime delectus nulla repellat aliquid, aperiam inventore, eaque,
-            ullam numquam tenetur voluptate itaque molestiae. Ad eos ipsa ex
-            recusandae aliquid, nobis illo at fugiat.
+            {product?.short_description}
           </p>
           <div className="add-to-cart">
             <div className="quantity">
@@ -99,12 +97,12 @@ const ProductDetails = () => {
             <button className="buy-btn">BUY NOW</button>
           </div>
           <p className="sku">
-            SKU: <span className="font">{product.sku}</span>
+            SKU: <span className="font">{product?.sku}</span>
           </p>
           <p className="tags">TAGS: FASHION / WOMAN</p>
         </div>
       </div>
-        <AdditionalInformation/>
+        <AdditionalInformation product={product}/>
       {/* <div className="relatedProducts">
         <p className="recomendedTitle">Recomended for you</p>
         <div className="underline"></div>

@@ -1,7 +1,10 @@
 import { useState } from "react";
 import "./AdditionalInformation.css";
+import ProductDescription from "./ProductDescription";
+import HowToUse from "./HowToUse";
+import ProductReviews from "./ProductReviews";
 
-const AdditionalInformation = () => {
+const AdditionalInformation = ({product}) => {
   const [selectedTab, setselectedTab] = useState(1);
   return (
     <div className="additional-info">
@@ -26,6 +29,11 @@ const AdditionalInformation = () => {
         </button>
       </div>
       <hr />
+      <div className="additional-info-content">
+      {selectedTab === 1 && <ProductDescription product={product}/>}
+        {selectedTab === 2 && <HowToUse product={product}/>}
+        {selectedTab === 3 && <ProductReviews product={product}/>}
+      </div>
     </div>
   );
 };
