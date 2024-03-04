@@ -10,6 +10,7 @@ const Search = () => {
   const [searchIcon, setSearchIcon] = useState(false);
   const [searchText, setSearchText] = useState("");
   const {profileHover, setProfileHover}= useContext(Context)
+  const [searchTab, setSearchTab] = useState("services");
 
 
   useEffect(() => {
@@ -68,6 +69,9 @@ const Search = () => {
         searchedProducts={searchedProducts}
         searchIcon={searchIcon}
         searchText={searchText}
+        setSearchText={setSearchText}
+        searchTab={searchTab}
+        setSearchTab={setSearchTab}
       />
     </div>
   );
