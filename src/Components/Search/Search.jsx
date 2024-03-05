@@ -9,19 +9,17 @@ const Search = () => {
   const [searchedProducts, setSearchedProducts] = useState([]);
   const [searchIcon, setSearchIcon] = useState(false);
   const [searchText, setSearchText] = useState("");
-  const {profileHover, setProfileHover}= useContext(Context)
+  const { profileHover, setProfileHover } = useContext(Context);
   const [searchTab, setSearchTab] = useState("services");
-
 
   useEffect(() => {
     if (searchText.length > 2) {
-      axios
-        .get(
-          `https://pamper-me-backend.vercel.app/api/products/getProductsByQuery?search=${searchText}`
-        )
-        .then((res) => setSearchedProducts(res.data));
+      const url = `http://localhost:5000/api/${searchTab}/${
+        searchTab === "services" ? "getServicesByQuery" : "getProductsByQuery"
+      }?search=${searchText}`;
+      axios.get(url).then((res) => setSearchedProducts(res.data));
     }
-  }, [searchText]);
+  }, [searchText, searchTab]);
 
   useEffect(() => {
     if (searchIcon == true) {
@@ -31,14 +29,12 @@ const Search = () => {
       });
     }
 
-    if(profileHover == true){
+    if (profileHover == true) {
       document.body.addEventListener("click", () => {
-        setProfileHover(false)
-      })
+        setProfileHover(false);
+      });
     }
-  }, [searchIcon,profileHover])
-
-
+  }, [searchIcon, profileHover]);
 
   // console.log(searchIcon)
 
@@ -58,11 +54,14 @@ const Search = () => {
           onClick={(e) => e.stopPropagation()}
           onChange={(e) => setSearchText(e.target.value)}
         />
-        <button onClick={(e) => {
-          e.stopPropagation();
-          setSearchIcon(true)
-        }} className={`${searchIcon ? "button-hide" : "button-show"}`}>
-          <TbSearch className="w-6 h-6"/>
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            setSearchIcon(true);
+          }}
+          className={`${searchIcon ? "button-hide" : "button-show"}`}
+        >
+          <TbSearch className="w-6 h-6" />
         </button>
       </div>
       <SearchPopUp
@@ -72,6 +71,7 @@ const Search = () => {
         setSearchText={setSearchText}
         searchTab={searchTab}
         setSearchTab={setSearchTab}
+        setSearchedProducts={setSearchedProducts}
       />
     </div>
   );

@@ -93,7 +93,8 @@ input.input-hide {
 }
 
 .searched-products {
-  max-height: 50vh;
+  max-height: 40vh;
+  margin-bottom: 20px;
 }
 
 .search-popUp-scroll {
