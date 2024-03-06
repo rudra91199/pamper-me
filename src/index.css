@@ -24,6 +24,7 @@ a {
 button {
   border: none;
   font-family: "Raleway", sans-serif;
+  cursor: pointer;
 }
 
 body {

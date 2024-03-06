@@ -5,8 +5,7 @@ import { Link } from "react-router-dom";
 import { Context } from "../../Providers/PamperContext";
 
 const Cart = () => {
-  const { cart } = useContext(Context);
-  const [isCartOpen, setIsCartOpen] = useState(false);
+  const { cart, isCartOpen, setIsCartOpen } = useContext(Context);
 
   const handleCartOpen = () => {
     setIsCartOpen(!isCartOpen);

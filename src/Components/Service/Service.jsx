@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import "./Service.css"
 const Service = ({service}) => {
   const navigate = useNavigate()
+  console.log(service)
     return (
         <div onClick={()=>navigate(`/service/${service?.title}`)} className="serviceCard">
         <p className="service-title">{service?.title}</p>

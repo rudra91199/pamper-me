@@ -12,7 +12,7 @@
 
 .service-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 20px;
   margin: 40px 0;
 }
@@ -98,11 +98,6 @@
   background: var(--purple);
 }
 
-@media screen and (max-width: 1860px) {
-  .service-container {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
 @media screen and (max-width: 1400px) {
   .services {
     padding: 0px 6%;

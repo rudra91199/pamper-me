@@ -18,6 +18,7 @@ import Checkout from "../Components/BookNow/Checkout/Checkout";
 import SearchProducts from "../Pages/SearchProducts/SearchProducts";
 import UpdateProfile from "../Pages/UpdateProfile/UpdateProfile";
 import ConfirmedBooking from "../Components/BookNow/ConfirmedBooking/ConfirmedBooking";
+import ViewCart from "../Pages/ViewCart/ViewCart";
 
 const router = createBrowserRouter([
   {
@@ -113,6 +114,10 @@ const router = createBrowserRouter([
         path: "/searchProducts",
         element: <SearchProducts />,
       },
+      {
+        path:"/cart",
+        element:<ViewCart/>
+      }
     ],
   },
 ]);
