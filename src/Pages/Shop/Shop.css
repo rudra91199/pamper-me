@@ -3,7 +3,7 @@
 }
 
 .shopProductBanner {
-  background: url('../../assets/Images/Banner/prdct-banner.jpg');
+  background: url("../../assets/Images/Banner/prdct-banner.jpg");
   border-radius: 20px 20px 0 0;
   height: 44vh;
   background-repeat: no-repeat;
@@ -12,16 +12,18 @@
 
 @media (width<430px) {
   .shopProducts {
-    padding: 0 !important;
+    padding: 0 20px !important;
   }
 
   .shopProductBanner {
-    background: url('../../assets/Images/mobileBanner/prdct-banner.jpg');
+    background: url("../../assets/Images/mobileBanner/prdct-banner.jpg");
     height: 43vh;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
-  .shopProduct-grid {}
-
+  .shopProduct-grid {
+  }
 }
 
 .shopProduct-grid {
