@@ -14,7 +14,7 @@ const Search = () => {
 
   useEffect(() => {
     if (searchText.length > 2) {
-      const url = `http://localhost:5000/api/${searchTab}/${
+      const url = `https://pamper-me-backend.vercel.app/api/${searchTab}/${
         searchTab === "services" ? "getServicesByQuery" : "getProductsByQuery"
       }?search=${searchText}`;
       axios.get(url).then((res) => setSearchedProducts(res.data));

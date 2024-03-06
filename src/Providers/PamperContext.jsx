@@ -17,9 +17,11 @@ const PamperContext = ({ children }) => {
   const [profileHover, setProfileHover] = useState(false);
   const [userData, setUserData] = useState({});
   const [user] = useAuthState(auth);
-  const [number,setNumber] = useState(null);
+  const [number, setNumber] = useState(null);
+  const [isCartOpen, setIsCartOpen] = useState(false);
 
-useEffect(() => {
+
+  useEffect(() => {
 
     fetch("https://pamper-me-backend.vercel.app/api/services/all")
       .then((res) => res.json())
@@ -28,8 +30,7 @@ useEffect(() => {
       });
 
     fetch(
-      `https://pamper-me-backend.vercel.app/api/products/all?category=${
-        routes?.category || ""
+      `https://pamper-me-backend.vercel.app/api/products/all?category=${routes?.category || ""
       }&subcategory=${routes?.subcategory || ""}&brand=${routes.brand || ""}`
     )
       .then((res) => res.json())
@@ -37,13 +38,13 @@ useEffect(() => {
   }, [routes]);
 
   useEffect(() => {
-    if(user?.email){
+    if (user?.email) {
       axios.get(`https://pamper-me-backend.vercel.app/api/users/${user.email}`).then((res) => setUserData(res.data));
     }
-    else{
+    else {
       setUserData({});
     }
-  },[user])
+  }, [user])
 
   const info = {
     services,
@@ -61,7 +62,7 @@ useEffect(() => {
     setProfileHover,
     userData,
     setUserData,
-    number,setNumber
+    number, setNumber, isCartOpen, setIsCartOpen
   };
   return <Context.Provider value={info}>{children}</Context.Provider>;
 };

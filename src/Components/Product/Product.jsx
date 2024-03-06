@@ -4,10 +4,12 @@ import "./Product.css";
 import { useContext } from "react";
 import { Context } from "../../Providers/PamperContext";
 import { addToDb } from "../../Utilities/CartDb";
+
+
 const Product = ({ product }) => {
   const location = useLocation();
   const navigate = useNavigate();
-  const { cart, setCart } = useContext(Context);
+  const { cart, setCart,isCartOpen, setIsCartOpen } = useContext(Context);
 
   const handleAddToCart = (item) => {
     console.log(item?._id);
@@ -40,7 +42,10 @@ const Product = ({ product }) => {
       <p className="product-desc">{product?.shortDescription}</p>
       <p className="price-button">
         <p className="product-price">TK. {product?.price}</p>
-        <button onClick={() => handleAddToCart(product)} className="cart-btn">
+        <button onClick={() => {
+          handleAddToCart(product)
+          setIsCartOpen(true);
+        }} className="cart-btn">
           Add to cart
         </button>
       </p>

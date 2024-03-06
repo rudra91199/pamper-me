@@ -64,6 +64,7 @@ const SearchPopUp = ({
             state: {
               products: searchedProducts,
               searchText,
+              searchTab
             },
           });
           setSearchText("");
