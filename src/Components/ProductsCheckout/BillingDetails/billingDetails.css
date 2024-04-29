@@ -1,0 +1,9 @@
+.billing-details form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .locationSave{
+      margin: 15px 0 0;
+  }

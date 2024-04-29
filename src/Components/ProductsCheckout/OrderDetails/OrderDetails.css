@@ -1,0 +1,99 @@
+/*----------Order details------*/
+.order-details{
+    background-color: rgba(209, 209, 209, 0.486);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.order-details > div{
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.selectedProducts .item-header,
+.selectedProducts .item-row {
+  display: grid;
+  grid-template-columns: 3fr 2fr 1fr 1fr;
+  place-items: center;
+}
+
+.selectedProducts hr{
+    margin: 10px 0;
+}
+
+.selectedProducts .total-price {
+  justify-self: flex-end;
+}
+
+.selectedProducts .item-header {
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.selectedProducts .item-header .product-name {
+  justify-self: flex-start;
+}
+
+.selectedProducts .item-row {
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgb(209, 209, 209);
+  padding-bottom: 20px;
+  font-size: 14px;
+}
+
+.selectedProducts .item-row .product-name {
+  display: flex;
+  align-items: center;
+  justify-self: flex-start;
+  gap: 20px;
+  font-weight: 500;
+}
+
+.selectedProducts .item-row .product-name img {
+  width: 40px;
+}
+
+.selectedProducts .item-row .product_quantity {
+  margin-top: 0;
+}
+
+
+.order-details .products-total-price{
+    padding: 30px;
+    background: rgba(211, 211, 211, 0.603);
+}
+
+.order-details .products-total-price hr{
+    margin: 10px 0;
+    border: none;
+    height: 1px;
+    width: 100%;
+    background-color: rgba(209, 209, 209, 0.815);
+}
+
+.order-details .products-total-price >div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.order-details .products-total-price .sub-total{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.order-details .products-total-price .shipping-charge div{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.order-details .products-total-price .shipping-charge div span{
+    font-size: 12px;
+}
+
+.order-details .products-total-price .total-price{
+    font-weight: 600;
+    font-size: 18px;
+}
