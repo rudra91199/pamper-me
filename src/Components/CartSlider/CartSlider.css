@@ -79,7 +79,7 @@
   margin-top: 5px;
 }
 
-.cartSliderItem .quantity {
+.product_quantity {
   margin-top: 10px;
   display: flex;
   gap: 10px;
@@ -93,11 +93,11 @@
   border-radius: 5px;
 }
 
-.cartSliderItem .quantity p {
+.product_quantity p {
   font-size: 16px;
 }
 
-.cartSliderItem .quantity button {
+.product_quantity button {
   background: none;
   display: flex;
   font-size: 12px;

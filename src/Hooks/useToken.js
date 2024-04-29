@@ -5,7 +5,7 @@ import { Context } from "../Providers/PamperContext";
 
 const useToken = (user) => {
   const [token, setToken] = useState("");
-  const {number} = useContext(Context);
+  const { number } = useContext(Context);
   useEffect(() => {
     const email = user?.email;
     const splittedname = user?.displayName?.split(" ");
@@ -20,11 +20,12 @@ const useToken = (user) => {
       ...(user?.providerData[0].providerId === "google.com" && {
         firstName: firstname,
         lastName: lastname,
-        image: {url:user?.photoURL},
+        image: { url: user?.photoURL },
       }),
-      ...((user?.providerData[0].providerId === "password" && number) && {
-        phone:number
-      }),
+      ...(user?.providerData[0].providerId === "password" &&
+        number && {
+          phone: number,
+        }),
       email: user?.email,
       //
     };

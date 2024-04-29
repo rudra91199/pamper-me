@@ -24,7 +24,12 @@ const CartSlider = ({ isCartOpen, handleCartOpen }) => {
 
   return (
     <div className={`cartSlider ${isCartOpen && "showCart"}`}>
-      <img className="close-btn" onClick={handleCartOpen} src={closeIcon} alt="" />
+      <img
+        className="close-btn"
+        onClick={handleCartOpen}
+        src={closeIcon}
+        alt=""
+      />
       <div className="cartSliderItems">
         <p>CART ITEMS</p>
         {cart?.map((item, i) => (
@@ -32,18 +37,24 @@ const CartSlider = ({ isCartOpen, handleCartOpen }) => {
             <img src={item?.images[0]?.src} alt="" />
             <div className="cartSliderItem-details">
               <p className="cartSliderItem-name" title={item?.name}>
-                {item?.name.length > 25 ? item?.name.slice(0, 25) + " ..." : item?.name}
+                {item?.name.length > 25
+                  ? item?.name.slice(0, 25) + " ..."
+                  : item?.name}
               </p>
               <p className="cartSliderItem-price">BDT. {item?.price}</p>
-              <div className="quantity">
+              <div className="product_quantity">
                 <button
-                  onClick={() => useHandleQuantity(item?._id, cart, setCart,"minus")}
+                  onClick={() =>
+                    useHandleQuantity(item?._id, cart, setCart, "minus")
+                  }
                   disabled={item?.quantity <= 1}
                 >
                   <FiMinus />
                 </button>
                 <p>{item?.quantity}</p>
-                <button onClick={() => useHandleQuantity(item?._id, cart, setCart)}>
+                <button
+                  onClick={() => useHandleQuantity(item?._id, cart, setCart)}
+                >
                   <FiPlus />
                 </button>
               </div>
@@ -60,11 +71,22 @@ const CartSlider = ({ isCartOpen, handleCartOpen }) => {
           <p>BDT {price}</p>
         </div>
         <div className="cartSlider-btns">
-          <button onClick={() => {
-            setIsCartOpen(false)
-            navigate("/cart")
-          }}>View Cart</button>
-          <button>Proceed To Checkout</button>
+          <button
+            onClick={() => {
+              setIsCartOpen(false);
+              navigate("/cart");
+            }}
+          >
+            View Cart
+          </button>
+          <button
+            onClick={() => {
+              setIsCartOpen(false);
+              navigate("/checkout");
+            }}
+          >
+            Proceed To Checkout
+          </button>
         </div>
       </div>
     </div>

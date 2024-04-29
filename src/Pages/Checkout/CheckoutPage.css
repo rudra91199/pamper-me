@@ -1,0 +1,254 @@
+.checkoutPage-container {
+  width: 76%;
+  margin: 70px auto;
+  min-height: 100vh;
+}
+
+.checkoutPage-container h3 {
+  font-size: 24px;
+  margin-bottom: 30px;
+  font-weight: 600;
+  letter-spacing: 1px;
+position: relative;
+}
+
+.checkoutPage-container h3::after{
+    content: " ";
+    position: absolute;
+    height: 2px;
+    width: 30px;
+    left: 0;
+    bottom: -10px;
+    background-color: rgb(187, 187, 187);
+}
+
+.checkoutPage-container label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.checkout-login {
+  margin-bottom: 50px;
+}
+
+.checkout-login > form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.checkout-login .password div{
+    display: flex;
+}
+
+.checkout-login .password input{
+    border: 1px solid rgba(0, 0, 0, 0.562);
+    border-right: none;
+    border-radius: 2px 0 0 2px;
+}
+
+.checkout-login .password button{
+    padding: 10px 20px;
+    background-color: black;
+    font-size: 15px;
+    color: white;
+    border-radius: 0 2px 2px 0;
+
+}
+
+.checkoutPage-container input,
+.checkoutPage-container select,
+.checkoutPage-container textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  resize: none;
+}
+
+.billing-orders {
+  display: grid;
+  grid-template-columns: 5fr 3fr;
+  gap: 50px;
+}
+
+.billing-details form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.locationSave{
+    margin: 15px 0 0;
+}
+
+.locationSave label,
+.order-confirmation label{
+    display: inline;
+    font-weight: 500;
+}
+
+.locationSave input,
+.order-confirmation input{
+    width: fit-content;
+    margin-right: 5px;
+}
+
+/*----------Payment Method-------*/
+
+.payment-method {
+    margin-bottom: 30px;
+}
+
+.payment-method p{
+    margin-bottom: 10px;
+}
+
+.payment-method label{
+    display: inline;
+    font-size: 14px;
+    letter-spacing: .5px;
+}
+
+.payment-method input{
+    width: fit-content;
+    margin-right: 10px;
+}
+
+.payment-method #cod{
+    margin-bottom: 10px;
+}
+
+.add-comment{
+    margin-bottom: 30px;
+}
+
+.add-comment h5{
+    margin-bottom: 10px;
+}
+
+/*----------Order details------*/
+.order-details{
+    background-color: rgba(209, 209, 209, 0.486);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.order-details > div{
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.selectedProducts .item-header,
+.selectedProducts .item-row {
+  display: grid;
+  grid-template-columns: 3fr 2fr 1fr 1fr;
+  place-items: center;
+}
+
+.selectedProducts hr{
+    margin: 10px 0;
+}
+
+.selectedProducts .total-price {
+  justify-self: flex-end;
+}
+
+.selectedProducts .item-header {
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.selectedProducts .item-header .product-name {
+  justify-self: flex-start;
+}
+
+.selectedProducts .item-row {
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgb(209, 209, 209);
+  padding-bottom: 20px;
+  font-size: 14px;
+}
+
+.selectedProducts .item-row .product-name {
+  display: flex;
+  align-items: center;
+  justify-self: flex-start;
+  gap: 20px;
+  font-weight: 500;
+}
+
+.selectedProducts .item-row .product-name img {
+  width: 40px;
+}
+
+.selectedProducts .item-row .product_quantity {
+  margin-top: 0;
+}
+
+
+.order-details .products-total-price{
+    padding: 30px;
+    background: rgba(211, 211, 211, 0.603);
+}
+
+.order-details .products-total-price hr{
+    margin: 10px 0;
+    border: none;
+    height: 1px;
+    width: 100%;
+    background-color: rgba(209, 209, 209, 0.815);
+}
+
+.order-details .products-total-price >div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.order-details .products-total-price .sub-total{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.order-details .products-total-price .shipping-charge div{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.order-details .products-total-price .shipping-charge div span{
+    font-size: 12px;
+}
+
+.order-details .products-total-price .total-price{
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.order-confirmation {
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.order-confirmation span{
+    font-weight: 600;
+}
+
+.order-confirmation button{
+    padding: 10px 0;
+    width: 150px;
+    background-color: black;
+    font-size: 15px;
+    color: white;
+    border-radius: 0 2px 2px 0;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+.order-confirmation button:disabled{
+    background-color: rgba(0, 0, 0, 0.473);
+}

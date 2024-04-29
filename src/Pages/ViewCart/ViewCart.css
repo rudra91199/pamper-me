@@ -1,0 +1,152 @@
+.viewCart-container {
+    min-height: 100vh;
+  }
+  
+  .viewCart-header {
+    height: 250px;
+    text-align: center;
+    background-color: var(--pink);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+  
+  .viewCart-items {
+    width: 70%;
+    margin: 70px auto;
+  }
+  
+  .viewCart-items hr {
+    margin: 20px 0;
+    border: none;
+    height: 2px;
+    width: 100%;
+    background-color: rgb(209, 209, 209);
+  }
+  
+  .viewCart-items .item-header,
+  .viewCart-items .item-row {
+    display: grid;
+    grid-template-columns: 3fr 2fr 1fr 1fr 1fr;
+    place-items: center;
+  }
+  
+  .viewCart-items .total-price {
+    justify-self: flex-end;
+  }
+  
+  .viewCart-items .item-header {
+    font-weight: 600;
+  }
+  
+  .viewCart-items .item-header .product-name {
+    justify-self: flex-start;
+  }
+  
+  .viewCart-items .item-row {
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgb(209, 209, 209);
+    padding-bottom: 20px;
+  }
+  
+  .viewCart-items .item-row .product-name {
+    display: flex;
+    align-items: center;
+    justify-self: flex-start;
+    gap: 20px;
+    font-weight: 500;
+  }
+  
+  .viewCart-items .item-row .product-name img {
+    width: 50px;
+  }
+  
+  .viewCart-items .item-row .product_quantity {
+    margin-top: 0;
+  }
+
+  .viewCart-total{
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+  }
+
+.viewCart-total .coupon p{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.viewCart-total .coupon form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.viewCart-total .coupon form label{
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.viewCart-total .coupon form input{
+    padding: 10px;
+}
+
+.viewCart-total .coupon form input:focus{
+    outline-color: rgba(227, 32, 133, 0.5);
+}
+
+.viewCart-total .coupon form button{
+    width: fit-content;
+    font-size: 16px;
+    padding: 7px 15px;
+    margin-top: 10px;
+    background-color: var(--purple);
+    color: white;
+}
+
+.viewCart-total .products-total-price{
+    padding: 30px;
+    background: lightgray;
+}
+
+.viewCart-total hr{
+    margin: 10px 0;
+    border: none;
+    height: 1px;
+    width: 100%;
+    background-color: rgb(209, 209, 209);
+}
+
+.viewCart-total .products-total-price .content{
+    background-color: white;
+    padding: 30px;
+}
+
+.viewCart-total .content div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.viewCart-total .content .sub-total{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.viewCart-total .content .total-price{
+    font-weight: 600;
+}
+
+.viewCart-total .products-total-price > button{
+    width: 100%;
+    padding: 7px;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: var(--pink);
+    color: white;
+}
+  
