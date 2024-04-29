@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AiOutlineCalendar, AiOutlineHistory, AiOutlineLogout, AiOutlinePercentage, AiOutlineProfile, AiOutlineSchedule, AiOutlineUsergroupAdd } from "react-icons/ai";
 import { CiDiscount1 } from "react-icons/ci";
@@ -7,16 +7,19 @@ import { useSignOut } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
 import { FaPercent } from "react-icons/fa6";
 import { MdOutlineLogout, MdOutlinePeopleAlt } from "react-icons/md";
+import { Context } from "../../Providers/PamperContext";
 
 const UserPopUp = ({ profileHover, user }) => {
   const [signOut] = useSignOut(auth);
   const navigate = useNavigate()
+  const { userData } = useContext(Context);
+
   return (
     <div className={`profile-popUp ${profileHover ? "show" : "hide"}`}>
       <div className="popUp-user-info">
         {
-          user.photoURL ?
-            <img src={user.photoURL} alt="" className="user-button-img" />
+          userData?.image?.url ?
+            <img src={userData?.image?.url} alt="" className="user-button-img" />
             :
             <span className="default-user-button-img">{user?.displayName.slice(0, 1)}</span>
         }
