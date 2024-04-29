@@ -114,6 +114,7 @@ font-weight: 700;
 
 .user-button-img,.default-user-button-img{
 width: 36px;
+height: 36px;
 border-radius: 50%;
 background-color: hsl(329, 78%, 82%);
 padding: 2px;
