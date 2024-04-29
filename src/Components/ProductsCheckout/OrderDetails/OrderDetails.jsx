@@ -2,15 +2,10 @@ import { useContext } from "react"
 import "./OrderDetails.css"
 import { Context } from "../../../Providers/PamperContext"
 
-const OrderDetails = ({city}) => {
+const OrderDetails = ({price,vat, shippingCharge, totalPrice }) => {
     const { cart } = useContext(Context);
 
-    let price = 0;
-    cart.map((item) => {
-        price = price + item.price * item.quantity;
-    });
-
-    let shippingCharge = city === "" ? 80 : city === "Dhaka" ? 80 : 150;
+    
 
     return (
         <div className="order-details">
@@ -63,13 +58,13 @@ const OrderDetails = ({city}) => {
                         <p className="">
                             Vat (<span className="font">5</span>%) :
                         </p>
-                        <p className="font">BDT {(price * 5) / 100}</p>
+                        <p className="font">BDT {vat}</p>
                     </div>
                     <hr />
                     <div className="total-price">
                         <p>Total :</p>
                         <p className="font">
-                            BDT {price + (price * 5) / 100 + shippingCharge}
+                            BDT {totalPrice}
                         </p>
                     </div>
                 </div>

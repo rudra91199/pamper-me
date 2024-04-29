@@ -2,12 +2,12 @@ import { useContext } from "react";
 import "./billingDetails.css";
 import { Context } from "../../../Providers/PamperContext";
 
-const BillingDetails = ({ city, setCity }) => {
+const BillingDetails = ({ city, setCity,handleOrderSubmit }) => {
   const { userData } = useContext(Context);
   return (
     <div className="billing-details">
       <h3>Billilng Details</h3>
-      <form action="">
+      <form action="" id="order-form" onSubmit={handleOrderSubmit}>
         <div>
           <label htmlFor="firstName">First Name</label>
           <input
@@ -31,7 +31,7 @@ const BillingDetails = ({ city, setCity }) => {
           />
         </div>
         <div>
-          <label htmlFor="lastName">Email</label>
+          <label htmlFor="email">Email</label>
           <input
             type="email"
             required
