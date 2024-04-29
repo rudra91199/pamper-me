@@ -75,6 +75,7 @@ const CartSlider = ({ isCartOpen, handleCartOpen }) => {
             onClick={() => {
               setIsCartOpen(false);
               navigate("/cart");
+              handleCartOpen();
             }}
           >
             View Cart
@@ -83,6 +84,7 @@ const CartSlider = ({ isCartOpen, handleCartOpen }) => {
             onClick={() => {
               setIsCartOpen(false);
               navigate("/checkout");
+              handleCartOpen();
             }}
           >
             Proceed To Checkout
