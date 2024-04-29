@@ -9,7 +9,7 @@ import useToken from "../../Hooks/useToken";
 import auth from "../../../firebase.init";
 
 const CheckoutPage = () => {
-  const [city, setCity] = useState("");
+  const [city, setCity] = useState("")
   const [isTermsAgreed, setIsTermsAgreed] = useState(false);
   const { userData } = useContext(Context);
   const { cart } = useContext(Context);
