@@ -1,0 +1,28 @@
+.checkout-login {
+    margin-bottom: 50px;
+  }
+  
+  .checkout-login > form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+  }
+  
+  .checkout-login .password div{
+      display: flex;
+  }
+  
+  .checkout-login .password input{
+      border: 1px solid rgba(0, 0, 0, 0.562);
+      border-right: none;
+      border-radius: 2px 0 0 2px;
+  }
+  
+  .checkout-login .password button{
+      padding: 10px 20px;
+      background-color: black;
+      font-size: 15px;
+      color: white;
+      border-radius: 0 2px 2px 0;
+  
+  }
