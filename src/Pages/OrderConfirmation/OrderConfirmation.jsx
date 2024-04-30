@@ -1,15 +1,19 @@
 import { useEffect } from "react";
-import "./OrderStatus.css";
+import "./OrderConfirmation.css";
 import checkIcon from "../../assets/Images/icons/check.png";
+import { useLocation, useNavigate } from "react-router-dom";
 
-const OrderStatus = () => {
+const OrderConfirmation = () => {
+  const navigate = useNavigate();
+  const data = useLocation().state;
+  console.log(data);
   useEffect(() => {
     window.history.pushState(null, "", "/");
   }, []);
 
   return (
-    <div className="order-status">
-      <div className="left">
+    <div className="order-confirmed">
+      <div className="left bg-gradient">
         <h3>Order ID: #SDFGS45433</h3>
         <div>
           <h3>Customer</h3>
@@ -47,7 +51,7 @@ const OrderStatus = () => {
                     <p>BDT <span className="font">150</span></p>
                 </div>
                 <div>
-                    <p>Shipping: </p>
+                    <p>Total: </p>
                     <p>BDT <span className="font">3243</span></p>
                 </div>
             </div>
@@ -55,7 +59,7 @@ const OrderStatus = () => {
         </div>
       </div>
       <div className="right">
-        <img src={checkIcon} alt="" />
+        <img className="bg-gradient" src={checkIcon} alt="" />
         <h2>Your Order is Confirmed!</h2>
         <h3>Thank you for ordering</h3>
         <p>
@@ -63,12 +67,12 @@ const OrderStatus = () => {
           ships.
         </p>
         <div>
-          <button>Return Home</button>
-          <button>Continue Shopping</button>
+          <button onClick={() => navigate("/")}>Return Home</button>
+          <button className="bg-gradient" onClick={() => navigate("/shop")}>Continue Shopping</button>
         </div>
       </div>
     </div>
   );
 };
 
-export default OrderStatus;
+export default OrderConfirmation;

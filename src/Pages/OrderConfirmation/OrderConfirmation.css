@@ -1,0 +1,97 @@
+.order-confirmed {
+  min-height: 75vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  width: 80%;
+  margin: 30px auto;
+}
+
+.order-confirmed .left {
+  border-radius: 30px;
+  padding: 40px;
+  color: white;
+}
+
+.order-confirmed .left h3 {
+  font-weight: 500;
+}
+
+.order-confirmed .left > div {
+  margin-top: 20px;
+}
+
+.order-confirmed .left div h3 {
+  margin-bottom: 10px;
+}
+
+.order-confirmed .left p {
+  padding-left: 10px;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.order-confirmed .order-summary > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.order-confirmed .order-summary> div > div {
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 5px;
+  height: fit-content;
+}
+
+.order-confirmed .order-summary .ordered-products{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+}
+
+.order-confirmed .order-summary .billing div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.order-confirmed .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.342);
+  border-radius: 30px;
+}
+
+.order-confirmed .right img {
+  width: 150px;
+  margin-bottom: 30px;
+  border-radius: 50%;
+  padding: 20px;
+}
+
+.order-confirmed .right h3 {
+  margin-top: 20px;
+}
+
+.order-confirmed .right p {
+  margin: 20px 0 30px;
+}
+
+.order-confirmed .right div {
+  display: flex;
+  gap: 20px;
+}
+
+.order-confirmed .right button {
+  width: 180px;
+  padding: 8px 0;
+  font-size: 16px;
+  background-color: black;
+  color: white;
+  font-weight: 500;
+  border-radius: 5px;
+}
