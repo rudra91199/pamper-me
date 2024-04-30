@@ -2,20 +2,17 @@ import { useContext, useRef, useState } from "react";
 import "./Shop.css";
 import { useEffect } from "react";
 import ServicesTab from "../../Components/ServicesTab/ServicesTab";
-import serviceBanner from "../../assets/Images/Banner/service-pamper-me-banner.jpg";
-import Service from "../../Components/Service/Service";
+
 import { Context } from "../../Providers/PamperContext";
 import Product from "../../Components/Product/Product";
 import { Outlet, useLocation, useNavigate, useParams } from "react-router-dom";
 import sortIcon from "../../assets/Images/icons/sort.png";
 import axios from "axios";
-import Search from "../../Components/Search/Search";
 
 const Shop = () => {
   const { products, services, setProducts, setRoutes } = useContext(Context);
 
   const [selectedTab, setSelectedTab] = useState(null);
-  const [loading, setLoading] = useState(false);
   const [active, setActive] = useState({
     category: false,
     brand: false,
@@ -34,8 +31,7 @@ const Shop = () => {
     if (category || subcategory || brand) {
       axios
         .get(
-          `http://pamper-me-backend.vercel.app/api/products/getProductsByCategory?category=${
-            category || ""
+          `http://pamper-me-backend.vercel.app/api/products/getProductsByCategory?category=${category || ""
           }&subcategory=${subcategory || ""}&Brand=${brand || ""}`
         )
         .then((res) => {
@@ -209,9 +205,8 @@ const Shop = () => {
               {products?.uniqueSubCategory?.map((uniqueSubCategory, i) => (
                 <div key={i}>
                   <button
-                    className={`${
-                      subcategory == uniqueSubCategory ? "isActive" : ""
-                    }`}
+                    className={`${subcategory == uniqueSubCategory ? "isActive" : ""
+                      }`}
                     onClick={() => handleNavigate(uniqueSubCategory)}
                   >
                     {uniqueSubCategory}
@@ -287,8 +282,8 @@ const Shop = () => {
 
           <div className="shopProduct-container">
             {brandProducts.length > 0 ||
-            subcategory?.length > 0 ||
-            filteredProducts?.length > 0 ? (
+              subcategory?.length > 0 ||
+              filteredProducts?.length > 0 ? (
               <Outlet
                 context={{ filteredProducts, subProducts, brandProducts }}
               />
