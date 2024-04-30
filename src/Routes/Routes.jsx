@@ -20,7 +20,7 @@ import UpdateProfile from "../Pages/UpdateProfile/UpdateProfile";
 import ConfirmedBooking from "../Components/BookNow/ConfirmedBooking/ConfirmedBooking";
 import ViewCart from "../Pages/ViewCart/ViewCart";
 import CheckoutPage from "../Pages/Checkout/CheckoutPage";
-import OrderStatus from "../Pages/OrderStatus/OrderStatus";
+import OrderConfirmation from "../Pages/OrderConfirmation/OrderConfirmation";
 
 const router = createBrowserRouter([
   {
@@ -125,8 +125,8 @@ const router = createBrowserRouter([
         element:<CheckoutPage/>
       },
       {
-        path:"/order-status",
-        element:<OrderStatus/>
+        path:"/order-confirmation",
+        element:<OrderConfirmation/>
       }
     ],
   },

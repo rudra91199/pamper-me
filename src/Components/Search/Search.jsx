@@ -29,9 +29,11 @@ const Search = () => {
       });
     }
 
+    if (profileHover == true){ 
     document.body.addEventListener("click", () => {
-      if (profileHover == true) setProfileHover(false);
+      setProfileHover(false)
     });
+  }
   }, [searchIcon, profileHover]);
 
   // console.log(searchIcon)

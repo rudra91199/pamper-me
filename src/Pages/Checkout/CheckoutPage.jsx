@@ -78,12 +78,13 @@ const CheckoutPage = () => {
       vat,
       comment,
     };
-    console.log(orderInfo);
     axios
-      .post("http://localhost:5000/api/orders/create", orderInfo)
+      .post("https://pamper-me-backend.vercel.app/api/orders/create", orderInfo)
       .then(({data}) => {
         if(data){
-          navigate("/order-status")
+          navigate("/order-confirmation",{
+            state:data
+          })
         }
       });
   };
