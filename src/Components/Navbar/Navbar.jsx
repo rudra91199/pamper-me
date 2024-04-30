@@ -3,7 +3,7 @@ import "./Navbar.css";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
 import { signOut } from "firebase/auth";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import faceLogo from "../../assets/Images/Logo/FaceLogo-01.png";
 import { Context } from "../../Providers/PamperContext";
 import Search from "../Search/Search";
@@ -13,10 +13,9 @@ import UserPopUp from "../UserPopUp/UserPopUp";
 
 const Navbar = () => {
   const [user] = useAuthState(auth);
-  const [profileHover, setProfileHover] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
-  const { cart,userData } = useContext(Context);
+  const { cart,userData ,profileHover, setProfileHover} = useContext(Context);
 
 
 //725NnxAErwMCiC3RbgDDZkcCdI02
@@ -26,6 +25,9 @@ const Navbar = () => {
   cart?.forEach((product) => {
     quantity = quantity + product?.quantity;
   });
+
+  
+
 
   return (
     <div

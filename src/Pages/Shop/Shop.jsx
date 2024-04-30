@@ -10,6 +10,7 @@ import { Outlet, useLocation, useNavigate, useParams } from "react-router-dom";
 import sortIcon from "../../assets/Images/icons/sort.png";
 import axios from "axios";
 import Search from "../../Components/Search/Search";
+
 const Shop = () => {
   const { products, services, setProducts, setRoutes } = useContext(Context);
 
@@ -220,7 +221,7 @@ const Shop = () => {
             </div>
           </div>
 
-          <div className={`filterCategory `} style={{ marginTop: 20 }}>
+          <div className={`filterCategory `}>
             <p
               onClick={() =>
                 setActive({
