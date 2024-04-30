@@ -20,6 +20,7 @@ import UpdateProfile from "../Pages/UpdateProfile/UpdateProfile";
 import ConfirmedBooking from "../Components/BookNow/ConfirmedBooking/ConfirmedBooking";
 import ViewCart from "../Pages/ViewCart/ViewCart";
 import CheckoutPage from "../Pages/Checkout/CheckoutPage";
+import OrderStatus from "../Pages/OrderStatus/OrderStatus";
 
 const router = createBrowserRouter([
   {
@@ -122,6 +123,10 @@ const router = createBrowserRouter([
       {
         path:"/checkout",
         element:<CheckoutPage/>
+      },
+      {
+        path:"/order-status",
+        element:<OrderStatus/>
       }
     ],
   },
