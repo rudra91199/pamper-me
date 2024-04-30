@@ -1,9 +1,13 @@
 import { useContext } from "react";
 import "./billingDetails.css";
 import { Context } from "../../../Providers/PamperContext";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../../../firebase.init";
+import { FaInfoCircle } from "react-icons/fa";
 
-const BillingDetails = ({ city, setCity,handleOrderSubmit }) => {
+const BillingDetails = ({ city, setCity, handleOrderSubmit }) => {
   const { userData } = useContext(Context);
+  const [user] = useAuthState(auth);
   return (
     <div className="billing-details">
       <h3>Billilng Details</h3>
@@ -136,13 +140,19 @@ const BillingDetails = ({ city, setCity,handleOrderSubmit }) => {
         )}
       </form>
       <div className="locationSave">
-        <input type="checkbox" id="locationSave" />{" "}
-        <label htmlFor="locationSave">
-          Also save my location for future use.
-        </label>
+        {user ? (
+          <>
+            <input type="checkbox" id="locationSave" />{" "}
+            <label htmlFor="locationSave">
+              Also save my location for future use.
+            </label>
+          </>
+        ) : (
+          <p><FaInfoCircle /> Login to save your location for future use.</p>
+        )}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default BillingDetails
+export default BillingDetails;
