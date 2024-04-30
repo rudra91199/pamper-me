@@ -16,6 +16,7 @@ const CheckoutPage = () => {
   const { cart } = useContext(Context);
   const [PaymentMethod, setPaymentMethod] = useState("Cash on delivery");
   const [comment, setComment] = useState();
+  const [locationSave, setLocationSave] = useState(false);
   const navigate = useNavigate();
 
   let price = 0;
@@ -55,6 +56,7 @@ const CheckoutPage = () => {
       lastName,
       email,
       phone,
+      city,
       shippingAddress:
         city === "Dhaka"
           ? {
@@ -78,16 +80,19 @@ const CheckoutPage = () => {
       vat,
       comment,
     };
+
     axios
       .post("https://pamper-me-backend.vercel.app/api/orders/create", orderInfo)
-      .then(({data}) => {
-        if(data){
-          navigate("/order-confirmation",{
-            state:data
-          })
+      .then(({ data }) => {
+        if (data) {
+          navigate("/order-confirmation", {
+            state: data,
+          });
         }
       });
   };
+
+  console.log(locationSave);
 
   return (
     <div className="checkoutPage-container">
@@ -97,6 +102,8 @@ const CheckoutPage = () => {
           city={city}
           setCity={setCity}
           handleOrderSubmit={handleOrderSubmit}
+          locationSave={locationSave}
+          setLocationSave={setLocationSave}
         />
 
         <div>

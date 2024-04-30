@@ -5,7 +5,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../../../firebase.init";
 import { FaInfoCircle } from "react-icons/fa";
 
-const BillingDetails = ({ city, setCity, handleOrderSubmit }) => {
+const BillingDetails = ({ city, setCity, handleOrderSubmit, locationSave, setLocationSave }) => {
   const { userData } = useContext(Context);
   const [user] = useAuthState(auth);
   return (
@@ -142,7 +142,7 @@ const BillingDetails = ({ city, setCity, handleOrderSubmit }) => {
       <div className="locationSave">
         {user ? (
           <>
-            <input type="checkbox" id="locationSave" />{" "}
+            <input type="checkbox" id="locationSave" checked={locationSave} onChange={() => setLocationSave(!locationSave)} />{" "}
             <label htmlFor="locationSave">
               Also save my location for future use.
             </label>
