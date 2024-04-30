@@ -43,7 +43,6 @@ position: relative;
   gap: 50px;
 }
 
-.locationSave label,
 .order-confirmation label{
     display: inline;
     font-weight: 500;
