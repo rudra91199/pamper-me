@@ -5,14 +5,21 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../../../firebase.init";
 import { FaInfoCircle } from "react-icons/fa";
 
-const BillingDetails = ({ city, setCity, handleOrderSubmit, locationSave, setLocationSave }) => {
+const BillingDetails = ({
+  city,
+  setCity,
+  handleOrderSubmit,
+  locationSave,
+  setLocationSave,
+}) => {
   const { userData } = useContext(Context);
   const [user] = useAuthState(auth);
-  console.log(userData)
+  console.log(userData);
   return (
     <div className="billing-details">
       <h3>Billilng Details</h3>
       <form action="" id="order-form" onSubmit={handleOrderSubmit}>
+        <div className="client-info">
         <div>
           <label htmlFor="firstName">First Name</label>
           <input
@@ -57,40 +64,58 @@ const BillingDetails = ({ city, setCity, handleOrderSubmit, locationSave, setLoc
             defaultValue={userData?.phone}
           />
         </div>
-        <div>
-          <label htmlFor="city">City</label>
-          <select
-            name="city"
-            id="city"
-            onChange={(e) => setCity(e.target.value)}
-            required
-          >
-            <option value="">Choose a city</option>
-            <option selected={userData?.shippingAddress?.city === "Dhaka"} value="Dhaka">Dhaka</option>
-            <option value="Khulna">Khulna</option>
-          </select>
         </div>
-        <div>
-          <label htmlFor="ShippingAddress">Shipping Address</label>
-          <input
-            type="number"
-            required
-            name="ShippingAddress"
-            placeholder="Shipping Address"
-            id="ShippingAddress"
-          />
+        <h3>Shipping Details</h3>
+        <div className="shipping-address">
+          <div>
+            <label htmlFor="city">City</label>
+            <select
+              name="city"
+              id="city"
+              defaultValue={userData?.shippingAddress?.city}
+              onChange={(e) => setCity(e.target.value)}
+              required
+            >
+              <option value="">Choose a city</option>
+              <option
+                selected={userData?.shippingAddress?.city === "Dhaka"}
+                value="Dhaka"
+              >
+                Dhaka
+              </option>
+              <option selected={userData?.shippingAddress?.city === "Khulna"} value="Khulna">Khulna</option>
+            </select>
+          </div>
+          <div>
+            <label htmlFor="address">Address</label>
+            <input
+              type="text"
+              required
+              name="address"
+              placeholder="Address"
+              id="address"
+              defaultValue={userData?.shippingAddress?.address}
+            />
+          </div>
         </div>
       </form>
       <div className="locationSave">
         {user ? (
           <>
-            <input type="checkbox" id="locationSave" checked={locationSave} onChange={() => setLocationSave(!locationSave)} />{" "}
+            <input
+              type="checkbox"
+              id="locationSave"
+              checked={locationSave}
+              onChange={() => setLocationSave(!locationSave)}
+            />{" "}
             <label htmlFor="locationSave">
               Also save my location for future use.
             </label>
           </>
         ) : (
-          <p><FaInfoCircle /> Login to save your location for future use.</p>
+          <p>
+            <FaInfoCircle /> Login to save your location for future use.
+          </p>
         )}
       </div>
     </div>
