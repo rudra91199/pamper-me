@@ -5,8 +5,17 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 const OrderConfirmation = () => {
   const navigate = useNavigate();
-  const data = useLocation().state;
-  console.log(data);
+  const {
+    _id,
+    clientInfo: { firstName, lastName, email, phone, city, shippingAddress },
+    OrderedProduct,
+    subtotal,
+    totalPrice,
+    PaymentMethod,
+    shippingCharge,
+    vat,
+  } = useLocation()?.state;
+
   useEffect(() => {
     window.history.pushState(null, "", "/");
   }, []);
@@ -14,46 +23,69 @@ const OrderConfirmation = () => {
   return (
     <div className="order-confirmed">
       <div className="left bg-gradient">
-        <h3>Order ID: #SDFGS45433</h3>
+        <h3>Order ID: {_id}</h3>
         <div>
           <h3>Customer</h3>
-          <p>Name: Sk Rdura</p>
-          <p>Email: skrudra@gmail.com</p>
-          <p>Number: 018*********</p>
+          <p>Name: {firstName + lastName}</p>
+          <p>Email: {email}</p>
+          <p>Number: {phone}</p>
         </div>
         <div>
           <h3>Shipping Address</h3>
-          <p>City: Dhaka</p>
-          <p>
-            Area: Banasree, Block B, Road: 01, Road: 01, House:26, Appartment:
-            101
-          </p>
+          <p>City: {city}</p>
+          {city === "Dhaka" ? (
+            <p>
+              Area: {shippingAddress?.area}, Block {shippingAddress?.block},
+              Road: {shippingAddress?.road}, House: {shippingAddress?.house},
+              Appartment: {shippingAddress?.apartment}
+            </p>
+          ) : (
+            <p>Address: {shippingAddress}</p>
+          )}
+        </div>
+        <div>
+          <h3>Payment Method</h3>
+          <p>Cash on delivery</p>
         </div>
         <div className="order-summary">
-          <h3>Order Summary</h3>
+          <h3>{PaymentMethod}</h3>
           <div>
             <div className="ordered-products">
-                <p>1x</p>
-                <p>Foundation</p>
-                <p>BDT <span className="font">2990</span></p>
+              {OrderedProduct?.map(({ name, quantity, total }) => (
+                <div>
+                  <p>{quantity}x</p>
+                  <p>{name.length > 15 ? name.slice(0, 15) + "..." : name}</p>
+                  <p>
+                    BDT <span className="font">{total}</span>
+                  </p>
+                </div>
+              ))}
             </div>
             <div className="billing">
-                <div>
-                    <p>Sub Total: </p>
-                    <p>BDT <span className="font">2990</span></p>
-                </div>
-                <div>
-                    <p>Shipping: </p>
-                    <p>BDT <span className="font">80</span></p>
-                </div>
-                <div>
-                    <p>VAT: </p>
-                    <p>BDT <span className="font">150</span></p>
-                </div>
-                <div>
-                    <p>Total: </p>
-                    <p>BDT <span className="font">3243</span></p>
-                </div>
+              <div>
+                <p>Sub Total: </p>
+                <p>
+                  BDT <span className="font">{subtotal}</span>
+                </p>
+              </div>
+              <div>
+                <p>Shipping: </p>
+                <p>
+                  BDT <span className="font">{shippingCharge}</span>
+                </p>
+              </div>
+              <div>
+                <p>VAT: </p>
+                <p>
+                  BDT <span className="font">{vat}</span>
+                </p>
+              </div>
+              <div>
+                <p>Total: </p>
+                <p>
+                  BDT <span className="font">{totalPrice}</span>
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -68,7 +100,9 @@ const OrderConfirmation = () => {
         </p>
         <div>
           <button onClick={() => navigate("/")}>Return Home</button>
-          <button className="bg-gradient" onClick={() => navigate("/shop")}>Continue Shopping</button>
+          <button className="bg-gradient" onClick={() => navigate("/shop")}>
+            Continue Shopping
+          </button>
         </div>
       </div>
     </div>
