@@ -14,8 +14,8 @@ const Shop = () => {
 
   const [selectedTab, setSelectedTab] = useState(null);
   const [active, setActive] = useState({
-    category: false,
-    brand: false,
+    category: true,
+    brand: true,
   });
   const [filteredProducts, setFilterProducts] = useState([]);
   const [subProducts, setSubProducts] = useState([]);
@@ -193,6 +193,7 @@ const Shop = () => {
                   brand: active.brand,
                 })
               }
+              className="gradient"
             >
               Filter by category{" "}
               {active.category ? (
