@@ -185,7 +185,7 @@ const Shop = () => {
       ></ServicesTab>
       <div className="shopProduct-grid">
         <div className="filter-container">
-          <div className={`filterCategory filter-sub-category`}>
+          <div className={`filterCategory  filter-sub-category`}>
             <p
               onClick={() =>
                 setActive({
