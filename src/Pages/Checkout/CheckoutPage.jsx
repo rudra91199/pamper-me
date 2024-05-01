@@ -10,10 +10,10 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const CheckoutPage = () => {
-  const [city, setCity] = useState("");
+  const { cart, userData } = useContext(Context);
+  const [city, setCity] = useState(userData?.shippingAddress?.city);
   const [isTermsAgreed, setIsTermsAgreed] = useState(false);
   const [LoggedUser] = useAuthState(auth);
-  const { cart } = useContext(Context);
   const [PaymentMethod, setPaymentMethod] = useState("Cash on delivery");
   const [comment, setComment] = useState();
   const [locationSave, setLocationSave] = useState(false);
@@ -56,17 +56,20 @@ const CheckoutPage = () => {
       lastName,
       email,
       phone,
-      city,
       shippingAddress:
         city === "Dhaka"
           ? {
+              city,
               area,
               block,
               road,
               house,
               apartment,
             }
-          : address,
+          : {
+              city,
+              address,
+            },
     };
     const orderInfo = {
       clientInfo,
@@ -81,6 +84,12 @@ const CheckoutPage = () => {
       comment,
     };
 
+    if (locationSave) {
+      axios.put(`http://localhost:5000/api/users/user/${LoggedUser?.email}`, {
+        shippingAddress: clientInfo.shippingAddress,
+      });
+    }
+
     axios
       .post("https://pamper-me-backend.vercel.app/api/orders/create", orderInfo)
       .then(({ data }) => {
@@ -92,7 +101,7 @@ const CheckoutPage = () => {
       });
   };
 
-  console.log(locationSave);
+  console.log(city);
 
   return (
     <div className="checkoutPage-container">

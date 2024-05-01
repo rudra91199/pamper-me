@@ -8,6 +8,7 @@ import { FaInfoCircle } from "react-icons/fa";
 const BillingDetails = ({ city, setCity, handleOrderSubmit, locationSave, setLocationSave }) => {
   const { userData } = useContext(Context);
   const [user] = useAuthState(auth);
+  console.log(userData)
   return (
     <div className="billing-details">
       <h3>Billilng Details</h3>
@@ -65,79 +66,20 @@ const BillingDetails = ({ city, setCity, handleOrderSubmit, locationSave, setLoc
             required
           >
             <option value="">Choose a city</option>
-            <option value="Dhaka">Dhaka</option>
+            <option selected={userData?.shippingAddress?.city === "Dhaka"} value="Dhaka">Dhaka</option>
             <option value="Khulna">Khulna</option>
           </select>
         </div>
-        {city === "Dhaka" ? (
-          <>
-            <div>
-              <label htmlFor="area">Area</label>
-              <input
-                type="text"
-                required
-                name="area"
-                placeholder="Area"
-                id="area"
-              />
-            </div>
-            <div>
-              <label htmlFor="apartment">Apartment</label>
-              <input
-                type="text"
-                placeholder="Apartment No."
-                id="apartment"
-                name="apartment"
-                defaultValue={userData?.apartment}
-                required
-              />
-            </div>
-            <div>
-              <label htmlFor="house">House No.</label>
-              <input
-                type="text"
-                placeholder="House No."
-                id="house"
-                name="house"
-                defaultValue={userData?.house}
-                required
-              />
-            </div>
-            <div>
-              <label htmlFor="road">Road No.</label>
-              <input
-                type="text"
-                placeholder="Road No."
-                id="road"
-                name="road"
-                defaultValue={userData?.road}
-                required
-              />
-            </div>
-            <div>
-              <label htmlFor="block">Block</label>
-              <input
-                type="text"
-                placeholder="Block"
-                id="block"
-                name="block"
-                defaultValue={userData?.block}
-                required
-              />
-            </div>
-          </>
-        ) : (
-          <div>
-            <label htmlFor="address">Address</label>
-            <input
-              type="text"
-              required
-              name="address"
-              placeholder="Address"
-              id="address"
-            />
-          </div>
-        )}
+        <div>
+          <label htmlFor="ShippingAddress">Shipping Address</label>
+          <input
+            type="number"
+            required
+            name="ShippingAddress"
+            placeholder="Shipping Address"
+            id="ShippingAddress"
+          />
+        </div>
       </form>
       <div className="locationSave">
         {user ? (
