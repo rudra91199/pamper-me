@@ -37,9 +37,9 @@
   margin: 40px 0px;
   margin-right: 20px;
   border-radius: 10px;
-  padding: 10px 0px;
+  padding: 16px 0px;
   position: sticky;
-  top: 0px;
+  top: 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -49,10 +49,12 @@
 
 .filterCategory {
   background: #fff;
-  padding: 10px 20px;
+  padding: 10px 20px 0px 20px;
   border-radius: 10px;
   width: 90%;
 }
+
+
 
 .filter-container>:first-child{
   border-radius: 10px 10px 0px 0px;
@@ -72,9 +74,11 @@
 .filterCategory button {
   display: block;
   background: transparent;
-  padding: 7px 10px;
+  padding: 0px 10px;
+  padding-bottom: 10px;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 500;
+  letter-spacing: 1px;
   transition: all ease-in-out 200ms;
 }
 
@@ -100,7 +104,7 @@
 
 .filterPrice input {
   padding: 8px;
-  margin: 7px 10px;
+  margin: 5px 10px;
   border: none;
   border-radius: 10px;
   width: 90%;
@@ -110,8 +114,8 @@
 .filterPrice p {
   font-size: 16px;
   font-weight: bold;
-  margin: 10px;
-  margin-bottom: 20px;
+  margin: 0px 10px;
+  margin-bottom: 10px;
 }
 
 .filterBtn {
@@ -186,10 +190,15 @@
   .shopProduct-grid {
     grid-template-columns: 2fr 5fr;
   }
+  
+  .filter-container{
+    top: 25px;
+  }
 }
 
 @media screen and (max-width: 1400px) {
   .shopProducts {
     padding: 0px 6%;
   }
+
 }
