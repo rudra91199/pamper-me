@@ -264,6 +264,7 @@ const Shop = () => {
         <div>
           <div className="sorting">
             <div>
+              {(!category && !subcategory && !brand) && "ALL PRODUCTS"}
               {category && category.toUpperCase()}{" "}
               {subcategory && " > " + subcategory.toUpperCase()}{" "}
               {brand && " > " + brand.toUpperCase()}
