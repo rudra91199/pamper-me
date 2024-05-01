@@ -7,7 +7,8 @@ const OrderConfirmation = () => {
   const navigate = useNavigate();
   const {
     _id,
-    clientInfo: { firstName, lastName, email, phone, shippingAddress },
+    clientInfo: { firstName, lastName, email, phone },
+    shippingAddress,
     OrderedProduct,
     subtotal,
     totalPrice,
@@ -33,15 +34,7 @@ const OrderConfirmation = () => {
         <div>
           <h3>Shipping Address</h3>
           <p>City: {shippingAddress?.city}</p>
-          {shippingAddress?.city === "Dhaka" ? (
-            <p>
-              Area: {shippingAddress?.area}, Block {shippingAddress?.block},
-              Road: {shippingAddress?.road}, House: {shippingAddress?.house},
-              Appartment: {shippingAddress?.apartment}
-            </p>
-          ) : (
-            <p>Address: {shippingAddress?.address}</p>
-          )}
+          <p>Address: {shippingAddress?.address}</p>
         </div>
         <div>
           <h3>Payment Method</h3>

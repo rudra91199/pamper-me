@@ -8,9 +8,10 @@ import OrderDetails from "../../Components/ProductsCheckout/OrderDetails/OrderDe
 import { Context } from "../../Providers/PamperContext";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { deleteCart } from "../../Utilities/CartDb";
 
 const CheckoutPage = () => {
-  const { cart, userData } = useContext(Context);
+  const { cart, setCart, userData } = useContext(Context);
   const [city, setCity] = useState(userData?.shippingAddress?.city);
   const [isTermsAgreed, setIsTermsAgreed] = useState(false);
   const [LoggedUser] = useAuthState(auth);
@@ -30,19 +31,11 @@ const CheckoutPage = () => {
 
   const handleOrderSubmit = (e) => {
     e.preventDefault();
+
     const form = new FormData(e.target);
-    const {
-      firstName,
-      lastName,
-      email,
-      phone,
-      address,
-      area,
-      apartment,
-      house,
-      block,
-      road,
-    } = Object.fromEntries(form);
+    const { firstName, lastName, email, phone, address } =
+      Object.fromEntries(form);
+
     const OrderedProduct = cart.map(({ name, quantity, _id, price }) => {
       return {
         _id,
@@ -51,49 +44,49 @@ const CheckoutPage = () => {
         total: quantity * price,
       };
     });
+
     const clientInfo = {
       firstName,
       lastName,
       email,
       phone,
-      shippingAddress:
-        city === "Dhaka"
-          ? {
-              city,
-              area,
-              block,
-              road,
-              house,
-              apartment,
-            }
-          : {
-              city,
-              address,
-            },
     };
+
+    const shippingAddress = {
+      city,
+      address,
+    };
+
     const orderInfo = {
       clientInfo,
       OrderedProduct,
+      shippingAddress,
       coupon: "",
       subtotal: price,
       totalPrice,
       PaymentMethod,
       paid: false,
       shippingCharge,
+
       vat,
       comment,
     };
 
     if (locationSave) {
-      axios.put(`http://localhost:5000/api/users/user/${LoggedUser?.email}`, {
-        shippingAddress: clientInfo.shippingAddress,
-      });
+      axios.put(
+        `https://pamper-me-backend.vercel.app/api/users/user/${LoggedUser?.email}`,
+        {
+          shippingAddress,
+        }
+      );
     }
 
     axios
       .post("https://pamper-me-backend.vercel.app/api/orders/create", orderInfo)
       .then(({ data }) => {
         if (data) {
+          deleteCart();
+          setCart([]);
           navigate("/order-confirmation", {
             state: data,
           });
