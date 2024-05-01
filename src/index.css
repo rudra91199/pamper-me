@@ -58,7 +58,7 @@ textarea {
   background: linear-gradient(to right, var(--pink), var(--purple));
   background-clip: text;
   color: transparent;
-  width: fit-content;
+  /* width: fit-content; */
 }
 
 .font {
@@ -66,6 +66,6 @@ textarea {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.bg-gradient{
+.bg-gradient {
   background: linear-gradient(to right, var(--pink), var(--purple));
 }
