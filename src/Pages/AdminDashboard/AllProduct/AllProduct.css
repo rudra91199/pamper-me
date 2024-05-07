@@ -1,0 +1,44 @@
+.page-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-title a{
+    margin-right: 20px;
+    padding: 10px;
+    border: 1px solid var(--purple);
+    color: var(--purple);
+    transition: all ease-in-out 200ms;
+}
+.page-title a:hover{
+    border: 1px solid var(--pink);
+    color: white;
+    background-color: var(--pink) ;
+}
+
+.allProducts{
+    padding: 20px;
+}
+.product-table{
+    width: 100%;
+    margin-top: 30px;
+}
+.th td{
+    background-color: var(--purple);
+    color: white;
+    border: 1px solid black;
+    padding: 10px;
+}
+.tr td{
+    border: 1px solid black;
+    padding: 10px;
+}
+.table-img{
+    display: flex;
+    align-items: center;
+}
+.table-img img{
+    width: 40px;
+    margin-right: 10px;
+}
