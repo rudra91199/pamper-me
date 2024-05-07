@@ -67,5 +67,5 @@ textarea {
 }
 
 .bg-gradient {
-  background: linear-gradient(to right, var(--pink), var(--purple));
+  background: linear-gradient(to right, var(--pink) 40%, var(--purple));
 }

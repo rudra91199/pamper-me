@@ -254,7 +254,7 @@ const Shop = () => {
             <form action="" onSubmit={handleFilerByPrice}>
               <input type="number" placeholder="From" name="min" />
               <input type="number" placeholder="To" name="max" />
-              <button className="filterBtn" type="submit">
+              <button className="filterBtn bg-gradient" type="submit">
                 Filter
               </button>
             </form>
