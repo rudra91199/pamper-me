@@ -1,7 +1,7 @@
-.swiper{
+.home-banner .swiper{
     height: 76vh;
 }
-.swiper img{
+.home-banner .swiper img{
     width: 100%;
     height: 100%;
 }
