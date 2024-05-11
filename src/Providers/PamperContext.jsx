@@ -9,6 +9,7 @@ export const Context = createContext();
 const PamperContext = ({ children }) => {
   const [services, setServices] = useState([]);
   const [products, setProducts] = useState({});
+  const [orders, setOrders] = useState({});
   const [cart, setCart] = useCart(products);
   const { category, subcategory, brand } = useParams();
   const [routes, setRoutes] = useState({});
@@ -27,6 +28,11 @@ const PamperContext = ({ children }) => {
       .then((res) => res.json())
       .then((data) => {
         setServices(data);
+      });
+    fetch("https://pamper-me-backend.vercel.app/api/orders/getOrder")
+      .then((res) => res.json())
+      .then((data) => {
+        setOrders(data);
       });
 
     fetch(
@@ -50,6 +56,7 @@ const PamperContext = ({ children }) => {
     services,
     setServices,
     products,
+    orders,
     cart,
     setCart,
     setProducts,
