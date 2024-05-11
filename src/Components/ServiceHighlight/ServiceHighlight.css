@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 3fr 2fr 2fr;
   width: 76%;
-  margin: 150px auto;
+  margin: 100px auto ;
   gap: 30px;
 }
 
@@ -15,7 +15,16 @@
 }
 
 .serviceHighlights h1 span{
-    color: var(--pink);
+    /* color: var(--pink); */
+}
+
+.serviceHighlights .gradient{
+  background: linear-gradient(to right, var(--pink) 40%, var(--purple));
+  background-clip: text;
+  color: transparent;
+  width: fit-content;
+  margin: 0 auto;
+
 }
 
 .serviceHighlights p{
@@ -38,4 +47,18 @@
 .serviceHighlights img {
   width: 100%;
   border-radius: 10px;
+}
+
+@media (width<1600px) {
+  .highlight-details{
+    width: 90%;
+  } 
+
+  .serviceHighlights h1{
+    font-size: 42px;
+  }
+
+  .serviceHighlights p{
+    font-size: 16px;
+  }
 }

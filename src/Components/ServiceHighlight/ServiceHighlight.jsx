@@ -6,7 +6,7 @@ const ServiceHighlight = () => {
   return (
     <div className="serviceHighlights">
       <div className="highlight-details">
-        <h1>Rediscover Beauty and Relaxation with <span>Pamper Me</span></h1>
+        <h1>Rediscover Beauty and Relaxation with <span className="gradient">Pamper Me</span></h1>
         <p>
           Discover serenity and beauty with Pamper Me's comprehensive range of
           at-home services. From luxurious makeup applications to indulgent

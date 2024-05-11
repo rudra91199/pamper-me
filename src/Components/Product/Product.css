@@ -9,16 +9,16 @@
   /* width: 400px; */
 }
 
-.productCard > div{
+.productCard>div {
   padding: 20px;
 }
 
-.shop-product{
+.shop-product {
   width: unset;
   box-shadow: 0px 0px 10px #e3208556;
 }
 
-.productCard:hover{
+.productCard:hover {
   box-shadow: 0 0 20px #e3208564;
 
 }
@@ -31,26 +31,35 @@
 .product-title {
   font-weight: 700;
   font-size: 16px !important;
-  height: 40px;
-  margin:10px 0 0;
+  height: 30px;
+  margin: 10px 0 0;
 }
 
-.shop-product .product-title{
-  height: 50px;
-}
 
-.productCard > div > div{
+
+.productCard>div>div {
   display: flex;
   gap: 10px;
 }
 
-.productCard > div > div span{
+.productCard>div>div span:first-child {
+  background: hsl(329, 78%, 91%);
+}
+
+.productCard>div>div span:nth-child(2) {
+  background: hsl(309, 57%, 85%);
+}
+
+.productCard>div>div span:last-child {
+  background: hsl(329, 58%, 95%);
+}
+
+.productCard>div>div span {
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 600;
   padding: 5px 10px;
-  border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 20px;
-  color: black;
+  color: rgba(0, 0, 0, 0.8);
 }
 
 .product-category {
@@ -62,7 +71,7 @@
 .product-desc {
   font-size: 14px;
   color: rgba(0, 0, 0, 0.8);
-  margin:20px 0 30px;
+  margin: 20px 0 30px;
   font-weight: 500;
   letter-spacing: 1px;
 }
@@ -76,12 +85,13 @@
   margin-top: 10px;
 }
 
-.productCard .product-price{
+.productCard .product-price {
   font-size: 20px;
+  color: #e32085;
 }
 
 .cart-btn {
-  background: #962986;
+  background: #e32085;
   color: white;
   font-family: "Raleway", sans-serif;
   font-weight: bold;
@@ -103,5 +113,37 @@
 }
 
 .cart-btn:hover {
-  background: #e32085;
+  background: #962986;
+}
+
+@media screen and (width<1600px) {
+  .productCard img {
+    height: 170px;
+  }
+
+  .product-title {
+    font-size: 14px !important;
+  }
+
+  .productCard>div>div span {
+    font-size: 10px;
+  }
+
+  .product-desc {
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
+
+  .productCard .product-price {
+    font-size: 16px;
+  }
+
+  .cart-btn {
+    font-size: 12px;
+    padding: 7px 10px;
+  }
+
+  .w-4 {
+    width: 18px;
+  }
 }
