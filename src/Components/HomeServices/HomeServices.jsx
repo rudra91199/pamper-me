@@ -33,10 +33,11 @@ const HomeServices = () => {
               slidesPerView: 6,
             },
           }}
+          // loop={true}
           modules={[Pagination, Autoplay]}
           className="mySwiper"
         >
-          {services?.slice(0, 20).map((service) => (
+          {services?.slice(0, 10).map((service) => (
             <SwiperSlide>
               <HomeService key={service?.title} service={service}>
                 {" "}
