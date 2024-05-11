@@ -14,8 +14,8 @@ const Shop = () => {
 
   const [selectedTab, setSelectedTab] = useState(null);
   const [active, setActive] = useState({
-    category: false,
-    brand: false,
+    category: true,
+    brand: true,
   });
   const [filteredProducts, setFilterProducts] = useState([]);
   const [subProducts, setSubProducts] = useState([]);
@@ -185,7 +185,7 @@ const Shop = () => {
       ></ServicesTab>
       <div className="shopProduct-grid">
         <div className="filter-container">
-          <div className={`filterCategory `}>
+          <div className={`filterCategory  filter-sub-category`}>
             <p
               onClick={() =>
                 setActive({
@@ -193,6 +193,7 @@ const Shop = () => {
                   brand: active.brand,
                 })
               }
+              className="gradient"
             >
               Filter by category{" "}
               {active.category ? (
@@ -224,6 +225,8 @@ const Shop = () => {
                   brand: !active.brand,
                 })
               }
+              className="gradient"
+
             >
               Filter by Brands{" "}
               {active.brand ? (
@@ -247,11 +250,11 @@ const Shop = () => {
           </div>
 
           <div className="filterPrice">
-            <p>Filter by price</p>
+            <p className="gradient">Filter by price</p>
             <form action="" onSubmit={handleFilerByPrice}>
               <input type="number" placeholder="From" name="min" />
               <input type="number" placeholder="To" name="max" />
-              <button className="filterBtn" type="submit">
+              <button className="filterBtn bg-gradient" type="submit">
                 Filter
               </button>
             </form>
@@ -261,6 +264,7 @@ const Shop = () => {
         <div>
           <div className="sorting">
             <div>
+              {(!category && !subcategory && !brand) && "ALL PRODUCTS"}
               {category && category.toUpperCase()}{" "}
               {subcategory && " > " + subcategory.toUpperCase()}{" "}
               {brand && " > " + brand.toUpperCase()}

@@ -8,12 +8,13 @@ import OrderDetails from "../../Components/ProductsCheckout/OrderDetails/OrderDe
 import { Context } from "../../Providers/PamperContext";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { deleteCart } from "../../Utilities/CartDb";
 
 const CheckoutPage = () => {
-  const [city, setCity] = useState("");
+  const { cart, setCart, userData } = useContext(Context);
+  const [city, setCity] = useState(userData?.shippingAddress?.city);
   const [isTermsAgreed, setIsTermsAgreed] = useState(false);
   const [LoggedUser] = useAuthState(auth);
-  const { cart } = useContext(Context);
   const [PaymentMethod, setPaymentMethod] = useState("Cash on delivery");
   const [comment, setComment] = useState();
   const [locationSave, setLocationSave] = useState(false);
@@ -30,19 +31,11 @@ const CheckoutPage = () => {
 
   const handleOrderSubmit = (e) => {
     e.preventDefault();
+
     const form = new FormData(e.target);
-    const {
-      firstName,
-      lastName,
-      email,
-      phone,
-      address,
-      area,
-      apartment,
-      house,
-      block,
-      road,
-    } = Object.fromEntries(form);
+    const { firstName, lastName, email, phone, address } =
+      Object.fromEntries(form);
+
     const OrderedProduct = cart.map(({ name, quantity, _id, price }) => {
       return {
         _id,
@@ -51,48 +44,55 @@ const CheckoutPage = () => {
         total: quantity * price,
       };
     });
+
     const clientInfo = {
       firstName,
       lastName,
       email,
       phone,
-      city,
-      shippingAddress:
-        city === "Dhaka"
-          ? {
-              area,
-              block,
-              road,
-              house,
-              apartment,
-            }
-          : address,
     };
+
+    const shippingAddress = {
+      city,
+      address,
+    };
+
     const orderInfo = {
       clientInfo,
       OrderedProduct,
+      shippingAddress,
       coupon: "",
       subtotal: price,
       totalPrice,
       PaymentMethod,
       paid: false,
       shippingCharge,
+
       vat,
       comment,
     };
+
+    if (locationSave) {
+      axios.put(
+        `https://pamper-me-backend.vercel.app/api/users/user/${LoggedUser?.email}`,
+        {
+          shippingAddress,
+        }
+      );
+    }
 
     axios
       .post("https://pamper-me-backend.vercel.app/api/orders/create", orderInfo)
       .then(({ data }) => {
         if (data) {
+          deleteCart();
+          setCart([]);
           navigate("/order-confirmation", {
             state: data,
           });
         }
       });
   };
-
-  console.log(locationSave);
 
   return (
     <div className="checkoutPage-container">

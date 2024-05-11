@@ -19,8 +19,6 @@ const ProductReviews = ({ product }) => {
       rating,
     };
 
-    console.log(reviewData);
-
     const { data } = await axios.put(
       `https://pamper-me-backend.vercel.app/api/products/addReview/${product._id}`,
       reviewData

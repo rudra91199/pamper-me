@@ -3,19 +3,49 @@ import "./HomeServices.css";
 import HomeService from "../HomeService/HomeService";
 import { Link } from "react-router-dom";
 import { Context } from "../../Providers/PamperContext";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+
+// import required modules
+import { Pagination, Autoplay } from "swiper/modules";
 
 const HomeServices = () => {
-  const {services, setServices} = useContext(Context);
-
+  const { services, setServices } = useContext(Context);
   return (
     <div className="services">
-        <h2>Popular Services</h2>
+      <p>WHO WE OFFER</p>
+      <h2>What We Provide To Our Customers</h2>
       <div className="home-services-container">
-        {services?.slice(0,3).map((service) => 
-          <HomeService key={service?.title} service={service}> </HomeService>
-        )}
+        <Swiper
+          spaceBetween={30}
+          // autoplay={{
+          //   delay: 3000,
+          //   pauseOnMouseEnter: true,
+          // }}
+          pagination={{
+            clickable: true,
+          }}
+          breakpoints={{
+            1500: {
+              slidesPerView: 6,
+            },
+          }}
+          modules={[Pagination, Autoplay]}
+          className="mySwiper"
+        >
+          {services?.slice(0, 20).map((service) => (
+            <SwiperSlide>
+              <HomeService key={service?.title} service={service}>
+                {" "}
+              </HomeService>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
-      <Link>View All Services</Link>
+      <Link to={"/services"}>View All Services</Link>
     </div>
   );
 };

@@ -86,6 +86,7 @@ const CartSlider = ({ isCartOpen, handleCartOpen }) => {
               navigate("/checkout");
               handleCartOpen();
             }}
+            disabled={cart.length <1}
           >
             Proceed To Checkout
           </button>

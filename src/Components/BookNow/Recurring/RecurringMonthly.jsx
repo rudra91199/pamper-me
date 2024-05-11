@@ -21,7 +21,6 @@ const RecurringMonthly = ({ counter, setCounter }) => {
   const {allBookingDates,setAllBookingDates} = useContext(Context);
   const { date,time } = useLocation().state;
   const selectedDate = date.getDate();
-  console.log();
   const days = [
     "Sunday",
     "Monday",
@@ -62,8 +61,6 @@ const RecurringMonthly = ({ counter, setCounter }) => {
     }
     setAllBookingDates(recurringNextDates);
   }, [counter,recurringMonthType]);
-console.log(allBookingDates)
-console.log(daysToWeeks(6))
 
 
   return (

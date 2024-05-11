@@ -10,7 +10,6 @@ import { useTimeFormat } from "../../../Hooks/useTimeFormat";
 const RecurringDates = () => {
   const state = useLocation().state;
   // const {splittedFirstValue, fractionFirstTimeString, splittedSecondValue, fractionSecondTimeString} = useTimeFormat(state.time)
-  console.log(state);
   return (
     <div className="recurring-dates">
       <div className="book-now-heading-container">

@@ -21,7 +21,17 @@ import ConfirmedBooking from "../Components/BookNow/ConfirmedBooking/ConfirmedBo
 import ViewCart from "../Pages/ViewCart/ViewCart";
 import CheckoutPage from "../Pages/Checkout/CheckoutPage";
 import OrderConfirmation from "../Pages/OrderConfirmation/OrderConfirmation";
-import AdminLayout from "../Layout/AdminLayout";
+import AdminLayout from "../Layout/AdminLayout/AdminLayout";
+import AllProduct from "../Pages/AdminDashboard/AllProduct/AllProduct";
+import AddProduct from "../Pages/AdminDashboard/AddProduct/AddProduct";
+import AllService from "../Pages/AdminDashboard/AllService/AllService";
+import OrderList from "../Pages/AdminDashboard/OrderList/OrderList";
+import BookingList from "../Pages/AdminDashboard/BookingList/BookingList";
+import CustomerList from "../Pages/AdminDashboard/CustomerList/CustomerList";
+import EmployeeList from "../Pages/AdminDashboard/EmployeeList/EmployeeList";
+import Reviews from "../Pages/AdminDashboard/Reviews/Reviews";
+import BlogList from "../Pages/AdminDashboard/BlogList/BlogList";
+import Coupons from "../Pages/AdminDashboard/Coupons/Coupons";
 
 const router = createBrowserRouter([
   {
@@ -118,16 +128,58 @@ const router = createBrowserRouter([
         element: <SearchProducts />,
       },
       {
-        path:"/cart",
-        element:<ViewCart/>
+        path: "/cart",
+        element: <ViewCart />,
       },
       {
-        path:"/checkout",
-        element:<CheckoutPage/>
+        path: "/checkout",
+        element: <CheckoutPage />,
       },
       {
-        path:"/order-confirmation",
-        element:<OrderConfirmation/>
+        path: "/order-confirmation",
+        element: <OrderConfirmation />,
+      },
+    ],
+  },
+  {
+    path: "/admin",
+    element: <AdminLayout></AdminLayout>,
+    children: [
+      {
+        path: "/admin",
+        element: <AllProduct></AllProduct>,
+      },
+      {
+        path: "/admin/services",
+        element: <AllService></AllService>,
+      },
+      {
+        path: "/admin/orders",
+        element: <OrderList></OrderList>,
+      },
+      {
+        path: "/admin/bookings",
+        element: <BookingList></BookingList>,
+      },
+      {
+        path: "/admin/customers",
+        element: <CustomerList></CustomerList>,
+      },
+      {
+        path: "/admin/employee",
+        element: <EmployeeList></EmployeeList>,
+      },
+      {
+        path: "/admin/reviews",
+        element: <Reviews></Reviews>,
+      },
+      {
+        path: "/admin/blogs",
+        element: <BlogList></BlogList>,
+      },
+      {
+        path: "/admin/coupons",
+        element: <Coupons></Coupons>,
       }
     ],
   },

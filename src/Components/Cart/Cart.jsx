@@ -9,7 +9,6 @@ const Cart = () => {
 
   const handleCartOpen = () => {
     setIsCartOpen(!isCartOpen);
-    console.log(isCartOpen);
     if (!isCartOpen) {
       document.body.style.overflowY = "hidden";
       document.body.style.paddingRight = "16px";

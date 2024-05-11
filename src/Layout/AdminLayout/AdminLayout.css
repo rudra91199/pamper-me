@@ -1,0 +1,42 @@
+.drawer-side{
+    background: var(--purple);
+    width: 200px;
+    padding: 20px;
+    margin: 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    height: 100%;
+}
+.drawer-content{
+    margin-left: 200px;
+}
+.ad-logo{
+    width: 160px;
+    border-radius: 10px;
+}
+.ad-menu{
+    margin-top: 10px;
+}
+.ad-menu a{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 10px;
+    transition: all ease-in-out 200ms;
+}
+.ad-menu a:hover{
+    background: black;
+    display: flex;
+    flex-direction: column; 
+}
+
+.ad-menu .ad-navlink-active{
+    background: white;
+    color: black;
+}
+.ad-menu .ad-navlink-active:hover{
+    color: white;
+}
