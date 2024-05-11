@@ -21,6 +21,7 @@ import ConfirmedBooking from "../Components/BookNow/ConfirmedBooking/ConfirmedBo
 import ViewCart from "../Pages/ViewCart/ViewCart";
 import CheckoutPage from "../Pages/Checkout/CheckoutPage";
 import OrderConfirmation from "../Pages/OrderConfirmation/OrderConfirmation";
+import AdminLayout from "../Layout/AdminLayout";
 
 const router = createBrowserRouter([
   {
