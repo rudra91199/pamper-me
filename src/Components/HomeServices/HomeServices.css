@@ -47,8 +47,8 @@
   transition: 0.2s ease-in-out;
 }
 
-.home-services-container .swiper-slide:nth-child(odd):hover img {
-  border-radius: 0;
+.home-services-container .swiper-slide:nth-child(odd):hover img{
+  border-radius: 40%;
 }
 
 .home-services-container .swiper-slide:nth-child(even) img {
@@ -56,8 +56,8 @@
   border-radius: 0 0 40% 40%;
 }
 
-.home-services-container .swiper-slide:nth-child(even):hover img {
-  border-radius: 0;
+.home-services-container .swiper-slide:nth-child(even):hover img{
+  border-radius: 40%;
 }
 
 .home-services-container .swiper-pagination-bullet,
