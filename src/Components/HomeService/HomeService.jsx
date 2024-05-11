@@ -8,13 +8,13 @@ const HomeService = ({ service }) => {
     <div className="homeServiceCard">
       <img src={service.img} alt="" />
       <div>
-        <p className="homeService-title">{service?.title}</p>
+        <p className="homeService-title gradient">{service?.title}</p>
         <p className="home-service-category">
           {service.category.toUpperCase()}
         </p>
-        <p className="service-desc">{service.shortDescription.slice(0,60) + "..."}</p>
+        <p className="service-desc">{service.shortDescription.slice(0,65) + "..."}</p>
         <p className="home-service-price">BDT <span className="font">{service.price}</span></p>
-        <button onClick={() => navigate(`/service/${service?.title}`)}>Read More...</button>
+        <button className="bg-gradient" onClick={() => navigate(`/service/${service?.title}`)}>Read More...</button>
       </div>
     </div>
   );
