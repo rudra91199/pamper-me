@@ -15,8 +15,8 @@ import { Pagination, Autoplay } from "swiper/modules";
 const HomeServices = () => {
   const { services, setServices } = useContext(Context);
   return (
-    <div className="services">
-      <p>WHO WE OFFER</p>
+    <div className="home-services">
+      <p>EXPLORE OUR SERVICES</p>
       <h2>What We Provide To Our Customers</h2>
       <div className="home-services-container">
         <Swiper

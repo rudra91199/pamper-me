@@ -33,7 +33,7 @@ const Product = ({ product }) => {
       />
       <div>
         <p className="product-title">{product?.name}</p>
-        <div>
+        <div className="categories">
           <span>{product?.category}</span>
           <span>{product?.subcategory}</span>
           <span>{product?.Brand}</span>

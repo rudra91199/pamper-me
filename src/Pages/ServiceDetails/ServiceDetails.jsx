@@ -7,6 +7,7 @@ import auth from "../../../firebase.init";
 import { useAuthState } from "react-firebase-hooks/auth";
 import Rating from "react-rating";
 import AdditionalInformation from "../../Components/ProductDetails/AdditionalInformation";
+import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 const ServiceDetails = () => {
   const [user] = useAuthState(auth);
   const { slug } = useParams();
@@ -42,7 +43,9 @@ const ServiceDetails = () => {
         <div className="serviceDetails">
           <h1 className="gradient">{service?.title}</h1>
           <p className="service-details-category">{service?.category}</p>
-          <p className="service-details-category">Duration: {service?.duration}</p>
+          <p className="service-details-category">
+            Duration: {service?.duration} min
+          </p>
           <p className="service-price">BDT. {service?.price}</p>
           <div className="service-rating">
             <Rating
@@ -56,9 +59,18 @@ const ServiceDetails = () => {
           <p className="service-details-description">
             {service?.shortDescription}
           </p>
+          <button className="booknow-btn">Booknow</button>
+          <div className="share">
+            <p>Share :</p>
+            <div>
+              <button><FaFacebookF /></button>
+              <button><FaInstagram /></button> 
+              <button><FaTwitter /></button> 
+            </div>
+          </div>
         </div>
       </div>
-      <AdditionalInformation product={service} />
+      <AdditionalInformation service={service} />
     </div>
   );
 };

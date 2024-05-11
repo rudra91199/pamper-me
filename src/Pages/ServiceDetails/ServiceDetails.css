@@ -71,57 +71,40 @@
   color: #e32085;
 }
 
-.service-details-container .add-to-cart{
-  display: flex;
-  align-items: center; 
-  gap: 20px;
-  margin-bottom: 30px;
-}
+.service-details-content .booknow-btn{
+  width: 200px;
+  padding: 10px 0;
+  font-size: 15px;
+  font-weight: 600;
+  background-color: var(--purple);
+  color: white;
+  border-radius: 5px;
+} 
 
-.service-details-container .quantity {
+.service-details-content .share {
+  margin-top: 30px;
   display: flex;
   gap: 10px;
   align-items: center;
-  border: 1px solid rgba(0, 0, 0, 0.247);
-  width: fit-content;
-  padding: 5px 15px;
-  height: 35px;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  border-radius: 5px;
-
 }
 
-.service-details-container .quantity p{
-  font-size: 18px;
-}
-
-.service-details-container .quantity button {
-  background: none;
-  display: flex;
-  font-size: 14px;
-}
-
-.service-details-container .add-to-cart .buy-btn {
-  padding: 0 15px;
-  border-radius: 5px;
-  background-color: var(--pink);
-  color: white;
+.service-details-content .share p{
   font-weight: 500;
-  font-size: 14px;
-  transition: all ease-in-out 200ms;
-  height: 35px;
 }
 
-.buy-btn:hover {
-  background-color: var(--purple);
-} 
-
-.service-details-container .sku{
-  margin-bottom: 10px;
+.service-details-content .share div{
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.service-details-container .sku,
-.service-details-container .tags{
-  font-size: 15px;
+.service-details-content .share button{
+  background: var(--lightPink);
+  height: 25px;
+  width: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 50%;
 }
