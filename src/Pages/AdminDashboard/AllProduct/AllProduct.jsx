@@ -2,6 +2,8 @@ import React, { useContext } from "react";
 import "./AllProduct.css";
 import { Context } from "../../../Providers/PamperContext";
 import { Link } from "react-router-dom";
+import { MdOutlineDelete } from "react-icons/md";
+import { FaRegEdit } from "react-icons/fa";
 
 const AllProduct = () => {
   const { products } = useContext(Context);
@@ -10,8 +12,8 @@ const AllProduct = () => {
       <div className="page-title">
         <h1>All Product</h1>
         <div>
-            <Link to="/admin">Add Product</Link>
-            <Link to="/admin">Bulk Edit</Link>
+          <Link to="/admin">Add Product</Link>
+          <Link to="/admin">Bulk Edit</Link>
         </div>
       </div>
       <table className="product-table">
@@ -37,7 +39,14 @@ const AllProduct = () => {
             <td>{product?.category}</td>
             <td>{product?.tags}</td>
             <td>Publish</td>
-            <td>Edit Delete</td>
+            <td>
+              <spam className="edit">
+                <FaRegEdit />
+              </spam>
+              <spam className="delete">
+                <MdOutlineDelete />
+              </spam>
+            </td>
           </tr>
         ))}
       </table>

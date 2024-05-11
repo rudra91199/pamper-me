@@ -1,10 +1,12 @@
 import { useNavigate, useParams } from "react-router-dom";
 import "./ServiceDetails.css";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Context } from "../../Providers/PamperContext";
 
 import auth from "../../../firebase.init";
 import { useAuthState } from "react-firebase-hooks/auth";
+import Rating from "react-rating";
+import AdditionalInformation from "../../Components/ProductDetails/AdditionalInformation";
 const ServiceDetails = () => {
   const [user] = useAuthState(auth);
   const { slug } = useParams();
@@ -14,79 +16,49 @@ const ServiceDetails = () => {
   const relatedCategory = services?.filter(
     (r) => r?.category == service?.category && r?.title != service?.title
   );
+  const [selectedImage, setSelectedImage] = useState("");
+
+  useEffect(() => {
+    setSelectedImage(service?.img);
+  }, [service]);
 
   return (
-    <div className="service-details">
-      <div>
-        <div className="service-details-container">
-          <div className="img-container">
-            <img src={service?.img} />
-          </div>
-          <div className="details">
-            <h1>{service?.title}</h1>
-            <p className="category">{service?.category}</p>
-            <div
-              className="description"
-              dangerouslySetInnerHTML={{ __html: service?.longDescription }}
-            />
-            <div style={{ display: "flex", gap: "40px" }}>
-              <p className="duration">{service?.duration}</p>
-              <p className="price">BDT. {service?.price}</p>
-            </div>
-            <button
-              onClick={() =>
-                navigate("/booknow", {
-                  state: {service:{
-                    id:service._id,
-                    title:service.title,
-                    price:service.price,
-                    duration:service.duration,
-                    img:service.img
-                  }},
-                })
-              }
-              className="book-btn"
-            >
-              BOOK NOW
-            </button>
-
-          </div>
-        </div>
-        <p style={{ textAlign: "center", fontWeight: "bold", margin: "40px" }}>
-          HOW TO USE
-        </p>
-        <div
-          className="steps"
-          dangerouslySetInnerHTML={{ __html: service?.steps }}
-        />
-      </div>
-      <div className="relatedServices">
-        <p className="recomendedTitle">Recomended for you</p>
-        <div className="underline"></div>
-        <div className="relatedServices-container">
-          <div>
-            {relatedCategory.map((related) => (
-              <div key={related.title} className="relatedService">
-                <div className="relatedImg">
-                  <img src={related?.img} alt="" />
-                </div>
-                <div className="relatedDetails">
-                  <p style={{ fontSize: "14px" }}>{related?.title}</p>
-                  <div style={{ color: "#e32085", fontWeight: "bold" }}>
-                    BDT {related?.price}
-                  </div>
-                  <button
-                    onClick={() => navigate(`/service/${related?.title}`)}
-                    className="viewBtn"
-                  >
-                    VIEW
-                  </button>
-                </div>
-              </div>
+    <div className="service-details-container">
+      <div className="service-details-content">
+        <div className="service-img-container">
+          <div className="images">
+            {[1, 2, 3, 4].map((_, i) => (
+              <img
+                key={i}
+                src={selectedImage}
+                // onClick={() => setSelectedImage(image.src)}
+                className={`${i === 0 && "selected-image"}`}
+              />
             ))}
           </div>
+
+          <img src={selectedImage} alt="" />
+        </div>
+        <div className="serviceDetails">
+          <h1 className="gradient">{service?.title}</h1>
+          <p className="service-details-category">{service?.category}</p>
+          <p className="service-details-category">Duration: {service?.duration}</p>
+          <p className="service-price">BDT. {service?.price}</p>
+          <div className="service-rating">
+            <Rating
+              emptySymbol="fa fa-star-o fa-2x"
+              fullSymbol="fa fa-star fa-2x"
+              initialRating={4.4}
+              fractions={10}
+              readonly
+            />
+          </div>
+          <p className="service-details-description">
+            {service?.shortDescription}
+          </p>
         </div>
       </div>
+      <AdditionalInformation product={service} />
     </div>
   );
 };

@@ -36,7 +36,6 @@ const Search = () => {
   }
   }, [searchIcon, profileHover]);
 
-  // console.log(searchIcon)
 
   return (
     <div

@@ -12,7 +12,6 @@ const Checkout = () => {
   const { userData } = useContext(Context);
   const [isChecked, setIsChecked] = useState(false);
   const navigate = useNavigate();
-  console.log(useLocation())
 
   const createBooking = (bookingDetails) => {
     axios

@@ -183,7 +183,6 @@ const Login = () => {
                       });
 
                       if (email) {
-                        console.log(email);
                         const success = await sendPasswordResetEmail(email);
                         if (success) {
                           Swal.fire(`Password reset email sent to ${email}`);
