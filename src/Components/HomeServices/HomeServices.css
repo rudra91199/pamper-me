@@ -48,7 +48,7 @@
 }
 
 .home-services-container .swiper-slide:nth-child(odd):hover img{
-  border-radius: 0;
+  border-radius: 40%;
 }
 
 .home-services-container .swiper-slide:nth-child(even) img{
@@ -57,5 +57,5 @@
 }
 
 .home-services-container .swiper-slide:nth-child(even):hover img{
-  border-radius: 0;
+  border-radius: 40%;
 }
