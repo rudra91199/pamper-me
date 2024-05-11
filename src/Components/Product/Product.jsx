@@ -11,7 +11,6 @@ const Product = ({ product }) => {
   const { cart, setCart, isCartOpen, setIsCartOpen } = useContext(Context);
 
   const handleAddToCart = (item) => {
-    console.log(item?._id);
     let newCart = [];
     const exists = cart.find((product) => product._id == item._id);
     if (!exists) {

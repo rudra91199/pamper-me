@@ -13,7 +13,6 @@ import Address from "../../Components/UpdateProfile/Address/Address";
 const UpdateProfile = () => {
   const [user] = useAuthState(auth);
   const [activeTab, setActiveTab] = useState("profile-details");
-  console.log(user);
   return (
     <div className="update-profile">
       <div className="user-info">

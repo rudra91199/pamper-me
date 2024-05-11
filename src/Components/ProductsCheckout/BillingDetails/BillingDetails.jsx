@@ -14,7 +14,6 @@ const BillingDetails = ({
 }) => {
   const { userData } = useContext(Context);
   const [user] = useAuthState(auth);
-  console.log(userData);
   return (
     <div className="billing-details">
       <h3>Billilng Details</h3>

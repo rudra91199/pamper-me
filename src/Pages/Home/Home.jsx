@@ -6,6 +6,7 @@ import PopularProducts from "../../Components/PopularProducts/PopularProducts";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
 import { useLocation } from "react-router-dom";
+import ServiceHighlight from "../../Components/ServiceHighlight/ServiceHighlight";
 
 const Home = () => {
   const [user] = useAuthState(auth);
@@ -13,6 +14,7 @@ const Home = () => {
   return (
     <div className="home">
       <Banner></Banner>
+      <ServiceHighlight/>
       <HomeServices />
       <PopularProducts />
       <ChooseUs />

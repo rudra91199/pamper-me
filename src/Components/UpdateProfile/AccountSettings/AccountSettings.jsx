@@ -53,8 +53,6 @@ const AccountSettings = () => {
 
   const passWordHandle = (e) => {
     e.preventDefault();
-    console.log(e.target.currentPass.value);
-    console.log(e.target.newPass.value);
     const currentPass = e.target.currentPass?.value;
     const newPass = e.target.newPass?.value;
     const confirmPass = e.target.confirmPass?.value;
@@ -62,9 +60,7 @@ const AccountSettings = () => {
       signInWithEmailAndPassword(auth, user?.email, currentPass)
         .then(async (userCredential) => {
           // Signed in
-          console.log("mathced");
           const success = await updatePassword(newPass);
-          console.log(success);
           if (success) {
             Swal.fire({
               title: "Password updated",
@@ -93,7 +89,6 @@ const AccountSettings = () => {
           });
         });
     } else {
-      console.log("first");
       setErrorMessage({
         currentPassNotMatch: "",
         confirmPassNotMatch: "Confirm Password Does Not Match!",

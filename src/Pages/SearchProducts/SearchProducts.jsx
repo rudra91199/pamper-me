@@ -5,7 +5,6 @@ import { useLocation } from 'react-router-dom'
 
 const SearchProducts = () => {
   const { products, searchText,searchTab } = useLocation().state;
-  console.log(products, searchTab);
   return (
     <div className="search-products-container">
       <h3>Showing {products.length} result for {'"' + searchText + '"'}</h3>

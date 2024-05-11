@@ -6,8 +6,6 @@ import { useState } from "react";
 const Category = () => {
  const {brandProducts,subProducts, filteredProducts} = useOutletContext()
 
- console.log(brandProducts)
-
   return <>
     {(brandProducts.length > 0 ? brandProducts : (subProducts.length> 0 ? subProducts : filteredProducts) )?.map(
             (product) => (

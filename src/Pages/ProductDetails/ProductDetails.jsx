@@ -16,8 +16,6 @@ const ProductDetails = () => {
   const [selectedImage, setSelectedImage] = useState("");
   const [counter, setCounter] = useState(1);
 
-  console.log(product);
-
   const navigate = useNavigate();
   const relatedCategory = products?.products?.filter(
     (r) => r?.category == product?.category && r?.name != product?.name

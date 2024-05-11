@@ -1,46 +1,49 @@
 .homeServiceCard {
-  display: flex;
-  flex-direction: column;
-  width: 350px;
-  height: 350px;
-  border-radius: 10px;
-  padding: 40px 30px;
-  position: relative;
-  box-shadow: 0px 0px 10px #e3208556;
-  border-radius: 60px 60px 60px 0;
   transition: all 200ms ease-in-out;
+  border-radius: 10px;
+  padding: 5px;
 }
-.homeServiceCard:hover {
-  box-shadow: 0px 0px 20px #e3208585;
-  scale: 100.5%;
-}
+
 .homeServiceCard img {
-  width: 95%;
-  height: 300px;
-  margin: 20px auto;
-  border-radius: 20px;
+  width: 100%;
 }
-.home-service-title {
-  font-weight: bold;
-  font-size: 16px !important;
-  margin-bottom: 10px;
+
+
+.homeServiceCard > div{
+  text-align: center;
+  margin-top: 10px;
 }
-.home-service-category {
+
+.homeService-title {
+  font-size: 17px;
   color: #962986;
   font-weight: bold;
-  margin: 20px 0;
-}
-
-.home-service-desc {
+  text-align: center;
   margin-bottom: 10px;
-  /* color: white; */
+  height: 40px;
 }
 
-.home-service-time {
-  margin-bottom: 20px;
-  color: #e32085;
+.home-service-category {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.homeServiceCard .service-desc{
+  font-size: 14px;
+  color: rgb(0, 0, 0,0.8);
 }
 
 .home-service-price {
   color: #e32085;
+  font-weight: 500;
+}
+
+.homeServiceCard button{
+  background-color: var(--pink);
+  color: white;
+  padding: 8px 15px;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-weight: 600;
 }
