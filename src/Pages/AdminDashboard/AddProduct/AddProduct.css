@@ -1,3 +1,28 @@
 .addProduct{
     padding: 20px;
 }
+.addProduct h1{
+    padding: 20px;
+}
+.add-form{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin-top: 20px;
+}
+.add-form input,.add-form textarea{
+    margin: 20px;
+    padding: 10px;
+    height: fit-content;
+}
+.add-image{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-weight: bold;
+}
+.image-preview{
+    height: 200px;
+    width: 600px;
+    border: 1px solid black;
+}

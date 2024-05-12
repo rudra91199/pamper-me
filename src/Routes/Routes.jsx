@@ -180,6 +180,10 @@ const router = createBrowserRouter([
       {
         path: "/admin/coupons",
         element: <Coupons></Coupons>,
+      },
+      {
+        path: "/admin/addProduct",
+        element: <AddProduct></AddProduct>,
       }
     ],
   },

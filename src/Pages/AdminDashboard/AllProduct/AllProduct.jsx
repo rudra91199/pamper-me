@@ -12,8 +12,8 @@ const AllProduct = () => {
       <div className="page-title">
         <h1>All Product</h1>
         <div>
-          <Link to="/admin">Add Product</Link>
-          <Link to="/admin">Bulk Edit</Link>
+          <Link to="/admin/addProduct">Add Product</Link>
+          <Link to="/admin/bulkEdit">Bulk Edit</Link>
         </div>
       </div>
       <table className="product-table">
