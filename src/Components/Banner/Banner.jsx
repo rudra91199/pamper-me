@@ -17,7 +17,7 @@ import { EffectFade, Navigation, Pagination,Autoplay } from 'swiper/modules';
 
 export default function Banner() {
   return (
-    <>
+    <div className='home-banner'>
       <Swiper
         spaceBetween={30}
         effect={'fade'}
@@ -42,6 +42,6 @@ export default function Banner() {
           <img src={banner3} alt='' />
         </SwiperSlide>
       </Swiper>
-    </>
+    </div>
   );
 }

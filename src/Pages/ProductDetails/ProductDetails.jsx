@@ -7,6 +7,7 @@ import { FiMinus, FiPlus } from "react-icons/fi";
 import { addToDb } from "../../Utilities/CartDb";
 import Rating from "react-rating";
 import AdditionalInformation from "../../Components/ProductDetails/AdditionalInformation";
+import RelatedProducts from "../../Components/RelatedProducts/RelatedProducts";
 const ProductDetails = () => {
   const { slug } = useParams();
   const { products } = useContext(Context);
@@ -15,8 +16,6 @@ const ProductDetails = () => {
   const product = products?.products?.find((p) => p?.name == slug);
   const [selectedImage, setSelectedImage] = useState("");
   const [counter, setCounter] = useState(1);
-
-  console.log(product);
 
   const navigate = useNavigate();
   const relatedCategory = products?.products?.filter(
@@ -101,8 +100,8 @@ const ProductDetails = () => {
           <p className="tags">TAGS: FASHION / WOMAN</p>
         </div>
       </div>
-        <AdditionalInformation product={product}/>
-      
+      <AdditionalInformation product={product} />
+      <RelatedProducts product={product}/>
     </div>
   );
 };

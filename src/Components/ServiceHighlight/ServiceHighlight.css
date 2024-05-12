@@ -1,0 +1,64 @@
+.serviceHighlights {
+  display: grid;
+  grid-template-columns: 3fr 2fr 2fr;
+  width: 76%;
+  margin: 100px auto ;
+  gap: 30px;
+}
+
+.highlight-details{
+  width: 80%;
+}
+
+.serviceHighlights h1{
+    font-size: 52px;
+}
+
+.serviceHighlights h1 span{
+    /* color: var(--pink); */
+}
+
+.serviceHighlights .gradient{
+  background: linear-gradient(to right, var(--pink) 40%, var(--purple));
+  background-clip: text;
+  color: transparent;
+  width: fit-content;
+  margin: 0 auto;
+
+}
+
+.serviceHighlights p{
+    margin-top: 30px;
+    font-weight: 500;
+    color: rgb(0, 0, 0,0.8);
+    text-align: justify;
+}
+
+.serviceHighlights button{
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 30px;
+    background-color: var(--lightPink);
+    color: white;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+.serviceHighlights img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+@media (width<1600px) {
+  .highlight-details{
+    width: 90%;
+  } 
+
+  .serviceHighlights h1{
+    font-size: 42px;
+  }
+
+  .serviceHighlights p{
+    font-size: 16px;
+  }
+}

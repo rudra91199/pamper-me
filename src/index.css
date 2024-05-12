@@ -58,7 +58,8 @@ textarea {
   background: linear-gradient(to right, var(--pink), var(--purple));
   background-clip: text;
   color: transparent;
-  /* width: fit-content; */
+  width: fit-content;
+  margin: 0 auto;
 }
 
 .font {
@@ -67,5 +68,5 @@ textarea {
 }
 
 .bg-gradient {
-  background: linear-gradient(to right, var(--pink), var(--purple));
+  background: linear-gradient(to right, var(--pink) 40%, var(--purple));
 }

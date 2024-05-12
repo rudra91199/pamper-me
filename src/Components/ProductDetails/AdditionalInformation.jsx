@@ -4,7 +4,7 @@ import ProductDescription from "./ProductDescription";
 import HowToUse from "./HowToUse";
 import ProductReviews from "./ProductReviews";
 
-const AdditionalInformation = ({product}) => {
+const AdditionalInformation = ({product, service}) => {
   const [selectedTab, setselectedTab] = useState(1);
   return (
     <div className="additional-info">
@@ -19,7 +19,7 @@ const AdditionalInformation = ({product}) => {
           onClick={() => setselectedTab(2)}
           className={`tab ${selectedTab === 2 && "tab-active"}`}
         >
-          How to use
+          {product? "How to use" : "Steps"}
         </button>
         <button
           onClick={() => setselectedTab(3)}
@@ -30,9 +30,9 @@ const AdditionalInformation = ({product}) => {
       </div>
       <hr />
       <div className="additional-info-content">
-      {selectedTab === 1 && <ProductDescription product={product}/>}
-        {selectedTab === 2 && <HowToUse product={product}/>}
-        {selectedTab === 3 && <ProductReviews product={product}/>}
+      {selectedTab === 1 && <ProductDescription product={product} service={service}/>}
+        {selectedTab === 2 && <HowToUse product={product} service={service}/>}
+        {selectedTab === 3 && <ProductReviews product={product} service={service}/>}
       </div>
     </div>
   );

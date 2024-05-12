@@ -1,30 +1,28 @@
-.products{
-    padding: 10px 12%;
-    background-image: url('../../assets/Images/Banner/ty2-lg.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    text-align: center;
+.products {
+  background-image: url("../../assets/Images/Banner/ty2-lg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+  height:77vh;
 }
-.products h2{
-    /* color: #e32085; */
-    /* text-align: center; */
-    padding: 10px;
-    /* border-radius: 10px; */
-    font-size: 40px;
-    background:linear-gradient(to right, var(--pink), var(--purple));
-    -webkit-background-clip: text;
-    width: fit-content;
-    color: transparent;
-    font-size: 35px;
-    margin: 20px auto;
+.products h2 {
+  padding: 30px 0 0;
+  background: linear-gradient(to right, var(--pink), var(--purple));
+  -webkit-background-clip: text;
+  width: fit-content;
+  color: transparent;
+  font-size: 35px;
+  margin: 0 auto;
 }
+
 .home-products-container {
-  display: flex;
-  flex-direction: row;
-  gap: 40px;
-  justify-content: center;
-  margin-top: 40px;
+  width: 76%;
+  margin: 60px auto 0;
+}
+
+.home-products-container .swiper {
+  padding-bottom: 60px;
 }
 
 .products span {
@@ -37,25 +35,23 @@
   font-weight: 700;
   text-align: center;
   padding: 10px 0;
-  margin-top: 30px;
+  margin: 30px 0;
   cursor: pointer;
   background-color: transparent;
 }
 
-
-.all-product-btn a{
-    color: #962986;
-    font-weight: 700;
+.all-product-btn a {
+  color: #962986;
+  font-weight: 700;
 }
 
-.all-product-btn a:hover{
+.all-product-btn a:hover {
   color: var(--pink);
 }
 
-
 @media (min-width: 768px) {
   .button-53 {
-    padding: .75rem 3rem;
+    padding: 0.75rem 3rem;
     font-size: 1.25rem;
   }
 }

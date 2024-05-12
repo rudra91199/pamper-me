@@ -1,35 +1,65 @@
 .productCard {
   display: flex;
   flex-direction: column;
-  height: 350px;
   border-radius: 10px;
-  padding: 20px;
   position: relative;
   background: white;
   transition: all 0.3s ease-in-out;
+  text-align: left;
+  /* width: 400px; */
 }
-.width-350{
-  width: 350px;
+
+.productCard>div {
+  padding: 20px;
 }
-.product-border{
+
+.shop-product {
+  width: unset;
   box-shadow: 0px 0px 10px #e3208556;
 }
 
-.productCard:hover{
+.productCard:hover {
   box-shadow: 0 0 20px #e3208564;
 
 }
 
 .productCard img {
-  /* width: 150px; */
   height: 200px;
   margin: 0px auto;
 }
 
 .product-title {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 16px !important;
-  height: 40px;
+  height: 30px;
+  margin: 10px 0 0;
+}
+
+
+
+.productCard>div>div {
+  display: flex;
+  gap: 10px;
+}
+
+.productCard>div>div span:first-child {
+  background: hsl(329, 78%, 91%);
+}
+
+.productCard>div>div span:nth-child(2) {
+  background: hsl(309, 57%, 85%);
+}
+
+.productCard>div>div span:last-child {
+  background: hsl(329, 58%, 95%);
+}
+
+.productCard>div>div span {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 20px;
+  color: rgba(0, 0, 0, 0.8);
 }
 
 .product-category {
@@ -39,9 +69,11 @@
 }
 
 .product-desc {
-  height: 55px;
   font-size: 14px;
-  color: rgb(111, 111, 111);
+  color: rgba(0, 0, 0, 0.8);
+  margin: 20px 0 30px;
+  font-weight: 500;
+  letter-spacing: 1px;
 }
 
 .price-button {
@@ -53,8 +85,13 @@
   margin-top: 10px;
 }
 
+.productCard .product-price {
+  font-size: 20px;
+  color: #e32085;
+}
+
 .cart-btn {
-  background: #962986;
+  background: #e32085;
   color: white;
   font-family: "Raleway", sans-serif;
   font-weight: bold;
@@ -62,8 +99,51 @@
   padding: 10px 15px;
   transition: all ease-in-out 200ms;
   border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.w-4 {
+  width: 20px;
+}
+
+.h-4 {
+  height: 20px;
 }
 
 .cart-btn:hover {
-  background: #e32085;
+  background: #962986;
+}
+
+@media screen and (width<1600px) {
+  .productCard img {
+    height: 170px;
+  }
+
+  .product-title {
+    font-size: 14px !important;
+  }
+
+  .productCard>div>div span {
+    font-size: 10px;
+  }
+
+  .product-desc {
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
+
+  .productCard .product-price {
+    font-size: 16px;
+  }
+
+  .cart-btn {
+    font-size: 12px;
+    padding: 7px 10px;
+  }
+
+  .w-4 {
+    width: 18px;
+  }
 }

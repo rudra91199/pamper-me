@@ -1,0 +1,21 @@
+.related-products{
+    margin-top: 5cqmax;
+}
+
+.related-products > h3{
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.related-products .mySwiper{
+    padding: 20px 20px 40px;
+}
+
+.related-products .product-desc{
+    display: none;
+}
+
+.related-products .categories{
+    margin-bottom: 20px;
+}

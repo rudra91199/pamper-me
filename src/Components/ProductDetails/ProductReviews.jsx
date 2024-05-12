@@ -4,7 +4,7 @@ import { Context } from "../../Providers/PamperContext";
 import axios from "axios";
 import { format } from "date-fns";
 
-const ProductReviews = ({ product }) => {
+const ProductReviews = ({ product, service }) => {
   const { userData } = useContext(Context);
   const [rating, setRating] = useState(0);
   const handleAddReview = async (e) => {
@@ -18,43 +18,46 @@ const ProductReviews = ({ product }) => {
       email: userData?.email,
       rating,
     };
-
-    console.log(reviewData);
-
-    const { data } = await axios.put(
-      `https://pamper-me-backend.vercel.app/api/products/addReview/${product._id}`,
-      reviewData
-    );
+    const url = product
+      ? `https://pamper-me-backend.vercel.app/api/products/addReview/${product._id}`
+      : `http://localhost:5000/api/services/addReview/${service._id}`;
+    const { data } = await axios.put(url, reviewData);
   };
   return (
     <div className="product-reviews">
-      <h3>{product?.reviews?.length} Review for {product?.name}</h3>
+      {product ? (
+        <h3>
+          {product?.reviews?.length} Review for {product?.name}
+        </h3>
+      ) : (
+        <h3>
+          {service?.reviews?.length} Reviews for {service?.title}
+        </h3>
+      )}
       <div className="reviews">
-        {product?.reviews?.map((review, i) =><div key={i} className="review">
-          <img
-            src={review.image}
-            alt=""
-            className="review-img"
-          />
-          <div>
-            <div className="review-rating">
-              <Rating
-                emptySymbol="fa fa-star-o fa-2x"
-                fullSymbol="fa fa-star fa-2x"
-                initialRating={review.rating}
-                fractions={10}
-                readonly
-              />
+        {(product ? product?.reviews : service?.reviews)?.map((review, i) => (
+          <div key={i} className="review">
+            <img src={review.image} alt="" className="review-img" />
+            <div>
+              <div className="review-rating">
+                <Rating
+                  emptySymbol="fa fa-star-o fa-2x"
+                  fullSymbol="fa fa-star fa-2x"
+                  initialRating={review.rating}
+                  fractions={10}
+                  readonly
+                />
+              </div>
+              <p className="review-name">
+                <span>
+                  {review.firstName} {review.lastName}
+                </span>{" "}
+                - {format(review.date, "MMMM dd, yyyy")}
+              </p>
+              <p>{review.review}</p>
             </div>
-            <p className="review-name">
-              <span>{review.firstName} {review.lastName}</span> - {format(review.date, "MMMM dd, yyyy")}
-            </p>
-            <p>
-              {review.review}
-            </p>
           </div>
-        </div>
-)}
+        ))}
       </div>
 
       {/* add review */}

@@ -94,8 +94,6 @@ const CheckoutPage = () => {
       });
   };
 
-  console.log(city);
-
   return (
     <div className="checkoutPage-container">
       {!LoggedUser && <LoginFromCheckout />}
