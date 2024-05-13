@@ -1,31 +1,25 @@
 import { useNavigate } from "react-router-dom";
 import "./Service.css"
-const Service = ({service}) => {
+const Service = ({ service }) => {
   const navigate = useNavigate()
-    return (
-        <div onClick={()=>navigate(`/service/${service?.title}`)} className="serviceCard">
-        <p className="service-title">{service?.title}</p>
-        <img
-          src={service?.img}
-          alt=""
-        />
+  return (
+    <div onClick={() => navigate(`/service/${service?.title}`)} className="serviceCard">
+      <div className="serviceCard-img-container">
+      <img
+        src={service?.img}
+        alt=""
+      />
+      </div>
+      <div className="serviceCard-content">
         <p className="service-category">{service?.category?.toUpperCase()}</p>
-        {/* <p className="service-desc">{service.shortDescription}</p> */}
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            gap: "20px",
-            fontFamily: "Arial, Helvetica, sans-serif",
-            position: "absolute",
-            bottom: "10px",
-          }}
-        >
-          <p className="service-time">{service?.duration}</p>
-          <p className="service-price">TK. {service?.price}</p>
+        <p className="service-title">{service?.title}</p>
+        <div>
+          <p className="serviceCard-time">Duration <span className="font">{service?.duration}</span> Min</p>
+          <p className="serviceCard-price">BDT <span className="font">{service?.price}</span></p>
         </div>
       </div>
-    );
+    </div>
+  );
 };
 
 export default Service;
