@@ -1,14 +1,17 @@
 import React, { useContext } from "react";
 import "./AddProduct.css";
 import { Context } from "../../../Providers/PamperContext";
+import addImg from "../../../assets/Images/icons/add-img.png";
 
 const AddProduct = () => {
   const { products } = useContext(Context);
-  console.log(products.products[0]);
 
   return (
     <div className="addProduct">
-      <h1>Add Product</h1>
+      <div className="addProduct-header">
+        <h1>Add Product</h1>
+        <button>PUBLISH</button>
+      </div>
 
       <div className="add-form">
         <input type="text" placeholder="Product Name" />
@@ -18,7 +21,11 @@ const AddProduct = () => {
         <textarea rows={10} placeholder="Product Short Description" />
         <textarea rows={10} placeholder="Product Meta Description" />
         <input type="number" placeholder="Sale Price" />
-        <input type="text" placeholder="On Sale?" />
+        <select type="text" placeholder="On Sale?" >
+          <option>Selece sale status</option>
+          <option>false</option>
+          <option>true</option>
+        </select>
         <input type="text" placeholder="Category" />
         <input type="text" placeholder="Subcategory" />
         <input type="number" placeholder="Stock Quantity" />
@@ -26,13 +33,30 @@ const AddProduct = () => {
         <input type="text" placeholder="Variation" />
         <input type="text" placeholder="Attributes" />
       </div>
-      <div className="add-image">
-        <p>Product Image</p>
-        <input type="file"/>
-        <p>Preview</p>
-        <div className="image-preview">
 
+      <h2>Product Image</h2>
+      <div className="add-image">
+        <div className="img-preview">
+          <input type="file" className="file" />
+          <img src={addImg} alt="" />
         </div>
+        <div className="img-preview">
+          <input type="file" className="file" />
+          <img src={addImg} alt="" />
+        </div>
+        <div className="img-preview">
+          <input type="file" className="file" />
+          <img src={addImg} alt="" />
+        </div>
+        <div className="img-preview">
+          <input type="file" className="file" />
+          <img src={addImg} alt="" />
+        </div>
+        <div className="img-preview">
+          <input type="file" className="file" />
+          <img src={addImg} alt="" />
+        </div>
+        <button>SUBMIT</button>
       </div>
     </div>
   );
