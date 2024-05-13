@@ -21,7 +21,7 @@ const AdminLayout = () => {
         <div className="drawer-side">
           <label htmlFor="dashboard-drawer" className="drawer-overlay"></label>
           <Link to="/">
-            {/* <img src={logo} alt="" className="ad-logo"></img> */}
+            <img src={logo} alt="" className="ad-logo"></img>
           </Link>
           <div className="ad-menu">
             <Link
@@ -32,7 +32,7 @@ const AdminLayout = () => {
             >
               Products
             </Link>
-
+              
             <Link
               className={`${
                 location.pathname === "/admin/services" && "ad-navlink-active"
