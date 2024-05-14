@@ -2,11 +2,12 @@ import { useNavigate } from "react-router-dom";
 import "./Service.css"
 const Service = ({ service }) => {
   const navigate = useNavigate()
+  const {images} = service;
   return (
     <div onClick={() => navigate(`/service/${service?.title}`)} className="serviceCard">
       <div className="serviceCard-img-container">
       <img
-        src={service?.img}
+        src={service?.images[4]?.src}
         alt=""
       />
       </div>

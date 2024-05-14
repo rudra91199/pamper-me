@@ -20,19 +20,20 @@ const ServiceDetails = () => {
   const [selectedImage, setSelectedImage] = useState("");
 
   useEffect(() => {
-    setSelectedImage(service?.img);
+    setSelectedImage(service?.images[0]?.src);
   }, [service]);
+
 
   return (
     <div className="service-details-container">
       <div className="service-details-content">
         <div className="service-img-container">
           <div className="images">
-            {[1, 2, 3, 4].map((_, i) => (
+            {service?.images?.slice(0,4)?.map((image, i) => (
               <img
                 key={i}
-                src={selectedImage}
-                // onClick={() => setSelectedImage(image.src)}
+                src={image.src}
+                onClick={() => setSelectedImage(image.src)}
                 className={`${i === 0 && "selected-image"}`}
               />
             ))}

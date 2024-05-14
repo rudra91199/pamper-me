@@ -6,7 +6,7 @@ const HomeService = ({ service }) => {
   const navigate = useNavigate();
   return (
     <div className="homeServiceCard">
-      <img src={service.img} alt="" />
+      <img src={service.images[0]?.src} alt="" />
       <div>
         <p className="homeService-title gradient">{service?.title}</p>
         <p className="home-service-category">
