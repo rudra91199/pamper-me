@@ -8,9 +8,12 @@ import { Context } from "../../Providers/PamperContext";
 const Services = () => {
   const [selectedTab, setSelectedTab] = useState(null);
   const [loading, setLoading] = useState(false);
-  const {services, setServices} = useContext(Context);
+  const { services, setServices } = useContext(Context);
+  const [images, setImages] = useState([]);
+  const [selectedImage, setSelectedImage] = useState(images[0]?.src);
+  const filteredServices = services?.filter(service => service?.category == selectedTab)
 
-  const filteredServices = services?.filter(service=>service?.category==selectedTab)
+
 
   return (
     <div className="services">
@@ -21,12 +24,17 @@ const Services = () => {
         setSelectedTab={setSelectedTab}
         name="services"
       ></ServicesTab>
-        <div className="service-container">
-          {(filteredServices.length>0?filteredServices:services)?.map((service) => (
-            <Service key={service.name} service={service}></Service>
-          ))}
-        </div>
+      <div className="service-container">
+        {(filteredServices.length > 0 ? filteredServices : services)?.map((service) => (
+          <Service key={service.name} service={service} setImages={setImages}></Service>
+        ))}
       </div>
+      {images.length > 0 && <div className="service-images">
+        <div>
+          <img src={images[0]?.src} alt="" />
+        </div>
+      </div>}
+    </div>
   );
 };
 
