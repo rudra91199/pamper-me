@@ -67,7 +67,6 @@ const CheckoutPage = () => {
       PaymentMethod,
       paid: false,
       shippingCharge,
-
       vat,
       comment,
     };
