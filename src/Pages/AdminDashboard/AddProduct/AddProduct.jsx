@@ -3,38 +3,38 @@ import "./AddProduct.css";
 import { Context } from "../../../Providers/PamperContext";
 import addImg from "../../../assets/Images/icons/add-img.png";
 import axios from "axios";
+import Swal from "sweetalert2";
 
 const AddProduct = () => {
   const { products } = useContext(Context);
-  const [images, setImages] = useState({
+  console.log(products.products[0])
+  const [productImages, setProductImages] = useState({
     img1: "",
     img2: "",
     img3: "",
     img4: "",
     img5: "",
   });
-  console.log(images);
-
   const setFileToBase = (e, imgCount) => {
     const file = e.target.files[0];
     if (!file) {
       // No file selected, set the corresponding key in images state to an empty string
-      setImages({ ...images, [`img${imgCount}`]: "" });
+      setProductImages({ ...productImages, [`img${imgCount}`]: "" });
       return;
     }
-  
+
     const reader = new FileReader();
     reader.readAsDataURL(file);
     reader.onload = () => {
-      setImages({ ...images, [`img${imgCount}`]: reader.result });
+      setProductImages({ ...productImages, [`img${imgCount}`]: reader.result });
     };
   };
-  
+
   const uploadImageToCloudinary = async (file) => {
     const formData = new FormData();
     formData.append("file", file);
     formData.append("upload_preset", "users_img"); // Replace 'your_upload_preset' with your Cloudinary upload preset
-  
+
     try {
       const { data } = await axios.post(
         "https://api.cloudinary.com/v1_1/dgyuvndgf/image/upload",
@@ -46,51 +46,118 @@ const AddProduct = () => {
       return null;
     }
   };
-  
-  const handleSubmit = async () => {
+
+  const handleImgSubmit = async () => {
     // Upload images to Cloudinary and set URLs
     const updatedImages = {};
-    for (const key in images) {
-      if (images.hasOwnProperty(key) && images[key] !== "") {
-        const imageURL = await uploadImageToCloudinary(images[key]);
+    for (const key in productImages) {
+      if (productImages.hasOwnProperty(key) && productImages[key] !== "") {
+        const imageURL = await uploadImageToCloudinary(productImages[key]);
         if (imageURL) {
           updatedImages[key] = imageURL;
         }
       }
     }
-    setImages(updatedImages);
-  
+    setProductImages(updatedImages);
+    Swal.fire({
+      title: "Product photo uploaded",
+      icon: "success",
+      showCancelButton: false,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "OK",
+    }).then(() => {});
+
     // Add your logic to submit the form data with images
     console.log("Form submitted with images:", updatedImages);
+  };
+  const handlePublish = (e) => {
+    e.preventDefault();
+
+    const form = new FormData(e.target);
+    const { name, slug, price, description, short_description, meta_description, sale_price, on_sale, category, subcategory, stock_quantity, Brand } = Object.fromEntries(form);
+    const images = [
+      {"src":productImages.img1},
+      {"src":productImages.img2},
+      {"src":productImages.img3},
+      {"src":productImages.img4},
+      {"src":productImages.img5}
+    ]
+    const attributes=[];
+    const variation=[];
+    const tags=[];
+
+    const data ={
+      name, slug, price, description, short_description, meta_description, sale_price, on_sale, category, subcategory, tags, variation, attributes, stock_quantity, Brand ,images
+    }
+    axios.post("https://pamper-me-backend.vercel.app/api/products/postProduct", data)
+    Swal.fire({
+      title: "Product added successfully",
+      icon: "success",
+      showCancelButton: false,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "OK",
+    }).then(() => {});
+    e.target.reset();
+    setProductImages({
+      img1: "",
+      img2: "",
+      img3: "",
+      img4: "",
+      img5: "",
+    })
   };
 
   return (
     <div className="addProduct">
       <div className="addProduct-header">
         <h1>Add Product</h1>
-        <button onClick={handleSubmit}>PUBLISH</button>
+        <button type="submit" form="product-form">
+          PUBLISH
+        </button>
       </div>
 
-      <div className="add-form">
-        <input type="text" placeholder="Product Name" />
-        <input type="text" placeholder="Product Slug" />
-        <input type="number" placeholder="Product Price" />
-        <textarea rows={10} placeholder="Product Description" />
-        <textarea rows={10} placeholder="Product Short Description" />
-        <textarea rows={10} placeholder="Product Meta Description" />
-        <input type="number" placeholder="Sale Price" />
-        <select type="text" placeholder="On Sale?">
+      <form id="product-form" onSubmit={handlePublish} className="add-form">
+        <input required type="text" name="name" placeholder="Product Name" />
+        <input required type="text" name="slug" placeholder="Product Slug" />
+        <input required type="number" name="price" placeholder="Product Price" />
+        <textarea
+          rows={10}
+          name="description"
+          placeholder="Product Description"
+          required
+        />
+        <textarea
+          rows={10}
+          name="short_description"
+          placeholder="Product Short Description"
+          required
+        />
+        <textarea
+          rows={10}
+          name="meta_description"
+          placeholder="Product Meta Description"
+        />
+        <input type="number" name="sale_price" placeholder="Sale Price" />
+        <select name="on_sale" placeholder="On Sale?">
           <option>Selece sale status</option>
           <option>false</option>
           <option>true</option>
         </select>
-        <input type="text" placeholder="Category" />
-        <input type="text" placeholder="Subcategory" />
-        <input type="number" placeholder="Stock Quantity" />
-        <input type="text" placeholder="Tags" />
-        <input type="text" placeholder="Variation" />
-        <input type="text" placeholder="Attributes" />
-      </div>
+        <input required type="text" name="category" placeholder="Category" />
+        <input required type="text" name="subcategory" placeholder="Subcategory" />
+        <input
+          type="number"
+          name="stock_quantity"
+          placeholder="Stock Quantity"
+          required
+        />
+        <input type="text" name="tags" placeholder="Tags" />
+        <input type="text" name="variation" placeholder="Variation" />
+        <input type="text" name="attributes" placeholder="Attributes" />
+        <input required type="text" name="Brand" placeholder="Brand" />
+      </form>
 
       <h2>Product Image</h2>
       <div className="add-image">
@@ -102,12 +169,12 @@ const AddProduct = () => {
               onChange={(e) => setFileToBase(e, imgCount)}
             />
             <img
-              src={images[`img${imgCount}`] ? images[`img${imgCount}`] : addImg}
+              src={productImages[`img${imgCount}`] ? productImages[`img${imgCount}`] : addImg}
               alt=""
             />
           </div>
         ))}
-        <button onClick={handleSubmit}>SUBMIT</button>
+        <button onClick={handleImgSubmit}>SUBMIT</button>
       </div>
     </div>
   );
