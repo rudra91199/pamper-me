@@ -8,20 +8,31 @@ import Swal from "sweetalert2";
 import axios from "axios";
 
 const Checkout = () => {
-  const {state }= useLocation();
+  const { state } = useLocation();
   const { userData } = useContext(Context);
   const [isChecked, setIsChecked] = useState(false);
   const navigate = useNavigate();
 
   const createBooking = (bookingDetails) => {
+    console.log(bookingDetails);
     axios
       .post("http://localhost:5000/api/bookings/create", bookingDetails)
-      .then(({ data }) => {
-        if (data) {
-          navigate(`/booknow/bookingConfirmed/${state?.service?.title}`, {
-            state: state,
-            
-          });
+      .then(({ data: bookingData }) => {
+        if (bookingData) {
+          axios
+            .put(
+              `http://localhost:5000/api/employees/createBooking/${bookingDetails.employee.id}`,
+              {
+                bookingId: bookingData._id,
+              }
+            )
+            .then(({ data: employeeData }) => {
+              if (employeeData) {
+                navigate(`/booknow/bookingConfirmed/${state?.service?.title}`, {
+                  state: state,
+                });
+              }
+            });
         }
       });
   };
@@ -39,7 +50,7 @@ const Checkout = () => {
     const bookingDates = state.dates;
     const employee = state.employee;
     const email = userData.email;
-    const serviceId = state.service.id;
+    const serviceId = state.service._id;
 
     const bookingDetails = {
       firstName,

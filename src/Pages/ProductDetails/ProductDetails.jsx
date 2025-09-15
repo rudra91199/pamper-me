@@ -8,9 +8,10 @@ import { addToDb } from "../../Utilities/CartDb";
 import Rating from "react-rating";
 import AdditionalInformation from "../../Components/ProductDetails/AdditionalInformation";
 import RelatedProducts from "../../Components/RelatedProducts/RelatedProducts";
+import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa6";
 const ProductDetails = () => {
   const { slug } = useParams();
-  const { products } = useContext(Context);
+  const { products, setIsCartOpen } = useContext(Context);
   const [quantity, setQuantity] = useState(1);
   const { cart, setCart } = useContext(Context);
   const product = products?.products?.find((p) => p?.name == slug);
@@ -25,15 +26,23 @@ const ProductDetails = () => {
     let newCart = [];
     const exists = cart.find((product) => product?._id == item._id);
     if (!exists) {
-      item.quantity = quantity;
+      item.quantity = counter;
       newCart = [...cart, item];
     } else {
-      item.quantity = exists.quantity + quantity;
+      item.quantity = exists.quantity + counter;
       const rest = cart.filter((product) => product?._id !== item._id);
       newCart = [...rest, item];
     }
     setCart(newCart);
-    addToDb(item._id, quantity);
+    addToDb(item._id, counter);
+  };
+
+  const handleBuyNow = (item) => {
+    item.quantity = counter;
+    setCart([item]);
+    localStorage.removeItem("shopping-cart");
+    addToDb(item._id, counter);
+    navigate("/checkout");
   };
 
   useEffect(() => {
@@ -58,7 +67,7 @@ const ProductDetails = () => {
           <img src={selectedImage} alt="" />
         </div>
         <div className="productDetails">
-          <h1 className="gradient">{product?.name}</h1>
+          <h1 className="gradient productDetails-title">{product?.name}</h1>
           <p className="product-details-category">{product?.category}</p>
           <p className="product-price">BDT. {product?.price}</p>
           <div className="product-rating">
@@ -87,21 +96,43 @@ const ProductDetails = () => {
               </button>
             </div>
             <button
-              onClick={() => handleAddToCart(product)}
+              onClick={() => {
+                handleAddToCart(product);
+                setIsCartOpen(true);
+              }}
               className="buy-btn"
             >
               ADD TO CART
             </button>
-            <button className="buy-btn">BUY NOW</button>
+            <button
+              className="buy-btn"
+              onClick={() => handleBuyNow(product)}
+            >
+              BUY NOW
+            </button>
           </div>
           <p className="sku">
             SKU: <span className="font">{product?.sku}</span>
           </p>
           <p className="tags">TAGS: FASHION / WOMAN</p>
+          <div className="share">
+            <p>Share :</p>
+            <div>
+              <button>
+                <FaFacebookF />
+              </button>
+              <button>
+                <FaInstagram />
+              </button>
+              <button>
+                <FaTwitter />
+              </button>
+            </div>
+          </div>
         </div>
       </div>
       <AdditionalInformation product={product} />
-      <RelatedProducts product={product}/>
+      <RelatedProducts product={product} />
     </div>
   );
 };

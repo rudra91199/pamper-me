@@ -4,6 +4,7 @@ import { FaEye } from "react-icons/fa";
 import { BsImages } from "react-icons/bs";
 
 const Service = ({ service, setImages }) => {
+  console.log(service);
   const navigate = useNavigate();
   const { images } = service;
   const viewImages = (e, image) => {
@@ -16,13 +17,13 @@ const Service = ({ service, setImages }) => {
       className="serviceCard"
     >
       <div className="serviceCard-img-container">
-        <img src={service?.images[2]?.src} alt="" />
+        <img src={service?.images[0].url} alt="" />
         <div className="service-card-img-overlay">
           <div>
             <button>
               <FaEye />
             </button>
-            <button onClick={(e) => viewImages(e, service?.images[2]?.src)}>
+            <button onClick={(e) => viewImages(e, service?.images[0]?.url)}>
               <BsImages />
             </button>
           </div>

@@ -16,6 +16,7 @@
     display: flex;
     justify-content: space-between;
     padding: 0 7%;
+    flex-wrap: wrap;
 }
 
 .footer-container>* {
@@ -91,7 +92,6 @@ footer .input-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    /* place-items: center; */
     justify-content: center;
     align-items: center;
 }
@@ -100,16 +100,12 @@ footer .input-container {
 .footer-section3 select,
 .footer-section3 textarea {
     border: none;
-    /* outline: none; */
     padding: 10px;
     border-radius: 5px;
-    /* background: linear-gradient(to right, hsl(329, 48%, 51%, .9), hsl(309, 27%, 37%, .9)); */
     background: linear-gradient(to right, hsla(329, 78%, 95%, 0.95), hsla(312, 60%, 95%, 0.7));
     backdrop-filter: blur(5px);
     transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
-
-
 
 .footer-section3 select option {
     color: black;
@@ -117,8 +113,6 @@ footer .input-container {
 
 .footer-section3 input[type="submit"] {
     background: var(--pink);
-    /* background: linear-gradient(to right, #f0017d61, #ad02936d); */
-
 }
 
 .footer-section3 input::placeholder,
@@ -132,7 +126,6 @@ footer .input-container {
 .footer-section3 input:hover,
 .footer-section3 textarea:hover,
 .footer-section3 select:hover {
-    /* outline: 2px solid #e3208528; */
     background: hsla(0, 0%, 100%);
     box-shadow: 0px 0px 10px rgba(255, 92, 176, 0.7);
 }
@@ -158,7 +151,6 @@ footer textarea {
     border-radius: 5px;
     margin-top: 20px;
     width: 100%;
-
 }
 
 .submitBtn {
@@ -181,4 +173,61 @@ footer textarea {
     margin-top: 60px;
     font-weight: bold;
     color: rgb(0, 0, 0);
+}
+
+/* ------------------- RESPONSIVE ------------------- */
+
+@media (max-width: 1024px) {
+    .footer {
+        height: auto;
+        padding: 40px 0;
+    }
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 50px;
+    }
+    .footer-section1,
+    .footer-section2,
+    .footer-section3 {
+        width: 100%;
+    }
+    .footer-section2 div {
+        justify-content: center;
+    }
+    .footer-section2 > div:last-child {
+        flex-wrap: wrap;
+        gap: 30px !important;
+        justify-content: center;
+    }
+    footer .input-container {
+        grid-template-columns: 1fr;
+    }
+    .submitBtn {
+        margin: 20px auto 0 auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer {
+        padding: 30px 20px;
+    }
+    .footer-logo-content p {
+        font-size: 14px;
+        line-height: 24px;
+    }
+    footer h3 {
+        font-size: 18px;
+    }
+    .footer-section1 img,
+    .footer-section2 img,
+    .footer-section3 img {
+        width: 60px;
+        height: 60px;
+    }
+    .footer-logo-content i {
+        font-size: 16px;
+        margin-right: 15px;
+    }
 }

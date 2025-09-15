@@ -3,8 +3,10 @@ import Rating from "react-rating";
 import { Context } from "../../Providers/PamperContext";
 import axios from "axios";
 import { format } from "date-fns";
+import Swal from "sweetalert2";
 
 const ProductReviews = ({ product, service }) => {
+  const [reviews, setReviews] = useState(product?.reviews || service?.reviews);
   const { userData } = useContext(Context);
   const [rating, setRating] = useState(0);
   const handleAddReview = async (e) => {
@@ -20,22 +22,33 @@ const ProductReviews = ({ product, service }) => {
     };
     const url = product
       ? `https://pamper-me-backend.vercel.app/api/products/addReview/${product._id}`
-      : `http://localhost:5000/api/services/addReview/${service._id}`;
+      : `https://pamper-me-backend.vercel.app/api/services/addReview/${service._id}`;
     const { data } = await axios.put(url, reviewData);
+    if (data) {
+      Swal.fire({
+        title: "Thanks for your feedback.",
+        text: "Your review has been submitted.",
+        icon: "success",
+      }).then(() => {
+        setReviews((prev) => [...prev, reviewData])
+        e.target.reset();
+      });
+    }
   };
+  console.log(reviews);
   return (
     <div className="product-reviews">
       {product ? (
         <h3>
-          {product?.reviews?.length} Review for {product?.name}
+          {reviews?.length} Review for {product?.name}
         </h3>
       ) : (
         <h3>
-          {service?.reviews?.length} Reviews for {service?.title}
+          {reviews?.length} Reviews for {service?.title}
         </h3>
       )}
       <div className="reviews">
-        {(product ? product?.reviews : service?.reviews)?.map((review, i) => (
+        {reviews.map((review, i) => (
           <div key={i} className="review">
             <img src={review.image} alt="" className="review-img" />
             <div>

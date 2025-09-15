@@ -1,0 +1,21 @@
+.relatedServices{
+    margin-top: 5cqmax;
+}
+
+.relatedServices > h3{
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.relatedServices .mySwiper{
+    padding: 20px 20px 40px;
+}
+
+.relatedServices .serviceCard{
+    width: unset;
+}
+
+.relatedServices .serviceCard img{
+    margin-bottom: 0;
+}

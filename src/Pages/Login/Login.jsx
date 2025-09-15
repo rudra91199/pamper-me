@@ -38,16 +38,15 @@ const Login = () => {
   const [signInWithEmailAndPassword, , , loginError] =
     useSignInWithEmailAndPassword(auth);
   const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
-  const {setNumber} = useContext(Context);
+  const { setNumber } = useContext(Context);
   const navigate = useNavigate();
-
 
   const [signInWithGoogle] = useSignInWithGoogle(auth);
 
   const token = useToken(user);
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     const displayName = e.target.name.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
@@ -62,7 +61,7 @@ const Login = () => {
       setNumber(null);
     }
   };
-  
+
   useEffect(() => {
     if (token) navigate("/");
   }, [token]);

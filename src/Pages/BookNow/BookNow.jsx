@@ -17,6 +17,8 @@ const BookNow = () => {
 
   const { service, employee, address, time, date, dates } = location?.state;
 
+  console.log(employee);
+
   useEffect(() => {
     if (location.pathname == "/booknow") {
       setSelectedDate(new Date());
@@ -43,7 +45,7 @@ const BookNow = () => {
           <TbUserPentagon className="icon" />
           <div>
             <p className="title">Employee</p>
-            <p>{employee}</p>
+            <p>{employee?.name}</p>
           </div>
         </div>
         <hr />

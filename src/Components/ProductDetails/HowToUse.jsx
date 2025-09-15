@@ -8,7 +8,9 @@ const HowToUse = ({product, service}) => {
       }
       {product ? <ul>
         {product?.howToUse?.map((step, i) => <li key={i}><span>Step {i+1}:</span> {step}</li>)}
-      </ul> : <div dangerouslySetInnerHTML={{__html:service?.longDescription}}/>}
+      </ul> : <ul>
+        {service?.steps?.map((step, i) => <li key={i}><span>Step {i+1}:</span> {step}</li>)}
+      </ul> }
     </div>
   )
 }

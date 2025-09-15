@@ -1,22 +1,28 @@
 .employee-details{
+    margin-top: 20px;
+    border: 1px solid lightgray;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.employee-content{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
 }
 
-.employee-details > div{
+.employee-content> div{
     display: flex;
-    gap: 15px;
-    align-items: center;
+    align-items: center;gap: 15px;
 }
 
-.employee-details div> img{
+.employee-details div > img{
     height: 80px;
     width: 80px;
     border-radius: 50%;
 }
 
-.employee-details-container p{
+.employee-details p{
     font-size: 14px;
     font-weight: 500;
+    margin-top: 20px;
 }

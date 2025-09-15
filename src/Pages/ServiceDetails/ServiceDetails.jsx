@@ -8,6 +8,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import Rating from "react-rating";
 import AdditionalInformation from "../../Components/ProductDetails/AdditionalInformation";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
+import RelatedServices from "../../Components/RelatedServices/RelatedServices";
 const ServiceDetails = () => {
   const [user] = useAuthState(auth);
   const { slug } = useParams();
@@ -20,20 +21,19 @@ const ServiceDetails = () => {
   const [selectedImage, setSelectedImage] = useState("");
 
   useEffect(() => {
-    setSelectedImage(service?.images[0]?.src);
+    setSelectedImage(service?.images[0]?.url);
   }, [service]);
-
 
   return (
     <div className="service-details-container">
       <div className="service-details-content">
         <div className="service-img-container">
           <div className="images">
-            {service?.images?.slice(0,4)?.map((image, i) => (
+            {service?.images?.slice(0, 4)?.map((image, i) => (
               <img
                 key={i}
-                src={image.src}
-                onClick={() => setSelectedImage(image.src)}
+                src={image.url}
+                onClick={() => setSelectedImage(image.url)}
                 className={`${i === 0 && "selected-image"}`}
               />
             ))}
@@ -42,7 +42,7 @@ const ServiceDetails = () => {
           <img src={selectedImage} alt="" />
         </div>
         <div className="serviceDetails">
-          <h1 className="gradient">{service?.title}</h1>
+          <h1 className="gradient serviceDetails-title">{service?.title}</h1>
           <p className="service-details-category">{service?.category}</p>
           <p className="service-details-category">
             Duration: {service?.duration} min
@@ -60,18 +60,34 @@ const ServiceDetails = () => {
           <p className="service-details-description">
             {service?.shortDescription}
           </p>
-          <button className="booknow-btn">Booknow</button>
+          <button
+            className="booknow-btn"
+            onClick={() =>
+              navigate("/booknow", {
+                state: { service },
+              })
+            }
+          >
+            Booknow
+          </button>
           <div className="share">
             <p>Share :</p>
             <div>
-              <button><FaFacebookF /></button>
-              <button><FaInstagram /></button> 
-              <button><FaTwitter /></button> 
+              <button>
+                <FaFacebookF />
+              </button>
+              <button>
+                <FaInstagram />
+              </button>
+              <button>
+                <FaTwitter />
+              </button>
             </div>
           </div>
         </div>
       </div>
       <AdditionalInformation service={service} />
+      <RelatedServices service={service} />
     </div>
   );
 };

@@ -32,6 +32,10 @@
   border: 1px solid black;
 }
 
+.serviceDetails-title{
+  margin: unset;
+}
+
 .serviceDetails {
   display: flex;
   flex-direction: column;

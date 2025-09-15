@@ -20,10 +20,9 @@ const PamperContext = ({ children }) => {
   const [user] = useAuthState(auth);
   const [number, setNumber] = useState(null);
   const [isCartOpen, setIsCartOpen] = useState(false);
-
+  const [employees, setEmployees] = useState([]);
 
   useEffect(() => {
-
     fetch("https://pamper-me-backend.vercel.app/api/services/all")
       .then((res) => res.json())
       .then((data) => {
@@ -36,7 +35,8 @@ const PamperContext = ({ children }) => {
       });
 
     fetch(
-      `https://pamper-me-backend.vercel.app/api/products/all?category=${routes?.category || ""
+      `https://pamper-me-backend.vercel.app/api/products/all?category=${
+        routes?.category || ""
       }&subcategory=${routes?.subcategory || ""}&brand=${routes.brand || ""}`
     )
       .then((res) => res.json())
@@ -45,12 +45,19 @@ const PamperContext = ({ children }) => {
 
   useEffect(() => {
     if (user?.email) {
-      axios.get(`https://pamper-me-backend.vercel.app/api/users/${user.email}`).then((res) => setUserData(res.data));
-    }
-    else {
+      axios
+        .get(`https://pamper-me-backend.vercel.app/api/users/${user.email}`)
+        .then((res) => setUserData(res.data));
+    } else {
       setUserData({});
     }
-  }, [user])
+  }, [user]);
+
+  useEffect(() => {
+    axios
+      .get(`http://localhost:5000/api/employees/getAll`)
+      .then((res) => setEmployees(res.data));
+  }, []);
 
   const info = {
     services,
@@ -69,7 +76,12 @@ const PamperContext = ({ children }) => {
     setProfileHover,
     userData,
     setUserData,
-    number, setNumber, isCartOpen, setIsCartOpen
+    number,
+    setNumber,
+    isCartOpen,
+    setIsCartOpen,
+    employees,
+    setEmployees,
   };
   return <Context.Provider value={info}>{children}</Context.Provider>;
 };

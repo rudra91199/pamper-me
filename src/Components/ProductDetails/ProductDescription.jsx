@@ -8,15 +8,7 @@ const ProductDescription = ({ product, service }) => {
         {product ? (
           <p className="">{product?.description}</p>
         ) : (
-          <p className="service-long-desc">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Necessitatibus, temporibus laborum quas ab error maxime soluta
-            expedita sint consectetur dolorum rerum veniam aspernatur suscipit
-            atque aperiam sequi architecto repellendus officiis nesciunt. Ut
-            dignissimos itaque illum provident porro deserunt reprehenderit
-            magni, nemo expedita minus perferendis tempore eveniet saepe dolorem
-            delectus fuga.
-          </p>
+          <p className="service-long-desc">{service?.description}</p>
         )}
       </div>
       <div className={product ? "ingredients" : "benefits"}>
@@ -33,8 +25,8 @@ const ProductDescription = ({ product, service }) => {
           </ul>
         ) : (
           <ul>
-            {[1, 2, 3, 4,5].map((li) => (
-              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            {service.benefits.map((li,i) => (
+              <li>{i+1}. {li}</li>
             ))}
           </ul>
         )}

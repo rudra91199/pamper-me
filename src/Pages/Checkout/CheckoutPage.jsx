@@ -33,6 +33,7 @@ const CheckoutPage = () => {
     e.preventDefault();
 
     const form = new FormData(e.target);
+    
     const { firstName, lastName, email, phone, address } =
       Object.fromEntries(form);
 

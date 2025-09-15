@@ -6,13 +6,22 @@ import { Context } from "../../../../Providers/PamperContext";
 import { format } from "date-fns";
 
 const ChooseTime = ({ selectedDate }) => {
+  const { employee } = useLocation().state;
+  const { employees } = useContext(Context);
   const currentDate = new Date();
   const localHours = currentDate.getHours();
+
+  console.log(employee)
 
   const location = useLocation();
   const { service } = location.state;
   const timeBlocks = [];
-  let firstValue = format(currentDate,"d") === format(selectedDate,"d") ? (localHours > 11 ? localHours : 11) : 11
+  let firstValue =
+    format(currentDate, "d") === format(selectedDate, "d")
+      ? localHours > 11
+        ? localHours
+        : 11
+      : 11;
   let secondValue = 0;
   while (1) {
     secondValue = firstValue + parseInt(service.duration) / 60;
@@ -23,6 +32,10 @@ const ChooseTime = ({ selectedDate }) => {
     timeBlocks.push(timeRange);
     firstValue = firstValue + 0.5;
   }
+
+  const selectedEmployee = employees?.find((item) => item._id, employee.id);
+
+  console.log(selectedEmployee);
 
   return (
     <div className="choose-time-container">

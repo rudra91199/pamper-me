@@ -1,5 +1,5 @@
 import "./Footer.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../../assets/Images/Logo/FaceLogo-01.png";
 import serviceIcon from "../../assets/Images/FooterIcons/cosmetics.png";
 import contactIcon from "../../assets/Images/FooterIcons/contact.png";
@@ -7,16 +7,15 @@ import { useContext } from "react";
 import { Context } from "../../Providers/PamperContext";
 
 const Footer = () => {
-  const { services } = useContext(Context)
+  const { services } = useContext(Context);
   const year = new Date().getFullYear();
+  const location = useLocation();
 
   let categoryArray = [...new Set(services.map((service) => service.category))];
 
   return (
     <div className={`footer ${location.pathname == "/login" ? "d-none" : ""}`}>
-
       <footer className="footer-container">
-
         <div className="footer-section1">
           <div>
             <img src={logo} alt="" />
@@ -25,7 +24,10 @@ const Footer = () => {
 
           <div className="footer-logo-content">
             <p>
-              Welcome to Pamper Me, your One Stop Beauty Solution, where luxury meets convenience. Our commitment to using premium products ensures a flawless finish, while stringent hygiene practices prioritize your safety.
+              Welcome to Pamper Me, your One Stop Beauty Solution, where luxury
+              meets convenience. Our commitment to using premium products
+              ensures a flawless finish, while stringent hygiene practices
+              prioritize your safety.
             </p>
             <i className="fa-brands fa-pinterest"></i>
             <i className="fa-brands fa-facebook-f"></i>
@@ -37,10 +39,9 @@ const Footer = () => {
         </div>
 
         <div className="footer-section2">
-
           <div>
             <img src={serviceIcon} alt="" />
-            <h3 >Our Services</h3>
+            <h3>Our Services</h3>
           </div>
 
           <div style={{ display: "flex", gap: "50px", marginTop: "40px" }}>
@@ -63,7 +64,6 @@ const Footer = () => {
           </div>
         </div>
 
-
         <div className="footer-section3">
           <div>
             <img src={contactIcon} alt="" />
@@ -72,15 +72,16 @@ const Footer = () => {
           <form>
             <div className="input-container">
               <input type="text" placeholder=" Name" />
-              <select name="interests" >
-                <option disabled value="">Services</option>
+              <select name="interests">
+                <option disabled value="">
+                  Services
+                </option>
                 <hr />
-                {
-                  categoryArray.map((service) => (
-
-                    <option key={service} value="">{service}</option>
-                  ))
-                }
+                {categoryArray.map((service) => (
+                  <option key={service} value="">
+                    {service}
+                  </option>
+                ))}
               </select>
               <input type="email" placeholder=" Email" />
               <input type="number" placeholder=" Number" />
@@ -88,7 +89,6 @@ const Footer = () => {
             <textarea type="text" rows={5} placeholder=" Your Message" />
             <input className="submitBtn" type="submit" value="Submit" />
           </form>
-
         </div>
       </footer>
     </div>
