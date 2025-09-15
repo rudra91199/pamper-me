@@ -212,13 +212,14 @@ footer textarea {
 @media (max-width: 600px) {
     .footer {
         padding: 30px 20px;
+        background: white;
     }
     .footer-logo-content p {
         font-size: 14px;
         line-height: 24px;
     }
     footer h3 {
-        font-size: 18px;
+        font-size: 24px;
     }
     .footer-section1 img,
     .footer-section2 img,

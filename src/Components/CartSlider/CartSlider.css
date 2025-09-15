@@ -150,3 +150,44 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
   background: var(--pink);
   color: white;
 }
+
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .cartSlider {
+    width: 45%;
+    right: -50%;
+  }
+  .showCart {
+    right: 0;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .cartSlider {
+    width: 100%;
+    right: -100%;
+    top: 0;
+    translate: 0 0;
+    height: 100vh;
+    border-radius: 0;
+    padding: 20px;
+    z-index: 100000;
+  }
+
+  .showCart {
+    right: 0;
+  }
+
+  .cartSlider .close-btn {
+    left: auto;
+    right: 15px;
+    top: 15px;
+    background: rgba(0, 0, 0, 0.05);
+  }
+
+  .cartSliderItems {
+    height: 70%;
+  }
+}
